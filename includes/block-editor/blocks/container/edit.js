@@ -19,7 +19,8 @@ import {
 	CheckboxControl,
 	PanelBody,
 	SelectControl,
-} from "@wordpress/components";
+	TextControl,
+} from '@wordpress/components';
 
 /**
  * Styles are applied only to the editor.
@@ -45,6 +46,7 @@ export default function
 		fullHeight,
 		isFluid,
 		tagName: TagName = 'div',
+		customAnchor,
 	} = attributes;
 
 	const classes = classnames({
@@ -83,18 +85,23 @@ export default function
 		<>
 			<BlockControls>
 				<BlockVerticalAlignmentToolbar
-					onChange={( value ) => setAttributes({ alignContent: value })}
-					value={ alignContent }
+					onChange={(value) => setAttributes({alignContent: value})}
+					value={alignContent}
 				/>
 				<FullHeightAlignmentControl
-					isActive={ fullHeight }
-					onToggle={( value ) => setAttributes({ fullHeight: value })}
+					isActive={fullHeight}
+					onToggle={(value) => setAttributes({fullHeight: value})}
 				/>
 			</BlockControls>
 			<InspectorControls>
-				<PanelBody title={__('HTML element', 'resource')}>
-					<SelectControl label={__('Choose element', 'resource')}
-								   value={ TagName }
+				<PanelBody title={__('Container Attributes', 'resource')}>
+					<TextControl
+						label={__('Anchor', 'resource')}
+						value={customAnchor}
+						onChange={(value) => setAttributes({customAnchor: value})}
+					/>
+					<SelectControl label={__('HTML Tag', 'resource')}
+								   value={TagName}
 								   options={[
 									   {label: __('Default (<div>)'), value: 'div'},
 									   {label: '<header>', value: 'header'},
@@ -104,17 +111,15 @@ export default function
 									   {label: '<aside>', value: 'aside'},
 									   {label: '<footer>', value: 'footer'},
 								   ]}
-								   onChange={ ( value ) =>
-									   setAttributes( { tagName: value } )
+								   onChange={(value) =>
+									   setAttributes({tagName: value})
 								   }
-								   help={ tagNameMessages[ TagName ] }
+								   help={tagNameMessages[TagName]}
 					/>
-				</PanelBody>
-				<PanelBody title={__('Fluid', 'resource')}>
 					<CheckboxControl
 						label={__('Fluid', 'resource')}
-						checked={ isFluid }
-						onChange={( value ) => setAttributes({ isFluid: value })}
+						checked={isFluid}
+						onChange={(value) => setAttributes({isFluid: value})}
 					/>
 				</PanelBody>
 			</InspectorControls>

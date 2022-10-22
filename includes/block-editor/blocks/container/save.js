@@ -1,12 +1,7 @@
 /**
- * External dependencies
- */
-import classnames from 'classnames';
-
-/**
  * WordPress dependencies.
  */
-import {InnerBlocks, useBlockProps} from '@wordpress/block-editor';
+import {InnerBlocks} from '@wordpress/block-editor';
 
 /**
  * The Block save function.
@@ -14,26 +9,8 @@ import {InnerBlocks, useBlockProps} from '@wordpress/block-editor';
  * @returns {JSX.Element}
  * @constructor
  */
-export default function save({
-	attributes
-}) {
-	const {
-		alignContent,
-		fullHeight,
-		isFluid,
-		tagName: TagName,
-	} = attributes;
-	const className = classnames( {
-		[ `are-vertically-aligned-${ alignContent }` ]: alignContent,
-		'container': !isFluid,
-		'container-fluid': isFluid,
-		'block-is-full-height': fullHeight,
-	} );
-	const blockProps = useBlockProps.save({ className });
-
+export default function save() {
 	return (
-		<TagName {...blockProps}>
-			<InnerBlocks.Content />
-		</TagName>
+		<InnerBlocks.Content/>
 	);
 }

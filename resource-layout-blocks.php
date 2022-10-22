@@ -21,13 +21,51 @@ function resource_init()
     );
 
     foreach ($blocks as $block) {
-        register_block_type(
-            plugin_dir_path(__FILE__) . 'includes/block-editor/blocks/' . $block
+        register_block_type_from_metadata(
+            plugin_dir_path(__FILE__) . 'includes/block-editor/blocks/' . $block,
+            [
+                'render_callback' => 'container_dynamic_render',
+            ],
         );
     }
 }
 
 add_action('init', 'resource_init');
+
+/**
+ * Renders the `container` block on the server.
+ *
+ * @param array $attributes Block attributes.
+ * @param string $content Block default content.
+ * @param WP_Block $block      Block instance.
+ *
+ * @return string
+ */
+function container_dynamic_render(array $attributes, string $content, WP_Block $block): string
+{
+    // Block name
+    $blockName = $block->name ?? '';
+    // Block classes
+    $alignContentClass = empty($attributes['alignContent']) ? '' : "are-vertically-aligned-{$attributes['alignContent']}";
+    $fullHeightClass   = empty($attributes['fullHeight']) ? '' : 'block-is-full-height';
+    $containerClass    = $attributes['isFluid'] ? 'container-fluid' : 'container';
+    $customAnchor = $attributes['customAnchor'] ?? '';
+
+    $attribute_classes  = $containerClass . ' ' . $alignContentClass . ' ' . $fullHeightClass;
+    $wrapper_attributes = get_block_wrapper_attributes(array( 'class' => $attribute_classes ));
+
+//    $testing = var_dump($block);
+
+    return sprintf(
+        '<%1$s id="%5$s" %2$s data-block-name="%4$s">%3$s</%1$s>',
+        $attributes['tagName'],
+        $wrapper_attributes,
+        $content,
+        $blockName,
+        $customAnchor,
+//        $testing,
+    );
+}
 
 /**
  * Enqueue global block JS & CSS for the editor.
@@ -73,9 +111,9 @@ add_action('enqueue_block_assets', 'resource_styles');
 function resource_category(array $block_categories): array
 {
     $resource_category = array(
-        'slug' => 'resource-layout-blocks',
+        'slug'  => 'resource-layout-blocks',
         'title' => __('Resource Layout Blocks', 'resource'),
-        'icon' => null, // icon is set in index.js of each block.
+        'icon'  => null, // icon is set in index.js of each block.
     );
 
     // move the new category to the start of the block category list.

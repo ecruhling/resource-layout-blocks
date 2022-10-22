@@ -25,11 +25,19 @@
 	"tagName": {
 	  "type": "string",
 	  "default": "div"
+	},
+	"customAnchor": {
+	  "type": "string",
+	  "default": ""
+	},
+	"extraClassesList": {
+	  "type": "string",
+	  "default": ""
 	}
   },
   "supports": {
 	"jsx": true,
-	"anchor": true,
+	"anchor": false,
 	"align": false,
 	"alignContent": true,
 	"alignText": false,
@@ -43,7 +51,7 @@
 	  "text": false,
 	  "__experimentalDuotone": false
 	},
-	"customClassName": true,
+	"customClassName": false,
 	"defaultStylePicker": false,
 	"fullHeight": true,
 	"html": true,
