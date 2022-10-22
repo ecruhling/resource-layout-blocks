@@ -15,7 +15,11 @@ import {
 	BlockControls,
 	__experimentalBlockFullHeightAligmentControl as FullHeightAlignmentControl,
 } from '@wordpress/block-editor';
-import {CheckboxControl, PanelBody} from "@wordpress/components";
+import {
+	CheckboxControl,
+	PanelBody,
+	SelectControl,
+} from "@wordpress/components";
 
 /**
  * Styles are applied only to the editor.
@@ -31,48 +35,92 @@ import './editor.scss';
  * @constructor
  */
 export default function
-	ContainerBlockEdit({
-						   attributes,
-						   setAttributes,
-					   }) {
+	edit({
+			 attributes,
+			 setAttributes,
+		 }) {
 
-	const {isFluid, alignContent, fullHeight} = attributes;
+	const {
+		alignContent,
+		fullHeight,
+		isFluid,
+		tagName: TagName = 'div',
+	} = attributes;
+
 	const classes = classnames({
 		[`are-vertically-aligned-${alignContent}`]: alignContent,
 		'container': !isFluid,
 		'container-fluid': isFluid,
 		'block-is-full-height': fullHeight,
 	});
+
 	const blockProps = useBlockProps({
 		className: classes,
 	});
+
+	const tagNameMessages = {
+		header: __(
+			'The <header> element should represent introductory content, typically a group of introductory or navigational aids.'
+		),
+		main: __(
+			'The <main> element should be used for the primary content of your document only. '
+		),
+		section: __(
+			"The <section> element should represent a standalone portion of the document that can't be better represented by another element."
+		),
+		article: __(
+			'The <article> element should represent a self contained, syndicatable portion of the document.'
+		),
+		aside: __(
+			"The <aside> element should represent a portion of a document whose content is only indirectly related to the document's main content."
+		),
+		footer: __(
+			'The <footer> element should represent a footer for its nearest sectioning element (e.g.: <section>, <article>, <main> etc.).'
+		),
+	};
 
 	return (
 		<>
 			<BlockControls>
 				<BlockVerticalAlignmentToolbar
-					onChange={(alignment) => setAttributes({alignContent: alignment})}
-					value={alignContent}
+					onChange={( value ) => setAttributes({ alignContent: value })}
+					value={ alignContent }
 				/>
 				<FullHeightAlignmentControl
-					isActive={fullHeight}
-					onToggle={(height) => setAttributes({fullHeight: height})}
+					isActive={ fullHeight }
+					onToggle={( value ) => setAttributes({ fullHeight: value })}
 				/>
 			</BlockControls>
 			<InspectorControls>
-				<PanelBody title={__('Fluid', 'resource-layout-blocks')}>
+				<PanelBody title={__('HTML element', 'resource')}>
+					<SelectControl label={__('Choose element', 'resource')}
+								   value={ TagName }
+								   options={[
+									   {label: __('Default (<div>)'), value: 'div'},
+									   {label: '<header>', value: 'header'},
+									   {label: '<main>', value: 'main'},
+									   {label: '<section>', value: 'section'},
+									   {label: '<article>', value: 'article'},
+									   {label: '<aside>', value: 'aside'},
+									   {label: '<footer>', value: 'footer'},
+								   ]}
+								   onChange={ ( value ) =>
+									   setAttributes( { tagName: value } )
+								   }
+								   help={ tagNameMessages[ TagName ] }
+					/>
+				</PanelBody>
+				<PanelBody title={__('Fluid', 'resource')}>
 					<CheckboxControl
-						label={__('Fluid', 'resource-layout-blocks')}
-						checked={isFluid}
-						onChange={(isChecked) => {
-							setAttributes({isFluid: isChecked});
-						}}
+						label={__('Fluid', 'resource')}
+						checked={ isFluid }
+						onChange={( value ) => setAttributes({ isFluid: value })}
 					/>
 				</PanelBody>
 			</InspectorControls>
-			<div {...blockProps}>
-				<InnerBlocks placeholder={__('Insert Rows', 'resource-layout-blocks')}/>
-			</div>
+			<TagName {...blockProps}>
+				<InnerBlocks placeholder={__('Insert Rows', 'resource')}/>
+			</TagName>
 		</>
 	);
 }

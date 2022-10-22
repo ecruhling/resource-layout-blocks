@@ -14,8 +14,15 @@ import {InnerBlocks, useBlockProps} from '@wordpress/block-editor';
  * @returns {JSX.Element}
  * @constructor
  */
-export default function ContainerBlockSave({ attributes }) {
-	const {isFluid, alignContent, fullHeight} = attributes;
+export default function save({
+	attributes
+}) {
+	const {
+		alignContent,
+		fullHeight,
+		isFluid,
+		tagName: TagName,
+	} = attributes;
 	const className = classnames( {
 		[ `are-vertically-aligned-${ alignContent }` ]: alignContent,
 		'container': !isFluid,
@@ -25,8 +32,8 @@ export default function ContainerBlockSave({ attributes }) {
 	const blockProps = useBlockProps.save({ className });
 
 	return (
-		<div {...blockProps}>
+		<TagName {...blockProps}>
 			<InnerBlocks.Content />
-		</div>
+		</TagName>
 	);
 }

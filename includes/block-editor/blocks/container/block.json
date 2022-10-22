@@ -4,23 +4,27 @@
   "name": "resource-layout-blocks/container",
   "title": "Container",
   "category": "resource-layout-blocks",
-  "description": "A Bootstrap container, fluid or fixed.",
+  "description": "A Container based on Bootstrap v5, fluid or fixed.",
   "keywords": [
 	"container"
   ],
   "version": "1.0.0",
-  "textdomain": "resource-layout-blocks",
+  "textdomain": "resource",
   "attributes": {
-	"isFluid": {
-	  "type": "boolean",
-	  "default": true
-	},
 	"alignContent": {
 	  "type": "string"
 	},
 	"fullHeight": {
 	  "type": "boolean",
 	  "default": false
+	},
+	"isFluid": {
+	  "type": "boolean",
+	  "default": true
+	},
+	"tagName": {
+	  "type": "string",
+	  "default": "div"
 	}
   },
   "supports": {

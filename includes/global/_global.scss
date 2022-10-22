@@ -1,0 +1,28 @@
+/**
+These are styles referenced by the blocks.
+None of them are enqueued, they are here just for reference.
+ */
+
+/**
+  Used in Block/Container
+ */
+
+.wp-block-resource-layout-blocks-container {}
+
+// BlockVerticalAlignmentToolbar
+.are-vertically-aligned-top {}
+
+.are-vertically-aligned-center {}
+
+.are-vertically-aligned-bottom {}
+
+// FullHeightAlignmentControl
+.block-is-full-height {}
+
+// isFluid attribute
+.container {}
+
+.container-fluid {}
+
+// tagName attribute
+div, header, main, section, article, aside, footer
