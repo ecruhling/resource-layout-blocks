@@ -11,97 +11,50 @@
  */
 
 /**
+ * Constants.
+ */
+const RESOURCE_LAYOUT_BLOCKS_SLUG = 'resource-layout-blocks';
+
+/**
  * Register layout blocks.
  */
-function resource_init()
+function resource_layout_blocks_init()
 {
     // The order below is the order that they will appear in the editor.
     $blocks = array(
-        'container/',
+        'container',
     );
 
     foreach ($blocks as $block) {
         register_block_type_from_metadata(
-            plugin_dir_path(__FILE__) . 'includes/block-editor/blocks/' . $block,
+            plugin_dir_path(__FILE__) . 'includes/block-editor/blocks/' . trailingslashit($block),
             [
-                'render_callback' => 'container_dynamic_render',
+                'render_callback' => 'dynamic_block_render_callback',
             ],
         );
     }
 }
 
-add_action('init', 'resource_init');
+add_action('init', 'resource_layout_blocks_init');
 
 /**
- * Renders the `container` block on the server.
+ * Render callback function.
+ * A generic function that routes to a PHP template stored in the named block's directory.
  *
  * @param array $attributes Block attributes.
  * @param string $content Block default content.
- * @param WP_Block $block      Block instance.
+ * @param WP_Block $block Block instance.
  *
- * @return string
+ * @return string The rendered output.
  */
-function container_dynamic_render(array $attributes, string $content, WP_Block $block): string
+function dynamic_block_render_callback(array $attributes, string $content, WP_Block $block): string
 {
-    // Block name
-    $blockName = $block->name ?? '';
-    // Block classes
-    $alignContentClass = empty($attributes['alignContent']) ? '' : "are-vertically-aligned-{$attributes['alignContent']}";
-    $fullHeightClass   = empty($attributes['fullHeight']) ? '' : 'block-is-full-height';
-    $containerClass    = $attributes['isFluid'] ? 'container-fluid' : 'container';
-    $customAnchor = $attributes['customAnchor'] ?? '';
-
-    $attribute_classes  = $containerClass . ' ' . $alignContentClass . ' ' . $fullHeightClass;
-    $wrapper_attributes = get_block_wrapper_attributes(array( 'class' => $attribute_classes ));
-
-//    $testing = var_dump($block);
-
-    return sprintf(
-        '<%1$s id="%5$s" %2$s data-block-name="%4$s">%3$s</%1$s>',
-        $attributes['tagName'],
-        $wrapper_attributes,
-        $content,
-        $blockName,
-        $customAnchor,
-//        $testing,
-    );
+    ob_start();
+    // the block name is stored with the slug preceding it, so remove the slug and the trailing slash.
+    $realBlockName = str_replace(trailingslashit(RESOURCE_LAYOUT_BLOCKS_SLUG), '', $block->name);
+    require plugin_dir_path(__FILE__) . 'includes/block-editor/blocks/' . $realBlockName . '/render.php';
+    return ob_get_clean();
 }
-
-/**
- * Enqueue global block JS & CSS for the editor.
- */
-function resource_styles_scripts()
-{
-//    wp_enqueue_style(
-//        'resource-global-editor-css',
-//        plugins_url('/build/global.css', __FILE__),
-//        ['wp-edit-blocks'],
-//        filemtime(plugin_dir_path(__FILE__) . 'build/global.css')
-//    );
-//
-//    wp_enqueue_script(
-//        'resource-meta',
-//        plugins_url('build/global.js', __FILE__),
-//        ['wp-plugins', 'wp-edit-post', 'wp-element', 'wp-components', 'wp-data', 'wp-block-editor', 'wp-dom-ready']
-//    );
-}
-
-add_action('enqueue_block_editor_assets', 'resource_styles_scripts');
-
-/**
- * Enqueue global frontend and editor CSS.
- */
-function resource_styles()
-{
-//    wp_enqueue_style(
-//        'resource-global-css',
-//        plugins_url('/build/style-global.css', __FILE__),
-//        [],
-//        filemtime(plugin_dir_path(__FILE__) . 'build/style-global.css')
-//    );
-}
-
-add_action('enqueue_block_assets', 'resource_styles');
 
 /**
  * Register Resource Layout Blocks category.
@@ -111,7 +64,7 @@ add_action('enqueue_block_assets', 'resource_styles');
 function resource_category(array $block_categories): array
 {
     $resource_category = array(
-        'slug'  => 'resource-layout-blocks',
+        'slug'  => RESOURCE_LAYOUT_BLOCKS_SLUG,
         'title' => __('Resource Layout Blocks', 'resource'),
         'icon'  => null, // icon is set in index.js of each block.
     );

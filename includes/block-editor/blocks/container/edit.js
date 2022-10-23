@@ -47,6 +47,7 @@ export default function
 		isFluid,
 		tagName: TagName = 'div',
 		customAnchor,
+		extraClassesList,
 	} = attributes;
 
 	const classes = classnames({
@@ -120,6 +121,11 @@ export default function
 						label={__('Fluid', 'resource')}
 						checked={isFluid}
 						onChange={(value) => setAttributes({isFluid: value})}
+					/>
+					<TextControl
+						label={__('Extra CSS Classes', 'resource')}
+						value={extraClassesList}
+						onChange={(value) => setAttributes({extraClassesList: value})}
 					/>
 				</PanelBody>
 			</InspectorControls>

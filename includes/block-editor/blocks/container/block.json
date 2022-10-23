@@ -10,6 +10,7 @@
   ],
   "version": "1.0.0",
   "textdomain": "resource",
+  "render": "file:./render.php",
   "attributes": {
 	"alignContent": {
 	  "type": "string"
