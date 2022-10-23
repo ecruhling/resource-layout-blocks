@@ -86,12 +86,25 @@ function edit(_ref) {
     const clientId = wp.data.select('core/block-editor').getSelectedBlock().clientId;
     // select the item in the list view that corresponds with this block.
     const listViewItem = document.querySelector("a[href='#block-" + clientId + "'][class*='block-editor-list-view-block-select-button']");
-    console.log(listViewItem);
-    // create span inside:
-    // <span class="block-editor-list-view-block-select-button__anchor">{value}</span>
-    // if value = '' (blank) then remove the span
+    // select the span element
+    const spanElement = listViewItem.querySelector("span[class*='block-editor-list-view-block-select-button__anchor']");
+    // if value is empty, remove the spanElement
+    if (value === '') {
+      listViewItem.removeChild(spanElement);
+    } else {
+      // else, check if spanElement exists first
+      if (spanElement) {
+        // if so, set it to value
+        spanElement.innerHTML = value;
+      } else {
+        // otherwise, create it and set it to value
+        let span = document.createElement('span');
+        span.classList.add('block-editor-list-view-block-select-button__anchor');
+        span.innerHTML = value;
+        listViewItem.appendChild(span);
+      }
+    }
   }
-
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.BlockControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.BlockVerticalAlignmentToolbar, {
     onChange: value => setAttributes({
       alignContent: value
