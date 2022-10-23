@@ -26,11 +26,19 @@ function resource_layout_blocks_init()
     );
 
     foreach ($blocks as $block) {
+        $render_callback = [];
+        $block_json = wp_json_file_decode(plugin_dir_path(__FILE__) . 'includes/block-editor/blocks/' . $block . '/block.json');
+        // check block.json for existence of 'render' key.
+        // it does not work presently, but if it does exist, then this is a dynamic block,
+        // and a render_callback needs to be sent to the block registration.
+        if (array_key_exists('render', $block_json)) {
+            $render_callback = [
+                'render_callback' => 'dynamic_block_render_callback',
+            ];
+        }
         register_block_type_from_metadata(
             plugin_dir_path(__FILE__) . 'includes/block-editor/blocks/' . trailingslashit($block),
-            [
-                'render_callback' => 'dynamic_block_render_callback',
-            ],
+            $render_callback,
         );
     }
 }
@@ -51,6 +59,7 @@ function dynamic_block_render_callback(array $attributes, string $content, WP_Bl
 {
     ob_start();
     // the block name is stored with the slug preceding it, so remove the slug and the trailing slash.
+    // Use the block name as a way to find the PHP render template associated with the named block.
     $realBlockName = str_replace(trailingslashit(RESOURCE_LAYOUT_BLOCKS_SLUG), '', $block->name);
     require plugin_dir_path(__FILE__) . 'includes/block-editor/blocks/' . $realBlockName . '/render.php';
     return ob_get_clean();
