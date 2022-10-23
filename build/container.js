@@ -22,7 +22,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./editor.scss */ "./includes/block-editor/blocks/container/editor.scss");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./editor.scss */ "./includes/block-editor/blocks/container/editor.scss");
 
 /**
  * External dependencies
@@ -32,6 +34,8 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * WordPress dependencies.
  */
+
+
 
 
 
@@ -79,6 +83,9 @@ function edit(_ref) {
     aside: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("The <aside> element should represent a portion of a document whose content is only indirectly related to the document's main content."),
     footer: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('The <footer> element should represent a footer for its nearest sectioning element (e.g.: <section>, <article>, <main> etc.).')
   };
+  const {
+    getBlock
+  } = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_5__.useSelect)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.store);
   function setAnchorValue(value) {
     setAttributes({
       customAnchor: value
@@ -105,6 +112,24 @@ function edit(_ref) {
       }
     }
   }
+  const listViewBlocks = document.querySelectorAll('.block-editor-list-view-leaf');
+  if (listViewBlocks) {
+    listViewBlocks.forEach(function (block) {
+      const id = block.getAttribute('data-block');
+      // check here for what kind of block, if not container, don't do anything.
+      const anchor = getBlock(id).attributes.customAnchor;
+      if (anchor !== undefined && anchor !== '') {
+        // select the span element
+        const spanElement = block.querySelector("span[class*='block-editor-list-view-block-select-button__anchor']");
+        if (!spanElement) {
+          let span = document.createElement('span');
+          span.classList.add('block-editor-list-view-block-select-button__anchor');
+          span.innerHTML = anchor;
+          block.querySelector('a').appendChild(span);
+        }
+      }
+    });
+  }
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.BlockControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.BlockVerticalAlignmentToolbar, {
     onChange: value => setAttributes({
       alignContent: value
@@ -118,11 +143,12 @@ function edit(_ref) {
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.PanelBody, {
     title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Container Attributes', 'resource')
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.TextControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Anchor', 'resource'),
-    value: customAnchor
-    // onChange={(value) => setAttributes({customAnchor: value})}
-    ,
-    onChange: value => setAnchorValue(value)
+    className: "html-anchor-control",
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('HTML anchor', 'resource'),
+    value: customAnchor,
+    onChange: value => setAnchorValue(value),
+    autoCapitalize: "none",
+    autoComplete: "off"
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.SelectControl, {
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('HTML Tag', 'resource'),
     value: TagName,
@@ -163,7 +189,8 @@ function edit(_ref) {
     value: extraClassesList,
     onChange: value => setAttributes({
       extraClassesList: value
-    })
+    }),
+    autoCapitalize: "none"
   }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(TagName, blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InnerBlocks, {
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Insert Rows', 'resource')
   })));
@@ -411,6 +438,17 @@ module.exports = window["wp"]["blocks"];
 
 "use strict";
 module.exports = window["wp"]["components"];
+
+/***/ }),
+
+/***/ "@wordpress/data":
+/*!******************************!*\
+  !*** external ["wp","data"] ***!
+  \******************************/
+/***/ (function(module) {
+
+"use strict";
+module.exports = window["wp"]["data"];
 
 /***/ }),
 

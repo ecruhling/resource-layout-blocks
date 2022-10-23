@@ -21,6 +21,8 @@ import {
 	SelectControl,
 	TextControl,
 } from '@wordpress/components';
+import {useSelect} from '@wordpress/data';
+import {store as blockEditorStore} from '@wordpress/block-editor';
 
 /**
  * Styles are applied only to the editor.
@@ -82,9 +84,11 @@ export default function
 		),
 	};
 
+	const {getBlock} = useSelect(blockEditorStore);
+
 	function setAnchorValue(value) {
 		setAttributes({customAnchor: value})
-		const clientId = wp.data.select( 'core/block-editor' ).getSelectedBlock().clientId;
+		const clientId = wp.data.select('core/block-editor').getSelectedBlock().clientId;
 		// select the item in the list view that corresponds with this block.
 		const listViewItem = document.querySelector("a[href='#block-" + clientId + "'][class*='block-editor-list-view-block-select-button']");
 		// select the span element
@@ -107,6 +111,25 @@ export default function
 		}
 	}
 
+	const listViewBlocks = document.querySelectorAll('.block-editor-list-view-leaf');
+	if (listViewBlocks) {
+		listViewBlocks.forEach(function (block) {
+			const id = block.getAttribute('data-block');
+			// check here for what kind of block, if not container, don't do anything.
+			const anchor = getBlock(id).attributes.customAnchor;
+			if(anchor !== undefined && anchor !== '') {
+				// select the span element
+				const spanElement = block.querySelector("span[class*='block-editor-list-view-block-select-button__anchor']");
+				if (!spanElement) {
+					let span = document.createElement('span');
+					span.classList.add('block-editor-list-view-block-select-button__anchor');
+					span.innerHTML = anchor;
+					block.querySelector('a').appendChild(span);
+				}
+			}
+		});
+	}
+
 	return (
 		<>
 			<BlockControls>
@@ -122,10 +145,12 @@ export default function
 			<InspectorControls>
 				<PanelBody title={__('Container Attributes', 'resource')}>
 					<TextControl
-						label={__('Anchor', 'resource')}
+						className='html-anchor-control'
+						label={__('HTML anchor', 'resource')}
 						value={customAnchor}
-						// onChange={(value) => setAttributes({customAnchor: value})}
 						onChange={(value) => setAnchorValue(value)}
+						autoCapitalize='none'
+						autoComplete='off'
 					/>
 					<SelectControl label={__('HTML Tag', 'resource')}
 								   value={TagName}
@@ -152,6 +177,7 @@ export default function
 						label={__('Extra CSS Classes', 'resource')}
 						value={extraClassesList}
 						onChange={(value) => setAttributes({extraClassesList: value})}
+						autoCapitalize='none'
 					/>
 				</PanelBody>
 			</InspectorControls>
