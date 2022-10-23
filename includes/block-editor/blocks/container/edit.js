@@ -82,6 +82,17 @@ export default function
 		),
 	};
 
+	function setAnchorValue(value) {
+		setAttributes({customAnchor: value})
+		const clientId = wp.data.select( 'core/block-editor' ).getSelectedBlock().clientId;
+		// select the item in the list view that corresponds with this block.
+		const listViewItem = document.querySelector("a[href='#block-" + clientId + "'][class*='block-editor-list-view-block-select-button']");
+		console.log(listViewItem);
+		// create span inside:
+		// <span class="block-editor-list-view-block-select-button__anchor">{value}</span>
+		// if value = '' (blank) then remove the span
+	}
+
 	return (
 		<>
 			<BlockControls>
@@ -99,7 +110,8 @@ export default function
 					<TextControl
 						label={__('Anchor', 'resource')}
 						value={customAnchor}
-						onChange={(value) => setAttributes({customAnchor: value})}
+						// onChange={(value) => setAttributes({customAnchor: value})}
+						onChange={(value) => setAnchorValue(value)}
 					/>
 					<SelectControl label={__('HTML Tag', 'resource')}
 								   value={TagName}

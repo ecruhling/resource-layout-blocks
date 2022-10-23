@@ -79,6 +79,19 @@ function edit(_ref) {
     aside: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("The <aside> element should represent a portion of a document whose content is only indirectly related to the document's main content."),
     footer: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('The <footer> element should represent a footer for its nearest sectioning element (e.g.: <section>, <article>, <main> etc.).')
   };
+  function setAnchorValue(value) {
+    setAttributes({
+      customAnchor: value
+    });
+    const clientId = wp.data.select('core/block-editor').getSelectedBlock().clientId;
+    // select the item in the list view that corresponds with this block.
+    const listViewItem = document.querySelector("a[href='#block-" + clientId + "'][class*='block-editor-list-view-block-select-button']");
+    console.log(listViewItem);
+    // create span inside:
+    // <span class="block-editor-list-view-block-select-button__anchor">{value}</span>
+    // if value = '' (blank) then remove the span
+  }
+
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.BlockControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.BlockVerticalAlignmentToolbar, {
     onChange: value => setAttributes({
       alignContent: value
@@ -93,10 +106,10 @@ function edit(_ref) {
     title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Container Attributes', 'resource')
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.TextControl, {
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Anchor', 'resource'),
-    value: customAnchor,
-    onChange: value => setAttributes({
-      customAnchor: value
-    })
+    value: customAnchor
+    // onChange={(value) => setAttributes({customAnchor: value})}
+    ,
+    onChange: value => setAnchorValue(value)
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.SelectControl, {
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('HTML Tag', 'resource'),
     value: TagName,
