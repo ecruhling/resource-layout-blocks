@@ -112,20 +112,27 @@ function edit(_ref) {
       }
     }
   }
+
+  /**
+   * Check all List View blocks; if it is a Container, apply the anchor value, if it exists.
+   */
   const listViewBlocks = document.querySelectorAll('.block-editor-list-view-leaf');
   if (listViewBlocks) {
     listViewBlocks.forEach(function (block) {
       const id = block.getAttribute('data-block');
-      // TODO check here for what kind of block, if not container, don't do anything.
-      const anchor = getBlock(id).attributes.customAnchor;
-      if (anchor !== undefined && anchor !== '') {
-        // select the span element
-        const spanElement = block.querySelector("span[class*='block-editor-list-view-block-select-button__anchor']");
-        if (!spanElement) {
-          let span = document.createElement('span');
-          span.classList.add('block-editor-list-view-block-select-button__anchor');
-          span.innerHTML = anchor;
-          block.querySelector('a').appendChild(span);
+      const name = getBlock(id).name;
+      if (name === 'resource-layout-blocks/container') {
+        console.log(name);
+        const anchor = getBlock(id).attributes.customAnchor;
+        if (anchor !== undefined && anchor !== '') {
+          // select the span element
+          const spanElement = block.querySelector("span[class*='block-editor-list-view-block-select-button__anchor']");
+          if (!spanElement) {
+            let span = document.createElement('span');
+            span.classList.add('block-editor-list-view-block-select-button__anchor');
+            span.innerHTML = anchor;
+            block.querySelector('a').appendChild(span);
+          }
         }
       }
     });
@@ -481,7 +488,7 @@ module.exports = window["wp"]["i18n"];
 /***/ (function(module) {
 
 "use strict";
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"resource-layout-blocks/container","title":"Container","category":"resource-layout-blocks","description":"A Container based on Bootstrap v5, fluid or fixed.","keywords":["container"],"version":"1.0.0","textdomain":"resource","render":"file:./render.php","attributes":{"alignContent":{"type":"string"},"fullHeight":{"type":"boolean","default":false},"isFluid":{"type":"boolean","default":true},"tagName":{"type":"string","default":"div"},"customAnchor":{"type":"string","default":""},"extraClassesList":{"type":"string","default":""}},"supports":{"jsx":true,"anchor":false,"align":false,"alignContent":true,"alignText":false,"alignWide":false,"ariaLabel":true,"className":true,"color":{"background":true,"gradients":false,"link":false,"text":false,"__experimentalDuotone":false},"customClassName":false,"defaultStylePicker":false,"fullHeight":true,"html":true,"inserter":true,"multiple":true,"reusable":true,"lock":true,"spacing":{"margin":false,"padding":false,"blockGap":false},"typography":{"fontSize":false,"lineHeight":false}},"editorScript":"file:../../../../build/container.js","editorStyle":"file:../../../../build/container.css","style":"file:../../../../build/style-container.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"resource-layout-blocks/container","title":"Container","category":"resource-layout-blocks","description":"A Container based on Bootstrap v5, fluid or fixed.","keywords":["container"],"version":"1.0.0","textdomain":"resource","render":"file:./index.php","attributes":{"alignContent":{"type":"string"},"fullHeight":{"type":"boolean","default":false},"isFluid":{"type":"boolean","default":true},"tagName":{"type":"string","default":"div"},"customAnchor":{"type":"string","default":""},"extraClassesList":{"type":"string","default":""}},"supports":{"jsx":true,"anchor":false,"align":false,"alignContent":true,"alignText":false,"alignWide":false,"ariaLabel":true,"className":true,"color":{"background":true,"gradients":false,"link":false,"text":false,"__experimentalDuotone":false},"customClassName":false,"defaultStylePicker":false,"fullHeight":true,"html":true,"inserter":true,"multiple":true,"reusable":true,"lock":true,"spacing":{"margin":false,"padding":false,"blockGap":false},"typography":{"fontSize":false,"lineHeight":false}},"editorScript":"file:../../../../build/container.js","editorStyle":"file:../../../../build/container.css","style":"file:../../../../build/style-container.css"}');
 
 /***/ })
 

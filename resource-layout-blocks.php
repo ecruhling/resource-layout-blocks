@@ -23,6 +23,7 @@ function resource_layout_blocks_init()
     // The order below is the order that they will appear in the editor.
     $blocks = array(
         'container',
+        'row',
     );
 
     foreach ($blocks as $block) {

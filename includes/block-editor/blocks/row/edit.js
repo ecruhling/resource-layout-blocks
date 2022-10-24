@@ -16,7 +16,6 @@ import {
 	__experimentalBlockFullHeightAligmentControl as FullHeightAlignmentControl,
 } from '@wordpress/block-editor';
 import {
-	CheckboxControl,
 	PanelBody,
 	SelectControl,
 	TextControl,
@@ -46,16 +45,14 @@ export default function
 	const {
 		alignContent,
 		fullHeight,
-		isFluid,
 		tagName: TagName = 'div',
 		customAnchor,
 		extraClassesList,
 	} = attributes;
 
-	const classes = classnames({
+	const classes = classnames(
+		'row', {
 		[`are-vertically-aligned-${alignContent}`]: alignContent,
-		'container': !isFluid,
-		'container-fluid': isFluid,
 		'block-is-full-height': fullHeight,
 	});
 
@@ -120,7 +117,7 @@ export default function
 		listViewBlocks.forEach(function (block) {
 			const id = block.getAttribute('data-block');
 			const name = getBlock(id).name;
-			if (name === 'resource-layout-blocks/container') {
+			if (name === 'resource-layout-blocks/row') {
 				console.log(name);
 				const anchor = getBlock(id).attributes.customAnchor;
 				if(anchor !== undefined && anchor !== '') {
@@ -181,15 +178,10 @@ export default function
 								   }
 								   help={tagNameMessages[TagName]}
 					/>
-					<CheckboxControl
-						label={__('Fluid', 'resource')}
-						checked={isFluid}
-						onChange={(value) => setAttributes({isFluid: value})}
-					/>
 				</PanelBody>
 			</InspectorControls>
 			<TagName {...blockProps}>
-				<InnerBlocks placeholder={__('Insert Rows', 'resource')}/>
+				<InnerBlocks placeholder={__('Insert Columns', 'resource')}/>
 			</TagName>
 		</>
 	);
