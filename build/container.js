@@ -116,7 +116,7 @@ function edit(_ref) {
   if (listViewBlocks) {
     listViewBlocks.forEach(function (block) {
       const id = block.getAttribute('data-block');
-      // check here for what kind of block, if not container, don't do anything.
+      // TODO check here for what kind of block, if not container, don't do anything.
       const anchor = getBlock(id).attributes.customAnchor;
       if (anchor !== undefined && anchor !== '') {
         // select the span element
@@ -149,6 +149,13 @@ function edit(_ref) {
     onChange: value => setAnchorValue(value),
     autoCapitalize: "none",
     autoComplete: "off"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.TextControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Extra CSS Classes', 'resource'),
+    value: extraClassesList,
+    onChange: value => setAttributes({
+      extraClassesList: value
+    }),
+    autoCapitalize: "none"
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.SelectControl, {
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('HTML Tag', 'resource'),
     value: TagName,
@@ -184,13 +191,6 @@ function edit(_ref) {
     onChange: value => setAttributes({
       isFluid: value
     })
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.TextControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Extra CSS Classes', 'resource'),
-    value: extraClassesList,
-    onChange: value => setAttributes({
-      extraClassesList: value
-    }),
-    autoCapitalize: "none"
   }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(TagName, blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InnerBlocks, {
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Insert Rows', 'resource')
   })));

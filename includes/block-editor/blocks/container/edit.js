@@ -115,7 +115,7 @@ export default function
 	if (listViewBlocks) {
 		listViewBlocks.forEach(function (block) {
 			const id = block.getAttribute('data-block');
-			// check here for what kind of block, if not container, don't do anything.
+			// TODO check here for what kind of block, if not container, don't do anything.
 			const anchor = getBlock(id).attributes.customAnchor;
 			if(anchor !== undefined && anchor !== '') {
 				// select the span element
@@ -152,6 +152,12 @@ export default function
 						autoCapitalize='none'
 						autoComplete='off'
 					/>
+					<TextControl
+						label={__('Extra CSS Classes', 'resource')}
+						value={extraClassesList}
+						onChange={(value) => setAttributes({extraClassesList: value})}
+						autoCapitalize='none'
+					/>
 					<SelectControl label={__('HTML Tag', 'resource')}
 								   value={TagName}
 								   options={[
@@ -172,12 +178,6 @@ export default function
 						label={__('Fluid', 'resource')}
 						checked={isFluid}
 						onChange={(value) => setAttributes({isFluid: value})}
-					/>
-					<TextControl
-						label={__('Extra CSS Classes', 'resource')}
-						value={extraClassesList}
-						onChange={(value) => setAttributes({extraClassesList: value})}
-						autoCapitalize='none'
 					/>
 				</PanelBody>
 			</InspectorControls>

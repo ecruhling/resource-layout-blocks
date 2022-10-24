@@ -61,7 +61,7 @@ function dynamic_block_render_callback(array $attributes, string $content, WP_Bl
     // the block name is stored with the slug preceding it, so remove the slug and the trailing slash.
     // Use the block name as a way to find the PHP render template associated with the named block.
     $realBlockName = str_replace(trailingslashit(RESOURCE_LAYOUT_BLOCKS_SLUG), '', $block->name);
-    require plugin_dir_path(__FILE__) . 'includes/block-editor/blocks/' . $realBlockName . '/render.php';
+    require plugin_dir_path(__FILE__) . 'includes/block-editor/blocks/' . $realBlockName . '/index.php';
     return ob_get_clean();
 }
 
