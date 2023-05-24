@@ -1,76 +1,108 @@
 {
-  "$schema": "https://schemas.wp.org/trunk/block.json",
-  "apiVersion": 2,
-  "name": "resource-layout-blocks/container",
-  "title": "Container",
-  "category": "resource-layout-blocks",
-  "description": "A Container based on Bootstrap v5, fluid or fixed.",
-  "keywords": [
-	"container"
-  ],
-  "version": "1.0.0",
-  "textdomain": "resource",
-  "render": "file:./index.php",
-  "attributes": {
-	"alignContent": {
-	  "type": "string"
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "resource-layout-blocks/container",
+	"title": "Container",
+	"category": "resource-layout-blocks",
+	"description": "A Container based on Bootstrap v5, fluid or fixed. A fluid container has infinite width, while a non-fluid container has discrete widths based on breakpoints.",
+	"keywords": [
+		"container",
+		"wrapper"
+	],
+	"version": "1.0.0",
+	"textdomain": "resource",
+	"render": "file:./index.php",
+	"attributes": {
+		"alignContent": {
+			"type": "string"
+		},
+		"fullHeight": {
+			"type": "boolean",
+			"default": false
+		},
+		"isFluid": {
+			"type": "boolean",
+			"default": true
+		},
+		"tagName": {
+			"type": "string",
+			"default": "div"
+		},
+		"customAnchor": {
+			"type": "string",
+			"default": ""
+		},
+		"extraClassesList": {
+			"type": "string",
+			"default": ""
+		}
 	},
-	"fullHeight": {
-	  "type": "boolean",
-	  "default": false
+	"supports": {
+		"__experimentalOnEnter": true,
+		"__experimentalSettings": true,
+		"align": [
+			"wide",
+			"full"
+		],
+		"anchor": true,
+		"ariaLabel": true,
+		"html": false,
+		"color": {
+			"gradients": true,
+			"link": true,
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": true
+			}
+		},
+		"spacing": {
+			"margin": [
+				"top",
+				"bottom"
+			],
+			"padding": true,
+			"blockGap": true,
+			"__experimentalDefaultControls": {
+				"padding": true,
+				"blockGap": true
+			}
+		},
+		"dimensions": {
+			"minHeight": true
+		},
+		"__experimentalBorder": {
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true,
+			"__experimentalDefaultControls": {
+				"color": true,
+				"radius": true,
+				"style": true,
+				"width": true
+			}
+		},
+		"position": {
+			"sticky": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalFontStyle": true,
+			"__experimentalTextTransform": true,
+			"__experimentalTextDecoration": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
+			}
+		},
+		"__experimentalLayout": {
+			"allowSizingOnChildren": true
+		}
 	},
-	"isFluid": {
-	  "type": "boolean",
-	  "default": true
-	},
-	"tagName": {
-	  "type": "string",
-	  "default": "div"
-	},
-	"customAnchor": {
-	  "type": "string",
-	  "default": ""
-	},
-	"extraClassesList": {
-	  "type": "string",
-	  "default": ""
-	}
-  },
-  "supports": {
-	"jsx": true,
-	"anchor": false,
-	"align": false,
-	"alignContent": true,
-	"alignText": false,
-	"alignWide": false,
-	"ariaLabel": true,
-	"className": true,
-	"color": {
-	  "background": true,
-	  "gradients": false,
-	  "link": false,
-	  "text": false,
-	  "__experimentalDuotone": false
-	},
-	"customClassName": false,
-	"defaultStylePicker": false,
-	"fullHeight": true,
-	"html": true,
-	"inserter": true,
-	"multiple": true,
-	"reusable": true,
-	"lock": true,
-	"spacing": {
-	  "margin": false,
-	  "padding": false,
-	  "blockGap": false
-	},
-	"typography": {
-	  "fontSize": false,
-	  "lineHeight": false
-	}
-  },
-  "editorScript": "file:../../../../build/container.js",
-  "editorStyle": "file:../../../../build/container.css",
-  "style": "file:../../../../build/style-container.css"
+	"editorScript": "file:../../../../build/container.js",
+	"editorStyle": "file:../../../../build/container.css",
+	"style": "file:../../../../build/style-container.css"
 }
