@@ -32,7 +32,7 @@ function resource_layout_blocks_init() {
 		// check block.json for existence of 'render' key.
 		// it does not work presently, but if it does exist, then this is a dynamic block,
 		// and a render_callback needs to be sent to the block registration.
-		if ( array_key_exists( 'render', $block_json ) ) {
+		if ( property_exists( $block_json, 'render' ) ) {
 			$render_callback = [
 				'render_callback' => 'dynamic_block_render_callback',
 			];
@@ -74,7 +74,7 @@ function dynamic_block_render_callback( array $attributes, string $content, WP_B
 function resource_category( array $block_categories ): array {
 	$resource_category = array(
 		'slug'  => RESOURCE_LAYOUT_BLOCKS_SLUG,
-		'title' => __( 'Resource Layout Blocks', 'resource' ),
+		'title' => __( 'Resource Layout Blocks', 'resource-layout-blocks' ),
 		'icon'  => null, // icon is set in index.js of each block.
 	);
 

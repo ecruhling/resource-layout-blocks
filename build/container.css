@@ -6,5 +6,22 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
+.breakpoint-tab-panel .breakpoint-tab {
+  font-size: 0.7rem;
+}
+
+[data-type="resource-layout-blocks/container"]:not(.is-selected):not(.has-child-selected):hover, [data-type="resource-layout-blocks/container"].is-selected {
+  outline: 1px dashed red;
+  position: relative;
+}
+[data-type="resource-layout-blocks/container"]:not(.is-selected):not(.has-child-selected):hover::before, [data-type="resource-layout-blocks/container"].is-selected::before {
+  content: "container";
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  display: block;
+  color: red;
+  font-size: 0.5rem;
+}
 
 /*# sourceMappingURL=container.css.map*/

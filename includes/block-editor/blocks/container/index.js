@@ -3,7 +3,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
-import { registerBlockType } from '@wordpress/blocks';
+import {registerBlockType, createBlock} from '@wordpress/blocks';
 
 /**
  * Styles are applied both to the front of your site and to the editor.
@@ -20,16 +20,29 @@ import {icon} from './icon';
 import edit from './edit';
 import save from './save';
 
-const { name, ...settings } = json;
+const {name, ...settings} = json;
 
 /**
  * Register this Block Type.
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
-registerBlockType( name, {
+registerBlockType(name, {
 	...settings,
 	icon,
 	edit,
 	save,
-} );
+	transforms: {
+		to: [
+			{
+				type: 'block',
+				blocks: ['resource-layout-blocks/row'],
+				transform: ({content}) => {
+					return createBlock('resource-layout-blocks/row', {
+						content,
+					});
+				},
+			},
+		],
+	},
+});

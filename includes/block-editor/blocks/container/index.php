@@ -13,17 +13,20 @@
 $block_type = $block->name ?? '';
 
 // Block classes.
-$align_class       = empty( $attributes['align'] ) ? '' : "are-vertically-aligned-{$attributes['align']}";
 $full_height_class = empty( $attributes['minHeight'] ) ? '' : 'block-is-full-height';
-//$class_names        = empty( $attributes['className'] ) ? '' : $attributes['className'];
-$container_class    = $attributes['isFluid'] ? 'container-fluid' : 'container';
-$custom_anchor      = $attributes['anchor'] ?? '';
-$attribute_classes  = $container_class . ' ' . $align_class . ' ' . $full_height_class;
+
+// Block attributes, as defined in block.json.
+$anchor          = $attributes['anchor'] ?? '';
+$container_class = $attributes['isFluid'] ? 'container-fluid' : 'container';
+$tag_name        = $attributes['tagName'];
+$vertical_align  = empty( $attributes['verticalAlignment'] ) ? '' : "is-vertically-aligned-{$attributes['verticalAlignment']}";
+
+$attribute_classes  = $container_class . ' ' . $vertical_align . ' ' . $full_height_class;
 $wrapper_attributes = get_block_wrapper_attributes( array( 'class' => $attribute_classes ) );
 ?>
 
 <pre><?= var_dump( $attributes ); ?></pre>
 
-<<?php echo esc_attr( $attributes['tagName'] ); ?> <?php echo $wrapper_attributes; ?> id="<?php echo esc_attr( $attributes['anchor'] ); ?>" data-type="<?php echo esc_attr( $block_type ); ?>">
+<<?php echo esc_attr( $tag_name ); ?> <?php echo wp_kses_data( $wrapper_attributes ); ?> id="<?php echo esc_attr( $attributes['anchor'] ); ?>" data-type="<?php echo esc_attr( $block_type ); ?>">
 <?php echo $content; // phpcs:ignore ?>
 </<?php echo esc_attr( $attributes['tagName'] ); ?>>

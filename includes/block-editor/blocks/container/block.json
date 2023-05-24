@@ -4,7 +4,7 @@
 	"name": "resource-layout-blocks/container",
 	"title": "Container",
 	"category": "resource-layout-blocks",
-	"description": "A container/wrapper based on Bootstrap v5, fluid or fixed. A fluid container has infinite width, while a non-fluid container has discrete widths based on breakpoints.",
+	"description": "A container/wrapper; fluid or fixed.",
 	"keywords": [
 		"container",
 		"wrapper"
@@ -23,6 +23,9 @@
 		"tagName": {
 			"type": "string",
 			"default": "div"
+		},
+		"verticalAlignment": {
+			"type": "string"
 		}
 	},
 	"supports": {
@@ -40,7 +43,7 @@
 		"customClassName": true,
 		"defaultStylePicker": true,
 		"dimensions": {
-			"minHeight": true
+			"minHeight": false
 		},
 		"filter": {
 			"duotone": false
