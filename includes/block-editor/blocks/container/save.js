@@ -11,8 +11,8 @@ import {InnerBlocks} from '@wordpress/block-editor';
  * @returns {JSX.Element}
  * @constructor
  */
-export default function save() {
+export default function save () {
 	return (
-		<InnerBlocks.Content/>
+		<InnerBlocks.Content />
 	);
 }

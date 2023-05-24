@@ -4,7 +4,7 @@
 	"name": "resource-layout-blocks/container",
 	"title": "Container",
 	"category": "resource-layout-blocks",
-	"description": "A Container based on Bootstrap v5, fluid or fixed. A fluid container has infinite width, while a non-fluid container has discrete widths based on breakpoints.",
+	"description": "A container/wrapper based on Bootstrap v5, fluid or fixed. A fluid container has infinite width, while a non-fluid container has discrete widths based on breakpoints.",
 	"keywords": [
 		"container",
 		"wrapper"
@@ -13,12 +13,8 @@
 	"textdomain": "resource",
 	"render": "file:./index.php",
 	"attributes": {
-		"alignContent": {
+		"anchor": {
 			"type": "string"
-		},
-		"fullHeight": {
-			"type": "boolean",
-			"default": false
 		},
 		"isFluid": {
 			"type": "boolean",
@@ -27,79 +23,44 @@
 		"tagName": {
 			"type": "string",
 			"default": "div"
-		},
-		"customAnchor": {
-			"type": "string",
-			"default": ""
-		},
-		"extraClassesList": {
-			"type": "string",
-			"default": ""
 		}
 	},
 	"supports": {
-		"__experimentalOnEnter": true,
-		"__experimentalSettings": true,
-		"align": [
-			"wide",
-			"full"
-		],
 		"anchor": true,
+		"align": true,
+		"alignWide": false,
 		"ariaLabel": true,
-		"html": false,
+		"className": true,
 		"color": {
-			"gradients": true,
-			"link": true,
-			"__experimentalDefaultControls": {
-				"background": true,
-				"text": true
-			}
+			"background": true,
+			"gradients": false,
+			"link": false,
+			"text": false
 		},
-		"spacing": {
-			"margin": [
-				"top",
-				"bottom"
-			],
-			"padding": true,
-			"blockGap": true,
-			"__experimentalDefaultControls": {
-				"padding": true,
-				"blockGap": true
-			}
-		},
+		"customClassName": true,
+		"defaultStylePicker": true,
 		"dimensions": {
 			"minHeight": true
 		},
-		"__experimentalBorder": {
-			"color": true,
-			"radius": true,
-			"style": true,
-			"width": true,
-			"__experimentalDefaultControls": {
-				"color": true,
-				"radius": true,
-				"style": true,
-				"width": true
-			}
+		"filter": {
+			"duotone": false
 		},
+		"html": true,
+		"inserter": true,
+		"multiple": true,
+		"reusable": true,
+		"lock": true,
 		"position": {
 			"sticky": true
 		},
-		"typography": {
-			"fontSize": true,
-			"lineHeight": true,
-			"__experimentalFontFamily": true,
-			"__experimentalFontWeight": true,
-			"__experimentalFontStyle": true,
-			"__experimentalTextTransform": true,
-			"__experimentalTextDecoration": true,
-			"__experimentalLetterSpacing": true,
-			"__experimentalDefaultControls": {
-				"fontSize": true
-			}
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"blockGap": true
 		},
-		"__experimentalLayout": {
-			"allowSizingOnChildren": true
+		"typography": {
+			"fontSize": false,
+			"lineHeight": false
 		}
 	},
 	"editorScript": "file:../../../../build/container.js",
