@@ -26,6 +26,24 @@
 		},
 		"verticalAlignment": {
 			"type": "string"
+		},
+		"baseColumns": {
+			"type": "string"
+		},
+		"baseDisplay": {
+			"type": "string"
+		},
+		"baseOffset": {
+			"type": "string"
+		},
+		"baseAlignItems": {
+			"type": "string"
+		},
+		"baseAlignSelf": {
+			"type": "string"
+		},
+		"baseJustifyContent": {
+			"type": "string"
 		}
 	},
 	"supports": {

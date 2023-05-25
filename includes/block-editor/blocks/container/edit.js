@@ -21,6 +21,11 @@ import {
 	PanelRow,
 	RangeControl,
 	TabPanel,
+	CardBody,
+	Card,
+	Flex,
+	FlexItem,
+	CardHeader,
 } from '@wordpress/components';
 
 /**
@@ -29,6 +34,11 @@ import {
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
 import './editor.scss';
+
+/**
+ * Custom components.
+ */
+import ColumnsDisplay from './columnsDisplay';
 
 /**
  * The Block edit function.
@@ -46,19 +56,21 @@ export default function
 		verticalAlignment,
 		isFluid,
 		tagName: TagName = 'div',
-		XsMarginTop,
-		XsMarginBottom,
-		XsMarginLeft,
-		XsMarginRight,
-		XsPaddingTop,
-		XsPaddingBottom,
-		XsPaddingLeft,
-		XsPaddingRight,
-		XsDisplay,
-		XsCol,
-		XsOffset,
-		XsFlexBasis,
-		XsAlignSelf,
+		baseColumns,
+		baseDisplay,
+		baseOffset,
+		baseAlignItems,
+		baseAlignSelf,
+		baseJustifyContent,
+		baseOrder,
+		baseMarginTop,
+		baseMarginBottom,
+		baseMarginLeft,
+		baseMarginRight,
+		basePaddingTop,
+		basePaddingBottom,
+		basePaddingLeft,
+		basePaddingRight,
 		SmMarginTop,
 		SmMarginBottom,
 		SmMarginLeft,
@@ -166,31 +178,41 @@ export default function
 				/>
 			</BlockControls>
 			<InspectorControls>
-				<PanelBody title={__('Container', 'resource-layout-blocks')}>
-					<CheckboxControl
-						label={__('Fluid', 'resource-layout-blocks')}
-						checked={isFluid}
-						onChange={(value) => setAttributes({isFluid: value})}
-					/>
-					<SelectControl
-						__nextHasNoMarginBottom
-						label={__('HTML element', 'resource-layout-blocks')}
-						options={[
-							{label: __('Default (<div>)'), value: 'div'},
-							{label: '<header>', value: 'header'},
-							{label: '<main>', value: 'main'},
-							{label: '<section>', value: 'section'},
-							{label: '<article>', value: 'article'},
-							{label: '<aside>', value: 'aside'},
-							{label: '<footer>', value: 'footer'},
-						]}
-						value={TagName}
-						onChange={(value) =>
-							setAttributes({tagName: value})
-						}
-						help={tagNameMessages[TagName]}
-					/>
-				</PanelBody>
+				<Card>
+					<CardHeader isBorderless={true} isShady={true}
+											size='small'>{__('CONTAINER', 'resource-layout-blocks')}</CardHeader>
+					<CardBody size='small'>
+						<Flex wrap={true}>
+							<FlexItem>
+								<SelectControl
+									__nextHasNoMarginBottom
+									label={__('HTML element', 'resource-layout-blocks')}
+									options={[
+										{label: __('Default (<div>)'), value: 'div'},
+										{label: '<header>', value: 'header'},
+										{label: '<main>', value: 'main'},
+										{label: '<section>', value: 'section'},
+										{label: '<article>', value: 'article'},
+										{label: '<aside>', value: 'aside'},
+										{label: '<footer>', value: 'footer'},
+									]}
+									value={TagName}
+									onChange={(value) =>
+										setAttributes({tagName: value})
+									}
+									help={tagNameMessages[TagName]}
+								/>
+							</FlexItem>
+							<FlexItem>
+								<CheckboxControl
+									label={__('Fluid', 'resource-layout-blocks')}
+									checked={isFluid}
+									onChange={(value) => setAttributes({isFluid: value})}
+								/>
+							</FlexItem>
+						</Flex>
+					</CardBody>
+				</Card>
 				<TabPanel
 					className='breakpoint-tab-panel'
 					activeClass='is-active'
@@ -200,7 +222,217 @@ export default function
 							name: 'base',
 							title: '—',
 							className: 'breakpoint-tab',
-							content: <p>Base Tab</p>,
+							content:
+								<Card>
+									<ColumnsDisplay
+										attributes={attributes}
+										columns={baseColumns}
+										display={baseDisplay}
+										offset={baseOffset}
+										setColumns={baseColumns => setAttributes({baseColumns})}
+										setDisplay={baseDisplay => setAttributes({baseDisplay})}
+										setOffset={baseOffset => setAttributes({baseOffset})}
+									></ColumnsDisplay>
+									<CardHeader isBorderless={true} isShady={true} size='small'>PADDING</CardHeader>
+									<CardBody size='small'>
+										<Flex wrap={true}>
+											<FlexItem>
+												<SelectControl label={__('Top', 'resource-layout-blocks')}
+																			 value={basePaddingTop}
+																			 options={[
+																				 {value: '', label: __('Select Value', 'resource-layout-blocks')},
+																				 {value: '0', label: __('0', 'resource-layout-blocks')},
+																				 {value: '1', label: __('1', 'resource-layout-blocks')},
+																				 {value: '2', label: __('2', 'resource-layout-blocks')},
+																				 {value: '3', label: __('3', 'resource-layout-blocks')},
+																				 {value: '4', label: __('4', 'resource-layout-blocks')},
+																				 {value: '5', label: __('5', 'resource-layout-blocks')},
+																			 ]}
+																			 onChange={basePaddingTop => setAttributes({basePaddingTop})}
+												/>
+											</FlexItem>
+											<FlexItem>
+												<SelectControl label={__('Right', 'resource-layout-blocks')}
+																			 value={basePaddingRight}
+																			 options={[
+																				 {value: '', label: __('Select Value', 'resource-layout-blocks')},
+																				 {value: '0', label: __('0', 'resource-layout-blocks')},
+																				 {value: '1', label: __('1', 'resource-layout-blocks')},
+																				 {value: '2', label: __('2', 'resource-layout-blocks')},
+																				 {value: '3', label: __('3', 'resource-layout-blocks')},
+																				 {value: '4', label: __('4', 'resource-layout-blocks')},
+																				 {value: '5', label: __('5', 'resource-layout-blocks')},
+																			 ]}
+																			 onChange={basePaddingRight => setAttributes({basePaddingRight})}
+												/>
+											</FlexItem>
+											<FlexItem>
+												<SelectControl label={__('Bottom', 'resource-layout-blocks')}
+																			 value={basePaddingBottom}
+																			 options={[
+																				 {value: '', label: __('Select Value', 'resource-layout-blocks')},
+																				 {value: '0', label: __('0', 'resource-layout-blocks')},
+																				 {value: '1', label: __('1', 'resource-layout-blocks')},
+																				 {value: '2', label: __('2', 'resource-layout-blocks')},
+																				 {value: '3', label: __('3', 'resource-layout-blocks')},
+																				 {value: '4', label: __('4', 'resource-layout-blocks')},
+																				 {value: '5', label: __('5', 'resource-layout-blocks')},
+																			 ]}
+																			 onChange={basePaddingBottom => setAttributes({basePaddingBottom})}
+												/>
+											</FlexItem>
+											<FlexItem>
+												<SelectControl label={__('Left', 'resource-layout-blocks')}
+																			 value={basePaddingLeft}
+																			 options={[
+																				 {value: '', label: __('Select Value', 'resource-layout-blocks')},
+																				 {value: '0', label: __('0', 'resource-layout-blocks')},
+																				 {value: '1', label: __('1', 'resource-layout-blocks')},
+																				 {value: '2', label: __('2', 'resource-layout-blocks')},
+																				 {value: '3', label: __('3', 'resource-layout-blocks')},
+																				 {value: '4', label: __('4', 'resource-layout-blocks')},
+																				 {value: '5', label: __('5', 'resource-layout-blocks')},
+																			 ]}
+																			 onChange={basePaddingLeft => setAttributes({basePaddingLeft})}
+												/>
+											</FlexItem>
+										</Flex>
+									</CardBody>
+									<CardHeader isBorderless={true} isShady={true} size='small'>MARGIN</CardHeader>
+									<CardBody size='small'>
+										<Flex wrap={true}>
+											<FlexItem>
+												<SelectControl label={__('Top', 'resource-layout-blocks')}
+																			 value={baseMarginTop}
+																			 options={[
+																				 {value: '', label: __('Select Value', 'resource-layout-blocks')},
+																				 {value: '0', label: __('0', 'resource-layout-blocks')},
+																				 {value: '1', label: __('1', 'resource-layout-blocks')},
+																				 {value: '2', label: __('2', 'resource-layout-blocks')},
+																				 {value: '3', label: __('3', 'resource-layout-blocks')},
+																				 {value: '4', label: __('4', 'resource-layout-blocks')},
+																				 {value: '5', label: __('5', 'resource-layout-blocks')},
+																				 {value: 'auto', label: __('auto', 'resource-layout-blocks')},
+																			 ]}
+																			 onChange={baseMarginTop => setAttributes({baseMarginTop})}
+												/>
+											</FlexItem>
+											<FlexItem>
+												<SelectControl label={__('Right', 'resource-layout-blocks')}
+																			 value={baseMarginRight}
+																			 options={[
+																				 {value: '', label: __('Select Value', 'resource-layout-blocks')},
+																				 {value: '0', label: __('0', 'resource-layout-blocks')},
+																				 {value: '1', label: __('1', 'resource-layout-blocks')},
+																				 {value: '2', label: __('2', 'resource-layout-blocks')},
+																				 {value: '3', label: __('3', 'resource-layout-blocks')},
+																				 {value: '4', label: __('4', 'resource-layout-blocks')},
+																				 {value: '5', label: __('5', 'resource-layout-blocks')},
+																				 {value: 'auto', label: __('auto', 'resource-layout-blocks')},
+																			 ]}
+																			 onChange={baseMarginRight => setAttributes({baseMarginRight})}
+												/>
+											</FlexItem>
+											<FlexItem>
+												<SelectControl label={__('Bottom', 'resource-layout-blocks')}
+																			 value={baseMarginBottom}
+																			 options={[
+																				 {value: '', label: __('Select Value', 'resource-layout-blocks')},
+																				 {value: '0', label: __('0', 'resource-layout-blocks')},
+																				 {value: '1', label: __('1', 'resource-layout-blocks')},
+																				 {value: '2', label: __('2', 'resource-layout-blocks')},
+																				 {value: '3', label: __('3', 'resource-layout-blocks')},
+																				 {value: '4', label: __('4', 'resource-layout-blocks')},
+																				 {value: '5', label: __('5', 'resource-layout-blocks')},
+																				 {value: 'auto', label: __('auto', 'resource-layout-blocks')},
+																			 ]}
+																			 onChange={baseMarginBottom => setAttributes({baseMarginBottom})}
+												/>
+											</FlexItem>
+											<FlexItem>
+												<SelectControl label={__('Left', 'resource-layout-blocks')}
+																			 value={baseMarginLeft}
+																			 options={[
+																				 {value: '', label: __('Select Value', 'resource-layout-blocks')},
+																				 {value: '0', label: __('0', 'resource-layout-blocks')},
+																				 {value: '1', label: __('1', 'resource-layout-blocks')},
+																				 {value: '2', label: __('2', 'resource-layout-blocks')},
+																				 {value: '3', label: __('3', 'resource-layout-blocks')},
+																				 {value: '4', label: __('4', 'resource-layout-blocks')},
+																				 {value: '5', label: __('5', 'resource-layout-blocks')},
+																				 {value: 'auto', label: __('auto', 'resource-layout-blocks')},
+																			 ]}
+																			 onChange={baseMarginLeft => setAttributes({baseMarginLeft})}
+												/>
+											</FlexItem>
+										</Flex>
+									</CardBody>
+									<CardHeader isBorderless={true} isShady={true} size='small'>ALIGN & JUSTIFY</CardHeader>
+									<CardBody size='small'>
+										<Flex wrap={true}>
+											<FlexItem>
+												<SelectControl label={__('Align Items', 'resource-layout-blocks')}
+																			 value={baseAlignItems}
+																			 options={[
+																				 {value: '', label: __('Select Option', 'resource-layout-blocks')},
+																				 {value: 'start', label: __('Start', 'resource-layout-blocks')},
+																				 {value: 'center', label: __('Center', 'resource-layout-blocks')},
+																				 {value: 'end', label: __('End', 'resource-layout-blocks')},
+																			 ]}
+																			 onChange={baseAlignItems => setAttributes({baseAlignItems})}
+												/>
+											</FlexItem>
+											<FlexItem>
+												<SelectControl label={__('Align Self', 'resource-layout-blocks')}
+																			 value={baseAlignSelf}
+																			 options={[
+																				 {value: '', label: __('Select Option', 'resource-layout-blocks')},
+																				 {value: 'start', label: __('Start', 'resource-layout-blocks')},
+																				 {value: 'center', label: __('Center', 'resource-layout-blocks')},
+																				 {value: 'end', label: __('End', 'resource-layout-blocks')},
+																			 ]}
+																			 onChange={baseAlignSelf => setAttributes({baseAlignSelf})}
+												/>
+											</FlexItem>
+											<FlexItem>
+												<SelectControl label={__('Justify Content', 'resource-layout-blocks')}
+																			 value={baseJustifyContent}
+																			 options={[
+																				 {value: '', label: __('Select Option', 'resource-layout-blocks')},
+																				 {value: 'start', label: __('Start', 'resource-layout-blocks')},
+																				 {value: 'center', label: __('Center', 'resource-layout-blocks')},
+																				 {value: 'end', label: __('End', 'resource-layout-blocks')},
+																				 {value: 'around', label: __('Around', 'resource-layout-blocks')},
+																				 {value: 'between', label: __('Between', 'resource-layout-blocks')},
+																				 {value: 'evenly', label: __('Evenly', 'resource-layout-blocks')},
+																			 ]}
+																			 onChange={baseJustifyContent => setAttributes({baseJustifyContent})}
+												/>
+											</FlexItem>
+										</Flex>
+									</CardBody>
+									<CardHeader isBorderless={true} isShady={true} size='small'>ORDER</CardHeader>
+									<CardBody size='small'>
+										<Flex wrap={true}>
+											<FlexItem>
+												<SelectControl label={__('Order', 'resource-layout-blocks')}
+																			 value={baseOrder}
+																			 options={[
+																				 {value: '', label: __('Select Option', 'resource-layout-blocks')},
+																				 {value: 'first', label: __('First', 'resource-layout-blocks')},
+																				 {value: '1', label: __('1', 'resource-layout-blocks')},
+																				 {value: '2', label: __('2', 'resource-layout-blocks')},
+																				 {value: '3', label: __('3', 'resource-layout-blocks')},
+																				 {value: '4', label: __('4', 'resource-layout-blocks')},
+																				 {value: '5', label: __('5', 'resource-layout-blocks')},
+																				 {value: 'last', label: __('Last', 'resource-layout-blocks')},
+																			 ]}
+																			 onChange={baseOrder => setAttributes({baseOrder})}
+												/>
+											</FlexItem>
+										</Flex>
+									</CardBody>
+								</Card>,
 						},
 						{
 							name: 'small',
@@ -234,190 +466,11 @@ export default function
 						},
 					]}
 				>
-					{({title, content, className}) => <div className={className}><h3>{title}</h3>{content}</div>}
+					{({content, className}) =>
+						<div className={className}>
+							{content}
+						</div>}
 				</TabPanel>
-				<PanelBody title={__('Base', 'resource-layout-blocks')} initialOpen={false}>
-					<SelectControl label={__('Display', 'resource-layout-blocks')}
-												 value={XsDisplay}
-												 options={[
-													 {value: '', label: __('Select Option', 'resource-layout-blocks')},
-													 {value: 'none', label: __('None', 'resource-layout-blocks')},
-													 {value: 'inline', label: __('Inline', 'resource-layout-blocks')},
-													 {value: 'inline-block', label: __('Inline-Block', 'resource-layout-blocks')},
-													 {value: 'block', label: __('Block', 'resource-layout-blocks')},
-													 {value: 'grid', label: __('Grid', 'resource-layout-blocks')},
-													 {value: 'inline-grid', label: __('Inline Grid', 'resource-layout-blocks')},
-													 {value: 'table', label: __('Table', 'resource-layout-blocks')},
-													 {value: 'table-cell', label: __('Table Cell', 'resource-layout-blocks')},
-													 {value: 'table-row', label: __('Table Row', 'resource-layout-blocks')},
-													 {value: 'flex', label: __('Flex', 'resource-layout-blocks')},
-													 {value: 'inline-flex', label: __('Inline Flex', 'resource-layout-blocks')},
-												 ]}
-												 onChange={XsDisplay => setAttributes({XsDisplay})}
-					/>
-					<SelectControl label={__('Align Items', 'resource-layout-blocks')}
-												 value={XsAlignSelf}
-												 options={[
-													 {value: '', label: __('Select Option', 'resource-layout-blocks')},
-													 {value: 'start', label: __('Start', 'resource-layout-blocks')},
-													 {value: 'end', label: __('End', 'resource-layout-blocks')},
-													 {value: 'center', label: __('Center', 'resource-layout-blocks')},
-													 {value: 'baseline', label: __('Baseline', 'resource-layout-blocks')},
-													 {value: 'stretch', label: __('Stretch', 'resource-layout-blocks')},
-												 ]}
-												 onChange={XsAlignSelf => setAttributes({XsAlignSelf})}
-					/>
-					<SelectControl label={__('Justify Content', 'resource-layout-blocks')}
-												 value={XsAlignSelf}
-												 options={[
-													 {value: '', label: __('Select Option', 'resource-layout-blocks')},
-													 {value: 'start', label: __('Start', 'resource-layout-blocks')},
-													 {value: 'end', label: __('End', 'resource-layout-blocks')},
-													 {value: 'center', label: __('Center', 'resource-layout-blocks')},
-													 {value: 'baseline', label: __('Baseline', 'resource-layout-blocks')},
-													 {value: 'stretch', label: __('Stretch', 'resource-layout-blocks')},
-												 ]}
-												 onChange={XsAlignSelf => setAttributes({XsAlignSelf})}
-					/>
-					<SelectControl label={__('Align Self', 'resource-layout-blocks')}
-												 value={XsAlignSelf}
-												 options={[
-													 {value: '', label: __('Select Option', 'resource-layout-blocks')},
-													 {value: 'start', label: __('Start', 'resource-layout-blocks')},
-													 {value: 'end', label: __('End', 'resource-layout-blocks')},
-													 {value: 'center', label: __('Center', 'resource-layout-blocks')},
-													 {value: 'baseline', label: __('Baseline', 'resource-layout-blocks')},
-													 {value: 'stretch', label: __('Stretch', 'resource-layout-blocks')},
-												 ]}
-												 onChange={XsAlignSelf => setAttributes({XsAlignSelf})}
-					/>
-					<PanelRow>
-						<RangeControl label={__('Column Size', 'resource-layout-blocks')}
-													value={XsCol}
-													allowReset={true}
-													onChange={XsCol => setAttributes({XsCol})}
-													min={1}
-													max={12}
-						/>
-					</PanelRow>
-					<PanelRow>
-						<RangeControl label={__('Column Offset', 'resource-layout-blocks')}
-													value={XsOffset}
-													allowReset={true}
-													onChange={XsOffset => setAttributes({XsOffset})}
-													min={1}
-													max={12}
-						/>
-					</PanelRow>
-					<PanelRow>
-						<SelectControl label={__('Margin Top', 'resource-layout-blocks')}
-													 value={XsMarginTop}
-													 options={[
-														 {value: '', label: __('Select Value', 'resource-layout-blocks')},
-														 {value: '0', label: __('0', 'resource-layout-blocks')},
-														 {value: '1', label: __('1', 'resource-layout-blocks')},
-														 {value: '2', label: __('2', 'resource-layout-blocks')},
-														 {value: '3', label: __('3', 'resource-layout-blocks')},
-														 {value: '4', label: __('4', 'resource-layout-blocks')},
-														 {value: '5', label: __('5', 'resource-layout-blocks')},
-														 {value: '6', label: __('6', 'resource-layout-blocks')},
-														 {value: '7', label: __('7', 'resource-layout-blocks')},
-														 {value: 'auto', label: __('auto', 'resource-layout-blocks')},
-													 ]}
-													 onChange={XsMarginTop => setAttributes({XsMarginTop})}
-						/>
-					</PanelRow>
-					<PanelRow>
-						<SelectControl label={__('Margin Bottom', 'resource-layout-blocks')}
-													 value={XsMarginBottom}
-													 options={[
-														 {value: '', label: __('Select Value', 'resource-layout-blocks')},
-														 {value: '0', label: __('0', 'resource-layout-blocks')},
-														 {value: '1', label: __('1', 'resource-layout-blocks')},
-														 {value: '2', label: __('2', 'resource-layout-blocks')},
-														 {value: '3', label: __('3', 'resource-layout-blocks')},
-														 {value: '4', label: __('4', 'resource-layout-blocks')},
-														 {value: '5', label: __('5', 'resource-layout-blocks')},
-														 {value: '6', label: __('6', 'resource-layout-blocks')},
-														 {value: '7', label: __('7', 'resource-layout-blocks')},
-														 {value: 'auto', label: __('auto', 'resource-layout-blocks')},
-													 ]}
-													 onChange={XsMarginBottom => setAttributes({XsMarginBottom})}
-						/>
-					</PanelRow>
-					<PanelRow>
-						<SelectControl label={__('Margin Left', 'resource-layout-blocks')}
-													 value={XsMarginLeft}
-													 options={[
-														 {value: '', label: __('Select Value', 'resource-layout-blocks')},
-														 {value: '0', label: __('0', 'resource-layout-blocks')},
-														 {value: '1', label: __('1', 'resource-layout-blocks')},
-														 {value: '2', label: __('2', 'resource-layout-blocks')},
-														 {value: '3', label: __('3', 'resource-layout-blocks')},
-														 {value: '4', label: __('4', 'resource-layout-blocks')},
-														 {value: '5', label: __('5', 'resource-layout-blocks')},
-														 {value: '6', label: __('6', 'resource-layout-blocks')},
-														 {value: '7', label: __('7', 'resource-layout-blocks')},
-														 {value: 'auto', label: __('auto', 'resource-layout-blocks')},
-													 ]}
-													 onChange={XsMarginLeft => setAttributes({XsMarginLeft})}
-						/>
-					</PanelRow>
-					<PanelRow>
-						<SelectControl label={__('Margin Right', 'resource-layout-blocks')}
-													 value={XsMarginRight}
-													 options={[
-														 {value: '', label: __('Select Value', 'resource-layout-blocks')},
-														 {value: '0', label: __('0', 'resource-layout-blocks')},
-														 {value: '1', label: __('1', 'resource-layout-blocks')},
-														 {value: '2', label: __('2', 'resource-layout-blocks')},
-														 {value: '3', label: __('3', 'resource-layout-blocks')},
-														 {value: '4', label: __('4', 'resource-layout-blocks')},
-														 {value: '5', label: __('5', 'resource-layout-blocks')},
-														 {value: '6', label: __('6', 'resource-layout-blocks')},
-														 {value: '7', label: __('7', 'resource-layout-blocks')},
-														 {value: 'auto', label: __('auto', 'resource-layout-blocks')},
-													 ]}
-													 onChange={XsMarginRight => setAttributes({XsMarginRight})}
-						/>
-					</PanelRow>
-					<PanelRow>
-						<RangeControl label={__('Padding Top', 'resource-layout-blocks')}
-													value={XsPaddingTop}
-													allowReset={true}
-													onChange={XsPaddingTop => setAttributes({XsPaddingTop})}
-													min={0}
-													max={7}
-						/>
-					</PanelRow>
-					<PanelRow>
-						<RangeControl label={__('Padding Bottom', 'resource-layout-blocks')}
-													value={XsPaddingBottom}
-													allowReset={true}
-													onChange={XsPaddingBottom => setAttributes({XsPaddingBottom})}
-													min={0}
-													max={7}
-						/>
-					</PanelRow>
-					<PanelRow>
-						<RangeControl label={__('Padding Left', 'resource-layout-blocks')}
-													value={XsPaddingLeft}
-													allowReset={true}
-													onChange={XsPaddingLeft => setAttributes({XsPaddingLeft})}
-													min={0}
-													max={7}
-						/>
-					</PanelRow>
-					<PanelRow>
-						<RangeControl label={__('Padding Right', 'resource-layout-blocks')}
-													value={XsPaddingRight}
-													allowReset={true}
-													onChange={XsPaddingRight => setAttributes({XsPaddingRight})}
-													min={0}
-													max={7}
-						/>
-					</PanelRow>
-				</PanelBody>
 				<PanelBody title={__('SM Settings', 'resource-layout-blocks')} initialOpen={false}>
 					<PanelRow>
 						<RangeControl label={__('Column Size', 'resource-layout-blocks')}
