@@ -5,8 +5,8 @@ import {__} from '@wordpress/i18n';
 import {CardBody, CardHeader, Flex, FlexItem, SelectControl} from '@wordpress/components';
 
 /**
- * DisplayControl.
- * Component for controlling Display attributes.
+ * OrderControl.
+ * Component for controlling Order attributes.
  *
  * @param columns
  * @param order
@@ -20,7 +20,7 @@ export default function ColumnsDisplayControl ({
 																							 }) {
 	return (
 		<div>
-			<CardHeader isBorderless={true} isShady={true} size='small'>ORDER</CardHeader>
+			<CardHeader isBorderless={true} isShady={true} size='small'>{__('ORDER', 'resource-layout-blocks')}</CardHeader>
 			<CardBody size='small'>
 				<Flex wrap={true}>
 					<FlexItem>
@@ -28,13 +28,13 @@ export default function ColumnsDisplayControl ({
 													 value={order}
 													 options={[
 														 {value: '', label: __('Select Option', 'resource-layout-blocks')},
-														 {value: 'first', label: __('First', 'resource-layout-blocks')},
-														 {value: '1', label: __('1', 'resource-layout-blocks')},
-														 {value: '2', label: __('2', 'resource-layout-blocks')},
-														 {value: '3', label: __('3', 'resource-layout-blocks')},
-														 {value: '4', label: __('4', 'resource-layout-blocks')},
-														 {value: '5', label: __('5', 'resource-layout-blocks')},
-														 {value: 'last', label: __('Last', 'resource-layout-blocks')},
+														 {value: 'order-first', label: __('first', 'resource-layout-blocks')},
+														 {value: 'order-1', label: __('1', 'resource-layout-blocks')},
+														 {value: 'order-2', label: __('2', 'resource-layout-blocks')},
+														 {value: 'order-3', label: __('3', 'resource-layout-blocks')},
+														 {value: 'order-4', label: __('4', 'resource-layout-blocks')},
+														 {value: 'order-5', label: __('5', 'resource-layout-blocks')},
+														 {value: 'order-last', label: __('last', 'resource-layout-blocks')},
 													 ]}
 													 onChange={setOrder}
 						/>

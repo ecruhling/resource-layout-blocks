@@ -24,22 +24,7 @@
 			"type": "string",
 			"default": "div"
 		},
-		"verticalAlignment": {
-			"type": "string"
-		},
 		"baseDisplay": {
-			"type": "string"
-		},
-		"baseAlignItems": {
-			"type": "string"
-		},
-		"baseAlignSelf": {
-			"type": "string"
-		},
-		"baseJustifyContent": {
-			"type": "string"
-		},
-		"baseOrder": {
 			"type": "string"
 		},
 		"basePaddingTop": {
@@ -52,6 +37,135 @@
 			"type": "string"
 		},
 		"basePaddingLeft": {
+			"type": "string"
+		},
+		"baseMarginTop": {
+			"type": "string"
+		},
+		"baseMarginRight": {
+			"type": "string"
+		},
+		"baseMarginBottom": {
+			"type": "string"
+		},
+		"baseMarginLeft": {
+			"type": "string"
+		},
+		"baseAlignItems": {
+			"type": "string"
+		},
+		"baseAlignSelf": {
+			"type": "string"
+		},
+		"baseJustifyContent": {
+			"type": "string"
+		},
+		"smDisplay": {
+			"type": "string"
+		},
+		"smPaddingTop": {
+			"type": "string"
+		},
+		"smPaddingRight": {
+			"type": "string"
+		},
+		"smPaddingBottom": {
+			"type": "string"
+		},
+		"smPaddingLeft": {
+			"type": "string"
+		},
+		"smMarginTop": {
+			"type": "string"
+		},
+		"smMarginRight": {
+			"type": "string"
+		},
+		"smMarginBottom": {
+			"type": "string"
+		},
+		"smMarginLeft": {
+			"type": "string"
+		},
+		"smAlignItems": {
+			"type": "string"
+		},
+		"smAlignSelf": {
+			"type": "string"
+		},
+		"smJustifyContent": {
+			"type": "string"
+		},
+		"mdDisplay": {
+			"type": "string"
+		},
+		"mdPaddingTop": {
+			"type": "string"
+		},
+		"mdPaddingRight": {
+			"type": "string"
+		},
+		"mdPaddingBottom": {
+			"type": "string"
+		},
+		"mdPaddingLeft": {
+			"type": "string"
+		},
+		"mdMarginTop": {
+			"type": "string"
+		},
+		"mdMarginRight": {
+			"type": "string"
+		},
+		"mdMarginBottom": {
+			"type": "string"
+		},
+		"mdMarginLeft": {
+			"type": "string"
+		},
+		"mdAlignItems": {
+			"type": "string"
+		},
+		"mdAlignSelf": {
+			"type": "string"
+		},
+		"mdJustifyContent": {
+			"type": "string"
+		},
+		"lgDisplay": {
+			"type": "string"
+		},
+		"lgPaddingTop": {
+			"type": "string"
+		},
+		"lgPaddingRight": {
+			"type": "string"
+		},
+		"lgPaddingBottom": {
+			"type": "string"
+		},
+		"lgPaddingLeft": {
+			"type": "string"
+		},
+		"lgMarginTop": {
+			"type": "string"
+		},
+		"lgMarginRight": {
+			"type": "string"
+		},
+		"lgMarginBottom": {
+			"type": "string"
+		},
+		"lgMarginLeft": {
+			"type": "string"
+		},
+		"lgAlignItems": {
+			"type": "string"
+		},
+		"lgAlignSelf": {
+			"type": "string"
+		},
+		"lgJustifyContent": {
 			"type": "string"
 		}
 	},
@@ -84,9 +198,9 @@
 			"sticky": true
 		},
 		"spacing": {
-			"margin": true,
-			"padding": true,
-			"blockGap": true
+			"margin": false,
+			"padding": false,
+			"blockGap": false
 		},
 		"typography": {
 			"fontSize": false,

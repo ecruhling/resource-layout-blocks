@@ -5,9 +5,10 @@ import {__} from '@wordpress/i18n';
 import {CardBody, CardHeader, Flex, FlexItem, SelectControl} from '@wordpress/components';
 
 /**
- * DisplayControl.
- * Component for controlling Display attributes.
+ * PaddingControl.
+ * Component for controlling Padding attributes.
  *
+ * @param breakpoint
  * @param paddingTop
  * @param paddingRight
  * @param paddingBottom
@@ -20,6 +21,7 @@ import {CardBody, CardHeader, Flex, FlexItem, SelectControl} from '@wordpress/co
  * @constructor
  */
 export default function PaddingControl ({
+																					breakpoint,
 																					paddingTop,
 																					paddingRight,
 																					paddingBottom,
@@ -31,7 +33,7 @@ export default function PaddingControl ({
 																				}) {
 	return (
 		<div>
-			<CardHeader isBorderless={true} isShady={true} size='small'>PADDING</CardHeader>
+			<CardHeader isBorderless={true} isShady={true} size='small'>{__('PADDING', 'resource-layout-blocks')}</CardHeader>
 			<CardBody size='small'>
 				<Flex wrap={true}>
 					<FlexItem>
@@ -39,12 +41,12 @@ export default function PaddingControl ({
 													 value={paddingTop}
 													 options={[
 														 {value: '', label: __('Select Value', 'resource-layout-blocks')},
-														 {value: '0', label: __('0', 'resource-layout-blocks')},
-														 {value: '1', label: __('1', 'resource-layout-blocks')},
-														 {value: '2', label: __('2', 'resource-layout-blocks')},
-														 {value: '3', label: __('3', 'resource-layout-blocks')},
-														 {value: '4', label: __('4', 'resource-layout-blocks')},
-														 {value: '5', label: __('5', 'resource-layout-blocks')},
+														 {value: `pt-${breakpoint}0`, label: __('0', 'resource-layout-blocks')},
+														 {value: `pt-${breakpoint}1`, label: __('1', 'resource-layout-blocks')},
+														 {value: `pt-${breakpoint}2`, label: __('2', 'resource-layout-blocks')},
+														 {value: `pt-${breakpoint}3`, label: __('3', 'resource-layout-blocks')},
+														 {value: `pt-${breakpoint}4`, label: __('4', 'resource-layout-blocks')},
+														 {value: `pt-${breakpoint}5`, label: __('5', 'resource-layout-blocks')},
 													 ]}
 													 onChange={setPaddingTop}
 						/>
@@ -54,12 +56,12 @@ export default function PaddingControl ({
 													 value={paddingRight}
 													 options={[
 														 {value: '', label: __('Select Value', 'resource-layout-blocks')},
-														 {value: '0', label: __('0', 'resource-layout-blocks')},
-														 {value: '1', label: __('1', 'resource-layout-blocks')},
-														 {value: '2', label: __('2', 'resource-layout-blocks')},
-														 {value: '3', label: __('3', 'resource-layout-blocks')},
-														 {value: '4', label: __('4', 'resource-layout-blocks')},
-														 {value: '5', label: __('5', 'resource-layout-blocks')},
+														 {value: `pe-${breakpoint}0`, label: __('0', 'resource-layout-blocks')},
+														 {value: `pe-${breakpoint}1`, label: __('1', 'resource-layout-blocks')},
+														 {value: `pe-${breakpoint}2`, label: __('2', 'resource-layout-blocks')},
+														 {value: `pe-${breakpoint}3`, label: __('3', 'resource-layout-blocks')},
+														 {value: `pe-${breakpoint}4`, label: __('4', 'resource-layout-blocks')},
+														 {value: `pe-${breakpoint}5`, label: __('5', 'resource-layout-blocks')},
 													 ]}
 													 onChange={setPaddingRight}
 						/>
@@ -69,12 +71,12 @@ export default function PaddingControl ({
 													 value={paddingBottom}
 													 options={[
 														 {value: '', label: __('Select Value', 'resource-layout-blocks')},
-														 {value: '0', label: __('0', 'resource-layout-blocks')},
-														 {value: '1', label: __('1', 'resource-layout-blocks')},
-														 {value: '2', label: __('2', 'resource-layout-blocks')},
-														 {value: '3', label: __('3', 'resource-layout-blocks')},
-														 {value: '4', label: __('4', 'resource-layout-blocks')},
-														 {value: '5', label: __('5', 'resource-layout-blocks')},
+														 {value: `pb-${breakpoint}0`, label: __('0', 'resource-layout-blocks')},
+														 {value: `pb-${breakpoint}1`, label: __('1', 'resource-layout-blocks')},
+														 {value: `pb-${breakpoint}2`, label: __('2', 'resource-layout-blocks')},
+														 {value: `pb-${breakpoint}3`, label: __('3', 'resource-layout-blocks')},
+														 {value: `pb-${breakpoint}4`, label: __('4', 'resource-layout-blocks')},
+														 {value: `pb-${breakpoint}5`, label: __('5', 'resource-layout-blocks')},
 													 ]}
 													 onChange={setPaddingBottom}
 						/>
@@ -84,12 +86,12 @@ export default function PaddingControl ({
 													 value={paddingLeft}
 													 options={[
 														 {value: '', label: __('Select Value', 'resource-layout-blocks')},
-														 {value: '0', label: __('0', 'resource-layout-blocks')},
-														 {value: '1', label: __('1', 'resource-layout-blocks')},
-														 {value: '2', label: __('2', 'resource-layout-blocks')},
-														 {value: '3', label: __('3', 'resource-layout-blocks')},
-														 {value: '4', label: __('4', 'resource-layout-blocks')},
-														 {value: '5', label: __('5', 'resource-layout-blocks')},
+														 {value: `ps-${breakpoint}0`, label: __('0', 'resource-layout-blocks')},
+														 {value: `ps-${breakpoint}1`, label: __('1', 'resource-layout-blocks')},
+														 {value: `ps-${breakpoint}2`, label: __('2', 'resource-layout-blocks')},
+														 {value: `ps-${breakpoint}3`, label: __('3', 'resource-layout-blocks')},
+														 {value: `ps-${breakpoint}4`, label: __('4', 'resource-layout-blocks')},
+														 {value: `ps-${breakpoint}5`, label: __('5', 'resource-layout-blocks')},
 													 ]}
 													 onChange={setPaddingLeft}
 						/>

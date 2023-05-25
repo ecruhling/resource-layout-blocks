@@ -39,6 +39,7 @@ import './editor.scss';
  * Custom components.
  */
 import DisplayControl from './../../block-components/displayControl';
+import OrderControl from '../../block-components/orderControl';
 
 /**
  * The Block edit function.
@@ -406,27 +407,10 @@ export default function
 											</FlexItem>
 										</Flex>
 									</CardBody>
-									<CardHeader isBorderless={true} isShady={true} size='small'>ORDER</CardHeader>
-									<CardBody size='small'>
-										<Flex wrap={true}>
-											<FlexItem>
-												<SelectControl label={__('Order', 'resource-layout-blocks')}
-																			 value={baseOrder}
-																			 options={[
-																				 {value: '', label: __('Select Option', 'resource-layout-blocks')},
-																				 {value: 'first', label: __('First', 'resource-layout-blocks')},
-																				 {value: '1', label: __('1', 'resource-layout-blocks')},
-																				 {value: '2', label: __('2', 'resource-layout-blocks')},
-																				 {value: '3', label: __('3', 'resource-layout-blocks')},
-																				 {value: '4', label: __('4', 'resource-layout-blocks')},
-																				 {value: '5', label: __('5', 'resource-layout-blocks')},
-																				 {value: 'last', label: __('Last', 'resource-layout-blocks')},
-																			 ]}
-																			 onChange={baseOrder => setAttributes({baseOrder})}
-												/>
-											</FlexItem>
-										</Flex>
-									</CardBody>
+									<OrderControl
+										order={baseOrder}
+										setOrder={baseOrder => setAttributes({baseOrder})}
+									></OrderControl>
 								</Card>,
 						},
 						{
