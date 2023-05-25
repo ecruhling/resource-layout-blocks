@@ -1,13 +1,12 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
-	"name": "resource-layout-blocks/container",
-	"title": "Container",
+	"name": "resource-layout-blocks/column",
+	"title": "Column",
 	"category": "resource-layout-blocks",
-	"description": "A container/wrapper; fluid or fixed.",
+	"description": "A column.",
 	"keywords": [
-		"container",
-		"wrapper"
+		"column"
 	],
 	"version": "1.0.0",
 	"textdomain": "resource",
@@ -16,18 +15,16 @@
 		"anchor": {
 			"type": "string"
 		},
-		"isFluid": {
-			"type": "boolean",
-			"default": true
-		},
-		"tagName": {
-			"type": "string",
-			"default": "div"
-		},
 		"verticalAlignment": {
 			"type": "string"
 		},
+		"baseColumns": {
+			"type": "string"
+		},
 		"baseDisplay": {
+			"type": "string"
+		},
+		"baseOffset": {
 			"type": "string"
 		},
 		"baseAlignItems": {
@@ -37,21 +34,6 @@
 			"type": "string"
 		},
 		"baseJustifyContent": {
-			"type": "string"
-		},
-		"baseOrder": {
-			"type": "string"
-		},
-		"basePaddingTop": {
-			"type": "string"
-		},
-		"basePaddingRight": {
-			"type": "string"
-		},
-		"basePaddingBottom": {
-			"type": "string"
-		},
-		"basePaddingLeft": {
 			"type": "string"
 		}
 	},

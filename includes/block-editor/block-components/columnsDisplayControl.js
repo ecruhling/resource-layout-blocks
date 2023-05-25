@@ -4,17 +4,27 @@
 import {__} from '@wordpress/i18n';
 import {CardBody, CardHeader, Flex, FlexItem, SelectControl} from '@wordpress/components';
 
-export default function ColumnsDisplay ({
-																					attributes,
-																					columns,
-																					display,
-																					offset,
-																					setColumns,
-																					setDisplay,
-																					setOffset,
-																				}) {
-
-	console.log(attributes);
+/**
+ * ColumnsDisplayControl.
+ * Component for controlling Columns & Display attributes.
+ *
+ * @param columns
+ * @param display
+ * @param offset
+ * @param setColumns
+ * @param setDisplay
+ * @param setOffset
+ * @returns {JSX.Element}
+ * @constructor
+ */
+export default function ColumnsDisplayControl ({
+																								 columns,
+																								 display,
+																								 offset,
+																								 setColumns,
+																								 setDisplay,
+																								 setOffset,
+																							 }) {
 	return (
 		<div>
 			<CardHeader isBorderless={true} isShady={true}

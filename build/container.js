@@ -1,16 +1,16 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./includes/block-editor/blocks/container/columnsDisplay.js":
+/***/ "./includes/block-editor/block-components/displayControl.js":
 /*!******************************************************************!*\
-  !*** ./includes/block-editor/blocks/container/columnsDisplay.js ***!
+  !*** ./includes/block-editor/block-components/displayControl.js ***!
   \******************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ ColumnsDisplay; }
+/* harmony export */   "default": function() { return /* binding */ ColumnsDisplayControl; }
 /* harmony export */ });
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
@@ -24,76 +24,31 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-function ColumnsDisplay(_ref) {
+
+/**
+ * DisplayControl.
+ * Component for controlling Display attributes.
+ *
+ * @param columns
+ * @param display
+ * @param setDisplay
+ * @returns {JSX.Element}
+ * @constructor
+ */
+function ColumnsDisplayControl(_ref) {
   let {
-    attributes,
-    columns,
     display,
-    offset,
-    setColumns,
-    setDisplay,
-    setOffset
+    setDisplay
   } = _ref;
-  console.log(attributes);
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardHeader, {
     isBorderless: true,
     isShady: true,
     size: "small"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('COLUMNS & DISPLAY', 'resource-layout-blocks')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardBody, {
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('DISPLAY', 'resource-layout-blocks')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardBody, {
     size: "small"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Flex, {
     wrap: true
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Columns', 'resource-layout-blocks'),
-    value: columns,
-    options: [{
-      value: '',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select Value', 'resource-layout-blocks')
-    }, {
-      value: 'equal',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('equal', 'resource-layout-blocks')
-    }, {
-      value: '1',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('1', 'resource-layout-blocks')
-    }, {
-      value: '2',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('2', 'resource-layout-blocks')
-    }, {
-      value: '3',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('3', 'resource-layout-blocks')
-    }, {
-      value: '4',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('4', 'resource-layout-blocks')
-    }, {
-      value: '5',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('5', 'resource-layout-blocks')
-    }, {
-      value: '6',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('6', 'resource-layout-blocks')
-    }, {
-      value: '7',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('7', 'resource-layout-blocks')
-    }, {
-      value: '8',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('8', 'resource-layout-blocks')
-    }, {
-      value: '9',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('9', 'resource-layout-blocks')
-    }, {
-      value: '10',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('10', 'resource-layout-blocks')
-    }, {
-      value: '11',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('11', 'resource-layout-blocks')
-    }, {
-      value: '12',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('12', 'resource-layout-blocks')
-    }, {
-      value: 'auto',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('auto', 'resource-layout-blocks')
-    }],
-    onChange: setColumns
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Display', 'resource-layout-blocks'),
     value: display,
     options: [{
@@ -134,12 +89,67 @@ function ColumnsDisplay(_ref) {
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Inline Flex', 'resource-layout-blocks')
     }],
     onChange: setDisplay
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Offset', 'resource-layout-blocks'),
-    value: offset,
+  })))));
+}
+
+/***/ }),
+
+/***/ "./includes/block-editor/block-components/orderControl.js":
+/*!****************************************************************!*\
+  !*** ./includes/block-editor/block-components/orderControl.js ***!
+  \****************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ ColumnsDisplayControl; }
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+
+/**
+ * WordPress dependencies.
+ */
+
+
+
+/**
+ * DisplayControl.
+ * Component for controlling Display attributes.
+ *
+ * @param columns
+ * @param order
+ * @param setOrder
+ * @returns {JSX.Element}
+ * @constructor
+ */
+function ColumnsDisplayControl(_ref) {
+  let {
+    order,
+    setOrder
+  } = _ref;
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardHeader, {
+    isBorderless: true,
+    isShady: true,
+    size: "small"
+  }, "ORDER"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardBody, {
+    size: "small"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Flex, {
+    wrap: true
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Order', 'resource-layout-blocks'),
+    value: order,
     options: [{
       value: '',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select Value', 'resource-layout-blocks')
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select Option', 'resource-layout-blocks')
+    }, {
+      value: 'first',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('First', 'resource-layout-blocks')
     }, {
       value: '1',
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('1', 'resource-layout-blocks')
@@ -156,28 +166,177 @@ function ColumnsDisplay(_ref) {
       value: '5',
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('5', 'resource-layout-blocks')
     }, {
-      value: '6',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('6', 'resource-layout-blocks')
-    }, {
-      value: '7',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('7', 'resource-layout-blocks')
-    }, {
-      value: '8',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('8', 'resource-layout-blocks')
-    }, {
-      value: '9',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('9', 'resource-layout-blocks')
-    }, {
-      value: '10',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('10', 'resource-layout-blocks')
-    }, {
-      value: '11',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('11', 'resource-layout-blocks')
-    }, {
-      value: '12',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('12', 'resource-layout-blocks')
+      value: 'last',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Last', 'resource-layout-blocks')
     }],
-    onChange: setOffset
+    onChange: setOrder
+  })))));
+}
+
+/***/ }),
+
+/***/ "./includes/block-editor/block-components/paddingControl.js":
+/*!******************************************************************!*\
+  !*** ./includes/block-editor/block-components/paddingControl.js ***!
+  \******************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ PaddingControl; }
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+
+/**
+ * WordPress dependencies.
+ */
+
+
+
+/**
+ * DisplayControl.
+ * Component for controlling Display attributes.
+ *
+ * @param paddingTop
+ * @param paddingRight
+ * @param paddingBottom
+ * @param paddingLeft
+ * @param setPaddingTop
+ * @param setPaddingRight
+ * @param setPaddingBottom
+ * @param setPaddingLeft
+ * @returns {JSX.Element}
+ * @constructor
+ */
+function PaddingControl(_ref) {
+  let {
+    paddingTop,
+    paddingRight,
+    paddingBottom,
+    paddingLeft,
+    setPaddingTop,
+    setPaddingRight,
+    setPaddingBottom,
+    setPaddingLeft
+  } = _ref;
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardHeader, {
+    isBorderless: true,
+    isShady: true,
+    size: "small"
+  }, "PADDING"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardBody, {
+    size: "small"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Flex, {
+    wrap: true
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Top', 'resource-layout-blocks'),
+    value: paddingTop,
+    options: [{
+      value: '',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select Value', 'resource-layout-blocks')
+    }, {
+      value: '0',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('0', 'resource-layout-blocks')
+    }, {
+      value: '1',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('1', 'resource-layout-blocks')
+    }, {
+      value: '2',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('2', 'resource-layout-blocks')
+    }, {
+      value: '3',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('3', 'resource-layout-blocks')
+    }, {
+      value: '4',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('4', 'resource-layout-blocks')
+    }, {
+      value: '5',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('5', 'resource-layout-blocks')
+    }],
+    onChange: setPaddingTop
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Right', 'resource-layout-blocks'),
+    value: paddingRight,
+    options: [{
+      value: '',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select Value', 'resource-layout-blocks')
+    }, {
+      value: '0',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('0', 'resource-layout-blocks')
+    }, {
+      value: '1',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('1', 'resource-layout-blocks')
+    }, {
+      value: '2',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('2', 'resource-layout-blocks')
+    }, {
+      value: '3',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('3', 'resource-layout-blocks')
+    }, {
+      value: '4',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('4', 'resource-layout-blocks')
+    }, {
+      value: '5',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('5', 'resource-layout-blocks')
+    }],
+    onChange: setPaddingRight
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Bottom', 'resource-layout-blocks'),
+    value: paddingBottom,
+    options: [{
+      value: '',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select Value', 'resource-layout-blocks')
+    }, {
+      value: '0',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('0', 'resource-layout-blocks')
+    }, {
+      value: '1',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('1', 'resource-layout-blocks')
+    }, {
+      value: '2',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('2', 'resource-layout-blocks')
+    }, {
+      value: '3',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('3', 'resource-layout-blocks')
+    }, {
+      value: '4',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('4', 'resource-layout-blocks')
+    }, {
+      value: '5',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('5', 'resource-layout-blocks')
+    }],
+    onChange: setPaddingBottom
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Left', 'resource-layout-blocks'),
+    value: paddingLeft,
+    options: [{
+      value: '',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select Value', 'resource-layout-blocks')
+    }, {
+      value: '0',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('0', 'resource-layout-blocks')
+    }, {
+      value: '1',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('1', 'resource-layout-blocks')
+    }, {
+      value: '2',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('2', 'resource-layout-blocks')
+    }, {
+      value: '3',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('3', 'resource-layout-blocks')
+    }, {
+      value: '4',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('4', 'resource-layout-blocks')
+    }, {
+      value: '5',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('5', 'resource-layout-blocks')
+    }],
+    onChange: setPaddingLeft
   })))));
 }
 
@@ -205,7 +364,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./editor.scss */ "./includes/block-editor/blocks/container/editor.scss");
-/* harmony import */ var _columnsDisplay__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./columnsDisplay */ "./includes/block-editor/blocks/container/columnsDisplay.js");
+/* harmony import */ var _block_components_displayControl__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../block-components/displayControl */ "./includes/block-editor/block-components/displayControl.js");
+/* harmony import */ var _block_components_orderControl__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../../block-components/orderControl */ "./includes/block-editor/block-components/orderControl.js");
+/* harmony import */ var _block_components_paddingControl__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../block-components/paddingControl */ "./includes/block-editor/block-components/paddingControl.js");
 
 /**
  * External dependencies
@@ -231,6 +392,8 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
+
+
 /**
  * The Block edit function.
  *
@@ -246,21 +409,19 @@ function edit(_ref) {
     verticalAlignment,
     isFluid,
     tagName: TagName = 'div',
-    baseColumns,
     baseDisplay,
-    baseOffset,
     baseAlignItems,
     baseAlignSelf,
     baseJustifyContent,
     baseOrder,
+    basePaddingTop,
+    basePaddingRight,
+    basePaddingBottom,
+    basePaddingLeft,
     baseMarginTop,
     baseMarginBottom,
     baseMarginLeft,
     baseMarginRight,
-    basePaddingTop,
-    basePaddingBottom,
-    basePaddingLeft,
-    basePaddingRight,
     SmMarginTop,
     SmMarginBottom,
     SmMarginLeft,
@@ -400,141 +561,29 @@ function edit(_ref) {
       name: 'base',
       title: '—',
       className: 'breakpoint-tab',
-      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_columnsDisplay__WEBPACK_IMPORTED_MODULE_6__["default"], {
-        attributes: attributes,
-        columns: baseColumns,
+      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_displayControl__WEBPACK_IMPORTED_MODULE_6__["default"], {
         display: baseDisplay,
-        offset: baseOffset,
-        setColumns: baseColumns => setAttributes({
-          baseColumns
-        }),
         setDisplay: baseDisplay => setAttributes({
           baseDisplay
-        }),
-        setOffset: baseOffset => setAttributes({
-          baseOffset
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.CardHeader, {
-        isBorderless: true,
-        isShady: true,
-        size: "small"
-      }, "PADDING"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.CardBody, {
-        size: "small"
-      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Flex, {
-        wrap: true
-      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.SelectControl, {
-        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Top', 'resource-layout-blocks'),
-        value: basePaddingTop,
-        options: [{
-          value: '',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Select Value', 'resource-layout-blocks')
-        }, {
-          value: '0',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('0', 'resource-layout-blocks')
-        }, {
-          value: '1',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('1', 'resource-layout-blocks')
-        }, {
-          value: '2',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('2', 'resource-layout-blocks')
-        }, {
-          value: '3',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('3', 'resource-layout-blocks')
-        }, {
-          value: '4',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('4', 'resource-layout-blocks')
-        }, {
-          value: '5',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('5', 'resource-layout-blocks')
-        }],
-        onChange: basePaddingTop => setAttributes({
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_paddingControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        paddingTop: basePaddingTop,
+        paddingRight: basePaddingRight,
+        paddingBottom: basePaddingBottom,
+        paddingLeft: basePaddingLeft,
+        setPaddingTop: basePaddingTop => setAttributes({
           basePaddingTop
-        })
-      })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.SelectControl, {
-        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Right', 'resource-layout-blocks'),
-        value: basePaddingRight,
-        options: [{
-          value: '',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Select Value', 'resource-layout-blocks')
-        }, {
-          value: '0',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('0', 'resource-layout-blocks')
-        }, {
-          value: '1',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('1', 'resource-layout-blocks')
-        }, {
-          value: '2',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('2', 'resource-layout-blocks')
-        }, {
-          value: '3',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('3', 'resource-layout-blocks')
-        }, {
-          value: '4',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('4', 'resource-layout-blocks')
-        }, {
-          value: '5',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('5', 'resource-layout-blocks')
-        }],
-        onChange: basePaddingRight => setAttributes({
+        }),
+        setPaddingRight: basePaddingRight => setAttributes({
           basePaddingRight
-        })
-      })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.SelectControl, {
-        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Bottom', 'resource-layout-blocks'),
-        value: basePaddingBottom,
-        options: [{
-          value: '',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Select Value', 'resource-layout-blocks')
-        }, {
-          value: '0',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('0', 'resource-layout-blocks')
-        }, {
-          value: '1',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('1', 'resource-layout-blocks')
-        }, {
-          value: '2',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('2', 'resource-layout-blocks')
-        }, {
-          value: '3',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('3', 'resource-layout-blocks')
-        }, {
-          value: '4',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('4', 'resource-layout-blocks')
-        }, {
-          value: '5',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('5', 'resource-layout-blocks')
-        }],
-        onChange: basePaddingBottom => setAttributes({
+        }),
+        setPaddingBottom: basePaddingBottom => setAttributes({
           basePaddingBottom
-        })
-      })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.SelectControl, {
-        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Left', 'resource-layout-blocks'),
-        value: basePaddingLeft,
-        options: [{
-          value: '',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Select Value', 'resource-layout-blocks')
-        }, {
-          value: '0',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('0', 'resource-layout-blocks')
-        }, {
-          value: '1',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('1', 'resource-layout-blocks')
-        }, {
-          value: '2',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('2', 'resource-layout-blocks')
-        }, {
-          value: '3',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('3', 'resource-layout-blocks')
-        }, {
-          value: '4',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('4', 'resource-layout-blocks')
-        }, {
-          value: '5',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('5', 'resource-layout-blocks')
-        }],
-        onChange: basePaddingLeft => setAttributes({
+        }),
+        setPaddingLeft: basePaddingLeft => setAttributes({
           basePaddingLeft
         })
-      })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.CardHeader, {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.CardHeader, {
         isBorderless: true,
         isShady: true,
         size: "small"
@@ -740,46 +789,12 @@ function edit(_ref) {
         onChange: baseJustifyContent => setAttributes({
           baseJustifyContent
         })
-      })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.CardHeader, {
-        isBorderless: true,
-        isShady: true,
-        size: "small"
-      }, "ORDER"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.CardBody, {
-        size: "small"
-      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Flex, {
-        wrap: true
-      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.SelectControl, {
-        label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Order', 'resource-layout-blocks'),
-        value: baseOrder,
-        options: [{
-          value: '',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Select Option', 'resource-layout-blocks')
-        }, {
-          value: 'first',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('First', 'resource-layout-blocks')
-        }, {
-          value: '1',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('1', 'resource-layout-blocks')
-        }, {
-          value: '2',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('2', 'resource-layout-blocks')
-        }, {
-          value: '3',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('3', 'resource-layout-blocks')
-        }, {
-          value: '4',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('4', 'resource-layout-blocks')
-        }, {
-          value: '5',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('5', 'resource-layout-blocks')
-        }, {
-          value: 'last',
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Last', 'resource-layout-blocks')
-        }],
-        onChange: baseOrder => setAttributes({
+      })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_orderControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        order: baseOrder,
+        setOrder: baseOrder => setAttributes({
           baseOrder
         })
-      })))))
+      }))
     }, {
       name: 'small',
       title: 'SM',
@@ -2477,7 +2492,7 @@ module.exports = window["wp"]["i18n"];
 /***/ (function(module) {
 
 "use strict";
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"resource-layout-blocks/container","title":"Container","category":"resource-layout-blocks","description":"A container/wrapper; fluid or fixed.","keywords":["container","wrapper"],"version":"1.0.0","textdomain":"resource","render":"file:./index.php","attributes":{"anchor":{"type":"string"},"isFluid":{"type":"boolean","default":true},"tagName":{"type":"string","default":"div"},"verticalAlignment":{"type":"string"},"baseColumns":{"type":"string"},"baseDisplay":{"type":"string"},"baseOffset":{"type":"string"},"baseAlignItems":{"type":"string"},"baseAlignSelf":{"type":"string"},"baseJustifyContent":{"type":"string"}},"supports":{"anchor":true,"align":true,"alignWide":false,"ariaLabel":true,"className":true,"color":{"background":true,"gradients":false,"link":false,"text":false},"customClassName":true,"defaultStylePicker":true,"dimensions":{"minHeight":false},"filter":{"duotone":false},"html":true,"inserter":true,"multiple":true,"reusable":true,"lock":true,"position":{"sticky":true},"spacing":{"margin":true,"padding":true,"blockGap":true},"typography":{"fontSize":false,"lineHeight":false}},"editorScript":"file:../../../../build/container.js","editorStyle":"file:../../../../build/container.css","style":"file:../../../../build/style-container.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"resource-layout-blocks/container","title":"Container","category":"resource-layout-blocks","description":"A container/wrapper; fluid or fixed.","keywords":["container","wrapper"],"version":"1.0.0","textdomain":"resource","render":"file:./index.php","attributes":{"anchor":{"type":"string"},"isFluid":{"type":"boolean","default":true},"tagName":{"type":"string","default":"div"},"verticalAlignment":{"type":"string"},"baseDisplay":{"type":"string"},"baseAlignItems":{"type":"string"},"baseAlignSelf":{"type":"string"},"baseJustifyContent":{"type":"string"},"baseOrder":{"type":"string"},"basePaddingTop":{"type":"string"},"basePaddingRight":{"type":"string"},"basePaddingBottom":{"type":"string"},"basePaddingLeft":{"type":"string"}},"supports":{"anchor":true,"align":true,"alignWide":false,"ariaLabel":true,"className":true,"color":{"background":true,"gradients":false,"link":false,"text":false},"customClassName":true,"defaultStylePicker":true,"dimensions":{"minHeight":false},"filter":{"duotone":false},"html":true,"inserter":true,"multiple":true,"reusable":true,"lock":true,"position":{"sticky":true},"spacing":{"margin":true,"padding":true,"blockGap":true},"typography":{"fontSize":false,"lineHeight":false}},"editorScript":"file:../../../../build/container.js","editorStyle":"file:../../../../build/container.css","style":"file:../../../../build/style-container.css"}');
 
 /***/ })
 

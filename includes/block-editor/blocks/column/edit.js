@@ -39,8 +39,6 @@ import './editor.scss';
  * Custom components.
  */
 import DisplayControl from './../../block-components/displayControl';
-import OrderControl from './../../block-components/orderControl';
-import PaddingControl from './../../block-components/paddingControl';
 
 /**
  * The Block edit function.
@@ -58,19 +56,21 @@ export default function
 		verticalAlignment,
 		isFluid,
 		tagName: TagName = 'div',
+		baseColumns,
 		baseDisplay,
+		baseOffset,
 		baseAlignItems,
 		baseAlignSelf,
 		baseJustifyContent,
 		baseOrder,
-		basePaddingTop,
-		basePaddingRight,
-		basePaddingBottom,
-		basePaddingLeft,
 		baseMarginTop,
 		baseMarginBottom,
 		baseMarginLeft,
 		baseMarginRight,
+		basePaddingTop,
+		basePaddingBottom,
+		basePaddingLeft,
+		basePaddingRight,
 		SmMarginTop,
 		SmMarginBottom,
 		SmMarginLeft,
@@ -228,16 +228,71 @@ export default function
 										display={baseDisplay}
 										setDisplay={baseDisplay => setAttributes({baseDisplay})}
 									></DisplayControl>
-									<PaddingControl
-										paddingTop={basePaddingTop}
-										paddingRight={basePaddingRight}
-										paddingBottom={basePaddingBottom}
-										paddingLeft={basePaddingLeft}
-										setPaddingTop={basePaddingTop => setAttributes({basePaddingTop})}
-										setPaddingRight={basePaddingRight => setAttributes({basePaddingRight})}
-										setPaddingBottom={basePaddingBottom => setAttributes({basePaddingBottom})}
-										setPaddingLeft={basePaddingLeft => setAttributes({basePaddingLeft})}
-									></PaddingControl>
+									<CardHeader isBorderless={true} isShady={true} size='small'>PADDING</CardHeader>
+									<CardBody size='small'>
+										<Flex wrap={true}>
+											<FlexItem>
+												<SelectControl label={__('Top', 'resource-layout-blocks')}
+																			 value={basePaddingTop}
+																			 options={[
+																				 {value: '', label: __('Select Value', 'resource-layout-blocks')},
+																				 {value: '0', label: __('0', 'resource-layout-blocks')},
+																				 {value: '1', label: __('1', 'resource-layout-blocks')},
+																				 {value: '2', label: __('2', 'resource-layout-blocks')},
+																				 {value: '3', label: __('3', 'resource-layout-blocks')},
+																				 {value: '4', label: __('4', 'resource-layout-blocks')},
+																				 {value: '5', label: __('5', 'resource-layout-blocks')},
+																			 ]}
+																			 onChange={basePaddingTop => setAttributes({basePaddingTop})}
+												/>
+											</FlexItem>
+											<FlexItem>
+												<SelectControl label={__('Right', 'resource-layout-blocks')}
+																			 value={basePaddingRight}
+																			 options={[
+																				 {value: '', label: __('Select Value', 'resource-layout-blocks')},
+																				 {value: '0', label: __('0', 'resource-layout-blocks')},
+																				 {value: '1', label: __('1', 'resource-layout-blocks')},
+																				 {value: '2', label: __('2', 'resource-layout-blocks')},
+																				 {value: '3', label: __('3', 'resource-layout-blocks')},
+																				 {value: '4', label: __('4', 'resource-layout-blocks')},
+																				 {value: '5', label: __('5', 'resource-layout-blocks')},
+																			 ]}
+																			 onChange={basePaddingRight => setAttributes({basePaddingRight})}
+												/>
+											</FlexItem>
+											<FlexItem>
+												<SelectControl label={__('Bottom', 'resource-layout-blocks')}
+																			 value={basePaddingBottom}
+																			 options={[
+																				 {value: '', label: __('Select Value', 'resource-layout-blocks')},
+																				 {value: '0', label: __('0', 'resource-layout-blocks')},
+																				 {value: '1', label: __('1', 'resource-layout-blocks')},
+																				 {value: '2', label: __('2', 'resource-layout-blocks')},
+																				 {value: '3', label: __('3', 'resource-layout-blocks')},
+																				 {value: '4', label: __('4', 'resource-layout-blocks')},
+																				 {value: '5', label: __('5', 'resource-layout-blocks')},
+																			 ]}
+																			 onChange={basePaddingBottom => setAttributes({basePaddingBottom})}
+												/>
+											</FlexItem>
+											<FlexItem>
+												<SelectControl label={__('Left', 'resource-layout-blocks')}
+																			 value={basePaddingLeft}
+																			 options={[
+																				 {value: '', label: __('Select Value', 'resource-layout-blocks')},
+																				 {value: '0', label: __('0', 'resource-layout-blocks')},
+																				 {value: '1', label: __('1', 'resource-layout-blocks')},
+																				 {value: '2', label: __('2', 'resource-layout-blocks')},
+																				 {value: '3', label: __('3', 'resource-layout-blocks')},
+																				 {value: '4', label: __('4', 'resource-layout-blocks')},
+																				 {value: '5', label: __('5', 'resource-layout-blocks')},
+																			 ]}
+																			 onChange={basePaddingLeft => setAttributes({basePaddingLeft})}
+												/>
+											</FlexItem>
+										</Flex>
+									</CardBody>
 									<CardHeader isBorderless={true} isShady={true} size='small'>MARGIN</CardHeader>
 									<CardBody size='small'>
 										<Flex wrap={true}>
@@ -351,10 +406,27 @@ export default function
 											</FlexItem>
 										</Flex>
 									</CardBody>
-									<OrderControl
-										order={baseOrder}
-										setOrder={baseOrder => setAttributes({baseOrder})}
-									></OrderControl>
+									<CardHeader isBorderless={true} isShady={true} size='small'>ORDER</CardHeader>
+									<CardBody size='small'>
+										<Flex wrap={true}>
+											<FlexItem>
+												<SelectControl label={__('Order', 'resource-layout-blocks')}
+																			 value={baseOrder}
+																			 options={[
+																				 {value: '', label: __('Select Option', 'resource-layout-blocks')},
+																				 {value: 'first', label: __('First', 'resource-layout-blocks')},
+																				 {value: '1', label: __('1', 'resource-layout-blocks')},
+																				 {value: '2', label: __('2', 'resource-layout-blocks')},
+																				 {value: '3', label: __('3', 'resource-layout-blocks')},
+																				 {value: '4', label: __('4', 'resource-layout-blocks')},
+																				 {value: '5', label: __('5', 'resource-layout-blocks')},
+																				 {value: 'last', label: __('Last', 'resource-layout-blocks')},
+																			 ]}
+																			 onChange={baseOrder => setAttributes({baseOrder})}
+												/>
+											</FlexItem>
+										</Flex>
+									</CardBody>
 								</Card>,
 						},
 						{
