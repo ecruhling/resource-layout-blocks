@@ -1,21 +1,17 @@
 <div id="top"></div>
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![Contributors][contributors-shield]][contributors-url][![Forks][forks-shield]][forks-url][![Stargazers][stars-shield]][stars-url][![Issues][issues-shield]][issues-url][![MIT License][license-shield]][license-url][![LinkedIn][linkedin-shield]][linkedin-url]
 
 <br />
 <div align="center">
   <a href="https://github.com/ecruhling/resource-layout-blocks">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="assets/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Resource Branding layout blocks for WordPress</h3>
 
   <p align="center">
-    project_description
+    Custom layout blocks for the WordPress block editor. Container, Row, and Column. Uses CSS and utility classes from
+Twitter Bootstrap 5.
     <br />
     <a href="https://github.com/ecruhling/resource-layout-blocks"><strong>Explore the docs »</strong></a>
     <br />
@@ -165,28 +161,28 @@ Project Link: [https://github.com/ecruhling/resource-layout-blocks](https://gith
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/ecruhling/resource-layout-blocks.svg
 
 [contributors-url]: https://github.com/ecruhling/resource-layout-blocks/graphs/contributors
 
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/ecruhling/resource-layout-blocks.svg
 
 [forks-url]: https://github.com/ecruhling/resource-layout-blocks/network/members
 
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/ecruhling/resource-layout-blocks.svg
 
 [stars-url]: https://github.com/ecruhling/resource-layout-blocks/stargazers
 
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/ecruhling/resource-layout-blocks.svg
 
 [issues-url]: https://github.com/ecruhling/resource-layout-blocks/issues
 
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/ecruhling/resource-layout-blocks.svg
 
 [license-url]: https://github.com/ecruhling/resource-layout-blocks/blob/master/LICENSE.txt
 
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg
 
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://linkedin.com/in/erik-r%C3%BChling-1a452138
 
 [product-screenshot]: images/screenshot.png
