@@ -1,5 +1,7 @@
 <div id="top"></div>
 
+<div align="center">
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -7,17 +9,21 @@
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
+</div>
+
 <br />
 <div align="center">
   <a href="https://github.com/ecruhling/resource-layout-blocks">
     <img src="assets/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Resource Branding layout blocks for WordPress</h3>
+<h3 align="center">Resource Branding
+Layout blocks for WordPress</h3>
 
   <p align="center">
-    Custom layout blocks for the WordPress block editor. Container, Row, and Column. Uses CSS and utility classes from
-Twitter Bootstrap 5.
+    Custom layout blocks for the WordPress block editor.
+Container, Row, and Column.
+Uses CSS and utility classes from Twitter Bootstrap 5.
     <br />
     <a href="https://github.com/ecruhling/resource-layout-blocks"><strong>Explore the docs »</strong></a>
     <br />
