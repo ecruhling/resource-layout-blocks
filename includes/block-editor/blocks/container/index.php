@@ -28,8 +28,8 @@ switch ( $align ) {
 $attribute_classes = implode(
 	' ',
 	array(
-		$attributes['isFluid'] ? 'container-fluid' : 'container',
 		$align_class,
+		$attributes['isFluid'] ? 'container-fluid' : 'container',
 		$attributes['baseDisplay'] ?? '',
 		$attributes['basePaddingTop'] ?? '',
 		$attributes['basePaddingRight'] ?? '',
@@ -78,13 +78,35 @@ $attribute_classes = implode(
 		$attributes['lgAlignItems'] ?? '',
 		$attributes['lgAlignSelf'] ?? '',
 		$attributes['lgJustifyContent'] ?? '',
+		$attributes['xlDisplay'] ?? '',
+		$attributes['xlPaddingTop'] ?? '',
+		$attributes['xlPaddingRight'] ?? '',
+		$attributes['xlPaddingBottom'] ?? '',
+		$attributes['xlPaddingLeft'] ?? '',
+		$attributes['xlMarginTop'] ?? '',
+		$attributes['xlMarginRight'] ?? '',
+		$attributes['xlMarginBottom'] ?? '',
+		$attributes['xlMarginLeft'] ?? '',
+		$attributes['xlAlignItems'] ?? '',
+		$attributes['xlAlignSelf'] ?? '',
+		$attributes['xlJustifyContent'] ?? '',
+		$attributes['xxlDisplay'] ?? '',
+		$attributes['xxlPaddingTop'] ?? '',
+		$attributes['xxlPaddingRight'] ?? '',
+		$attributes['xxlPaddingBottom'] ?? '',
+		$attributes['xxlPaddingLeft'] ?? '',
+		$attributes['xxlMarginTop'] ?? '',
+		$attributes['xxlMarginRight'] ?? '',
+		$attributes['xxlMarginBottom'] ?? '',
+		$attributes['xxlMarginLeft'] ?? '',
+		$attributes['xxlAlignItems'] ?? '',
+		$attributes['xxlAlignSelf'] ?? '',
+		$attributes['xxlJustifyContent'] ?? '',
 	)
 );
 
 $wrapper_attributes = get_block_wrapper_attributes( array( 'class' => preg_replace( '/\s+/', ' ', $attribute_classes ) ) );
 ?>
-
-<pre><?php echo var_dump( $attributes ); ?></pre>
 
 <<?php echo esc_attr( $attributes['tagName'] ); ?> <?php echo wp_kses_data( $wrapper_attributes ); ?> id="<?php echo esc_attr( $attributes['anchor'] ); ?>" data-type="<?php echo esc_attr( $block->name ?? '' ); ?>">
 <?php echo $content; // phpcs:ignore ?>

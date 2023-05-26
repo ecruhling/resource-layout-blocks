@@ -11,14 +11,10 @@ import {
 	InnerBlocks,
 	InspectorControls,
 	useBlockProps,
-	BlockControls,
 } from '@wordpress/block-editor';
 import {
 	CheckboxControl,
-	PanelBody,
 	SelectControl,
-	PanelRow,
-	RangeControl,
 	TabPanel,
 	CardBody,
 	Card,
@@ -35,7 +31,7 @@ import {
 import './editor.scss';
 
 /**
- * Custom components.
+ * Control components.
  */
 import DisplayControl from './../../block-components/displayControl';
 import PaddingControl from './../../block-components/paddingControl';
@@ -106,32 +102,30 @@ export default function
 		lgAlignItems,
 		lgAlignSelf,
 		lgJustifyContent,
-		XlMarginTop,
-		XlMarginBottom,
-		XlMarginLeft,
-		XlMarginRight,
-		XlPaddingTop,
-		XlPaddingBottom,
-		XlPaddingLeft,
-		XlPaddingRight,
-		XlDisplay,
-		XlCol,
-		XlOffset,
-		XlFlexBasis,
-		XlAlignSelf,
-		XxlMarginTop,
-		XxlMarginBottom,
-		XxlMarginLeft,
-		XxlMarginRight,
-		XxlPaddingTop,
-		XxlPaddingBottom,
-		XxlPaddingLeft,
-		XxlPaddingRight,
-		XxlDisplay,
-		XxlCol,
-		XxlOffset,
-		XxlFlexBasis,
-		XxlAlignSelf,
+		xlDisplay,
+		xlPaddingTop,
+		xlPaddingRight,
+		xlPaddingBottom,
+		xlPaddingLeft,
+		xlMarginTop,
+		xlMarginRight,
+		xlMarginBottom,
+		xlMarginLeft,
+		xlAlignItems,
+		xlAlignSelf,
+		xlJustifyContent,
+		xxlDisplay,
+		xxlPaddingTop,
+		xxlPaddingRight,
+		xxlPaddingBottom,
+		xxlPaddingLeft,
+		xxlMarginTop,
+		xxlMarginRight,
+		xxlMarginBottom,
+		xxlMarginLeft,
+		xxlAlignItems,
+		xxlAlignSelf,
+		xxlJustifyContent,
 	} = attributes;
 
 	const classes = classnames(
@@ -184,6 +178,30 @@ export default function
 		lgAlignItems,
 		lgAlignSelf,
 		lgJustifyContent,
+		xlDisplay,
+		xlPaddingTop,
+		xlPaddingRight,
+		xlPaddingBottom,
+		xlPaddingLeft,
+		xlMarginTop,
+		xlMarginRight,
+		xlMarginBottom,
+		xlMarginLeft,
+		xlAlignItems,
+		xlAlignSelf,
+		xlJustifyContent,
+		xxlDisplay,
+		xxlPaddingTop,
+		xxlPaddingRight,
+		xxlPaddingBottom,
+		xxlPaddingLeft,
+		xxlMarginTop,
+		xxlMarginRight,
+		xxlMarginBottom,
+		xxlMarginLeft,
+		xxlAlignItems,
+		xxlAlignSelf,
+		xxlJustifyContent,
 		{
 			'container': !isFluid,
 			'container-fluid': isFluid,
@@ -216,8 +234,6 @@ export default function
 
 	return (
 		<>
-			<BlockControls>
-			</BlockControls>
 			<InspectorControls>
 				<Card>
 					<CardHeader isBorderless={true} isShady={true}
@@ -439,13 +455,89 @@ export default function
 							name: 'extra-large',
 							title: 'XL',
 							className: 'breakpoint-tab',
-							content: <p>Extra Large Tab</p>,
+							content:
+								<Card>
+									<DisplayControl
+										breakpoint='xl-'
+										display={xlDisplay}
+										setDisplay={xlDisplay => setAttributes({xlDisplay})}
+									></DisplayControl>
+									<PaddingControl
+										breakpoint='xl-'
+										paddingTop={xlPaddingTop}
+										paddingRight={xlPaddingRight}
+										paddingBottom={xlPaddingBottom}
+										paddingLeft={xlPaddingLeft}
+										setPaddingTop={xlPaddingTop => setAttributes({xlPaddingTop})}
+										setPaddingRight={xlPaddingRight => setAttributes({xlPaddingRight})}
+										setPaddingBottom={xlPaddingBottom => setAttributes({xlPaddingBottom})}
+										setPaddingLeft={xlPaddingLeft => setAttributes({xlPaddingLeft})}
+									></PaddingControl>
+									<MarginControl
+										breakpoint='xl-'
+										marginTop={xlMarginTop}
+										marginRight={xlMarginRight}
+										marginBottom={xlMarginBottom}
+										marginLeft={xlMarginLeft}
+										setMarginTop={xlMarginTop => setAttributes({xlMarginTop})}
+										setMarginRight={xlMarginRight => setAttributes({xlMarginRight})}
+										setMarginBottom={xlMarginBottom => setAttributes({xlMarginBottom})}
+										setMarginLeft={xlMarginLeft => setAttributes({xlMarginLeft})}
+									></MarginControl>
+									<AlignJustifyControl
+										breakpoint='xl-'
+										alignItems={xlAlignItems}
+										alignSelf={xlAlignSelf}
+										justifyContent={xlJustifyContent}
+										setAlignItems={xlAlignItems => setAttributes({xlAlignItems})}
+										setAlignSelf={xlAlignSelf => setAttributes({xlAlignSelf})}
+										setJustifyContent={xlJustifyContent => setAttributes({xlJustifyContent})}
+									></AlignJustifyControl>
+								</Card>,
 						},
 						{
 							name: 'extra-extra-large',
 							title: 'XXL',
 							className: 'breakpoint-tab',
-							content: <p>Extra Extra Large Tab</p>,
+							content:
+								<Card>
+									<DisplayControl
+										breakpoint='xxl-'
+										display={xxlDisplay}
+										setDisplay={xxlDisplay => setAttributes({xxlDisplay})}
+									></DisplayControl>
+									<PaddingControl
+										breakpoint='xxl-'
+										paddingTop={xxlPaddingTop}
+										paddingRight={xxlPaddingRight}
+										paddingBottom={xxlPaddingBottom}
+										paddingLeft={xxlPaddingLeft}
+										setPaddingTop={xxlPaddingTop => setAttributes({xxlPaddingTop})}
+										setPaddingRight={xxlPaddingRight => setAttributes({xxlPaddingRight})}
+										setPaddingBottom={xxlPaddingBottom => setAttributes({xxlPaddingBottom})}
+										setPaddingLeft={xxlPaddingLeft => setAttributes({xxlPaddingLeft})}
+									></PaddingControl>
+									<MarginControl
+										breakpoint='xxl-'
+										marginTop={xxlMarginTop}
+										marginRight={xxlMarginRight}
+										marginBottom={xxlMarginBottom}
+										marginLeft={xxlMarginLeft}
+										setMarginTop={xxlMarginTop => setAttributes({xxlMarginTop})}
+										setMarginRight={xxlMarginRight => setAttributes({xxlMarginRight})}
+										setMarginBottom={xxlMarginBottom => setAttributes({xxlMarginBottom})}
+										setMarginLeft={xxlMarginLeft => setAttributes({xxlMarginLeft})}
+									></MarginControl>
+									<AlignJustifyControl
+										breakpoint='xxl-'
+										alignItems={xxlAlignItems}
+										alignSelf={xxlAlignSelf}
+										justifyContent={xxlJustifyContent}
+										setAlignItems={xxlAlignItems => setAttributes({xxlAlignItems})}
+										setAlignSelf={xxlAlignSelf => setAttributes({xxlAlignSelf})}
+										setJustifyContent={xxlJustifyContent => setAttributes({xxlJustifyContent})}
+									></AlignJustifyControl>
+								</Card>,
 						},
 					]}
 				>

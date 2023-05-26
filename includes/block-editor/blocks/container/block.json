@@ -167,6 +167,78 @@
 		},
 		"lgJustifyContent": {
 			"type": "string"
+		},
+		"xlDisplay": {
+			"type": "string"
+		},
+		"xlPaddingTop": {
+			"type": "string"
+		},
+		"xlPaddingRight": {
+			"type": "string"
+		},
+		"xlPaddingBottom": {
+			"type": "string"
+		},
+		"xlPaddingLeft": {
+			"type": "string"
+		},
+		"xlMarginTop": {
+			"type": "string"
+		},
+		"xlMarginRight": {
+			"type": "string"
+		},
+		"xlMarginBottom": {
+			"type": "string"
+		},
+		"xlMarginLeft": {
+			"type": "string"
+		},
+		"xlAlignItems": {
+			"type": "string"
+		},
+		"xlAlignSelf": {
+			"type": "string"
+		},
+		"xlJustifyContent": {
+			"type": "string"
+		},
+		"xxlDisplay": {
+			"type": "string"
+		},
+		"xxlPaddingTop": {
+			"type": "string"
+		},
+		"xxlPaddingRight": {
+			"type": "string"
+		},
+		"xxlPaddingBottom": {
+			"type": "string"
+		},
+		"xxlPaddingLeft": {
+			"type": "string"
+		},
+		"xxlMarginTop": {
+			"type": "string"
+		},
+		"xxlMarginRight": {
+			"type": "string"
+		},
+		"xxlMarginBottom": {
+			"type": "string"
+		},
+		"xxlMarginLeft": {
+			"type": "string"
+		},
+		"xxlAlignItems": {
+			"type": "string"
+		},
+		"xxlAlignSelf": {
+			"type": "string"
+		},
+		"xxlJustifyContent": {
+			"type": "string"
 		}
 	},
 	"supports": {

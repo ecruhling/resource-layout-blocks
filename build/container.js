@@ -613,7 +613,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * Custom components.
+ * Control components.
  */
 
 
@@ -683,34 +683,32 @@ function edit(_ref) {
     lgAlignItems,
     lgAlignSelf,
     lgJustifyContent,
-    XlMarginTop,
-    XlMarginBottom,
-    XlMarginLeft,
-    XlMarginRight,
-    XlPaddingTop,
-    XlPaddingBottom,
-    XlPaddingLeft,
-    XlPaddingRight,
-    XlDisplay,
-    XlCol,
-    XlOffset,
-    XlFlexBasis,
-    XlAlignSelf,
-    XxlMarginTop,
-    XxlMarginBottom,
-    XxlMarginLeft,
-    XxlMarginRight,
-    XxlPaddingTop,
-    XxlPaddingBottom,
-    XxlPaddingLeft,
-    XxlPaddingRight,
-    XxlDisplay,
-    XxlCol,
-    XxlOffset,
-    XxlFlexBasis,
-    XxlAlignSelf
+    xlDisplay,
+    xlPaddingTop,
+    xlPaddingRight,
+    xlPaddingBottom,
+    xlPaddingLeft,
+    xlMarginTop,
+    xlMarginRight,
+    xlMarginBottom,
+    xlMarginLeft,
+    xlAlignItems,
+    xlAlignSelf,
+    xlJustifyContent,
+    xxlDisplay,
+    xxlPaddingTop,
+    xxlPaddingRight,
+    xxlPaddingBottom,
+    xxlPaddingLeft,
+    xxlMarginTop,
+    xxlMarginRight,
+    xxlMarginBottom,
+    xxlMarginLeft,
+    xxlAlignItems,
+    xxlAlignSelf,
+    xxlJustifyContent
   } = attributes;
-  const classes = classnames__WEBPACK_IMPORTED_MODULE_1___default()(className, baseDisplay, basePaddingTop, basePaddingRight, basePaddingBottom, basePaddingLeft, baseMarginTop, baseMarginRight, baseMarginBottom, baseMarginLeft, baseAlignItems, baseAlignSelf, baseJustifyContent, smDisplay, smPaddingTop, smPaddingRight, smPaddingBottom, smPaddingLeft, smMarginTop, smMarginRight, smMarginBottom, smMarginLeft, smAlignItems, smAlignSelf, smJustifyContent, mdDisplay, mdPaddingTop, mdPaddingRight, mdPaddingBottom, mdPaddingLeft, mdMarginTop, mdMarginRight, mdMarginBottom, mdMarginLeft, mdAlignItems, mdAlignSelf, mdJustifyContent, lgDisplay, lgPaddingTop, lgPaddingRight, lgPaddingBottom, lgPaddingLeft, lgMarginTop, lgMarginRight, lgMarginBottom, lgMarginLeft, lgAlignItems, lgAlignSelf, lgJustifyContent, {
+  const classes = classnames__WEBPACK_IMPORTED_MODULE_1___default()(className, baseDisplay, basePaddingTop, basePaddingRight, basePaddingBottom, basePaddingLeft, baseMarginTop, baseMarginRight, baseMarginBottom, baseMarginLeft, baseAlignItems, baseAlignSelf, baseJustifyContent, smDisplay, smPaddingTop, smPaddingRight, smPaddingBottom, smPaddingLeft, smMarginTop, smMarginRight, smMarginBottom, smMarginLeft, smAlignItems, smAlignSelf, smJustifyContent, mdDisplay, mdPaddingTop, mdPaddingRight, mdPaddingBottom, mdPaddingLeft, mdMarginTop, mdMarginRight, mdMarginBottom, mdMarginLeft, mdAlignItems, mdAlignSelf, mdJustifyContent, lgDisplay, lgPaddingTop, lgPaddingRight, lgPaddingBottom, lgPaddingLeft, lgMarginTop, lgMarginRight, lgMarginBottom, lgMarginLeft, lgAlignItems, lgAlignSelf, lgJustifyContent, xlDisplay, xlPaddingTop, xlPaddingRight, xlPaddingBottom, xlPaddingLeft, xlMarginTop, xlMarginRight, xlMarginBottom, xlMarginLeft, xlAlignItems, xlAlignSelf, xlJustifyContent, xxlDisplay, xxlPaddingTop, xxlPaddingRight, xxlPaddingBottom, xxlPaddingLeft, xxlMarginTop, xxlMarginRight, xxlMarginBottom, xxlMarginLeft, xxlAlignItems, xxlAlignSelf, xxlJustifyContent, {
     'container': !isFluid,
     'container-fluid': isFluid
   });
@@ -725,7 +723,7 @@ function edit(_ref) {
     aside: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('The <aside> element should represent a portion of a document whose content is only indirectly related to the document\'s main content.'),
     footer: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('The <footer> element should represent a footer for its nearest sectioning element (e.g.: <section>, <article>, <main> etc.).')
   };
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.BlockControls, null), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.CardHeader, {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.CardHeader, {
     isBorderless: true,
     isShady: true,
     size: "small"
@@ -1021,12 +1019,124 @@ function edit(_ref) {
       name: 'extra-large',
       title: 'XL',
       className: 'breakpoint-tab',
-      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "Extra Large Tab")
+      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_displayControl__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        breakpoint: "xl-",
+        display: xlDisplay,
+        setDisplay: xlDisplay => setAttributes({
+          xlDisplay
+        })
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_paddingControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        breakpoint: "xl-",
+        paddingTop: xlPaddingTop,
+        paddingRight: xlPaddingRight,
+        paddingBottom: xlPaddingBottom,
+        paddingLeft: xlPaddingLeft,
+        setPaddingTop: xlPaddingTop => setAttributes({
+          xlPaddingTop
+        }),
+        setPaddingRight: xlPaddingRight => setAttributes({
+          xlPaddingRight
+        }),
+        setPaddingBottom: xlPaddingBottom => setAttributes({
+          xlPaddingBottom
+        }),
+        setPaddingLeft: xlPaddingLeft => setAttributes({
+          xlPaddingLeft
+        })
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_marginControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        breakpoint: "xl-",
+        marginTop: xlMarginTop,
+        marginRight: xlMarginRight,
+        marginBottom: xlMarginBottom,
+        marginLeft: xlMarginLeft,
+        setMarginTop: xlMarginTop => setAttributes({
+          xlMarginTop
+        }),
+        setMarginRight: xlMarginRight => setAttributes({
+          xlMarginRight
+        }),
+        setMarginBottom: xlMarginBottom => setAttributes({
+          xlMarginBottom
+        }),
+        setMarginLeft: xlMarginLeft => setAttributes({
+          xlMarginLeft
+        })
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_alignJustifyControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        breakpoint: "xl-",
+        alignItems: xlAlignItems,
+        alignSelf: xlAlignSelf,
+        justifyContent: xlJustifyContent,
+        setAlignItems: xlAlignItems => setAttributes({
+          xlAlignItems
+        }),
+        setAlignSelf: xlAlignSelf => setAttributes({
+          xlAlignSelf
+        }),
+        setJustifyContent: xlJustifyContent => setAttributes({
+          xlJustifyContent
+        })
+      }))
     }, {
       name: 'extra-extra-large',
       title: 'XXL',
       className: 'breakpoint-tab',
-      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "Extra Extra Large Tab")
+      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_displayControl__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        breakpoint: "xxl-",
+        display: xxlDisplay,
+        setDisplay: xxlDisplay => setAttributes({
+          xxlDisplay
+        })
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_paddingControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        breakpoint: "xxl-",
+        paddingTop: xxlPaddingTop,
+        paddingRight: xxlPaddingRight,
+        paddingBottom: xxlPaddingBottom,
+        paddingLeft: xxlPaddingLeft,
+        setPaddingTop: xxlPaddingTop => setAttributes({
+          xxlPaddingTop
+        }),
+        setPaddingRight: xxlPaddingRight => setAttributes({
+          xxlPaddingRight
+        }),
+        setPaddingBottom: xxlPaddingBottom => setAttributes({
+          xxlPaddingBottom
+        }),
+        setPaddingLeft: xxlPaddingLeft => setAttributes({
+          xxlPaddingLeft
+        })
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_marginControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        breakpoint: "xxl-",
+        marginTop: xxlMarginTop,
+        marginRight: xxlMarginRight,
+        marginBottom: xxlMarginBottom,
+        marginLeft: xxlMarginLeft,
+        setMarginTop: xxlMarginTop => setAttributes({
+          xxlMarginTop
+        }),
+        setMarginRight: xxlMarginRight => setAttributes({
+          xxlMarginRight
+        }),
+        setMarginBottom: xxlMarginBottom => setAttributes({
+          xxlMarginBottom
+        }),
+        setMarginLeft: xxlMarginLeft => setAttributes({
+          xxlMarginLeft
+        })
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_alignJustifyControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        breakpoint: "xxl-",
+        alignItems: xxlAlignItems,
+        alignSelf: xxlAlignSelf,
+        justifyContent: xxlJustifyContent,
+        setAlignItems: xxlAlignItems => setAttributes({
+          xxlAlignItems
+        }),
+        setAlignSelf: xxlAlignSelf => setAttributes({
+          xxlAlignSelf
+        }),
+        setJustifyContent: xxlJustifyContent => setAttributes({
+          xxlJustifyContent
+        })
+      }))
     }]
   }, _ref2 => {
     let {
@@ -1329,7 +1439,7 @@ module.exports = window["wp"]["i18n"];
 /***/ (function(module) {
 
 "use strict";
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"resource-layout-blocks/container","title":"Container","category":"resource-layout-blocks","description":"A container/wrapper; fluid or fixed.","keywords":["container","wrapper"],"version":"1.0.0","textdomain":"resource","render":"file:./index.php","attributes":{"anchor":{"type":"string"},"isFluid":{"type":"boolean","default":true},"tagName":{"type":"string","default":"div"},"baseDisplay":{"type":"string"},"basePaddingTop":{"type":"string"},"basePaddingRight":{"type":"string"},"basePaddingBottom":{"type":"string"},"basePaddingLeft":{"type":"string"},"baseMarginTop":{"type":"string"},"baseMarginRight":{"type":"string"},"baseMarginBottom":{"type":"string"},"baseMarginLeft":{"type":"string"},"baseAlignItems":{"type":"string"},"baseAlignSelf":{"type":"string"},"baseJustifyContent":{"type":"string"},"smDisplay":{"type":"string"},"smPaddingTop":{"type":"string"},"smPaddingRight":{"type":"string"},"smPaddingBottom":{"type":"string"},"smPaddingLeft":{"type":"string"},"smMarginTop":{"type":"string"},"smMarginRight":{"type":"string"},"smMarginBottom":{"type":"string"},"smMarginLeft":{"type":"string"},"smAlignItems":{"type":"string"},"smAlignSelf":{"type":"string"},"smJustifyContent":{"type":"string"},"mdDisplay":{"type":"string"},"mdPaddingTop":{"type":"string"},"mdPaddingRight":{"type":"string"},"mdPaddingBottom":{"type":"string"},"mdPaddingLeft":{"type":"string"},"mdMarginTop":{"type":"string"},"mdMarginRight":{"type":"string"},"mdMarginBottom":{"type":"string"},"mdMarginLeft":{"type":"string"},"mdAlignItems":{"type":"string"},"mdAlignSelf":{"type":"string"},"mdJustifyContent":{"type":"string"},"lgDisplay":{"type":"string"},"lgPaddingTop":{"type":"string"},"lgPaddingRight":{"type":"string"},"lgPaddingBottom":{"type":"string"},"lgPaddingLeft":{"type":"string"},"lgMarginTop":{"type":"string"},"lgMarginRight":{"type":"string"},"lgMarginBottom":{"type":"string"},"lgMarginLeft":{"type":"string"},"lgAlignItems":{"type":"string"},"lgAlignSelf":{"type":"string"},"lgJustifyContent":{"type":"string"}},"supports":{"anchor":true,"align":true,"alignWide":false,"ariaLabel":true,"className":true,"color":{"background":true,"gradients":false,"link":false,"text":false},"customClassName":true,"defaultStylePicker":true,"dimensions":{"minHeight":false},"filter":{"duotone":false},"html":true,"inserter":true,"multiple":true,"reusable":true,"lock":true,"position":{"sticky":true},"spacing":{"margin":false,"padding":false,"blockGap":false},"typography":{"fontSize":false,"lineHeight":false}},"editorScript":"file:../../../../build/container.js","editorStyle":"file:../../../../build/container.css","style":"file:../../../../build/style-container.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"resource-layout-blocks/container","title":"Container","category":"resource-layout-blocks","description":"A container/wrapper; fluid or fixed.","keywords":["container","wrapper"],"version":"1.0.0","textdomain":"resource","render":"file:./index.php","attributes":{"anchor":{"type":"string"},"isFluid":{"type":"boolean","default":true},"tagName":{"type":"string","default":"div"},"baseDisplay":{"type":"string"},"basePaddingTop":{"type":"string"},"basePaddingRight":{"type":"string"},"basePaddingBottom":{"type":"string"},"basePaddingLeft":{"type":"string"},"baseMarginTop":{"type":"string"},"baseMarginRight":{"type":"string"},"baseMarginBottom":{"type":"string"},"baseMarginLeft":{"type":"string"},"baseAlignItems":{"type":"string"},"baseAlignSelf":{"type":"string"},"baseJustifyContent":{"type":"string"},"smDisplay":{"type":"string"},"smPaddingTop":{"type":"string"},"smPaddingRight":{"type":"string"},"smPaddingBottom":{"type":"string"},"smPaddingLeft":{"type":"string"},"smMarginTop":{"type":"string"},"smMarginRight":{"type":"string"},"smMarginBottom":{"type":"string"},"smMarginLeft":{"type":"string"},"smAlignItems":{"type":"string"},"smAlignSelf":{"type":"string"},"smJustifyContent":{"type":"string"},"mdDisplay":{"type":"string"},"mdPaddingTop":{"type":"string"},"mdPaddingRight":{"type":"string"},"mdPaddingBottom":{"type":"string"},"mdPaddingLeft":{"type":"string"},"mdMarginTop":{"type":"string"},"mdMarginRight":{"type":"string"},"mdMarginBottom":{"type":"string"},"mdMarginLeft":{"type":"string"},"mdAlignItems":{"type":"string"},"mdAlignSelf":{"type":"string"},"mdJustifyContent":{"type":"string"},"lgDisplay":{"type":"string"},"lgPaddingTop":{"type":"string"},"lgPaddingRight":{"type":"string"},"lgPaddingBottom":{"type":"string"},"lgPaddingLeft":{"type":"string"},"lgMarginTop":{"type":"string"},"lgMarginRight":{"type":"string"},"lgMarginBottom":{"type":"string"},"lgMarginLeft":{"type":"string"},"lgAlignItems":{"type":"string"},"lgAlignSelf":{"type":"string"},"lgJustifyContent":{"type":"string"},"xlDisplay":{"type":"string"},"xlPaddingTop":{"type":"string"},"xlPaddingRight":{"type":"string"},"xlPaddingBottom":{"type":"string"},"xlPaddingLeft":{"type":"string"},"xlMarginTop":{"type":"string"},"xlMarginRight":{"type":"string"},"xlMarginBottom":{"type":"string"},"xlMarginLeft":{"type":"string"},"xlAlignItems":{"type":"string"},"xlAlignSelf":{"type":"string"},"xlJustifyContent":{"type":"string"},"xxlDisplay":{"type":"string"},"xxlPaddingTop":{"type":"string"},"xxlPaddingRight":{"type":"string"},"xxlPaddingBottom":{"type":"string"},"xxlPaddingLeft":{"type":"string"},"xxlMarginTop":{"type":"string"},"xxlMarginRight":{"type":"string"},"xxlMarginBottom":{"type":"string"},"xxlMarginLeft":{"type":"string"},"xxlAlignItems":{"type":"string"},"xxlAlignSelf":{"type":"string"},"xxlJustifyContent":{"type":"string"}},"supports":{"anchor":true,"align":true,"alignWide":false,"ariaLabel":true,"className":true,"color":{"background":true,"gradients":false,"link":false,"text":false},"customClassName":true,"defaultStylePicker":true,"dimensions":{"minHeight":false},"filter":{"duotone":false},"html":true,"inserter":true,"multiple":true,"reusable":true,"lock":true,"position":{"sticky":true},"spacing":{"margin":false,"padding":false,"blockGap":false},"typography":{"fontSize":false,"lineHeight":false}},"editorScript":"file:../../../../build/container.js","editorStyle":"file:../../../../build/container.css","style":"file:../../../../build/style-container.css"}');
 
 /***/ })
 
