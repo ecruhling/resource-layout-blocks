@@ -24,18 +24,19 @@ function resource_layout_blocks_init() {
 	$blocks = array(
 		'container',
 		'row',
+		'column',
 	);
 
 	foreach ( $blocks as $block ) {
-		$render_callback = [];
+		$render_callback = array();
 		$block_json      = wp_json_file_decode( plugin_dir_path( __FILE__ ) . 'includes/block-editor/blocks/' . $block . '/block.json' );
 		// check block.json for existence of 'render' key.
 		// it does not work presently, but if it does exist, then this is a dynamic block,
 		// and a render_callback needs to be sent to the block registration.
 		if ( property_exists( $block_json, 'render' ) ) {
-			$render_callback = [
+			$render_callback = array(
 				'render_callback' => 'dynamic_block_render_callback',
-			];
+			);
 		}
 		register_block_type_from_metadata(
 			plugin_dir_path( __FILE__ ) . 'includes/block-editor/blocks/' . trailingslashit( $block ),
@@ -60,8 +61,8 @@ function dynamic_block_render_callback( array $attributes, string $content, WP_B
 	ob_start();
 	// the block name is stored with the slug preceding it, so remove the slug and the trailing slash.
 	// Use the block name as a way to find the PHP render template associated with the named block.
-	$realBlockName = str_replace( trailingslashit( RESOURCE_LAYOUT_BLOCKS_SLUG ), '', $block->name );
-	require plugin_dir_path( __FILE__ ) . 'includes/block-editor/blocks/' . $realBlockName . '/index.php';
+	$real_block_name = str_replace( trailingslashit( RESOURCE_LAYOUT_BLOCKS_SLUG ), '', $block->name );
+	require plugin_dir_path( __FILE__ ) . 'includes/block-editor/blocks/' . $real_block_name . '/index.php';
 
 	return ob_get_clean();
 }
@@ -85,3 +86,19 @@ function resource_category( array $block_categories ): array {
 }
 
 add_action( 'block_categories_all', 'resource_category', 10, 2 );
+
+/**
+ * Enqueue Bootstrap CSS on the frontend.
+ */
+add_action( 'wp_enqueue_scripts', function () {
+	wp_register_style( 'bootstrap-css', '//cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css', array(), null, 'all' );
+	wp_enqueue_style( 'bootstrap-css' );
+} );
+
+/**
+ * Enqueue Bootstrap CSS on the backend.
+ */
+add_action( 'admin_enqueue_scripts', function () {
+	wp_register_style( 'bootstrap-css', '//cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css', array(), null, 'all' );
+	wp_enqueue_style( 'bootstrap-css' );
+} );
