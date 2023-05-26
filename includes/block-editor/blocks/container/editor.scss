@@ -4,12 +4,14 @@
  * Replace them with your own styles or remove the file completely.
  */
 
+// This needs to be moved to a global CSS stylesheet
 .breakpoint-tab-panel {
 	button.breakpoint-tab {
 		font-size: 0.7rem;
 	}
 }
 
+// This needs to be moved to a global CSS stylesheet
 #class-inspector.components-accessible-toolbar {
 	border: 0;
 	border-right: 1px solid #1e1e1e;
@@ -20,6 +22,9 @@
 
 	p {
 		margin-bottom: 0;
+		font-size: 0.75rem;
+		max-width: 200px;
+		line-height: 1.3;
 	}
 }
 

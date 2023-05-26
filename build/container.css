@@ -20,6 +20,9 @@
 }
 #class-inspector.components-accessible-toolbar p {
   margin-bottom: 0;
+  font-size: 0.75rem;
+  max-width: 200px;
+  line-height: 1.3;
 }
 
 [data-type="resource-layout-blocks/container"]:not(.is-selected):not(.has-child-selected):hover, [data-type="resource-layout-blocks/container"].is-selected {

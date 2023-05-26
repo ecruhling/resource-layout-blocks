@@ -34,6 +34,18 @@ export default function AlignJustifyControl ({
 			<CardBody size='small'>
 				<Flex wrap={true}>
 					<FlexItem>
+						<SelectControl label={__('Align Text', 'resource-layout-blocks')}
+													 value={alignItems}
+													 options={[
+														 {value: '', label: __('Select Option', 'resource-layout-blocks')},
+														 {value: `text-${breakpoint}start`, label: __('Start', 'resource-layout-blocks')},
+														 {value: `text-${breakpoint}center`, label: __('Center', 'resource-layout-blocks')},
+														 {value: `text-${breakpoint}end`, label: __('End', 'resource-layout-blocks')},
+													 ]}
+													 onChange={setAlignItems}
+						/>
+					</FlexItem>
+					<FlexItem>
 						<SelectControl label={__('Align Items', 'resource-layout-blocks')}
 													 value={alignItems}
 													 options={[

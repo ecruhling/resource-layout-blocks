@@ -243,7 +243,7 @@
 	},
 	"supports": {
 		"anchor": true,
-		"align": true,
+		"align": false,
 		"alignWide": false,
 		"ariaLabel": true,
 		"className": true,
