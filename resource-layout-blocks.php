@@ -51,8 +51,8 @@ add_action( 'init', 'resource_layout_blocks_init' );
  * Render callback function.
  * A generic function that routes to a PHP template stored in the named block's directory.
  *
- * @param array $attributes Block attributes.
- * @param string $content Block default content.
+ * @param array    $attributes Block attributes.
+ * @param string   $content Block default content.
  * @param WP_Block $block Block instance.
  *
  * @return string The rendered output.
@@ -90,15 +90,21 @@ add_action( 'block_categories_all', 'resource_category', 10, 2 );
 /**
  * Enqueue Bootstrap CSS on the frontend.
  */
-add_action( 'wp_enqueue_scripts', function () {
-	wp_register_style( 'bootstrap-css', '//cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css', array(), null, 'all' );
-	wp_enqueue_style( 'bootstrap-css' );
-} );
+add_action(
+	'wp_enqueue_scripts',
+	function () {
+		wp_register_style( 'bootstrap-css', '//cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css', array(), null, 'all' );
+		wp_enqueue_style( 'bootstrap-css' );
+	}
+);
 
 /**
  * Enqueue Bootstrap CSS on the backend.
  */
-add_action( 'admin_enqueue_scripts', function () {
-	wp_register_style( 'bootstrap-css', '//cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css', array(), null, 'all' );
-	wp_enqueue_style( 'bootstrap-css' );
-} );
+add_action(
+	'admin_enqueue_scripts',
+	function () {
+		wp_register_style( 'bootstrap-css', '//cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css', array(), null, 'all' );
+		wp_enqueue_style( 'bootstrap-css' );
+	}
+);

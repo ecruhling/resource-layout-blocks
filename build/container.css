@@ -10,6 +10,18 @@
   font-size: 0.7rem;
 }
 
+#class-inspector.components-accessible-toolbar {
+  border: 0;
+  border-right: 1px solid #1e1e1e;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#class-inspector.components-accessible-toolbar p {
+  margin-bottom: 0;
+}
+
 [data-type="resource-layout-blocks/container"]:not(.is-selected):not(.has-child-selected):hover, [data-type="resource-layout-blocks/container"].is-selected {
   outline: 1px dashed red;
   position: relative;

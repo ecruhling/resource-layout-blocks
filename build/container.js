@@ -628,13 +628,13 @@ __webpack_require__.r(__webpack_exports__);
  */
 function edit(_ref) {
   let {
-    className,
     attributes,
     setAttributes
   } = _ref;
   const {
     isFluid,
     tagName: TagName = 'div',
+    className,
     baseDisplay,
     basePaddingTop,
     basePaddingRight,
@@ -708,10 +708,10 @@ function edit(_ref) {
     xxlAlignSelf,
     xxlJustifyContent
   } = attributes;
-  const classes = classnames__WEBPACK_IMPORTED_MODULE_1___default()(className, baseDisplay, basePaddingTop, basePaddingRight, basePaddingBottom, basePaddingLeft, baseMarginTop, baseMarginRight, baseMarginBottom, baseMarginLeft, baseAlignItems, baseAlignSelf, baseJustifyContent, smDisplay, smPaddingTop, smPaddingRight, smPaddingBottom, smPaddingLeft, smMarginTop, smMarginRight, smMarginBottom, smMarginLeft, smAlignItems, smAlignSelf, smJustifyContent, mdDisplay, mdPaddingTop, mdPaddingRight, mdPaddingBottom, mdPaddingLeft, mdMarginTop, mdMarginRight, mdMarginBottom, mdMarginLeft, mdAlignItems, mdAlignSelf, mdJustifyContent, lgDisplay, lgPaddingTop, lgPaddingRight, lgPaddingBottom, lgPaddingLeft, lgMarginTop, lgMarginRight, lgMarginBottom, lgMarginLeft, lgAlignItems, lgAlignSelf, lgJustifyContent, xlDisplay, xlPaddingTop, xlPaddingRight, xlPaddingBottom, xlPaddingLeft, xlMarginTop, xlMarginRight, xlMarginBottom, xlMarginLeft, xlAlignItems, xlAlignSelf, xlJustifyContent, xxlDisplay, xxlPaddingTop, xxlPaddingRight, xxlPaddingBottom, xxlPaddingLeft, xxlMarginTop, xxlMarginRight, xxlMarginBottom, xxlMarginLeft, xxlAlignItems, xxlAlignSelf, xxlJustifyContent, {
+  const classes = classnames__WEBPACK_IMPORTED_MODULE_1___default()({
     'container': !isFluid,
     'container-fluid': isFluid
-  });
+  }, baseDisplay, basePaddingTop, basePaddingRight, basePaddingBottom, basePaddingLeft, baseMarginTop, baseMarginRight, baseMarginBottom, baseMarginLeft, baseAlignItems, baseAlignSelf, baseJustifyContent, smDisplay, smPaddingTop, smPaddingRight, smPaddingBottom, smPaddingLeft, smMarginTop, smMarginRight, smMarginBottom, smMarginLeft, smAlignItems, smAlignSelf, smJustifyContent, mdDisplay, mdPaddingTop, mdPaddingRight, mdPaddingBottom, mdPaddingLeft, mdMarginTop, mdMarginRight, mdMarginBottom, mdMarginLeft, mdAlignItems, mdAlignSelf, mdJustifyContent, lgDisplay, lgPaddingTop, lgPaddingRight, lgPaddingBottom, lgPaddingLeft, lgMarginTop, lgMarginRight, lgMarginBottom, lgMarginLeft, lgAlignItems, lgAlignSelf, lgJustifyContent, xlDisplay, xlPaddingTop, xlPaddingRight, xlPaddingBottom, xlPaddingLeft, xlMarginTop, xlMarginRight, xlMarginBottom, xlMarginLeft, xlAlignItems, xlAlignSelf, xlJustifyContent, xxlDisplay, xxlPaddingTop, xxlPaddingRight, xxlPaddingBottom, xxlPaddingLeft, xxlMarginTop, xxlMarginRight, xxlMarginBottom, xxlMarginLeft, xxlAlignItems, xxlAlignSelf, xxlJustifyContent, className);
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)({
     className: classes
   });
@@ -723,7 +723,12 @@ function edit(_ref) {
     aside: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('The <aside> element should represent a portion of a document whose content is only indirectly related to the document\'s main content.'),
     footer: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('The <footer> element should represent a footer for its nearest sectioning element (e.g.: <section>, <article>, <main> etc.).')
   };
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.CardHeader, {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.BlockControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Toolbar, {
+    label: "Class Inspector",
+    id: "class-inspector"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.ToolbarItem, {
+    as: "p"
+  }, classes))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.CardHeader, {
     isBorderless: true,
     isShady: true,
     size: "small"

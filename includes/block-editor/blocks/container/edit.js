@@ -8,11 +8,13 @@ import classnames from 'classnames';
  */
 import {__} from '@wordpress/i18n';
 import {
+	BlockControls,
 	InnerBlocks,
 	InspectorControls,
 	useBlockProps,
 } from '@wordpress/block-editor';
 import {
+	Button,
 	CheckboxControl,
 	SelectControl,
 	TabPanel,
@@ -21,6 +23,9 @@ import {
 	Flex,
 	FlexItem,
 	CardHeader,
+	Toolbar,
+	ToolbarItem,
+	ToolbarGroup,
 } from '@wordpress/components';
 
 /**
@@ -46,7 +51,6 @@ import AlignJustifyControl from './../../block-components/alignJustifyControl';
  */
 export default function
 	edit ({
-					className,
 					attributes,
 					setAttributes,
 				}) {
@@ -54,6 +58,7 @@ export default function
 	const {
 		isFluid,
 		tagName: TagName = 'div',
+		className,
 		baseDisplay,
 		basePaddingTop,
 		basePaddingRight,
@@ -129,7 +134,10 @@ export default function
 	} = attributes;
 
 	const classes = classnames(
-		className,
+		{
+			'container': !isFluid,
+			'container-fluid': isFluid,
+		},
 		baseDisplay,
 		basePaddingTop,
 		basePaddingRight,
@@ -202,10 +210,8 @@ export default function
 		xxlAlignItems,
 		xxlAlignSelf,
 		xxlJustifyContent,
-		{
-			'container': !isFluid,
-			'container-fluid': isFluid,
-		});
+		className,
+	);
 
 	const blockProps = useBlockProps({
 		className: classes,
@@ -234,6 +240,11 @@ export default function
 
 	return (
 		<>
+			<BlockControls>
+				<Toolbar label='Class Inspector' id='class-inspector'>
+					<ToolbarItem as='p'>{classes}</ToolbarItem>
+				</Toolbar>
+			</BlockControls>
 			<InspectorControls>
 				<Card>
 					<CardHeader isBorderless={true} isShady={true}

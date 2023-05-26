@@ -10,6 +10,19 @@
 	}
 }
 
+#class-inspector.components-accessible-toolbar {
+	border: 0;
+	border-right: 1px solid #1e1e1e;
+	justify-content: center;
+	align-items: center;
+	padding-left: 10px;
+	padding-right: 10px;
+
+	p {
+		margin-bottom: 0;
+	}
+}
+
 // Container block
 [data-type="resource-layout-blocks/container"] {
 	// Container background on hover to make it visible
