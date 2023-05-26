@@ -39,6 +39,7 @@ $attribute_classes = implode(
 		$attributes['baseMarginRight'] ?? '',
 		$attributes['baseMarginBottom'] ?? '',
 		$attributes['baseMarginLeft'] ?? '',
+		$attributes['baseAlignText'] ?? '',
 		$attributes['baseAlignItems'] ?? '',
 		$attributes['baseAlignSelf'] ?? '',
 		$attributes['baseJustifyContent'] ?? '',

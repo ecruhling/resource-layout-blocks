@@ -25,7 +25,6 @@ import {
 	CardHeader,
 	Toolbar,
 	ToolbarItem,
-	ToolbarGroup,
 } from '@wordpress/components';
 
 /**
@@ -68,6 +67,7 @@ export default function
 		baseMarginRight,
 		baseMarginBottom,
 		baseMarginLeft,
+		baseAlignText,
 		baseAlignItems,
 		baseAlignSelf,
 		baseJustifyContent,
@@ -80,6 +80,7 @@ export default function
 		smMarginRight,
 		smMarginBottom,
 		smMarginLeft,
+		smAlignText,
 		smAlignItems,
 		smAlignSelf,
 		smJustifyContent,
@@ -92,6 +93,7 @@ export default function
 		mdMarginRight,
 		mdMarginBottom,
 		mdMarginLeft,
+		mdAlignText,
 		mdAlignItems,
 		mdAlignSelf,
 		mdJustifyContent,
@@ -104,6 +106,7 @@ export default function
 		lgMarginRight,
 		lgMarginBottom,
 		lgMarginLeft,
+		lgAlignText,
 		lgAlignItems,
 		lgAlignSelf,
 		lgJustifyContent,
@@ -116,6 +119,7 @@ export default function
 		xlMarginRight,
 		xlMarginBottom,
 		xlMarginLeft,
+		xlAlignText,
 		xlAlignItems,
 		xlAlignSelf,
 		xlJustifyContent,
@@ -128,6 +132,7 @@ export default function
 		xxlMarginRight,
 		xxlMarginBottom,
 		xxlMarginLeft,
+		xxlAlignText,
 		xxlAlignItems,
 		xxlAlignSelf,
 		xxlJustifyContent,
@@ -147,6 +152,7 @@ export default function
 		baseMarginRight,
 		baseMarginBottom,
 		baseMarginLeft,
+		baseAlignText,
 		baseAlignItems,
 		baseAlignSelf,
 		baseJustifyContent,
@@ -159,6 +165,7 @@ export default function
 		smMarginRight,
 		smMarginBottom,
 		smMarginLeft,
+		smAlignText,
 		smAlignItems,
 		smAlignSelf,
 		smJustifyContent,
@@ -171,6 +178,7 @@ export default function
 		mdMarginRight,
 		mdMarginBottom,
 		mdMarginLeft,
+		mdAlignText,
 		mdAlignItems,
 		mdAlignSelf,
 		mdJustifyContent,
@@ -183,6 +191,7 @@ export default function
 		lgMarginRight,
 		lgMarginBottom,
 		lgMarginLeft,
+		lgAlignText,
 		lgAlignItems,
 		lgAlignSelf,
 		lgJustifyContent,
@@ -195,6 +204,7 @@ export default function
 		xlMarginRight,
 		xlMarginBottom,
 		xlMarginLeft,
+		xlAlignText,
 		xlAlignItems,
 		xlAlignSelf,
 		xlJustifyContent,
@@ -207,6 +217,7 @@ export default function
 		xxlMarginRight,
 		xxlMarginBottom,
 		xxlMarginLeft,
+		xxlAlignText,
 		xxlAlignItems,
 		xxlAlignSelf,
 		xxlJustifyContent,
@@ -294,6 +305,7 @@ export default function
 								<Card>
 									<DisplayControl
 										breakpoint=''
+										breakpoint_name=''
 										display={baseDisplay}
 										setDisplay={baseDisplay => setAttributes({baseDisplay})}
 									></DisplayControl>
@@ -321,9 +333,11 @@ export default function
 									></MarginControl>
 									<AlignJustifyControl
 										breakpoint=''
+										alignText={baseAlignText}
 										alignItems={baseAlignItems}
 										alignSelf={baseAlignSelf}
 										justifyContent={baseJustifyContent}
+										setAlignText={baseAlignText => setAttributes({baseAlignText})}
 										setAlignItems={baseAlignItems => setAttributes({baseAlignItems})}
 										setAlignSelf={baseAlignSelf => setAttributes({baseAlignSelf})}
 										setJustifyContent={baseJustifyContent => setAttributes({baseJustifyContent})}
@@ -338,6 +352,7 @@ export default function
 								<Card>
 									<DisplayControl
 										breakpoint='sm-'
+										breakpoint_name='SM'
 										display={smDisplay}
 										setDisplay={smDisplay => setAttributes({smDisplay})}
 									></DisplayControl>
@@ -365,9 +380,11 @@ export default function
 									></MarginControl>
 									<AlignJustifyControl
 										breakpoint='sm-'
+										alignText={smAlignText}
 										alignItems={smAlignItems}
 										alignSelf={smAlignSelf}
 										justifyContent={smJustifyContent}
+										setAlignText={smAlignText => setAttributes({smAlignText})}
 										setAlignItems={smAlignItems => setAttributes({smAlignItems})}
 										setAlignSelf={smAlignSelf => setAttributes({smAlignSelf})}
 										setJustifyContent={smJustifyContent => setAttributes({smJustifyContent})}
@@ -382,6 +399,7 @@ export default function
 								<Card>
 									<DisplayControl
 										breakpoint='md-'
+										breakpoint_name='MD'
 										display={mdDisplay}
 										setDisplay={mdDisplay => setAttributes({mdDisplay})}
 									></DisplayControl>
@@ -409,9 +427,11 @@ export default function
 									></MarginControl>
 									<AlignJustifyControl
 										breakpoint='md-'
+										alignText={mdAlignText}
 										alignItems={mdAlignItems}
 										alignSelf={mdAlignSelf}
 										justifyContent={mdJustifyContent}
+										setAlignText={mdAlignText => setAttributes({mdAlignText})}
 										setAlignItems={mdAlignItems => setAttributes({mdAlignItems})}
 										setAlignSelf={mdAlignSelf => setAttributes({mdAlignSelf})}
 										setJustifyContent={mdJustifyContent => setAttributes({mdJustifyContent})}
@@ -426,6 +446,7 @@ export default function
 								<Card>
 									<DisplayControl
 										breakpoint='lg-'
+										breakpoint_name='LG'
 										display={lgDisplay}
 										setDisplay={lgDisplay => setAttributes({lgDisplay})}
 									></DisplayControl>
@@ -453,9 +474,11 @@ export default function
 									></MarginControl>
 									<AlignJustifyControl
 										breakpoint='lg-'
+										alignText={lgAlignText}
 										alignItems={lgAlignItems}
 										alignSelf={lgAlignSelf}
 										justifyContent={lgJustifyContent}
+										setAlignText={lgAlignText => setAttributes({lgAlignText})}
 										setAlignItems={lgAlignItems => setAttributes({lgAlignItems})}
 										setAlignSelf={lgAlignSelf => setAttributes({lgAlignSelf})}
 										setJustifyContent={lgJustifyContent => setAttributes({lgJustifyContent})}
@@ -470,6 +493,7 @@ export default function
 								<Card>
 									<DisplayControl
 										breakpoint='xl-'
+										breakpoint_name='XL'
 										display={xlDisplay}
 										setDisplay={xlDisplay => setAttributes({xlDisplay})}
 									></DisplayControl>
@@ -497,9 +521,11 @@ export default function
 									></MarginControl>
 									<AlignJustifyControl
 										breakpoint='xl-'
+										alignText={xlAlignText}
 										alignItems={xlAlignItems}
 										alignSelf={xlAlignSelf}
 										justifyContent={xlJustifyContent}
+										setAlignText={xlAlignText => setAttributes({xlAlignText})}
 										setAlignItems={xlAlignItems => setAttributes({xlAlignItems})}
 										setAlignSelf={xlAlignSelf => setAttributes({xlAlignSelf})}
 										setJustifyContent={xlJustifyContent => setAttributes({xlJustifyContent})}
@@ -514,6 +540,7 @@ export default function
 								<Card>
 									<DisplayControl
 										breakpoint='xxl-'
+										breakpoint_name='XXL'
 										display={xxlDisplay}
 										setDisplay={xxlDisplay => setAttributes({xxlDisplay})}
 									></DisplayControl>
@@ -541,9 +568,11 @@ export default function
 									></MarginControl>
 									<AlignJustifyControl
 										breakpoint='xxl-'
+										alignText={xxlAlignText}
 										alignItems={xxlAlignItems}
 										alignSelf={xxlAlignSelf}
 										justifyContent={xxlJustifyContent}
+										setAlignText={xxlAlignText => setAttributes({xxlAlignText})}
 										setAlignItems={xxlAlignItems => setAttributes({xxlAlignItems})}
 										setAlignSelf={xxlAlignSelf => setAttributes({xxlAlignSelf})}
 										setJustifyContent={xxlJustifyContent => setAttributes({xxlJustifyContent})}

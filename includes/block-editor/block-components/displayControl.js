@@ -16,13 +16,14 @@ import {CardBody, CardHeader, Flex, FlexItem, SelectControl} from '@wordpress/co
  */
 export default function ColumnsDisplayControl ({
 																								 breakpoint,
+																								 breakpoint_name,
 																								 display,
 																								 setDisplay,
 																							 }) {
 	return (
 		<div>
 			<CardHeader isBorderless={true} isShady={true} size='small'>
-				{__('DISPLAY', 'resource-layout-blocks')}
+				{__(`${breakpoint_name} DISPLAY`, 'resource-layout-blocks')}
 			</CardHeader>
 			<CardBody size='small'>
 				<Flex wrap={true}>

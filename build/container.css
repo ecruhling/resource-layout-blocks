@@ -1,1 +1,42 @@
-.breakpoint-tab-panel button.breakpoint-tab{font-size:.7rem}#class-inspector.components-accessible-toolbar{align-items:center;border:0;border-right:1px solid #1e1e1e;justify-content:center;padding-left:10px;padding-right:10px}#class-inspector.components-accessible-toolbar p{font-size:.75rem;line-height:1.3;margin-bottom:0;max-width:200px}[data-type="resource-layout-blocks/container"].is-selected,[data-type="resource-layout-blocks/container"]:not(.is-selected):not(.has-child-selected):hover{outline:1px dashed red;position:relative}[data-type="resource-layout-blocks/container"].is-selected:before,[data-type="resource-layout-blocks/container"]:not(.is-selected):not(.has-child-selected):hover:before{color:red;content:"container";display:block;font-size:.5rem;left:2px;position:absolute;top:-2px}
+/*!***************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./includes/block-editor/blocks/container/editor.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.breakpoint-tab-panel button.breakpoint-tab {
+  font-size: 0.7rem;
+}
+
+#class-inspector.components-accessible-toolbar {
+  border: 0;
+  border-right: 1px solid #1e1e1e;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#class-inspector.components-accessible-toolbar p {
+  margin-bottom: 0;
+  font-size: 0.75rem;
+  max-width: 200px;
+  line-height: 1.3;
+}
+
+[data-type="resource-layout-blocks/container"]:not(.is-selected):not(.has-child-selected):hover, [data-type="resource-layout-blocks/container"].is-selected {
+  outline: 1px dashed red;
+  position: relative;
+}
+[data-type="resource-layout-blocks/container"]:not(.is-selected):not(.has-child-selected):hover::before, [data-type="resource-layout-blocks/container"].is-selected::before {
+  content: "container";
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  display: block;
+  color: red;
+  font-size: 0.5rem;
+}
+
+/*# sourceMappingURL=container.css.map*/

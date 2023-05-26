@@ -51,6 +51,9 @@
 		"baseMarginLeft": {
 			"type": "string"
 		},
+		"baseAlignText": {
+			"type": "string"
+		},
 		"baseAlignItems": {
 			"type": "string"
 		},
@@ -85,6 +88,9 @@
 			"type": "string"
 		},
 		"smMarginLeft": {
+			"type": "string"
+		},
+		"smAlignText": {
 			"type": "string"
 		},
 		"smAlignItems": {
@@ -123,6 +129,9 @@
 		"mdMarginLeft": {
 			"type": "string"
 		},
+		"mdAlignText": {
+			"type": "string"
+		},
 		"mdAlignItems": {
 			"type": "string"
 		},
@@ -157,6 +166,9 @@
 			"type": "string"
 		},
 		"lgMarginLeft": {
+			"type": "string"
+		},
+		"lgAlignText": {
 			"type": "string"
 		},
 		"lgAlignItems": {
@@ -195,6 +207,9 @@
 		"xlMarginLeft": {
 			"type": "string"
 		},
+		"xlAlignText": {
+			"type": "string"
+		},
 		"xlAlignItems": {
 			"type": "string"
 		},
@@ -229,6 +244,9 @@
 			"type": "string"
 		},
 		"xxlMarginLeft": {
+			"type": "string"
+		},
+		"xxlAlignText": {
 			"type": "string"
 		},
 		"xxlAlignItems": {
