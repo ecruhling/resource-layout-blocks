@@ -17,12 +17,12 @@
     <img src="assets/images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Resource Branding
+<h3 align="center">Resource Branding<br />
 Layout blocks for WordPress</h3>
 
   <p align="center">
-    Custom layout blocks for the WordPress block editor.
-Container, Row, and Column.
+    Custom layout blocks for the WordPress block editor.<br />
+Container, Row, and Column.<br />
 Uses CSS and utility classes from Twitter Bootstrap 5.
     <br />
     <a href="https://github.com/ecruhling/resource-layout-blocks"><strong>Explore the docs »</strong></a>
