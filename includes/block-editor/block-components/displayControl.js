@@ -22,7 +22,7 @@ export default function ColumnsDisplayControl ({
 																							 }) {
 	return (
 		<div>
-			<CardHeader isBorderless={true} isShady={true} size='small'>
+			<CardHeader isBorderless={true} isShady={true} size='small' className='resource-card-header'>
 				{__(`${breakpoint_name} DISPLAY`, 'resource-layout-blocks')}
 			</CardHeader>
 			<CardBody size='small'>

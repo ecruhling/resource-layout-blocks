@@ -22,6 +22,7 @@ import {CardBody, CardHeader, Flex, FlexItem, SelectControl} from '@wordpress/co
  */
 export default function AlignJustifyControl ({
 																							 breakpoint,
+																							 breakpoint_name,
 																							 alignText,
 																							 alignItems,
 																							 alignSelf,
@@ -34,7 +35,8 @@ export default function AlignJustifyControl ({
 	return (
 		<div>
 			<CardHeader isBorderless={true} isShady={true}
-									size='small'>{__('ALIGN & JUSTIFY', 'resource-layout-blocks')}</CardHeader>
+									size='small'
+									className='resource-card-header'>{__(`${breakpoint_name} ALIGN & JUSTIFY`, 'resource-layout-blocks')}</CardHeader>
 			<CardBody size='small'>
 				<Flex wrap={true}>
 					<FlexItem>

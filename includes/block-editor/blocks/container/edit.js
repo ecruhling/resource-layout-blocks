@@ -259,7 +259,8 @@ export default function
 			<InspectorControls>
 				<Card>
 					<CardHeader isBorderless={true} isShady={true}
-											size='small'>{__('CONTAINER', 'resource-layout-blocks')}</CardHeader>
+											size='small'
+											className='resource-card-header'>{__('CONTAINER', 'resource-layout-blocks')}</CardHeader>
 					<CardBody size='small'>
 						<Flex wrap={true}>
 							<FlexItem>
@@ -311,6 +312,7 @@ export default function
 									></DisplayControl>
 									<PaddingControl
 										breakpoint=''
+										breakpoint_name=''
 										paddingTop={basePaddingTop}
 										paddingRight={basePaddingRight}
 										paddingBottom={basePaddingBottom}
@@ -322,6 +324,7 @@ export default function
 									></PaddingControl>
 									<MarginControl
 										breakpoint=''
+										breakpoint_name=''
 										marginTop={baseMarginTop}
 										marginRight={baseMarginRight}
 										marginBottom={baseMarginBottom}
@@ -333,6 +336,7 @@ export default function
 									></MarginControl>
 									<AlignJustifyControl
 										breakpoint=''
+										breakpoint_name=''
 										alignText={baseAlignText}
 										alignItems={baseAlignItems}
 										alignSelf={baseAlignSelf}
@@ -358,6 +362,7 @@ export default function
 									></DisplayControl>
 									<PaddingControl
 										breakpoint='sm-'
+										breakpoint_name='SM'
 										paddingTop={smPaddingTop}
 										paddingRight={smPaddingRight}
 										paddingBottom={smPaddingBottom}
@@ -369,6 +374,7 @@ export default function
 									></PaddingControl>
 									<MarginControl
 										breakpoint='sm-'
+										breakpoint_name='SM'
 										marginTop={smMarginTop}
 										marginRight={smMarginRight}
 										marginBottom={smMarginBottom}
@@ -380,6 +386,7 @@ export default function
 									></MarginControl>
 									<AlignJustifyControl
 										breakpoint='sm-'
+										breakpoint_name='SM'
 										alignText={smAlignText}
 										alignItems={smAlignItems}
 										alignSelf={smAlignSelf}
@@ -405,6 +412,7 @@ export default function
 									></DisplayControl>
 									<PaddingControl
 										breakpoint='md-'
+										breakpoint_name='MD'
 										paddingTop={mdPaddingTop}
 										paddingRight={mdPaddingRight}
 										paddingBottom={mdPaddingBottom}
@@ -416,6 +424,7 @@ export default function
 									></PaddingControl>
 									<MarginControl
 										breakpoint='md-'
+										breakpoint_name='MD'
 										marginTop={mdMarginTop}
 										marginRight={mdMarginRight}
 										marginBottom={mdMarginBottom}
@@ -427,6 +436,7 @@ export default function
 									></MarginControl>
 									<AlignJustifyControl
 										breakpoint='md-'
+										breakpoint_name='MD'
 										alignText={mdAlignText}
 										alignItems={mdAlignItems}
 										alignSelf={mdAlignSelf}
@@ -452,6 +462,7 @@ export default function
 									></DisplayControl>
 									<PaddingControl
 										breakpoint='lg-'
+										breakpoint_name='LG'
 										paddingTop={lgPaddingTop}
 										paddingRight={lgPaddingRight}
 										paddingBottom={lgPaddingBottom}
@@ -463,6 +474,7 @@ export default function
 									></PaddingControl>
 									<MarginControl
 										breakpoint='lg-'
+										breakpoint_name='LG'
 										marginTop={lgMarginTop}
 										marginRight={lgMarginRight}
 										marginBottom={lgMarginBottom}
@@ -474,6 +486,7 @@ export default function
 									></MarginControl>
 									<AlignJustifyControl
 										breakpoint='lg-'
+										breakpoint_name='LG'
 										alignText={lgAlignText}
 										alignItems={lgAlignItems}
 										alignSelf={lgAlignSelf}
@@ -499,6 +512,7 @@ export default function
 									></DisplayControl>
 									<PaddingControl
 										breakpoint='xl-'
+										breakpoint_name='XL'
 										paddingTop={xlPaddingTop}
 										paddingRight={xlPaddingRight}
 										paddingBottom={xlPaddingBottom}
@@ -510,6 +524,7 @@ export default function
 									></PaddingControl>
 									<MarginControl
 										breakpoint='xl-'
+										breakpoint_name='XL'
 										marginTop={xlMarginTop}
 										marginRight={xlMarginRight}
 										marginBottom={xlMarginBottom}
@@ -521,6 +536,7 @@ export default function
 									></MarginControl>
 									<AlignJustifyControl
 										breakpoint='xl-'
+										breakpoint_name='XL'
 										alignText={xlAlignText}
 										alignItems={xlAlignItems}
 										alignSelf={xlAlignSelf}
@@ -546,6 +562,7 @@ export default function
 									></DisplayControl>
 									<PaddingControl
 										breakpoint='xxl-'
+										breakpoint_name='XXL'
 										paddingTop={xxlPaddingTop}
 										paddingRight={xxlPaddingRight}
 										paddingBottom={xxlPaddingBottom}
@@ -557,6 +574,7 @@ export default function
 									></PaddingControl>
 									<MarginControl
 										breakpoint='xxl-'
+										breakpoint_name='XXL'
 										marginTop={xxlMarginTop}
 										marginRight={xxlMarginRight}
 										marginBottom={xxlMarginBottom}
@@ -568,6 +586,7 @@ export default function
 									></MarginControl>
 									<AlignJustifyControl
 										breakpoint='xxl-'
+										breakpoint_name='XXL'
 										alignText={xxlAlignText}
 										alignItems={xxlAlignItems}
 										alignSelf={xxlAlignSelf}

@@ -44,6 +44,7 @@ __webpack_require__.r(__webpack_exports__);
 function AlignJustifyControl(_ref) {
   let {
     breakpoint,
+    breakpoint_name,
     alignText,
     alignItems,
     alignSelf,
@@ -56,8 +57,9 @@ function AlignJustifyControl(_ref) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardHeader, {
     isBorderless: true,
     isShady: true,
-    size: "small"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('ALIGN & JUSTIFY', 'resource-layout-blocks')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardBody, {
+    size: "small",
+    className: "resource-card-header"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)(`${breakpoint_name} ALIGN & JUSTIFY`, 'resource-layout-blocks')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardBody, {
     size: "small"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Flex, {
     wrap: true
@@ -199,7 +201,8 @@ function ColumnsDisplayControl(_ref) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardHeader, {
     isBorderless: true,
     isShady: true,
-    size: "small"
+    size: "small",
+    className: "resource-card-header"
   }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)(`${breakpoint_name} DISPLAY`, 'resource-layout-blocks')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardBody, {
     size: "small"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Flex, {
@@ -293,6 +296,7 @@ __webpack_require__.r(__webpack_exports__);
 function MarginControl(_ref) {
   let {
     breakpoint,
+    breakpoint_name,
     marginTop,
     marginRight,
     marginBottom,
@@ -305,8 +309,9 @@ function MarginControl(_ref) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardHeader, {
     isBorderless: true,
     isShady: true,
-    size: "small"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('MARGIN', 'resource-layout-blocks')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardBody, {
+    size: "small",
+    className: "resource-card-header"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)(`${breakpoint_name} MARGIN`, 'resource-layout-blocks')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardBody, {
     size: "small"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Flex, {
     wrap: true
@@ -462,6 +467,7 @@ __webpack_require__.r(__webpack_exports__);
 function PaddingControl(_ref) {
   let {
     breakpoint,
+    breakpoint_name,
     paddingTop,
     paddingRight,
     paddingBottom,
@@ -474,8 +480,9 @@ function PaddingControl(_ref) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardHeader, {
     isBorderless: true,
     isShady: true,
-    size: "small"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('PADDING', 'resource-layout-blocks')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardBody, {
+    size: "small",
+    className: "resource-card-header"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)(`${breakpoint_name} PADDING`, 'resource-layout-blocks')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardBody, {
     size: "small"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Flex, {
     wrap: true
@@ -759,7 +766,8 @@ function edit(_ref) {
   }, classes))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.CardHeader, {
     isBorderless: true,
     isShady: true,
-    size: "small"
+    size: "small",
+    className: "resource-card-header"
   }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('CONTAINER', 'resource-layout-blocks')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.CardBody, {
     size: "small"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.Flex, {
@@ -817,6 +825,7 @@ function edit(_ref) {
         })
       }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_paddingControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
         breakpoint: "",
+        breakpoint_name: "",
         paddingTop: basePaddingTop,
         paddingRight: basePaddingRight,
         paddingBottom: basePaddingBottom,
@@ -835,6 +844,7 @@ function edit(_ref) {
         })
       }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_marginControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
         breakpoint: "",
+        breakpoint_name: "",
         marginTop: baseMarginTop,
         marginRight: baseMarginRight,
         marginBottom: baseMarginBottom,
@@ -853,6 +863,7 @@ function edit(_ref) {
         })
       }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_alignJustifyControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
         breakpoint: "",
+        breakpoint_name: "",
         alignText: baseAlignText,
         alignItems: baseAlignItems,
         alignSelf: baseAlignSelf,
@@ -883,6 +894,7 @@ function edit(_ref) {
         })
       }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_paddingControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
         breakpoint: "sm-",
+        breakpoint_name: "SM",
         paddingTop: smPaddingTop,
         paddingRight: smPaddingRight,
         paddingBottom: smPaddingBottom,
@@ -901,6 +913,7 @@ function edit(_ref) {
         })
       }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_marginControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
         breakpoint: "sm-",
+        breakpoint_name: "SM",
         marginTop: smMarginTop,
         marginRight: smMarginRight,
         marginBottom: smMarginBottom,
@@ -919,6 +932,7 @@ function edit(_ref) {
         })
       }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_alignJustifyControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
         breakpoint: "sm-",
+        breakpoint_name: "SM",
         alignText: smAlignText,
         alignItems: smAlignItems,
         alignSelf: smAlignSelf,
@@ -949,6 +963,7 @@ function edit(_ref) {
         })
       }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_paddingControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
         breakpoint: "md-",
+        breakpoint_name: "MD",
         paddingTop: mdPaddingTop,
         paddingRight: mdPaddingRight,
         paddingBottom: mdPaddingBottom,
@@ -967,6 +982,7 @@ function edit(_ref) {
         })
       }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_marginControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
         breakpoint: "md-",
+        breakpoint_name: "MD",
         marginTop: mdMarginTop,
         marginRight: mdMarginRight,
         marginBottom: mdMarginBottom,
@@ -985,6 +1001,7 @@ function edit(_ref) {
         })
       }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_alignJustifyControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
         breakpoint: "md-",
+        breakpoint_name: "MD",
         alignText: mdAlignText,
         alignItems: mdAlignItems,
         alignSelf: mdAlignSelf,
@@ -1015,6 +1032,7 @@ function edit(_ref) {
         })
       }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_paddingControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
         breakpoint: "lg-",
+        breakpoint_name: "LG",
         paddingTop: lgPaddingTop,
         paddingRight: lgPaddingRight,
         paddingBottom: lgPaddingBottom,
@@ -1033,6 +1051,7 @@ function edit(_ref) {
         })
       }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_marginControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
         breakpoint: "lg-",
+        breakpoint_name: "LG",
         marginTop: lgMarginTop,
         marginRight: lgMarginRight,
         marginBottom: lgMarginBottom,
@@ -1051,6 +1070,7 @@ function edit(_ref) {
         })
       }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_alignJustifyControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
         breakpoint: "lg-",
+        breakpoint_name: "LG",
         alignText: lgAlignText,
         alignItems: lgAlignItems,
         alignSelf: lgAlignSelf,
@@ -1081,6 +1101,7 @@ function edit(_ref) {
         })
       }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_paddingControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
         breakpoint: "xl-",
+        breakpoint_name: "XL",
         paddingTop: xlPaddingTop,
         paddingRight: xlPaddingRight,
         paddingBottom: xlPaddingBottom,
@@ -1099,6 +1120,7 @@ function edit(_ref) {
         })
       }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_marginControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
         breakpoint: "xl-",
+        breakpoint_name: "XL",
         marginTop: xlMarginTop,
         marginRight: xlMarginRight,
         marginBottom: xlMarginBottom,
@@ -1117,6 +1139,7 @@ function edit(_ref) {
         })
       }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_alignJustifyControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
         breakpoint: "xl-",
+        breakpoint_name: "XL",
         alignText: xlAlignText,
         alignItems: xlAlignItems,
         alignSelf: xlAlignSelf,
@@ -1147,6 +1170,7 @@ function edit(_ref) {
         })
       }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_paddingControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
         breakpoint: "xxl-",
+        breakpoint_name: "XXL",
         paddingTop: xxlPaddingTop,
         paddingRight: xxlPaddingRight,
         paddingBottom: xxlPaddingBottom,
@@ -1165,6 +1189,7 @@ function edit(_ref) {
         })
       }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_marginControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
         breakpoint: "xxl-",
+        breakpoint_name: "XXL",
         marginTop: xxlMarginTop,
         marginRight: xxlMarginRight,
         marginBottom: xxlMarginBottom,
@@ -1183,6 +1208,7 @@ function edit(_ref) {
         })
       }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_alignJustifyControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
         breakpoint: "xxl-",
+        breakpoint_name: "XXL",
         alignText: xxlAlignText,
         alignItems: xxlAlignItems,
         alignSelf: xxlAlignSelf,

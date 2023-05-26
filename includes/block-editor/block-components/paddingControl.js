@@ -22,6 +22,7 @@ import {CardBody, CardHeader, Flex, FlexItem, SelectControl} from '@wordpress/co
  */
 export default function PaddingControl ({
 																					breakpoint,
+																					breakpoint_name,
 																					paddingTop,
 																					paddingRight,
 																					paddingBottom,
@@ -33,7 +34,8 @@ export default function PaddingControl ({
 																				}) {
 	return (
 		<div>
-			<CardHeader isBorderless={true} isShady={true} size='small'>{__('PADDING', 'resource-layout-blocks')}</CardHeader>
+			<CardHeader isBorderless={true} isShady={true} size='small'
+									className='resource-card-header'>{__(`${breakpoint_name} PADDING`, 'resource-layout-blocks')}</CardHeader>
 			<CardBody size='small'>
 				<Flex wrap={true}>
 					<FlexItem>

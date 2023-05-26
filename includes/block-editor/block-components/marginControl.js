@@ -22,6 +22,7 @@ import {CardBody, CardHeader, Flex, FlexItem, SelectControl} from '@wordpress/co
  */
 export default function MarginControl ({
 																				 breakpoint,
+																				 breakpoint_name,
 																				 marginTop,
 																				 marginRight,
 																				 marginBottom,
@@ -33,7 +34,8 @@ export default function MarginControl ({
 																			 }) {
 	return (
 		<div>
-			<CardHeader isBorderless={true} isShady={true} size='small'>{__('MARGIN', 'resource-layout-blocks')}</CardHeader>
+			<CardHeader isBorderless={true} isShady={true} size='small'
+									className='resource-card-header'>{__(`${breakpoint_name} MARGIN`, 'resource-layout-blocks')}</CardHeader>
 			<CardBody size='small'>
 				<Flex wrap={true}>
 					<FlexItem>

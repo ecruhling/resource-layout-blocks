@@ -10,6 +10,14 @@
   font-size: 0.7rem;
 }
 
+div.resource-card-header {
+  font-size: 0.75rem;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
 #class-inspector.components-accessible-toolbar {
   border: 0;
   border-right: 1px solid #1e1e1e;
