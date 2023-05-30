@@ -9,6 +9,7 @@ import {CardBody, CardHeader, Flex, FlexItem, SelectControl} from '@wordpress/co
  * Component for controlling Margin attributes.
  *
  * @param breakpoint
+ * @param breakpoint_name
  * @param marginTop
  * @param marginRight
  * @param marginBottom
@@ -49,6 +50,7 @@ export default function MarginControl ({
 														 {value: `mt-${breakpoint}3`, label: __('3', 'resource-layout-blocks')},
 														 {value: `mt-${breakpoint}4`, label: __('4', 'resource-layout-blocks')},
 														 {value: `mt-${breakpoint}5`, label: __('5', 'resource-layout-blocks')},
+														 {value: `mt-${breakpoint}auto`, label: __('Auto', 'resource-layout-blocks')},
 													 ]}
 													 onChange={setMarginTop}
 						/>
@@ -64,6 +66,7 @@ export default function MarginControl ({
 														 {value: `me-${breakpoint}3`, label: __('3', 'resource-layout-blocks')},
 														 {value: `me-${breakpoint}4`, label: __('4', 'resource-layout-blocks')},
 														 {value: `me-${breakpoint}5`, label: __('5', 'resource-layout-blocks')},
+														 {value: `me-${breakpoint}auto`, label: __('Auto', 'resource-layout-blocks')},
 													 ]}
 													 onChange={setMarginRight}
 						/>
@@ -79,6 +82,7 @@ export default function MarginControl ({
 														 {value: `mb-${breakpoint}3`, label: __('3', 'resource-layout-blocks')},
 														 {value: `mb-${breakpoint}4`, label: __('4', 'resource-layout-blocks')},
 														 {value: `mb-${breakpoint}5`, label: __('5', 'resource-layout-blocks')},
+														 {value: `mb-${breakpoint}auto`, label: __('Auto', 'resource-layout-blocks')},
 													 ]}
 													 onChange={setMarginBottom}
 						/>
@@ -94,6 +98,7 @@ export default function MarginControl ({
 														 {value: `ms-${breakpoint}3`, label: __('3', 'resource-layout-blocks')},
 														 {value: `ms-${breakpoint}4`, label: __('4', 'resource-layout-blocks')},
 														 {value: `ms-${breakpoint}5`, label: __('5', 'resource-layout-blocks')},
+														 {value: `ms-${breakpoint}auto`, label: __('Auto', 'resource-layout-blocks')},
 													 ]}
 													 onChange={setMarginLeft}
 						/>

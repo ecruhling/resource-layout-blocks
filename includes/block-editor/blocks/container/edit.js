@@ -41,6 +41,7 @@ import DisplayControl from './../../block-components/displayControl';
 import PaddingControl from './../../block-components/paddingControl';
 import MarginControl from './../../block-components/marginControl';
 import AlignJustifyControl from './../../block-components/alignJustifyControl';
+import FlexControl from './../../block-components/flexControl';
 
 /**
  * The Block edit function.
@@ -68,6 +69,11 @@ export default function
 		baseMarginBottom,
 		baseMarginLeft,
 		baseAlignText,
+		baseFlexDirection,
+		baseFillGrowShrink,
+		baseWrap,
+		baseOrder,
+		baseAlignContent,
 		baseAlignItems,
 		baseAlignSelf,
 		baseJustifyContent,
@@ -81,6 +87,7 @@ export default function
 		smMarginBottom,
 		smMarginLeft,
 		smAlignText,
+		smFlexDirection,
 		smAlignItems,
 		smAlignSelf,
 		smJustifyContent,
@@ -94,6 +101,7 @@ export default function
 		mdMarginBottom,
 		mdMarginLeft,
 		mdAlignText,
+		mdFlexDirection,
 		mdAlignItems,
 		mdAlignSelf,
 		mdJustifyContent,
@@ -107,6 +115,7 @@ export default function
 		lgMarginBottom,
 		lgMarginLeft,
 		lgAlignText,
+		lgFlexDirection,
 		lgAlignItems,
 		lgAlignSelf,
 		lgJustifyContent,
@@ -120,6 +129,7 @@ export default function
 		xlMarginBottom,
 		xlMarginLeft,
 		xlAlignText,
+		xlFlexDirection,
 		xlAlignItems,
 		xlAlignSelf,
 		xlJustifyContent,
@@ -133,6 +143,7 @@ export default function
 		xxlMarginBottom,
 		xxlMarginLeft,
 		xxlAlignText,
+		xxlFlexDirection,
 		xxlAlignItems,
 		xxlAlignSelf,
 		xxlJustifyContent,
@@ -153,6 +164,11 @@ export default function
 		baseMarginBottom,
 		baseMarginLeft,
 		baseAlignText,
+		baseFlexDirection,
+		baseFillGrowShrink,
+		baseWrap,
+		baseOrder,
+		baseAlignContent,
 		baseAlignItems,
 		baseAlignSelf,
 		baseJustifyContent,
@@ -166,6 +182,7 @@ export default function
 		smMarginBottom,
 		smMarginLeft,
 		smAlignText,
+		smFlexDirection,
 		smAlignItems,
 		smAlignSelf,
 		smJustifyContent,
@@ -179,6 +196,7 @@ export default function
 		mdMarginBottom,
 		mdMarginLeft,
 		mdAlignText,
+		mdFlexDirection,
 		mdAlignItems,
 		mdAlignSelf,
 		mdJustifyContent,
@@ -192,6 +210,7 @@ export default function
 		lgMarginBottom,
 		lgMarginLeft,
 		lgAlignText,
+		lgFlexDirection,
 		lgAlignItems,
 		lgAlignSelf,
 		lgJustifyContent,
@@ -205,6 +224,7 @@ export default function
 		xlMarginBottom,
 		xlMarginLeft,
 		xlAlignText,
+		xlFlexDirection,
 		xlAlignItems,
 		xlAlignSelf,
 		xlJustifyContent,
@@ -218,6 +238,7 @@ export default function
 		xxlMarginBottom,
 		xxlMarginLeft,
 		xxlAlignText,
+		xxlFlexDirection,
 		xxlAlignItems,
 		xxlAlignSelf,
 		xxlJustifyContent,
@@ -265,7 +286,6 @@ export default function
 						<Flex wrap={true}>
 							<FlexItem>
 								<SelectControl
-									__nextHasNoMarginBottom
 									label={__('HTML element', 'resource-layout-blocks')}
 									options={[
 										{label: __('Default (<div>)'), value: 'div'},
@@ -310,42 +330,71 @@ export default function
 										display={baseDisplay}
 										setDisplay={baseDisplay => setAttributes({baseDisplay})}
 									></DisplayControl>
-									<PaddingControl
-										breakpoint=''
-										breakpoint_name=''
-										paddingTop={basePaddingTop}
-										paddingRight={basePaddingRight}
-										paddingBottom={basePaddingBottom}
-										paddingLeft={basePaddingLeft}
-										setPaddingTop={basePaddingTop => setAttributes({basePaddingTop})}
-										setPaddingRight={basePaddingRight => setAttributes({basePaddingRight})}
-										setPaddingBottom={basePaddingBottom => setAttributes({basePaddingBottom})}
-										setPaddingLeft={basePaddingLeft => setAttributes({basePaddingLeft})}
-									></PaddingControl>
-									<MarginControl
-										breakpoint=''
-										breakpoint_name=''
-										marginTop={baseMarginTop}
-										marginRight={baseMarginRight}
-										marginBottom={baseMarginBottom}
-										marginLeft={baseMarginLeft}
-										setMarginTop={baseMarginTop => setAttributes({baseMarginTop})}
-										setMarginRight={baseMarginRight => setAttributes({baseMarginRight})}
-										setMarginBottom={baseMarginBottom => setAttributes({baseMarginBottom})}
-										setMarginLeft={baseMarginLeft => setAttributes({baseMarginLeft})}
-									></MarginControl>
-									<AlignJustifyControl
-										breakpoint=''
-										breakpoint_name=''
-										alignText={baseAlignText}
-										alignItems={baseAlignItems}
-										alignSelf={baseAlignSelf}
-										justifyContent={baseJustifyContent}
-										setAlignText={baseAlignText => setAttributes({baseAlignText})}
-										setAlignItems={baseAlignItems => setAttributes({baseAlignItems})}
-										setAlignSelf={baseAlignSelf => setAttributes({baseAlignSelf})}
-										setJustifyContent={baseJustifyContent => setAttributes({baseJustifyContent})}
-									></AlignJustifyControl>
+									{(baseDisplay === 'd-flex' || baseDisplay === 'd-inline-flex') && (
+										<FlexControl
+											breakpoint=''
+											breakpoint_name=''
+											flexDirection={baseFlexDirection}
+											justifyContent={baseJustifyContent}
+											alignItems={baseAlignItems}
+											alignSelf={baseAlignSelf}
+											fillGrowShrink={baseFillGrowShrink}
+											wrap={baseWrap}
+											order={baseOrder}
+											alignContent={baseAlignContent}
+											setFlexDirection={baseFlexDirection => setAttributes({baseFlexDirection})}
+											setJustifyContent={baseJustifyContent => setAttributes({baseJustifyContent})}
+											setAlignItems={baseAlignItems => setAttributes({baseAlignItems})}
+											setAlignSelf={baseAlignSelf => setAttributes({baseAlignSelf})}
+											setFillGrowShrink={baseFillGrowShrink => setAttributes({baseFillGrowShrink})}
+											setWrap={baseWrap => setAttributes({baseWrap})}
+											setOrder={baseOrder => setAttributes({baseOrder})}
+											setAlignContent={baseAlignContent => setAttributes({baseAlignContent})}
+										>
+										</FlexControl>
+									)}
+									{(baseDisplay !== 'd-none') && (
+										<>
+											<PaddingControl
+												breakpoint=''
+												breakpoint_name=''
+												paddingTop={basePaddingTop}
+												paddingRight={basePaddingRight}
+												paddingBottom={basePaddingBottom}
+												paddingLeft={basePaddingLeft}
+												setPaddingTop={basePaddingTop => setAttributes({basePaddingTop})}
+												setPaddingRight={basePaddingRight => setAttributes({basePaddingRight})}
+												setPaddingBottom={basePaddingBottom => setAttributes({basePaddingBottom})}
+												setPaddingLeft={basePaddingLeft => setAttributes({basePaddingLeft})}
+											></PaddingControl>
+											<MarginControl
+												breakpoint=''
+												breakpoint_name=''
+												marginTop={baseMarginTop}
+												marginRight={baseMarginRight}
+												marginBottom={baseMarginBottom}
+												marginLeft={baseMarginLeft}
+												setMarginTop={baseMarginTop => setAttributes({baseMarginTop})}
+												setMarginRight={baseMarginRight => setAttributes({baseMarginRight})}
+												setMarginBottom={baseMarginBottom => setAttributes({baseMarginBottom})}
+												setMarginLeft={baseMarginLeft => setAttributes({baseMarginLeft})}
+											></MarginControl>
+											<AlignJustifyControl
+												breakpoint=''
+												breakpoint_name=''
+												alignText={baseAlignText}
+												flexDirection={baseFlexDirection}
+												alignItems={baseAlignItems}
+												alignSelf={baseAlignSelf}
+												justifyContent={baseJustifyContent}
+												setAlignText={baseAlignText => setAttributes({baseAlignText})}
+												setFlexDirection={baseFlexDirection => setAttributes({baseFlexDirection})}
+												setAlignItems={baseAlignItems => setAttributes({baseAlignItems})}
+												setAlignSelf={baseAlignSelf => setAttributes({baseAlignSelf})}
+												setJustifyContent={baseJustifyContent => setAttributes({baseJustifyContent})}
+											></AlignJustifyControl>
+										</>
+									)}
 								</Card>,
 						},
 						{
@@ -388,6 +437,7 @@ export default function
 										breakpoint='sm-'
 										breakpoint_name='SM'
 										alignText={smAlignText}
+										flexDirection={smFlexDirection}
 										alignItems={smAlignItems}
 										alignSelf={smAlignSelf}
 										justifyContent={smJustifyContent}
@@ -438,6 +488,7 @@ export default function
 										breakpoint='md-'
 										breakpoint_name='MD'
 										alignText={mdAlignText}
+										flexDirection={mdFlexDirection}
 										alignItems={mdAlignItems}
 										alignSelf={mdAlignSelf}
 										justifyContent={mdJustifyContent}
@@ -488,6 +539,7 @@ export default function
 										breakpoint='lg-'
 										breakpoint_name='LG'
 										alignText={lgAlignText}
+										flexDirection={lgFlexDirection}
 										alignItems={lgAlignItems}
 										alignSelf={lgAlignSelf}
 										justifyContent={lgJustifyContent}
@@ -538,6 +590,7 @@ export default function
 										breakpoint='xl-'
 										breakpoint_name='XL'
 										alignText={xlAlignText}
+										flexDirection={xlFlexDirection}
 										alignItems={xlAlignItems}
 										alignSelf={xlAlignSelf}
 										justifyContent={xlJustifyContent}
@@ -588,6 +641,7 @@ export default function
 										breakpoint='xxl-'
 										breakpoint_name='XXL'
 										alignText={xxlAlignText}
+										flexDirection={xxlFlexDirection}
 										alignItems={xxlAlignItems}
 										alignSelf={xxlAlignSelf}
 										justifyContent={xxlJustifyContent}

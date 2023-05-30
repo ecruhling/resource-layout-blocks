@@ -8,6 +8,8 @@ import {CardBody, CardHeader, Flex, FlexItem, SelectControl} from '@wordpress/co
  * ColumnsDisplayControl.
  * Component for controlling Columns & Display attributes.
  *
+ * @param breakpoint
+ * @param breakpoint_name
  * @param columns
  * @param display
  * @param offset
@@ -18,6 +20,8 @@ import {CardBody, CardHeader, Flex, FlexItem, SelectControl} from '@wordpress/co
  * @constructor
  */
 export default function ColumnsDisplayControl ({
+																								 breakpoint,
+																								 breakpoint_name,
 																								 columns,
 																								 display,
 																								 offset,

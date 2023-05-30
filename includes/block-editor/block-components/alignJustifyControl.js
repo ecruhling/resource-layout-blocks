@@ -9,11 +9,14 @@ import {CardBody, CardHeader, Flex, FlexItem, SelectControl} from '@wordpress/co
  * Component for controlling Align & Justify attributes.
  *
  * @param breakpoint
+ * @param breakpoint_name
  * @param alignText
+ * @param flexDirection
  * @param alignItems
  * @param alignSelf
  * @param justifyContent
  * @param setAlignText
+ * @param setFlexDirection
  * @param setAlignItems
  * @param setAlignSelf
  * @param setJustifyContent
@@ -24,10 +27,12 @@ export default function AlignJustifyControl ({
 																							 breakpoint,
 																							 breakpoint_name,
 																							 alignText,
+																							 flexDirection,
 																							 alignItems,
 																							 alignSelf,
 																							 justifyContent,
 																							 setAlignText,
+																							 setFlexDirection,
 																							 setAlignItems,
 																							 setAlignSelf,
 																							 setJustifyContent,
@@ -49,6 +54,25 @@ export default function AlignJustifyControl ({
 														 {value: `text-${breakpoint}end`, label: __('End', 'resource-layout-blocks')},
 													 ]}
 													 onChange={setAlignText}
+						/>
+					</FlexItem>
+					<FlexItem>
+						<SelectControl label={__('Flex Direction', 'resource-layout-blocks')}
+													 value={flexDirection}
+													 options={[
+														 {value: '', label: __('Select Option', 'resource-layout-blocks')},
+														 {value: `flex-${breakpoint}row`, label: __('Flex Row', 'resource-layout-blocks')},
+														 {
+															 value: `flex-${breakpoint}row-reverse`,
+															 label: __('Flex Row Reverse', 'resource-layout-blocks'),
+														 },
+														 {value: `flex-${breakpoint}column`, label: __('Flex Column', 'resource-layout-blocks')},
+														 {
+															 value: `flex-${breakpoint}column-reverse`,
+															 label: __('Flex Column Reverse', 'resource-layout-blocks'),
+														 },
+													 ]}
+													 onChange={setFlexDirection}
 						/>
 					</FlexItem>
 					<FlexItem>
