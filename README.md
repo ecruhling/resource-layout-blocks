@@ -61,9 +61,9 @@ Uses CSS and utility classes from Twitter Bootstrap 5.
   </ol>
 </details>
 
-## About The Project
+## Layout Blocks
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+![Layout Blocks Screen Shot][product-screenshot]
 
 Custom layout blocks for the WordPress block editor. Container, Row, and Column. Uses CSS and utility classes from
 Twitter Bootstrap 5.
@@ -79,52 +79,29 @@ Twitter Bootstrap 5.
 
 ## Getting Started
 
-WordPress plugin; install and activate.
+WordPress plugin – install and activate.
 
 ### Prerequisites
 
 Requires PHP >= 7.0. Requires WordPress >= 5.9.
 
-### Installation
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 ## Usage
 
-The killer feature here is the 'Class Inspector' section added to the Block Control Toolbar. This dynamically lists all
-the various Bootstrap 5 utility classes added to the block during creation and editing. It provides a concise, quick way
-of telling exactly what classes are added throughout all breakpoints, including any custom classes added in the Advanced
+One major feature in this plugin is the 'Class Inspector' area added to the Block Control Toolbar. This dynamically
+lists all the CSS classes added to the block during creation and editing. It provides a concise, quick way
+of telling exactly what classes are added throughout all breakpoints, including any custom CSS classes added in the
+Advanced
 sidebar.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-	- [ ] Nested Feature
+- [ ] Enable class editing from within the Class Inspector?
 
 See the [open issues](https://github.com/ecruhling/resource-layout-blocks/issues) for a full list of proposed features (
 and
 known issues).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any
-contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also
-simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -136,17 +113,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Erik Ruhling - ecruhling@gmail.com
+Erik Rühling - erik@resourceatlanta.com
 
 Project Link: [https://github.com/ecruhling/resource-layout-blocks](https://github.com/ecruhling/resource-layout-blocks)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-## Acknowledgments
-
-* []()
-* []()
-* []()
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -177,4 +146,4 @@ Project Link: [https://github.com/ecruhling/resource-layout-blocks](https://gith
 
 [linkedin-url]: https://linkedin.com/in/erik-r%C3%BChling-1a452138
 
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: assets/images/logo.png
