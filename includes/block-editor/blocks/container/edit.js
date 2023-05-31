@@ -170,7 +170,7 @@ export default function
 		xxlJustifyContent,
 	} = attributes;
 
-	const classNameAttributes = omit(attributes, ['isFluid', 'tagName', 'className']);
+	const classNameAttributes = omit(attributes, ['anchor', 'isFluid', 'tagName', 'className']);
 
 	const classes = classnames(
 		{

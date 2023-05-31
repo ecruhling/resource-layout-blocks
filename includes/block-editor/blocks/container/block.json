@@ -4,7 +4,7 @@
 	"name": "resource-layout-blocks/container",
 	"title": "Container",
 	"category": "resource-layout-blocks",
-	"description": "A container/wrapper; fluid or fixed.",
+	"description": "A container/wrapper; fluid or fixed width.",
 	"keywords": [
 		"container",
 		"wrapper"
