@@ -11,7 +11,6 @@
 	],
 	"version": "1.0.0",
 	"textdomain": "resource",
-	"render": "file:./index.php",
 	"attributes": {
 		"anchor": {
 			"type": "string"
@@ -369,7 +368,7 @@
 		"filter": {
 			"duotone": false
 		},
-		"html": true,
+		"html": false,
 		"inserter": true,
 		"multiple": true,
 		"reusable": true,
