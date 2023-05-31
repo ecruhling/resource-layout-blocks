@@ -111,6 +111,18 @@
 		"smFlexDirection": {
 			"type": "string"
 		},
+		"smFillGrowShrink": {
+			"type": "string"
+		},
+		"smWrap": {
+			"type": "string"
+		},
+		"smOrder": {
+			"type": "string"
+		},
+		"smAlignContent": {
+			"type": "string"
+		},
 		"smAlignItems": {
 			"type": "string"
 		},
@@ -151,6 +163,18 @@
 			"type": "string"
 		},
 		"mdFlexDirection": {
+			"type": "string"
+		},
+		"mdFillGrowShrink": {
+			"type": "string"
+		},
+		"mdWrap": {
+			"type": "string"
+		},
+		"mdOrder": {
+			"type": "string"
+		},
+		"mdAlignContent": {
 			"type": "string"
 		},
 		"mdAlignItems": {
@@ -195,6 +219,18 @@
 		"lgFlexDirection": {
 			"type": "string"
 		},
+		"lgFillGrowShrink": {
+			"type": "string"
+		},
+		"lgWrap": {
+			"type": "string"
+		},
+		"lgOrder": {
+			"type": "string"
+		},
+		"lgAlignContent": {
+			"type": "string"
+		},
 		"lgAlignItems": {
 			"type": "string"
 		},
@@ -237,6 +273,18 @@
 		"xlFlexDirection": {
 			"type": "string"
 		},
+		"xlFillGrowShrink": {
+			"type": "string"
+		},
+		"xlWrap": {
+			"type": "string"
+		},
+		"xlOrder": {
+			"type": "string"
+		},
+		"xlAlignContent": {
+			"type": "string"
+		},
 		"xlAlignItems": {
 			"type": "string"
 		},
@@ -277,6 +325,18 @@
 			"type": "string"
 		},
 		"xxlFlexDirection": {
+			"type": "string"
+		},
+		"xxlFillGrowShrink": {
+			"type": "string"
+		},
+		"xxlWrap": {
+			"type": "string"
+		},
+		"xxlOrder": {
+			"type": "string"
+		},
+		"xxlAlignContent": {
 			"type": "string"
 		},
 		"xxlAlignItems": {
