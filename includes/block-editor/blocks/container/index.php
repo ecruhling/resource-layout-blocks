@@ -1,6 +1,6 @@
 <?php
 /**
- * Front-end render template for the block.
+ * Front-end render template for the block. [NOT USED - BLOCK IS STATIC]
  *
  * @var array $attributes Block attributes.
  * @var string $content Block default content.

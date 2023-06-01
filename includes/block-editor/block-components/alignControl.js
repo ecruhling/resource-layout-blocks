@@ -27,15 +27,7 @@ export default function AlignControl ({
 																				breakpoint,
 																				breakpoint_name,
 																				alignText,
-																				flexDirection,
-																				alignItems,
-																				alignSelf,
-																				justifyContent,
 																				setAlignText,
-																				setFlexDirection,
-																				setAlignItems,
-																				setAlignSelf,
-																				setJustifyContent,
 																			}) {
 	return (
 		<div>

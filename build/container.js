@@ -49,15 +49,7 @@ function AlignControl(_ref) {
     breakpoint,
     breakpoint_name,
     alignText,
-    flexDirection,
-    alignItems,
-    alignSelf,
-    justifyContent,
-    setAlignText,
-    setFlexDirection,
-    setAlignItems,
-    setAlignSelf,
-    setJustifyContent
+    setAlignText
   } = _ref;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardHeader, {
     isBorderless: true,
@@ -1879,12 +1871,11 @@ function save(_ref) {
     'container': !isFluid,
     'container-fluid': isFluid
   }, Object.values(classNameAttributes));
-
-  // console.log(classes);
-
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(TagName, _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save({
+  const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save({
     className
-  }));
+  });
+  const innerBlocksProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useInnerBlocksProps.save(blockProps);
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(TagName, innerBlocksProps);
 }
 
 /***/ }),

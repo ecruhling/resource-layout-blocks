@@ -34,7 +34,11 @@ export default function save ({
 		Object.values(classNameAttributes),
 	);
 
-	// console.log(classes);
+	const blockProps = useBlockProps.save({
+		className,
+	});
 
-	return <TagName {...useBlockProps.save({className})} />;
+	const innerBlocksProps = useInnerBlocksProps.save(blockProps);
+
+	return <TagName {...innerBlocksProps} />;
 }
