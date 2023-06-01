@@ -1,6 +1,6 @@
 <?php
 /**
- * Front-end render template for the block.
+ * Front-end render template for the block. [NOT USED - BLOCK IS STATIC]
  *
  * @var array $attributes Block attributes.
  * @var string $content Block default content.
@@ -9,16 +9,16 @@
 // Block name
 $blockType = $block->name ?? '';
 // Block classes
-$alignContentClass = empty($attributes['alignContent']) ? '' : "are-vertically-aligned-{$attributes['alignContent']}";
-$fullHeightClass   = empty($attributes['fullHeight']) ? '' : 'block-is-full-height';
-$extraClassesList   = empty($attributes['extraClassesList']) ? '' : $attributes['extraClassesList'];
+$alignContentClass = empty( $attributes['alignContent'] ) ? '' : "are-vertically-aligned-{$attributes['alignContent']}";
+$fullHeightClass   = empty( $attributes['fullHeight'] ) ? '' : 'block-is-full-height';
+$extraClassesList  = empty( $attributes['extraClassesList'] ) ? '' : $attributes['extraClassesList'];
 $containerClass    = 'row';
-$customAnchor = $attributes['customAnchor'] ?? '';
+$customAnchor      = $attributes['customAnchor'] ?? '';
 
 $attribute_classes  = $containerClass . ' ' . $alignContentClass . ' ' . $fullHeightClass;
-$wrapper_attributes = get_block_wrapper_attributes([ 'class' => $attribute_classes . ' ' . $extraClassesList ]);
+$wrapper_attributes = get_block_wrapper_attributes( [ 'class' => $attribute_classes . ' ' . $extraClassesList ] );
 ?>
 
 <<?= $attributes['tagName']; ?> id="<?= $customAnchor; ?>" <?= $wrapper_attributes; ?> data-type="<?= $blockType; ?>">
-    <?= $content; ?>
+<?= $content; ?>
 </<?= $attributes['tagName']; ?>>

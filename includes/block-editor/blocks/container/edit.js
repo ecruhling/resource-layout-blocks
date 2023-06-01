@@ -713,7 +713,7 @@ export default function
 				</TabPanel>
 			</InspectorControls>
 			<TagName {...blockProps}>
-				<InnerBlocks placeholder={__('Insert Blocks', 'resource-layout-blocks')} />
+				<InnerBlocks placeholder={__('Insert Rows', 'resource-layout-blocks')} />
 			</TagName>
 		</>
 	);

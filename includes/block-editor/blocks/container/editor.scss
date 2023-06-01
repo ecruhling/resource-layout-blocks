@@ -5,12 +5,22 @@
  */
 
 // This needs to be moved to a global CSS stylesheet
+.editor-styles-wrapper .block-editor-block-list__block.is-highlighted::after,
+.editor-styles-wrapper .block-editor-block-list__block.is-highlighted ~ .is-multi-selected::after,
+.editor-styles-wrapper .block-editor-block-list__block:not([contenteditable]):focus::after,
+.editor-styles-wrapper .is-block-moving-mode.block-editor-block-list__block.has-child-selected::after {
+	box-shadow: none;
+	outline: 1px dashed magenta;
+}
+
+// This needs to be moved to a global CSS stylesheet
 .breakpoint-tab-panel {
 	button.breakpoint-tab {
 		font-size: 0.7rem;
 	}
 }
 
+// This needs to be moved to a global CSS stylesheet
 div.resource-card-header {
 	font-size: 0.75rem;
 	padding-top: 5px;
@@ -38,7 +48,7 @@ div.resource-card-header {
 }
 
 // Container block
-[data-type="resource-layout-blocks/container"] {
+.editor-styles-wrapper [data-type="resource-layout-blocks/container"] {
 	// Container background on hover to make it visible
 	&:not(.is-selected):not(.has-child-selected):hover,
 	&.is-selected {
@@ -48,8 +58,8 @@ div.resource-card-header {
 		&::before {
 			content: "container";
 			position: absolute;
-			top: -2px;
-			left: 2px;
+			top: -11px;
+			left: -1px;
 			display: block;
 			color: red;
 			font-size: 0.5rem;

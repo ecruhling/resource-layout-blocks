@@ -3,7 +3,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
-import {registerBlockType, createBlock} from '@wordpress/blocks';
+import {registerBlockType} from '@wordpress/blocks';
 
 /**
  * Internal dependencies
