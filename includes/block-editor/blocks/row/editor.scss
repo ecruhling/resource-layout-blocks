@@ -7,15 +7,17 @@
 // Row block
 .editor-styles-wrapper [data-type="resource-layout-blocks/row"] {
 	// WordPress overrides the negative margin on the row. Get it back.
-	margin-right: calc(-.5 * var(--bs-gutter-x));
-	margin-left: calc(-.5 * var(--bs-gutter-x));
+	// (only needed for 'classic' themes that load classic.css
+	//margin-right: calc(-.5 * var(--bs-gutter-x));
+	//margin-left: calc(-.5 * var(--bs-gutter-x));
 
 	// Bootstrap's after-row clearfix conflicts with WordPress' 'is-highlighted' class for blocks that are
 	// selected in the List View. Adding this makes the highlight work again.
-	&::after {
-		width: 100%;
-		height: 100%;
-	}
+	// (only needed for 'classic' themes that load classic.css
+	//&::after {
+	//	width: 100%;
+	//	height: 100%;
+	//}
 
 	// Container background on hover to make it visible
 	&:not(.is-selected):not(.has-child-selected):hover,
@@ -27,7 +29,7 @@
 			content: "row";
 			position: absolute;
 			top: -11px;
-			left: -1px;
+			left: 1px;
 			display: block;
 			color: purple;
 			font-size: 0.5rem;

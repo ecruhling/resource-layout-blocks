@@ -374,7 +374,7 @@
 		"reusable": true,
 		"lock": true,
 		"position": {
-			"sticky": true
+			"sticky": false
 		},
 		"spacing": {
 			"margin": false,

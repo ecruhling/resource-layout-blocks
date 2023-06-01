@@ -6,14 +6,6 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-.editor-styles-wrapper [data-type="resource-layout-blocks/row"] {
-  margin-right: calc(-0.5 * var(--bs-gutter-x));
-  margin-left: calc(-0.5 * var(--bs-gutter-x));
-}
-.editor-styles-wrapper [data-type="resource-layout-blocks/row"]::after {
-  width: 100%;
-  height: 100%;
-}
 .editor-styles-wrapper [data-type="resource-layout-blocks/row"]:not(.is-selected):not(.has-child-selected):hover, .editor-styles-wrapper [data-type="resource-layout-blocks/row"].is-selected {
   outline: 1px dashed purple;
   position: relative;
@@ -22,7 +14,7 @@
   content: "row";
   position: absolute;
   top: -11px;
-  left: -1px;
+  left: 1px;
   display: block;
   color: purple;
   font-size: 0.5rem;

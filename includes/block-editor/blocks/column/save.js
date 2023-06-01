@@ -10,7 +10,7 @@ import classnames from 'classnames';
 import {omit} from 'lodash';
 
 /**
- * The Block save function
+ * The Block save function.
  *
  * @returns {JSX.Element}
  * @constructor
@@ -40,7 +40,5 @@ export default function save ({
 
 	const innerBlocksProps = useInnerBlocksProps.save(blockProps);
 
-	return (
-		<TagName {...innerBlocksProps} />
-	);
+	return <TagName {...innerBlocksProps} />;
 }

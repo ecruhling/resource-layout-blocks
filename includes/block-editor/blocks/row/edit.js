@@ -173,7 +173,6 @@ export default function
 	const classes = classnames(
 		'row',
 		Object.values(classNameAttributes),
-		className,
 	);
 
 	const blockProps = useBlockProps({

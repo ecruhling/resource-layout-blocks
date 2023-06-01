@@ -10,36 +10,9 @@
 	],
 	"version": "1.0.0",
 	"textdomain": "resource",
-	"render": "file:./index.php",
-	"attributes": {
-		"anchor": {
-			"type": "string"
-		},
-		"verticalAlignment": {
-			"type": "string"
-		},
-		"baseColumns": {
-			"type": "string"
-		},
-		"baseDisplay": {
-			"type": "string"
-		},
-		"baseOffset": {
-			"type": "string"
-		},
-		"baseAlignItems": {
-			"type": "string"
-		},
-		"baseAlignSelf": {
-			"type": "string"
-		},
-		"baseJustifyContent": {
-			"type": "string"
-		}
-	},
 	"supports": {
 		"anchor": true,
-		"align": true,
+		"align": false,
 		"alignWide": false,
 		"ariaLabel": true,
 		"className": true,
@@ -57,7 +30,7 @@
 		"filter": {
 			"duotone": false
 		},
-		"html": true,
+		"html": false,
 		"inserter": true,
 		"multiple": true,
 		"reusable": true,
@@ -66,16 +39,16 @@
 			"sticky": true
 		},
 		"spacing": {
-			"margin": true,
-			"padding": true,
-			"blockGap": true
+			"margin": false,
+			"padding": false,
+			"blockGap": false
 		},
 		"typography": {
 			"fontSize": false,
 			"lineHeight": false
 		}
 	},
-	"editorScript": "file:../../../../build/container.js",
-	"editorStyle": "file:../../../../build/container.css",
-	"style": "file:../../../../build/style-container.css"
+	"editorScript": "file:../../../../build/column.js",
+	"editorStyle": "file:../../../../build/column.css",
+	"style": "file:../../../../build/style-column.css"
 }
