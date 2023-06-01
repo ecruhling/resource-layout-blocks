@@ -853,15 +853,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _block_help_tagNameMessages__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../block-help/tagNameMessages */ "./includes/block-editor/block-help/tagNameMessages.js");
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./editor.scss */ "./includes/block-editor/blocks/row/editor.scss");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! lodash */ "lodash");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _block_components_displayControl__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../block-components/displayControl */ "./includes/block-editor/block-components/displayControl.js");
-/* harmony import */ var _block_components_flexControl__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../block-components/flexControl */ "./includes/block-editor/block-components/flexControl.js");
-/* harmony import */ var _block_components_paddingControl__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../block-components/paddingControl */ "./includes/block-editor/block-components/paddingControl.js");
-/* harmony import */ var _block_components_marginControl__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../block-components/marginControl */ "./includes/block-editor/block-components/marginControl.js");
-/* harmony import */ var _block_components_alignControl__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../block-components/alignControl */ "./includes/block-editor/block-components/alignControl.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lodash */ "lodash");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _block_help_tagNameMessages__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../block-help/tagNameMessages */ "./includes/block-editor/block-help/tagNameMessages.js");
+/* harmony import */ var _block_components_displayControl__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../block-components/displayControl */ "./includes/block-editor/block-components/displayControl.js");
+/* harmony import */ var _block_components_flexControl__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../block-components/flexControl */ "./includes/block-editor/block-components/flexControl.js");
+/* harmony import */ var _block_components_paddingControl__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../block-components/paddingControl */ "./includes/block-editor/block-components/paddingControl.js");
+/* harmony import */ var _block_components_marginControl__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../block-components/marginControl */ "./includes/block-editor/block-components/marginControl.js");
+/* harmony import */ var _block_components_alignControl__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../block-components/alignControl */ "./includes/block-editor/block-components/alignControl.js");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./editor.scss */ "./includes/block-editor/blocks/row/editor.scss");
 
 /**
  * WordPress dependencies
@@ -875,9 +875,15 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
+
 /**
  * Internal dependencies
  */
+
+
+
+
+
 
 
 /**
@@ -885,12 +891,6 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
-
-
-
-
-
-
 
 
 /**
@@ -906,7 +906,6 @@ function edit(_ref) {
   } = _ref;
   const {
     tagName: TagName = 'div',
-    className,
     baseDisplay,
     basePaddingTop,
     basePaddingRight,
@@ -1016,7 +1015,7 @@ function edit(_ref) {
     xxlAlignSelf,
     xxlJustifyContent
   } = attributes;
-  const classNameAttributes = (0,lodash__WEBPACK_IMPORTED_MODULE_7__.omit)(attributes, ['anchor', 'tagName', 'className']);
+  const classNameAttributes = (0,lodash__WEBPACK_IMPORTED_MODULE_5__.omit)(attributes, ['anchor', 'tagName', 'className']);
   const classes = classnames__WEBPACK_IMPORTED_MODULE_4___default()('row', Object.values(classNameAttributes));
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
     className: classes
@@ -1063,7 +1062,7 @@ function edit(_ref) {
     onChange: value => setAttributes({
       tagName: value
     }),
-    help: _block_help_tagNameMessages__WEBPACK_IMPORTED_MODULE_5__.tagNameMessages[TagName]
+    help: _block_help_tagNameMessages__WEBPACK_IMPORTED_MODULE_6__.tagNameMessages[TagName]
   }))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TabPanel, {
     className: "breakpoint-tab-panel",
     activeClass: "is-active",
@@ -1072,14 +1071,23 @@ function edit(_ref) {
       name: 'base',
       title: '—',
       className: 'breakpoint-tab',
-      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_displayControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_displayControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
         breakpoint: "",
         breakpoint_name: "",
         display: baseDisplay,
         setDisplay: baseDisplay => setAttributes({
           baseDisplay
-        })
-      }), (baseDisplay === 'd-flex' || baseDisplay === 'd-inline-flex') && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_flexControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        }),
+        __nextHasNoMarginBottom: true
+      }), (baseDisplay === '' || baseDisplay === 'd-flex' || baseDisplay === 'd-inline-flex') && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.CardBody, {
+        size: "small",
+        style: {
+          paddingTop: 0,
+          paddingBottom: 0
+        }
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Flex, {
+        wrap: true
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("em", null, "Row block default display attribute is 'flex'"))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_flexControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
         breakpoint: "",
         breakpoint_name: "",
         flexDirection: baseFlexDirection,
@@ -1114,7 +1122,7 @@ function edit(_ref) {
         setAlignContent: baseAlignContent => setAttributes({
           baseAlignContent
         })
-      }), baseDisplay !== 'd-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_paddingControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      })), baseDisplay !== 'd-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_paddingControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
         breakpoint: "",
         breakpoint_name: "",
         paddingTop: basePaddingTop,
@@ -1133,7 +1141,7 @@ function edit(_ref) {
         setPaddingLeft: basePaddingLeft => setAttributes({
           basePaddingLeft
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_marginControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_marginControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
         breakpoint: "",
         breakpoint_name: "",
         marginTop: baseMarginTop,
@@ -1152,7 +1160,7 @@ function edit(_ref) {
         setMarginLeft: baseMarginLeft => setAttributes({
           baseMarginLeft
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_alignControl__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_alignControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
         breakpoint: "",
         breakpoint_name: "",
         alignText: baseAlignText,
@@ -1180,14 +1188,22 @@ function edit(_ref) {
       name: 'small',
       title: 'SM',
       className: 'breakpoint-tab',
-      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_displayControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_displayControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
         breakpoint: "sm-",
         breakpoint_name: "SM",
         display: smDisplay,
         setDisplay: smDisplay => setAttributes({
           smDisplay
         })
-      }), (smDisplay === 'd-sm-flex' || smDisplay === 'd-sm-inline-flex') && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_flexControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      }), (baseDisplay === '' || baseDisplay === 'd-sm-flex' || baseDisplay === 'd-sm-inline-flex') && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.CardBody, {
+        size: "small",
+        style: {
+          paddingTop: 0,
+          paddingBottom: 0
+        }
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Flex, {
+        wrap: true
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("em", null, "Row block default display attribute is 'flex'"))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_flexControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
         breakpoint: "sm-",
         breakpoint_name: "SM",
         flexDirection: smFlexDirection,
@@ -1222,7 +1238,7 @@ function edit(_ref) {
         setAlignContent: smAlignContent => setAttributes({
           smAlignContent
         })
-      }), smDisplay !== 'd-sm-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_paddingControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      })), smDisplay !== 'd-sm-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_paddingControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
         breakpoint: "sm-",
         breakpoint_name: "SM",
         paddingTop: smPaddingTop,
@@ -1241,7 +1257,7 @@ function edit(_ref) {
         setPaddingLeft: smPaddingLeft => setAttributes({
           smPaddingLeft
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_marginControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_marginControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
         breakpoint: "sm-",
         breakpoint_name: "SM",
         marginTop: smMarginTop,
@@ -1260,7 +1276,7 @@ function edit(_ref) {
         setMarginLeft: smMarginLeft => setAttributes({
           smMarginLeft
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_alignControl__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_alignControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
         breakpoint: "sm-",
         breakpoint_name: "SM",
         alignText: smAlignText,
@@ -1285,14 +1301,22 @@ function edit(_ref) {
       name: 'medium',
       title: 'MD',
       className: 'breakpoint-tab',
-      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_displayControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_displayControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
         breakpoint: "md-",
         breakpoint_name: "MD",
         display: mdDisplay,
         setDisplay: mdDisplay => setAttributes({
           mdDisplay
         })
-      }), (mdDisplay === 'd-md-flex' || mdDisplay === 'd-md-inline-flex') && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_flexControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      }), (baseDisplay === '' || baseDisplay === 'd-md-flex' || baseDisplay === 'd-md-inline-flex') && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.CardBody, {
+        size: "small",
+        style: {
+          paddingTop: 0,
+          paddingBottom: 0
+        }
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Flex, {
+        wrap: true
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("em", null, "Row block default display attribute is 'flex'"))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_flexControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
         breakpoint: "md-",
         breakpoint_name: "MD",
         flexDirection: mdFlexDirection,
@@ -1327,7 +1351,7 @@ function edit(_ref) {
         setAlignContent: mdAlignContent => setAttributes({
           mdAlignContent
         })
-      }), mdDisplay !== 'd-md-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_paddingControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      })), mdDisplay !== 'd-md-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_paddingControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
         breakpoint: "md-",
         breakpoint_name: "MD",
         paddingTop: mdPaddingTop,
@@ -1346,7 +1370,7 @@ function edit(_ref) {
         setPaddingLeft: mdPaddingLeft => setAttributes({
           mdPaddingLeft
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_marginControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_marginControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
         breakpoint: "md-",
         breakpoint_name: "MD",
         marginTop: mdMarginTop,
@@ -1365,7 +1389,7 @@ function edit(_ref) {
         setMarginLeft: mdMarginLeft => setAttributes({
           mdMarginLeft
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_alignControl__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_alignControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
         breakpoint: "md-",
         breakpoint_name: "MD",
         alignText: mdAlignText,
@@ -1390,14 +1414,22 @@ function edit(_ref) {
       name: 'large',
       title: 'LG',
       className: 'breakpoint-tab',
-      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_displayControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_displayControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
         breakpoint: "lg-",
         breakpoint_name: "LG",
         display: lgDisplay,
         setDisplay: lgDisplay => setAttributes({
           lgDisplay
         })
-      }), (lgDisplay === 'd-lg-flex' || lgDisplay === 'd-lg-inline-flex') && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_flexControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      }), (baseDisplay === '' || baseDisplay === 'd-lg-flex' || baseDisplay === 'd-lg-inline-flex') && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.CardBody, {
+        size: "small",
+        style: {
+          paddingTop: 0,
+          paddingBottom: 0
+        }
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Flex, {
+        wrap: true
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("em", null, "Row block default display attribute is 'flex'"))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_flexControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
         breakpoint: "lg-",
         breakpoint_name: "LG",
         flexDirection: lgFlexDirection,
@@ -1432,7 +1464,7 @@ function edit(_ref) {
         setAlignContent: lgAlignContent => setAttributes({
           lgAlignContent
         })
-      }), lgDisplay !== 'd-lg-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_paddingControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      })), lgDisplay !== 'd-lg-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_paddingControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
         breakpoint: "lg-",
         breakpoint_name: "LG",
         paddingTop: lgPaddingTop,
@@ -1451,7 +1483,7 @@ function edit(_ref) {
         setPaddingLeft: lgPaddingLeft => setAttributes({
           lgPaddingLeft
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_marginControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_marginControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
         breakpoint: "lg-",
         breakpoint_name: "LG",
         marginTop: lgMarginTop,
@@ -1470,7 +1502,7 @@ function edit(_ref) {
         setMarginLeft: lgMarginLeft => setAttributes({
           lgMarginLeft
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_alignControl__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_alignControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
         breakpoint: "lg-",
         breakpoint_name: "LG",
         alignText: lgAlignText,
@@ -1495,14 +1527,22 @@ function edit(_ref) {
       name: 'extra-large',
       title: 'XL',
       className: 'breakpoint-tab',
-      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_displayControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_displayControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
         breakpoint: "xl-",
         breakpoint_name: "XL",
         display: xlDisplay,
         setDisplay: xlDisplay => setAttributes({
           xlDisplay
         })
-      }), (xlDisplay === 'd-xl-flex' || xlDisplay === 'd-xl-inline-flex') && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_flexControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      }), (baseDisplay === '' || baseDisplay === 'd-xl-flex' || baseDisplay === 'd-xl-inline-flex') && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.CardBody, {
+        size: "small",
+        style: {
+          paddingTop: 0,
+          paddingBottom: 0
+        }
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Flex, {
+        wrap: true
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("em", null, "Row block default display attribute is 'flex'"))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_flexControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
         breakpoint: "xl-",
         breakpoint_name: "XL",
         flexDirection: xlFlexDirection,
@@ -1537,7 +1577,7 @@ function edit(_ref) {
         setAlignContent: xlAlignContent => setAttributes({
           xlAlignContent
         })
-      }), xlDisplay !== 'd-xl-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_paddingControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      })), xlDisplay !== 'd-xl-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_paddingControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
         breakpoint: "xl-",
         breakpoint_name: "XL",
         paddingTop: xlPaddingTop,
@@ -1556,7 +1596,7 @@ function edit(_ref) {
         setPaddingLeft: xlPaddingLeft => setAttributes({
           xlPaddingLeft
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_marginControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_marginControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
         breakpoint: "xl-",
         breakpoint_name: "XL",
         marginTop: xlMarginTop,
@@ -1575,7 +1615,7 @@ function edit(_ref) {
         setMarginLeft: xlMarginLeft => setAttributes({
           xlMarginLeft
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_alignControl__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_alignControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
         breakpoint: "xl-",
         breakpoint_name: "XL",
         alignText: xlAlignText,
@@ -1600,14 +1640,22 @@ function edit(_ref) {
       name: 'extra-extra-large',
       title: 'XXL',
       className: 'breakpoint-tab',
-      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_displayControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_displayControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
         breakpoint: "xxl-",
         breakpoint_name: "XXL",
         display: xxlDisplay,
         setDisplay: xxlDisplay => setAttributes({
           xxlDisplay
         })
-      }), (xxlDisplay === 'd-xxl-flex' || xxlDisplay === 'd-xxl-inline-flex') && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_flexControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      }), (baseDisplay === '' || baseDisplay === 'd-xxl-flex' || baseDisplay === 'd-xxl-inline-flex') && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.CardBody, {
+        size: "small",
+        style: {
+          paddingTop: 0,
+          paddingBottom: 0
+        }
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Flex, {
+        wrap: true
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("em", null, "Row block default display attribute is 'flex'"))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_flexControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
         breakpoint: "xxl-",
         breakpoint_name: "XXL",
         flexDirection: xxlFlexDirection,
@@ -1642,7 +1690,7 @@ function edit(_ref) {
         setAlignContent: xxlAlignContent => setAttributes({
           xxlAlignContent
         })
-      }), xxlDisplay !== 'd-xxl-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_paddingControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      })), xxlDisplay !== 'd-xxl-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_paddingControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
         breakpoint: "xxl-",
         breakpoint_name: "XXL",
         paddingTop: xxlPaddingTop,
@@ -1661,7 +1709,7 @@ function edit(_ref) {
         setPaddingLeft: xxlPaddingLeft => setAttributes({
           xxlPaddingLeft
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_marginControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_marginControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
         breakpoint: "xxl-",
         breakpoint_name: "XXL",
         marginTop: xxlMarginTop,
@@ -1680,7 +1728,7 @@ function edit(_ref) {
         setMarginLeft: xxlMarginLeft => setAttributes({
           xxlMarginLeft
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_alignControl__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_alignControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
         breakpoint: "xxl-",
         breakpoint_name: "XXL",
         alignText: xxlAlignText,

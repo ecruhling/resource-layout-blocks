@@ -24,11 +24,17 @@ import {
  * External dependencies
  */
 import classnames from 'classnames';
+import {omit} from 'lodash';
 
 /**
  * Internal dependencies
  */
 import {tagNameMessages} from '../../block-help/tagNameMessages';
+import DisplayControl from '../../block-components/displayControl';
+import FlexControl from '../../block-components/flexControl';
+import PaddingControl from '../../block-components/paddingControl';
+import MarginControl from '../../block-components/marginControl';
+import AlignControl from '../../block-components/alignControl';
 
 /**
  * Styles are applied only to the editor
@@ -36,12 +42,6 @@ import {tagNameMessages} from '../../block-help/tagNameMessages';
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
 import './editor.scss';
-import {omit} from 'lodash';
-import DisplayControl from '../../block-components/displayControl';
-import FlexControl from '../../block-components/flexControl';
-import PaddingControl from '../../block-components/paddingControl';
-import MarginControl from '../../block-components/marginControl';
-import AlignControl from '../../block-components/alignControl';
 
 /**
  * The Block edit function
@@ -57,7 +57,6 @@ export default function
 
 	const {
 		tagName: TagName = 'div',
-		className,
 		baseDisplay,
 		basePaddingTop,
 		basePaddingRight,
@@ -232,29 +231,39 @@ export default function
 											breakpoint_name=''
 											display={baseDisplay}
 											setDisplay={baseDisplay => setAttributes({baseDisplay})}
+											__nextHasNoMarginBottom
 										></DisplayControl>
-										{(baseDisplay === 'd-flex' || baseDisplay === 'd-inline-flex') && (
-											<FlexControl
-												breakpoint=''
-												breakpoint_name=''
-												flexDirection={baseFlexDirection}
-												justifyContent={baseJustifyContent}
-												alignItems={baseAlignItems}
-												alignSelf={baseAlignSelf}
-												fillGrowShrink={baseFillGrowShrink}
-												wrap={baseWrap}
-												order={baseOrder}
-												alignContent={baseAlignContent}
-												setFlexDirection={baseFlexDirection => setAttributes({baseFlexDirection})}
-												setJustifyContent={baseJustifyContent => setAttributes({baseJustifyContent})}
-												setAlignItems={baseAlignItems => setAttributes({baseAlignItems})}
-												setAlignSelf={baseAlignSelf => setAttributes({baseAlignSelf})}
-												setFillGrowShrink={baseFillGrowShrink => setAttributes({baseFillGrowShrink})}
-												setWrap={baseWrap => setAttributes({baseWrap})}
-												setOrder={baseOrder => setAttributes({baseOrder})}
-												setAlignContent={baseAlignContent => setAttributes({baseAlignContent})}
-											>
-											</FlexControl>
+										{(baseDisplay === '' || baseDisplay === 'd-flex' || baseDisplay === 'd-inline-flex') && (
+											<>
+												<CardBody size='small' style={{paddingTop: 0, paddingBottom: 0}}>
+													<Flex wrap={true}>
+														<FlexItem>
+															<p><em>Row block default display attribute is 'flex'</em></p>
+														</FlexItem>
+													</Flex>
+												</CardBody>
+												<FlexControl
+													breakpoint=''
+													breakpoint_name=''
+													flexDirection={baseFlexDirection}
+													justifyContent={baseJustifyContent}
+													alignItems={baseAlignItems}
+													alignSelf={baseAlignSelf}
+													fillGrowShrink={baseFillGrowShrink}
+													wrap={baseWrap}
+													order={baseOrder}
+													alignContent={baseAlignContent}
+													setFlexDirection={baseFlexDirection => setAttributes({baseFlexDirection})}
+													setJustifyContent={baseJustifyContent => setAttributes({baseJustifyContent})}
+													setAlignItems={baseAlignItems => setAttributes({baseAlignItems})}
+													setAlignSelf={baseAlignSelf => setAttributes({baseAlignSelf})}
+													setFillGrowShrink={baseFillGrowShrink => setAttributes({baseFillGrowShrink})}
+													setWrap={baseWrap => setAttributes({baseWrap})}
+													setOrder={baseOrder => setAttributes({baseOrder})}
+													setAlignContent={baseAlignContent => setAttributes({baseAlignContent})}
+												>
+												</FlexControl>
+											</>
 										)}
 										{(baseDisplay !== 'd-none') && (
 											<>
@@ -312,28 +321,37 @@ export default function
 											display={smDisplay}
 											setDisplay={smDisplay => setAttributes({smDisplay})}
 										></DisplayControl>
-										{(smDisplay === 'd-sm-flex' || smDisplay === 'd-sm-inline-flex') && (
-											<FlexControl
-												breakpoint='sm-'
-												breakpoint_name='SM'
-												flexDirection={smFlexDirection}
-												justifyContent={smJustifyContent}
-												alignItems={smAlignItems}
-												alignSelf={smAlignSelf}
-												fillGrowShrink={smFillGrowShrink}
-												wrap={smWrap}
-												order={smOrder}
-												alignContent={smAlignContent}
-												setFlexDirection={smFlexDirection => setAttributes({smFlexDirection})}
-												setJustifyContent={smJustifyContent => setAttributes({smJustifyContent})}
-												setAlignItems={smAlignItems => setAttributes({smAlignItems})}
-												setAlignSelf={smAlignSelf => setAttributes({smAlignSelf})}
-												setFillGrowShrink={smFillGrowShrink => setAttributes({smFillGrowShrink})}
-												setWrap={smWrap => setAttributes({smWrap})}
-												setOrder={smOrder => setAttributes({smOrder})}
-												setAlignContent={smAlignContent => setAttributes({smAlignContent})}
-											>
-											</FlexControl>
+										{(baseDisplay === '' || baseDisplay === 'd-sm-flex' || baseDisplay === 'd-sm-inline-flex') && (
+											<>
+												<CardBody size='small' style={{paddingTop: 0, paddingBottom: 0}}>
+													<Flex wrap={true}>
+														<FlexItem>
+															<p><em>Row block default display attribute is 'flex'</em></p>
+														</FlexItem>
+													</Flex>
+												</CardBody>
+												<FlexControl
+													breakpoint='sm-'
+													breakpoint_name='SM'
+													flexDirection={smFlexDirection}
+													justifyContent={smJustifyContent}
+													alignItems={smAlignItems}
+													alignSelf={smAlignSelf}
+													fillGrowShrink={smFillGrowShrink}
+													wrap={smWrap}
+													order={smOrder}
+													alignContent={smAlignContent}
+													setFlexDirection={smFlexDirection => setAttributes({smFlexDirection})}
+													setJustifyContent={smJustifyContent => setAttributes({smJustifyContent})}
+													setAlignItems={smAlignItems => setAttributes({smAlignItems})}
+													setAlignSelf={smAlignSelf => setAttributes({smAlignSelf})}
+													setFillGrowShrink={smFillGrowShrink => setAttributes({smFillGrowShrink})}
+													setWrap={smWrap => setAttributes({smWrap})}
+													setOrder={smOrder => setAttributes({smOrder})}
+													setAlignContent={smAlignContent => setAttributes({smAlignContent})}
+												>
+												</FlexControl>
+											</>
 										)}
 										{(smDisplay !== 'd-sm-none') && (
 											<>
@@ -390,28 +408,37 @@ export default function
 											display={mdDisplay}
 											setDisplay={mdDisplay => setAttributes({mdDisplay})}
 										></DisplayControl>
-										{(mdDisplay === 'd-md-flex' || mdDisplay === 'd-md-inline-flex') && (
-											<FlexControl
-												breakpoint='md-'
-												breakpoint_name='MD'
-												flexDirection={mdFlexDirection}
-												justifyContent={mdJustifyContent}
-												alignItems={mdAlignItems}
-												alignSelf={mdAlignSelf}
-												fillGrowShrink={mdFillGrowShrink}
-												wrap={mdWrap}
-												order={mdOrder}
-												alignContent={mdAlignContent}
-												setFlexDirection={mdFlexDirection => setAttributes({mdFlexDirection})}
-												setJustifyContent={mdJustifyContent => setAttributes({mdJustifyContent})}
-												setAlignItems={mdAlignItems => setAttributes({mdAlignItems})}
-												setAlignSelf={mdAlignSelf => setAttributes({mdAlignSelf})}
-												setFillGrowShrink={mdFillGrowShrink => setAttributes({mdFillGrowShrink})}
-												setWrap={mdWrap => setAttributes({mdWrap})}
-												setOrder={mdOrder => setAttributes({mdOrder})}
-												setAlignContent={mdAlignContent => setAttributes({mdAlignContent})}
-											>
-											</FlexControl>
+										{(baseDisplay === '' || baseDisplay === 'd-md-flex' || baseDisplay === 'd-md-inline-flex') && (
+											<>
+												<CardBody size='small' style={{paddingTop: 0, paddingBottom: 0}}>
+													<Flex wrap={true}>
+														<FlexItem>
+															<p><em>Row block default display attribute is 'flex'</em></p>
+														</FlexItem>
+													</Flex>
+												</CardBody>
+												<FlexControl
+													breakpoint='md-'
+													breakpoint_name='MD'
+													flexDirection={mdFlexDirection}
+													justifyContent={mdJustifyContent}
+													alignItems={mdAlignItems}
+													alignSelf={mdAlignSelf}
+													fillGrowShrink={mdFillGrowShrink}
+													wrap={mdWrap}
+													order={mdOrder}
+													alignContent={mdAlignContent}
+													setFlexDirection={mdFlexDirection => setAttributes({mdFlexDirection})}
+													setJustifyContent={mdJustifyContent => setAttributes({mdJustifyContent})}
+													setAlignItems={mdAlignItems => setAttributes({mdAlignItems})}
+													setAlignSelf={mdAlignSelf => setAttributes({mdAlignSelf})}
+													setFillGrowShrink={mdFillGrowShrink => setAttributes({mdFillGrowShrink})}
+													setWrap={mdWrap => setAttributes({mdWrap})}
+													setOrder={mdOrder => setAttributes({mdOrder})}
+													setAlignContent={mdAlignContent => setAttributes({mdAlignContent})}
+												>
+												</FlexControl>
+											</>
 										)}
 										{(mdDisplay !== 'd-md-none') && (
 											<>
@@ -468,28 +495,37 @@ export default function
 											display={lgDisplay}
 											setDisplay={lgDisplay => setAttributes({lgDisplay})}
 										></DisplayControl>
-										{(lgDisplay === 'd-lg-flex' || lgDisplay === 'd-lg-inline-flex') && (
-											<FlexControl
-												breakpoint='lg-'
-												breakpoint_name='LG'
-												flexDirection={lgFlexDirection}
-												justifyContent={lgJustifyContent}
-												alignItems={lgAlignItems}
-												alignSelf={lgAlignSelf}
-												fillGrowShrink={lgFillGrowShrink}
-												wrap={lgWrap}
-												order={lgOrder}
-												alignContent={lgAlignContent}
-												setFlexDirection={lgFlexDirection => setAttributes({lgFlexDirection})}
-												setJustifyContent={lgJustifyContent => setAttributes({lgJustifyContent})}
-												setAlignItems={lgAlignItems => setAttributes({lgAlignItems})}
-												setAlignSelf={lgAlignSelf => setAttributes({lgAlignSelf})}
-												setFillGrowShrink={lgFillGrowShrink => setAttributes({lgFillGrowShrink})}
-												setWrap={lgWrap => setAttributes({lgWrap})}
-												setOrder={lgOrder => setAttributes({lgOrder})}
-												setAlignContent={lgAlignContent => setAttributes({lgAlignContent})}
-											>
-											</FlexControl>
+										{(baseDisplay === '' || baseDisplay === 'd-lg-flex' || baseDisplay === 'd-lg-inline-flex') && (
+											<>
+												<CardBody size='small' style={{paddingTop: 0, paddingBottom: 0}}>
+													<Flex wrap={true}>
+														<FlexItem>
+															<p><em>Row block default display attribute is 'flex'</em></p>
+														</FlexItem>
+													</Flex>
+												</CardBody>
+												<FlexControl
+													breakpoint='lg-'
+													breakpoint_name='LG'
+													flexDirection={lgFlexDirection}
+													justifyContent={lgJustifyContent}
+													alignItems={lgAlignItems}
+													alignSelf={lgAlignSelf}
+													fillGrowShrink={lgFillGrowShrink}
+													wrap={lgWrap}
+													order={lgOrder}
+													alignContent={lgAlignContent}
+													setFlexDirection={lgFlexDirection => setAttributes({lgFlexDirection})}
+													setJustifyContent={lgJustifyContent => setAttributes({lgJustifyContent})}
+													setAlignItems={lgAlignItems => setAttributes({lgAlignItems})}
+													setAlignSelf={lgAlignSelf => setAttributes({lgAlignSelf})}
+													setFillGrowShrink={lgFillGrowShrink => setAttributes({lgFillGrowShrink})}
+													setWrap={lgWrap => setAttributes({lgWrap})}
+													setOrder={lgOrder => setAttributes({lgOrder})}
+													setAlignContent={lgAlignContent => setAttributes({lgAlignContent})}
+												>
+												</FlexControl>
+											</>
 										)}
 										{(lgDisplay !== 'd-lg-none') && (
 											<>
@@ -546,28 +582,37 @@ export default function
 											display={xlDisplay}
 											setDisplay={xlDisplay => setAttributes({xlDisplay})}
 										></DisplayControl>
-										{(xlDisplay === 'd-xl-flex' || xlDisplay === 'd-xl-inline-flex') && (
-											<FlexControl
-												breakpoint='xl-'
-												breakpoint_name='XL'
-												flexDirection={xlFlexDirection}
-												justifyContent={xlJustifyContent}
-												alignItems={xlAlignItems}
-												alignSelf={xlAlignSelf}
-												fillGrowShrink={xlFillGrowShrink}
-												wrap={xlWrap}
-												order={xlOrder}
-												alignContent={xlAlignContent}
-												setFlexDirection={xlFlexDirection => setAttributes({xlFlexDirection})}
-												setJustifyContent={xlJustifyContent => setAttributes({xlJustifyContent})}
-												setAlignItems={xlAlignItems => setAttributes({xlAlignItems})}
-												setAlignSelf={xlAlignSelf => setAttributes({xlAlignSelf})}
-												setFillGrowShrink={xlFillGrowShrink => setAttributes({xlFillGrowShrink})}
-												setWrap={xlWrap => setAttributes({xlWrap})}
-												setOrder={xlOrder => setAttributes({xlOrder})}
-												setAlignContent={xlAlignContent => setAttributes({xlAlignContent})}
-											>
-											</FlexControl>
+										{(baseDisplay === '' || baseDisplay === 'd-xl-flex' || baseDisplay === 'd-xl-inline-flex') && (
+											<>
+												<CardBody size='small' style={{paddingTop: 0, paddingBottom: 0}}>
+													<Flex wrap={true}>
+														<FlexItem>
+															<p><em>Row block default display attribute is 'flex'</em></p>
+														</FlexItem>
+													</Flex>
+												</CardBody>
+												<FlexControl
+													breakpoint='xl-'
+													breakpoint_name='XL'
+													flexDirection={xlFlexDirection}
+													justifyContent={xlJustifyContent}
+													alignItems={xlAlignItems}
+													alignSelf={xlAlignSelf}
+													fillGrowShrink={xlFillGrowShrink}
+													wrap={xlWrap}
+													order={xlOrder}
+													alignContent={xlAlignContent}
+													setFlexDirection={xlFlexDirection => setAttributes({xlFlexDirection})}
+													setJustifyContent={xlJustifyContent => setAttributes({xlJustifyContent})}
+													setAlignItems={xlAlignItems => setAttributes({xlAlignItems})}
+													setAlignSelf={xlAlignSelf => setAttributes({xlAlignSelf})}
+													setFillGrowShrink={xlFillGrowShrink => setAttributes({xlFillGrowShrink})}
+													setWrap={xlWrap => setAttributes({xlWrap})}
+													setOrder={xlOrder => setAttributes({xlOrder})}
+													setAlignContent={xlAlignContent => setAttributes({xlAlignContent})}
+												>
+												</FlexControl>
+											</>
 										)}
 										{(xlDisplay !== 'd-xl-none') && (
 											<>
@@ -624,28 +669,37 @@ export default function
 											display={xxlDisplay}
 											setDisplay={xxlDisplay => setAttributes({xxlDisplay})}
 										></DisplayControl>
-										{(xxlDisplay === 'd-xxl-flex' || xxlDisplay === 'd-xxl-inline-flex') && (
-											<FlexControl
-												breakpoint='xxl-'
-												breakpoint_name='XXL'
-												flexDirection={xxlFlexDirection}
-												justifyContent={xxlJustifyContent}
-												alignItems={xxlAlignItems}
-												alignSelf={xxlAlignSelf}
-												fillGrowShrink={xxlFillGrowShrink}
-												wrap={xxlWrap}
-												order={xxlOrder}
-												alignContent={xxlAlignContent}
-												setFlexDirection={xxlFlexDirection => setAttributes({xxlFlexDirection})}
-												setJustifyContent={xxlJustifyContent => setAttributes({xxlJustifyContent})}
-												setAlignItems={xxlAlignItems => setAttributes({xxlAlignItems})}
-												setAlignSelf={xxlAlignSelf => setAttributes({xxlAlignSelf})}
-												setFillGrowShrink={xxlFillGrowShrink => setAttributes({xxlFillGrowShrink})}
-												setWrap={xxlWrap => setAttributes({xxlWrap})}
-												setOrder={xxlOrder => setAttributes({xxlOrder})}
-												setAlignContent={xxlAlignContent => setAttributes({xxlAlignContent})}
-											>
-											</FlexControl>
+										{(baseDisplay === '' || baseDisplay === 'd-xxl-flex' || baseDisplay === 'd-xxl-inline-flex') && (
+											<>
+												<CardBody size='small' style={{paddingTop: 0, paddingBottom: 0}}>
+													<Flex wrap={true}>
+														<FlexItem>
+															<p><em>Row block default display attribute is 'flex'</em></p>
+														</FlexItem>
+													</Flex>
+												</CardBody>
+												<FlexControl
+													breakpoint='xxl-'
+													breakpoint_name='XXL'
+													flexDirection={xxlFlexDirection}
+													justifyContent={xxlJustifyContent}
+													alignItems={xxlAlignItems}
+													alignSelf={xxlAlignSelf}
+													fillGrowShrink={xxlFillGrowShrink}
+													wrap={xxlWrap}
+													order={xxlOrder}
+													alignContent={xxlAlignContent}
+													setFlexDirection={xxlFlexDirection => setAttributes({xxlFlexDirection})}
+													setJustifyContent={xxlJustifyContent => setAttributes({xxlJustifyContent})}
+													setAlignItems={xxlAlignItems => setAttributes({xxlAlignItems})}
+													setAlignSelf={xxlAlignSelf => setAttributes({xxlAlignSelf})}
+													setFillGrowShrink={xxlFillGrowShrink => setAttributes({xxlFillGrowShrink})}
+													setWrap={xxlWrap => setAttributes({xxlWrap})}
+													setOrder={xxlOrder => setAttributes({xxlOrder})}
+													setAlignContent={xxlAlignContent => setAttributes({xxlAlignContent})}
+												>
+												</FlexControl>
+											</>
 										)}
 										{(xxlDisplay !== 'd-xxl-none') && (
 											<>

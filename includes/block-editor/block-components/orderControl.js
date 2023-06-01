@@ -1,11 +1,11 @@
 /**
- * WordPress dependencies.
+ * WordPress dependencies
  */
 import {__} from '@wordpress/i18n';
 import {CardBody, CardHeader, Flex, FlexItem, SelectControl} from '@wordpress/components';
 
 /**
- * OrderControl.
+ * OrderControl
  * Component for controlling Order attributes.
  *
  * @param columns
@@ -14,10 +14,10 @@ import {CardBody, CardHeader, Flex, FlexItem, SelectControl} from '@wordpress/co
  * @returns {JSX.Element}
  * @constructor
  */
-export default function ColumnsDisplayControl ({
-																								 order,
-																								 setOrder,
-																							 }) {
+export default function OrderControl ({
+																				order,
+																				setOrder,
+																			}) {
 	return (
 		<div>
 			<CardHeader isBorderless={true} isShady={true} size='small'>{__('ORDER', 'resource-layout-blocks')}</CardHeader>

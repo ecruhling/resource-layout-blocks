@@ -1,32 +1,40 @@
 /**
- * External dependencies
- */
-import classnames from 'classnames';
-
-/**
- * WordPress dependencies.
+ * WordPress dependencies
  */
 import {__} from '@wordpress/i18n';
 import {
 	InnerBlocks,
 	InspectorControls,
 	useBlockProps,
-	BlockVerticalAlignmentToolbar,
-	BlockControls,
 } from '@wordpress/block-editor';
 import {
-	CheckboxControl,
-	PanelBody,
 	SelectControl,
-	PanelRow,
-	RangeControl,
 	TabPanel,
 	CardBody,
 	Card,
 	Flex,
 	FlexItem,
 	CardHeader,
+	PanelBody,
+	PanelRow,
+	RangeControl,
 } from '@wordpress/components';
+
+/**
+ * External dependencies
+ */
+import classnames from 'classnames';
+import {omit} from 'lodash';
+
+/**
+ * Internal dependencies
+ */
+import DisplayControl from '../../block-components/displayControl';
+import FlexControl from '../../block-components/flexControl';
+import PaddingControl from '../../block-components/paddingControl';
+import MarginControl from '../../block-components/marginControl';
+import AlignControl from '../../block-components/alignControl';
+import OrderControl from '../../block-components/orderControl';
 
 /**
  * Styles are applied only to the editor.
@@ -34,12 +42,6 @@ import {
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
 import './editor.scss';
-
-/**
- * Custom components.
- */
-import DisplayControl from './../../block-components/displayControl';
-import OrderControl from '../../block-components/orderControl';
 
 /**
  * The Block edit function.
@@ -54,9 +56,6 @@ export default function
 				}) {
 
 	const {
-		verticalAlignment,
-		isFluid,
-		tagName: TagName = 'div',
 		baseColumns,
 		baseDisplay,
 		baseOffset,
@@ -139,11 +138,7 @@ export default function
 		XxlAlignSelf,
 	} = attributes;
 
-	const classes = classnames({
-		[`is-vertically-aligned-${verticalAlignment}`]: verticalAlignment,
-		'container': !isFluid,
-		'container-fluid': isFluid,
-	});
+	const classes = classnames({});
 
 	const blockProps = useBlockProps({
 		className: classes,
@@ -172,45 +167,13 @@ export default function
 
 	return (
 		<>
-			<BlockControls>
-				<BlockVerticalAlignmentToolbar
-					onChange={(value) => setAttributes({verticalAlignment: value})}
-					value={verticalAlignment}
-				/>
-			</BlockControls>
 			<InspectorControls>
 				<Card>
 					<CardHeader isBorderless={true} isShady={true}
-											size='small'>{__('CONTAINER', 'resource-layout-blocks')}</CardHeader>
+											size='small'>{__('COLUMN', 'resource-layout-blocks')}</CardHeader>
 					<CardBody size='small'>
 						<Flex wrap={true}>
-							<FlexItem>
-								<SelectControl
-									__nextHasNoMarginBottom
-									label={__('HTML element', 'resource-layout-blocks')}
-									options={[
-										{label: __('Default (<div>)'), value: 'div'},
-										{label: '<header>', value: 'header'},
-										{label: '<main>', value: 'main'},
-										{label: '<section>', value: 'section'},
-										{label: '<article>', value: 'article'},
-										{label: '<aside>', value: 'aside'},
-										{label: '<footer>', value: 'footer'},
-									]}
-									value={TagName}
-									onChange={(value) =>
-										setAttributes({tagName: value})
-									}
-									help={tagNameMessages[TagName]}
-								/>
-							</FlexItem>
-							<FlexItem>
-								<CheckboxControl
-									label={__('Fluid', 'resource-layout-blocks')}
-									checked={isFluid}
-									onChange={(value) => setAttributes({isFluid: value})}
-								/>
-							</FlexItem>
+
 						</Flex>
 					</CardBody>
 				</Card>
@@ -1286,9 +1249,9 @@ export default function
 					</PanelRow>
 				</PanelBody>
 			</InspectorControls>
-			<TagName {...blockProps}>
-				<InnerBlocks placeholder={__('Insert Rows', 'resource-layout-blocks')} />
-			</TagName>
+			<div {...blockProps}>
+				<InnerBlocks placeholder={__('Insert Blocks', 'resource-layout-blocks')} />
+			</div>
 		</>
 	);
 }
