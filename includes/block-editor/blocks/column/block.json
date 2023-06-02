@@ -17,6 +17,12 @@
 		"baseDisplay": {
 			"type": "string"
 		},
+		"baseColumns": {
+			"type": "string"
+		},
+		"baseOffset": {
+			"type": "string"
+		},
 		"basePaddingTop": {
 			"type": "string"
 		},

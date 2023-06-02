@@ -19,18 +19,19 @@ import {CardBody, CardHeader, Flex, FlexItem, SelectControl} from '@wordpress/co
  * @returns {JSX.Element}
  * @constructor
  */
-export default function ColumnsControl ({
-																					breakpoint,
-																					breakpoint_name,
-																					columns,
-																					offset,
-																					setColumns,
-																					setOffset,
-																				}) {
+export default function ColumnControl ({
+																				 breakpoint,
+																				 breakpoint_name,
+																				 columns,
+																				 offset,
+																				 setColumns,
+																				 setOffset,
+																			 }) {
 	return (
 		<div>
-			<CardHeader isBorderless={true} isShady={true}
-									size='small'>{__(`${breakpoint_name} COLUMNS`, 'resource-layout-blocks')}</CardHeader>
+			<CardHeader isBorderless={true} isShady={true} size='small' className='resource-card-header'>
+				{__(`${breakpoint_name} COLUMNS`, 'resource-layout-blocks')}
+			</CardHeader>
 			<CardBody size='small'>
 				<Flex wrap={true}>
 					<FlexItem>
