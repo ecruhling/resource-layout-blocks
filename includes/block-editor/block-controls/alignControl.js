@@ -1,25 +1,18 @@
 /**
- * WordPress dependencies.
+ * WordPress dependencies
  */
 import {__} from '@wordpress/i18n';
 import {CardBody, CardHeader, Flex, FlexItem, SelectControl} from '@wordpress/components';
 
 /**
- * AlignControl.
+ * AlignControl
  * Component for controlling Align & Justify attributes.
  *
  * @param breakpoint
  * @param breakpoint_name
  * @param alignText
  * @param flexDirection
- * @param alignItems
- * @param alignSelf
- * @param justifyContent
  * @param setAlignText
- * @param setFlexDirection
- * @param setAlignItems
- * @param setAlignSelf
- * @param setJustifyContent
  * @returns {JSX.Element}
  * @constructor
  */

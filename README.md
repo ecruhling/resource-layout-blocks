@@ -49,15 +49,11 @@ Uses CSS and utility classes from Twitter Bootstrap 5.
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#features">Features</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -85,9 +81,9 @@ WordPress plugin – install and activate.
 
 Requires PHP >= 7.0. Requires WordPress >= 5.9.
 
-## Usage
+## Features
 
-One major feature in this plugin is the 'Class Inspector' area added to the Block Control Toolbar. This dynamically
+A 'Class Inspector' area is added to the Block Control Toolbar. This dynamically
 lists all the CSS classes added to the block during creation and editing. It provides a concise, quick way
 of telling exactly what classes are added throughout all breakpoints, including any custom CSS classes added in the
 Advanced
@@ -97,17 +93,15 @@ sidebar.
 
 ## Roadmap
 
-- [ ] Enable class editing from within the Class Inspector?
+- [ ] Add Controls for creating & editing inline style per block.
+
+- [ ] Block for layout purposes only, placeholder, width 100% to break column, etc.
+
+- [ ] Enable CSS class editing from within the Class Inspector.
 
 See the [open issues](https://github.com/ecruhling/resource-layout-blocks/issues) for a full list of proposed features (
 and
 known issues).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

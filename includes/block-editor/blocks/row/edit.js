@@ -30,11 +30,11 @@ import {omit} from 'lodash';
  * Internal dependencies
  */
 import {tagNameMessages} from '../../block-help/tagNameMessages';
-import DisplayControl from '../../block-components/displayControl';
-import FlexControl from '../../block-components/flexControl';
-import PaddingControl from '../../block-components/paddingControl';
-import MarginControl from '../../block-components/marginControl';
-import AlignControl from '../../block-components/alignControl';
+import DisplayControl from '../../block-controls/displayControl';
+import FlexControl from '../../block-controls/flexControl';
+import PaddingControl from '../../block-controls/paddingControl';
+import MarginControl from '../../block-controls/marginControl';
+import AlignControl from '../../block-controls/alignControl';
 
 /**
  * Styles are applied only to the editor

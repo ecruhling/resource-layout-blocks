@@ -1,10 +1,10 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./includes/block-editor/block-components/alignControl.js":
-/*!****************************************************************!*\
-  !*** ./includes/block-editor/block-components/alignControl.js ***!
-  \****************************************************************/
+/***/ "./includes/block-editor/block-controls/alignControl.js":
+/*!**************************************************************!*\
+  !*** ./includes/block-editor/block-controls/alignControl.js ***!
+  \**************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -20,27 +20,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
 
 /**
- * WordPress dependencies.
+ * WordPress dependencies
  */
 
 
 
 /**
- * AlignControl.
+ * AlignControl
  * Component for controlling Align & Justify attributes.
  *
  * @param breakpoint
  * @param breakpoint_name
  * @param alignText
  * @param flexDirection
- * @param alignItems
- * @param alignSelf
- * @param justifyContent
  * @param setAlignText
- * @param setFlexDirection
- * @param setAlignItems
- * @param setAlignSelf
- * @param setJustifyContent
  * @returns {JSX.Element}
  * @constructor
  */
@@ -82,10 +75,10 @@ function AlignControl(_ref) {
 
 /***/ }),
 
-/***/ "./includes/block-editor/block-components/displayControl.js":
-/*!******************************************************************!*\
-  !*** ./includes/block-editor/block-components/displayControl.js ***!
-  \******************************************************************/
+/***/ "./includes/block-editor/block-controls/displayControl.js":
+/*!****************************************************************!*\
+  !*** ./includes/block-editor/block-controls/displayControl.js ***!
+  \****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -178,10 +171,10 @@ function ColumnsDisplayControl(_ref) {
 
 /***/ }),
 
-/***/ "./includes/block-editor/block-components/flexControl.js":
-/*!***************************************************************!*\
-  !*** ./includes/block-editor/block-components/flexControl.js ***!
-  \***************************************************************/
+/***/ "./includes/block-editor/block-controls/flexControl.js":
+/*!*************************************************************!*\
+  !*** ./includes/block-editor/block-controls/flexControl.js ***!
+  \*************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -452,10 +445,10 @@ function FlexControl(_ref) {
 
 /***/ }),
 
-/***/ "./includes/block-editor/block-components/marginControl.js":
-/*!*****************************************************************!*\
-  !*** ./includes/block-editor/block-components/marginControl.js ***!
-  \*****************************************************************/
+/***/ "./includes/block-editor/block-controls/marginControl.js":
+/*!***************************************************************!*\
+  !*** ./includes/block-editor/block-controls/marginControl.js ***!
+  \***************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -636,10 +629,10 @@ function MarginControl(_ref) {
 
 /***/ }),
 
-/***/ "./includes/block-editor/block-components/paddingControl.js":
-/*!******************************************************************!*\
-  !*** ./includes/block-editor/block-components/paddingControl.js ***!
-  \******************************************************************/
+/***/ "./includes/block-editor/block-controls/paddingControl.js":
+/*!****************************************************************!*\
+  !*** ./includes/block-editor/block-controls/paddingControl.js ***!
+  \****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -856,11 +849,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lodash */ "lodash");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _block_help_tagNameMessages__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../block-help/tagNameMessages */ "./includes/block-editor/block-help/tagNameMessages.js");
-/* harmony import */ var _block_components_displayControl__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../block-components/displayControl */ "./includes/block-editor/block-components/displayControl.js");
-/* harmony import */ var _block_components_flexControl__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../block-components/flexControl */ "./includes/block-editor/block-components/flexControl.js");
-/* harmony import */ var _block_components_paddingControl__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../block-components/paddingControl */ "./includes/block-editor/block-components/paddingControl.js");
-/* harmony import */ var _block_components_marginControl__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../block-components/marginControl */ "./includes/block-editor/block-components/marginControl.js");
-/* harmony import */ var _block_components_alignControl__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../block-components/alignControl */ "./includes/block-editor/block-components/alignControl.js");
+/* harmony import */ var _block_controls_displayControl__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../block-controls/displayControl */ "./includes/block-editor/block-controls/displayControl.js");
+/* harmony import */ var _block_controls_flexControl__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../block-controls/flexControl */ "./includes/block-editor/block-controls/flexControl.js");
+/* harmony import */ var _block_controls_paddingControl__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../block-controls/paddingControl */ "./includes/block-editor/block-controls/paddingControl.js");
+/* harmony import */ var _block_controls_marginControl__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../block-controls/marginControl */ "./includes/block-editor/block-controls/marginControl.js");
+/* harmony import */ var _block_controls_alignControl__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../block-controls/alignControl */ "./includes/block-editor/block-controls/alignControl.js");
 /* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./editor.scss */ "./includes/block-editor/blocks/row/editor.scss");
 
 /**
@@ -1071,7 +1064,7 @@ function edit(_ref) {
       name: 'base',
       title: '—',
       className: 'breakpoint-tab',
-      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_displayControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_displayControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
         breakpoint: "",
         breakpoint_name: "",
         display: baseDisplay,
@@ -1087,7 +1080,7 @@ function edit(_ref) {
         }
       }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Flex, {
         wrap: true
-      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("em", null, "Row block default display attribute is 'flex'"))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_flexControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("em", null, "Row block default display attribute is 'flex'"))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_flexControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
         breakpoint: "",
         breakpoint_name: "",
         flexDirection: baseFlexDirection,
@@ -1122,7 +1115,7 @@ function edit(_ref) {
         setAlignContent: baseAlignContent => setAttributes({
           baseAlignContent
         })
-      })), baseDisplay !== 'd-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_paddingControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      })), baseDisplay !== 'd-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_paddingControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
         breakpoint: "",
         breakpoint_name: "",
         paddingTop: basePaddingTop,
@@ -1141,7 +1134,7 @@ function edit(_ref) {
         setPaddingLeft: basePaddingLeft => setAttributes({
           basePaddingLeft
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_marginControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_marginControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
         breakpoint: "",
         breakpoint_name: "",
         marginTop: baseMarginTop,
@@ -1160,7 +1153,7 @@ function edit(_ref) {
         setMarginLeft: baseMarginLeft => setAttributes({
           baseMarginLeft
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_alignControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_alignControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
         breakpoint: "",
         breakpoint_name: "",
         alignText: baseAlignText,
@@ -1188,7 +1181,7 @@ function edit(_ref) {
       name: 'small',
       title: 'SM',
       className: 'breakpoint-tab',
-      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_displayControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_displayControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
         breakpoint: "sm-",
         breakpoint_name: "SM",
         display: smDisplay,
@@ -1203,7 +1196,7 @@ function edit(_ref) {
         }
       }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Flex, {
         wrap: true
-      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("em", null, "Row block default display attribute is 'flex'"))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_flexControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("em", null, "Row block default display attribute is 'flex'"))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_flexControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
         breakpoint: "sm-",
         breakpoint_name: "SM",
         flexDirection: smFlexDirection,
@@ -1238,7 +1231,7 @@ function edit(_ref) {
         setAlignContent: smAlignContent => setAttributes({
           smAlignContent
         })
-      })), smDisplay !== 'd-sm-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_paddingControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      })), smDisplay !== 'd-sm-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_paddingControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
         breakpoint: "sm-",
         breakpoint_name: "SM",
         paddingTop: smPaddingTop,
@@ -1257,7 +1250,7 @@ function edit(_ref) {
         setPaddingLeft: smPaddingLeft => setAttributes({
           smPaddingLeft
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_marginControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_marginControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
         breakpoint: "sm-",
         breakpoint_name: "SM",
         marginTop: smMarginTop,
@@ -1276,7 +1269,7 @@ function edit(_ref) {
         setMarginLeft: smMarginLeft => setAttributes({
           smMarginLeft
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_alignControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_alignControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
         breakpoint: "sm-",
         breakpoint_name: "SM",
         alignText: smAlignText,
@@ -1301,7 +1294,7 @@ function edit(_ref) {
       name: 'medium',
       title: 'MD',
       className: 'breakpoint-tab',
-      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_displayControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_displayControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
         breakpoint: "md-",
         breakpoint_name: "MD",
         display: mdDisplay,
@@ -1316,7 +1309,7 @@ function edit(_ref) {
         }
       }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Flex, {
         wrap: true
-      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("em", null, "Row block default display attribute is 'flex'"))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_flexControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("em", null, "Row block default display attribute is 'flex'"))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_flexControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
         breakpoint: "md-",
         breakpoint_name: "MD",
         flexDirection: mdFlexDirection,
@@ -1351,7 +1344,7 @@ function edit(_ref) {
         setAlignContent: mdAlignContent => setAttributes({
           mdAlignContent
         })
-      })), mdDisplay !== 'd-md-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_paddingControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      })), mdDisplay !== 'd-md-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_paddingControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
         breakpoint: "md-",
         breakpoint_name: "MD",
         paddingTop: mdPaddingTop,
@@ -1370,7 +1363,7 @@ function edit(_ref) {
         setPaddingLeft: mdPaddingLeft => setAttributes({
           mdPaddingLeft
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_marginControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_marginControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
         breakpoint: "md-",
         breakpoint_name: "MD",
         marginTop: mdMarginTop,
@@ -1389,7 +1382,7 @@ function edit(_ref) {
         setMarginLeft: mdMarginLeft => setAttributes({
           mdMarginLeft
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_alignControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_alignControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
         breakpoint: "md-",
         breakpoint_name: "MD",
         alignText: mdAlignText,
@@ -1414,7 +1407,7 @@ function edit(_ref) {
       name: 'large',
       title: 'LG',
       className: 'breakpoint-tab',
-      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_displayControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_displayControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
         breakpoint: "lg-",
         breakpoint_name: "LG",
         display: lgDisplay,
@@ -1429,7 +1422,7 @@ function edit(_ref) {
         }
       }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Flex, {
         wrap: true
-      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("em", null, "Row block default display attribute is 'flex'"))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_flexControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("em", null, "Row block default display attribute is 'flex'"))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_flexControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
         breakpoint: "lg-",
         breakpoint_name: "LG",
         flexDirection: lgFlexDirection,
@@ -1464,7 +1457,7 @@ function edit(_ref) {
         setAlignContent: lgAlignContent => setAttributes({
           lgAlignContent
         })
-      })), lgDisplay !== 'd-lg-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_paddingControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      })), lgDisplay !== 'd-lg-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_paddingControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
         breakpoint: "lg-",
         breakpoint_name: "LG",
         paddingTop: lgPaddingTop,
@@ -1483,7 +1476,7 @@ function edit(_ref) {
         setPaddingLeft: lgPaddingLeft => setAttributes({
           lgPaddingLeft
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_marginControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_marginControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
         breakpoint: "lg-",
         breakpoint_name: "LG",
         marginTop: lgMarginTop,
@@ -1502,7 +1495,7 @@ function edit(_ref) {
         setMarginLeft: lgMarginLeft => setAttributes({
           lgMarginLeft
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_alignControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_alignControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
         breakpoint: "lg-",
         breakpoint_name: "LG",
         alignText: lgAlignText,
@@ -1527,7 +1520,7 @@ function edit(_ref) {
       name: 'extra-large',
       title: 'XL',
       className: 'breakpoint-tab',
-      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_displayControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_displayControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
         breakpoint: "xl-",
         breakpoint_name: "XL",
         display: xlDisplay,
@@ -1542,7 +1535,7 @@ function edit(_ref) {
         }
       }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Flex, {
         wrap: true
-      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("em", null, "Row block default display attribute is 'flex'"))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_flexControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("em", null, "Row block default display attribute is 'flex'"))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_flexControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
         breakpoint: "xl-",
         breakpoint_name: "XL",
         flexDirection: xlFlexDirection,
@@ -1577,7 +1570,7 @@ function edit(_ref) {
         setAlignContent: xlAlignContent => setAttributes({
           xlAlignContent
         })
-      })), xlDisplay !== 'd-xl-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_paddingControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      })), xlDisplay !== 'd-xl-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_paddingControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
         breakpoint: "xl-",
         breakpoint_name: "XL",
         paddingTop: xlPaddingTop,
@@ -1596,7 +1589,7 @@ function edit(_ref) {
         setPaddingLeft: xlPaddingLeft => setAttributes({
           xlPaddingLeft
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_marginControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_marginControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
         breakpoint: "xl-",
         breakpoint_name: "XL",
         marginTop: xlMarginTop,
@@ -1615,7 +1608,7 @@ function edit(_ref) {
         setMarginLeft: xlMarginLeft => setAttributes({
           xlMarginLeft
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_alignControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_alignControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
         breakpoint: "xl-",
         breakpoint_name: "XL",
         alignText: xlAlignText,
@@ -1640,7 +1633,7 @@ function edit(_ref) {
       name: 'extra-extra-large',
       title: 'XXL',
       className: 'breakpoint-tab',
-      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_displayControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_displayControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
         breakpoint: "xxl-",
         breakpoint_name: "XXL",
         display: xxlDisplay,
@@ -1655,7 +1648,7 @@ function edit(_ref) {
         }
       }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Flex, {
         wrap: true
-      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("em", null, "Row block default display attribute is 'flex'"))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_flexControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("em", null, "Row block default display attribute is 'flex'"))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_flexControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
         breakpoint: "xxl-",
         breakpoint_name: "XXL",
         flexDirection: xxlFlexDirection,
@@ -1690,7 +1683,7 @@ function edit(_ref) {
         setAlignContent: xxlAlignContent => setAttributes({
           xxlAlignContent
         })
-      })), xxlDisplay !== 'd-xxl-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_paddingControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      })), xxlDisplay !== 'd-xxl-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_paddingControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
         breakpoint: "xxl-",
         breakpoint_name: "XXL",
         paddingTop: xxlPaddingTop,
@@ -1709,7 +1702,7 @@ function edit(_ref) {
         setPaddingLeft: xxlPaddingLeft => setAttributes({
           xxlPaddingLeft
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_marginControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_marginControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
         breakpoint: "xxl-",
         breakpoint_name: "XXL",
         marginTop: xxlMarginTop,
@@ -1728,7 +1721,7 @@ function edit(_ref) {
         setMarginLeft: xxlMarginLeft => setAttributes({
           xxlMarginLeft
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_alignControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_alignControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
         breakpoint: "xxl-",
         breakpoint_name: "XXL",
         alignText: xxlAlignText,

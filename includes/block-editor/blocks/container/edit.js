@@ -31,11 +31,11 @@ import {omit} from 'lodash';
  * Internal dependencies
  */
 import {tagNameMessages} from '../../block-help/tagNameMessages';
-import DisplayControl from '../../block-components/displayControl';
-import PaddingControl from '../../block-components/paddingControl';
-import MarginControl from '../../block-components/marginControl';
-import AlignControl from '../../block-components/alignControl';
-import FlexControl from '../../block-components/flexControl';
+import DisplayControl from '../../block-controls/displayControl';
+import PaddingControl from '../../block-controls/paddingControl';
+import MarginControl from '../../block-controls/marginControl';
+import AlignControl from '../../block-controls/alignControl';
+import FlexControl from '../../block-controls/flexControl';
 
 /**
  * Styles are applied only to the editor
@@ -181,8 +181,18 @@ export default function
 		className,
 	);
 
+	// TODO: Create inline style editor
+	// inline styles example:
+	// const styles = {
+	// 	backgroundColor: '#090',
+	// 	color: '#fff',
+	// 	padding: '20px',
+	// 	maxWidth: '1200px',
+	// };
+
 	const blockProps = useBlockProps({
 		className: classes,
+		// style: styles,
 	});
 
 	return (

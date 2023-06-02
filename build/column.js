@@ -1,10 +1,10 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./includes/block-editor/block-components/alignControl.js":
-/*!****************************************************************!*\
-  !*** ./includes/block-editor/block-components/alignControl.js ***!
-  \****************************************************************/
+/***/ "./includes/block-editor/block-controls/alignControl.js":
+/*!**************************************************************!*\
+  !*** ./includes/block-editor/block-controls/alignControl.js ***!
+  \**************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -20,27 +20,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
 
 /**
- * WordPress dependencies.
+ * WordPress dependencies
  */
 
 
 
 /**
- * AlignControl.
+ * AlignControl
  * Component for controlling Align & Justify attributes.
  *
  * @param breakpoint
  * @param breakpoint_name
  * @param alignText
  * @param flexDirection
- * @param alignItems
- * @param alignSelf
- * @param justifyContent
  * @param setAlignText
- * @param setFlexDirection
- * @param setAlignItems
- * @param setAlignSelf
- * @param setJustifyContent
  * @returns {JSX.Element}
  * @constructor
  */
@@ -82,10 +75,10 @@ function AlignControl(_ref) {
 
 /***/ }),
 
-/***/ "./includes/block-editor/block-components/displayControl.js":
-/*!******************************************************************!*\
-  !*** ./includes/block-editor/block-components/displayControl.js ***!
-  \******************************************************************/
+/***/ "./includes/block-editor/block-controls/displayControl.js":
+/*!****************************************************************!*\
+  !*** ./includes/block-editor/block-controls/displayControl.js ***!
+  \****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -178,10 +171,10 @@ function ColumnsDisplayControl(_ref) {
 
 /***/ }),
 
-/***/ "./includes/block-editor/block-components/flexControl.js":
-/*!***************************************************************!*\
-  !*** ./includes/block-editor/block-components/flexControl.js ***!
-  \***************************************************************/
+/***/ "./includes/block-editor/block-controls/flexControl.js":
+/*!*************************************************************!*\
+  !*** ./includes/block-editor/block-controls/flexControl.js ***!
+  \*************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -452,10 +445,10 @@ function FlexControl(_ref) {
 
 /***/ }),
 
-/***/ "./includes/block-editor/block-components/marginControl.js":
-/*!*****************************************************************!*\
-  !*** ./includes/block-editor/block-components/marginControl.js ***!
-  \*****************************************************************/
+/***/ "./includes/block-editor/block-controls/marginControl.js":
+/*!***************************************************************!*\
+  !*** ./includes/block-editor/block-controls/marginControl.js ***!
+  \***************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -636,10 +629,10 @@ function MarginControl(_ref) {
 
 /***/ }),
 
-/***/ "./includes/block-editor/block-components/orderControl.js":
-/*!****************************************************************!*\
-  !*** ./includes/block-editor/block-components/orderControl.js ***!
-  \****************************************************************/
+/***/ "./includes/block-editor/block-controls/orderControl.js":
+/*!**************************************************************!*\
+  !*** ./includes/block-editor/block-controls/orderControl.js ***!
+  \**************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -717,10 +710,10 @@ function OrderControl(_ref) {
 
 /***/ }),
 
-/***/ "./includes/block-editor/block-components/paddingControl.js":
-/*!******************************************************************!*\
-  !*** ./includes/block-editor/block-components/paddingControl.js ***!
-  \******************************************************************/
+/***/ "./includes/block-editor/block-controls/paddingControl.js":
+/*!****************************************************************!*\
+  !*** ./includes/block-editor/block-controls/paddingControl.js ***!
+  \****************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -911,12 +904,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lodash */ "lodash");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _block_components_displayControl__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../block-components/displayControl */ "./includes/block-editor/block-components/displayControl.js");
-/* harmony import */ var _block_components_flexControl__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../block-components/flexControl */ "./includes/block-editor/block-components/flexControl.js");
-/* harmony import */ var _block_components_paddingControl__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../block-components/paddingControl */ "./includes/block-editor/block-components/paddingControl.js");
-/* harmony import */ var _block_components_marginControl__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../block-components/marginControl */ "./includes/block-editor/block-components/marginControl.js");
-/* harmony import */ var _block_components_alignControl__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../block-components/alignControl */ "./includes/block-editor/block-components/alignControl.js");
-/* harmony import */ var _block_components_orderControl__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../block-components/orderControl */ "./includes/block-editor/block-components/orderControl.js");
+/* harmony import */ var _block_controls_displayControl__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../block-controls/displayControl */ "./includes/block-editor/block-controls/displayControl.js");
+/* harmony import */ var _block_controls_flexControl__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../block-controls/flexControl */ "./includes/block-editor/block-controls/flexControl.js");
+/* harmony import */ var _block_controls_paddingControl__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../block-controls/paddingControl */ "./includes/block-editor/block-controls/paddingControl.js");
+/* harmony import */ var _block_controls_marginControl__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../block-controls/marginControl */ "./includes/block-editor/block-controls/marginControl.js");
+/* harmony import */ var _block_controls_alignControl__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../block-controls/alignControl */ "./includes/block-editor/block-controls/alignControl.js");
+/* harmony import */ var _block_controls_orderControl__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../block-controls/orderControl */ "./includes/block-editor/block-controls/orderControl.js");
 /* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./editor.scss */ "./includes/block-editor/blocks/column/editor.scss");
 
 /**
@@ -1070,7 +1063,7 @@ function edit(_ref) {
       name: 'base',
       title: '—',
       className: 'breakpoint-tab',
-      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_displayControl__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_displayControl__WEBPACK_IMPORTED_MODULE_6__["default"], {
         display: baseDisplay,
         setDisplay: baseDisplay => setAttributes({
           baseDisplay
@@ -1401,7 +1394,7 @@ function edit(_ref) {
         onChange: baseJustifyContent => setAttributes({
           baseJustifyContent
         })
-      })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_components_orderControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_orderControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
         order: baseOrder,
         setOrder: baseOrder => setAttributes({
           baseOrder

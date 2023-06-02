@@ -29,12 +29,12 @@ import {omit} from 'lodash';
 /**
  * Internal dependencies
  */
-import DisplayControl from '../../block-components/displayControl';
-import FlexControl from '../../block-components/flexControl';
-import PaddingControl from '../../block-components/paddingControl';
-import MarginControl from '../../block-components/marginControl';
-import AlignControl from '../../block-components/alignControl';
-import OrderControl from '../../block-components/orderControl';
+import DisplayControl from '../../block-controls/displayControl';
+import FlexControl from '../../block-controls/flexControl';
+import PaddingControl from '../../block-controls/paddingControl';
+import MarginControl from '../../block-controls/marginControl';
+import AlignControl from '../../block-controls/alignControl';
+import OrderControl from '../../block-controls/orderControl';
 
 /**
  * Styles are applied only to the editor.
