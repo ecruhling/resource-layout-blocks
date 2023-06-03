@@ -1040,31 +1040,6 @@ function PaddingControl(_ref) {
 
 /***/ }),
 
-/***/ "./includes/block-editor/block-help/tagNameMessages.js":
-/*!*************************************************************!*\
-  !*** ./includes/block-editor/block-help/tagNameMessages.js ***!
-  \*************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "tagNameMessages": () => (/* binding */ tagNameMessages)
-/* harmony export */ });
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
-
-const tagNameMessages = {
-  header: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('The <header> element should represent introductory content, typically a group of introductory or navigational aids.'),
-  main: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('The <main> element should be used for the primary content of your document only. '),
-  section: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('The <section> element should represent a standalone portion of the document that can\'t be better represented by another element.'),
-  article: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('The <article> element should represent a self contained, syndicatable portion of the document.'),
-  aside: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('The <aside> element should represent a portion of a document whose content is only indirectly related to the document\'s main content.'),
-  footer: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('The <footer> element should represent a footer for its nearest sectioning element (e.g.: <section>, <article>, <main> etc.).')
-};
-
-/***/ }),
-
 /***/ "./includes/block-editor/blocks/column/edit.js":
 /*!*****************************************************!*\
   !*** ./includes/block-editor/blocks/column/edit.js ***!
@@ -1088,15 +1063,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lodash */ "lodash");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _block_help_tagNameMessages__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../block-help/tagNameMessages */ "./includes/block-editor/block-help/tagNameMessages.js");
-/* harmony import */ var _block_controls_displayControl__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../block-controls/displayControl */ "./includes/block-editor/block-controls/displayControl.js");
-/* harmony import */ var _block_controls_flexControl__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../block-controls/flexControl */ "./includes/block-editor/block-controls/flexControl.js");
-/* harmony import */ var _block_controls_paddingControl__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../block-controls/paddingControl */ "./includes/block-editor/block-controls/paddingControl.js");
-/* harmony import */ var _block_controls_marginControl__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../block-controls/marginControl */ "./includes/block-editor/block-controls/marginControl.js");
-/* harmony import */ var _block_controls_alignControl__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../block-controls/alignControl */ "./includes/block-editor/block-controls/alignControl.js");
-/* harmony import */ var _block_controls_columnControl__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../block-controls/columnControl */ "./includes/block-editor/block-controls/columnControl.js");
-/* harmony import */ var _block_controls_orderControl__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../block-controls/orderControl */ "./includes/block-editor/block-controls/orderControl.js");
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./editor.scss */ "./includes/block-editor/blocks/column/editor.scss");
+/* harmony import */ var _block_controls_displayControl__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../block-controls/displayControl */ "./includes/block-editor/block-controls/displayControl.js");
+/* harmony import */ var _block_controls_flexControl__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../block-controls/flexControl */ "./includes/block-editor/block-controls/flexControl.js");
+/* harmony import */ var _block_controls_paddingControl__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../block-controls/paddingControl */ "./includes/block-editor/block-controls/paddingControl.js");
+/* harmony import */ var _block_controls_marginControl__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../block-controls/marginControl */ "./includes/block-editor/block-controls/marginControl.js");
+/* harmony import */ var _block_controls_alignControl__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../block-controls/alignControl */ "./includes/block-editor/block-controls/alignControl.js");
+/* harmony import */ var _block_controls_columnControl__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../block-controls/columnControl */ "./includes/block-editor/block-controls/columnControl.js");
+/* harmony import */ var _block_controls_orderControl__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../block-controls/orderControl */ "./includes/block-editor/block-controls/orderControl.js");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./editor.scss */ "./includes/block-editor/blocks/column/editor.scss");
 
 /**
  * WordPress dependencies
@@ -1122,16 +1096,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 /**
- * Styles are applied only to the editor.
+ * Styles are applied only to the editor
  *
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
 
 
 /**
- * The Block edit function.
+ * The Block edit function
  *
  * @returns {JSX.Element}
  * @constructor
@@ -1251,7 +1224,7 @@ function edit(_ref) {
       name: 'base',
       title: '—',
       className: 'breakpoint-tab',
-      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_displayControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_displayControl__WEBPACK_IMPORTED_MODULE_6__["default"], {
         breakpoint: "",
         breakpoint_name: "",
         display: baseDisplay,
@@ -1259,7 +1232,7 @@ function edit(_ref) {
           baseDisplay
         }),
         __nextHasNoMarginBottom: true
-      }), (baseDisplay === 'd-flex' || baseDisplay === 'd-inline-flex') && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_flexControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      }), (baseDisplay === 'd-flex' || baseDisplay === 'd-inline-flex') && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_flexControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
         breakpoint: "",
         breakpoint_name: "",
         flexDirection: baseFlexDirection,
@@ -1294,7 +1267,7 @@ function edit(_ref) {
         setAlignContent: baseAlignContent => setAttributes({
           baseAlignContent
         })
-      }), baseDisplay !== 'd-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_columnControl__WEBPACK_IMPORTED_MODULE_12__["default"], {
+      }), baseDisplay !== 'd-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_columnControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
         breakpoint: "",
         breakpoint_name: "",
         columns: baseColumns,
@@ -1305,7 +1278,7 @@ function edit(_ref) {
         setOffset: baseOffset => setAttributes({
           baseOffset
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_paddingControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_paddingControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
         breakpoint: "",
         breakpoint_name: "",
         paddingTop: basePaddingTop,
@@ -1324,7 +1297,7 @@ function edit(_ref) {
         setPaddingLeft: basePaddingLeft => setAttributes({
           basePaddingLeft
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_marginControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_marginControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
         breakpoint: "",
         breakpoint_name: "",
         marginTop: baseMarginTop,
@@ -1343,7 +1316,7 @@ function edit(_ref) {
         setMarginLeft: baseMarginLeft => setAttributes({
           baseMarginLeft
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_alignControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_alignControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
         breakpoint: "",
         breakpoint_name: "",
         alignText: baseAlignText,
@@ -1366,7 +1339,7 @@ function edit(_ref) {
         setJustifyContent: baseJustifyContent => setAttributes({
           baseJustifyContent
         })
-      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_orderControl__WEBPACK_IMPORTED_MODULE_13__["default"], {
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_orderControl__WEBPACK_IMPORTED_MODULE_12__["default"], {
         breakpoint: "",
         breakpoint_name: "",
         order: baseOrder,

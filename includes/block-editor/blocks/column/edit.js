@@ -30,7 +30,6 @@ import {omit} from 'lodash';
 /**
  * Internal dependencies
  */
-import {tagNameMessages} from '../../block-help/tagNameMessages';
 import DisplayControl from '../../block-controls/displayControl';
 import FlexControl from '../../block-controls/flexControl';
 import PaddingControl from '../../block-controls/paddingControl';
@@ -40,14 +39,14 @@ import ColumnControl from '../../block-controls/columnControl';
 import OrderControl from '../../block-controls/orderControl';
 
 /**
- * Styles are applied only to the editor.
+ * Styles are applied only to the editor
  *
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
 import './editor.scss';
 
 /**
- * The Block edit function.
+ * The Block edit function
  *
  * @returns {JSX.Element}
  * @constructor
