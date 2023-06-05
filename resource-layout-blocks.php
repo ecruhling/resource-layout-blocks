@@ -51,8 +51,8 @@ add_action( 'init', 'resource_layout_blocks_init' );
  * Render callback function.
  * A generic function that routes to a PHP template stored in the named block's directory.
  *
- * @param array    $attributes Block attributes.
- * @param string   $content Block default content.
+ * @param array $attributes Block attributes.
+ * @param string $content Block default content.
  * @param WP_Block $block Block instance.
  *
  * @return string The rendered output.
@@ -75,7 +75,7 @@ function dynamic_block_render_callback( array $attributes, string $content, WP_B
 function resource_category( array $block_categories ): array {
 	$resource_category = array(
 		'slug'  => RESOURCE_LAYOUT_BLOCKS_SLUG,
-		'title' => __( 'Resource Layout Blocks', 'resource-layout-blocks' ),
+		'title' => __( 'Resource Layout Blocks', 'resource' ),
 		'icon'  => null, // icon is set in index.js of each block.
 	);
 

@@ -189,14 +189,14 @@ export default function
 				<Card>
 					<CardHeader isBorderless={true} isShady={true}
 											size='small'
-											className='resource-card-header'>{__('ROW', 'resource-layout-blocks')}</CardHeader>
+											className='resource-card-header'>{__('ROW', 'resource')}</CardHeader>
 					<CardBody size='small'>
 						<Flex wrap={true}>
 							<FlexItem>
 								<SelectControl
-									label={__('HTML element', 'resource-layout-blocks')}
+									label={__('HTML element', 'resource')}
 									options={[
-										{label: __('Default (<div>)'), value: 'div'},
+										{label: __('Default (<div>)', 'resource'), value: 'div'},
 										{label: '<header>', value: 'header'},
 										{label: '<main>', value: 'main'},
 										{label: '<section>', value: 'section'},
@@ -754,7 +754,7 @@ export default function
 				</TabPanel>
 			</InspectorControls>
 			<TagName {...blockProps}>
-				<InnerBlocks placeholder={__('Insert Columns', 'resource-layout-blocks')} />
+				<InnerBlocks placeholder={__('Insert Columns', 'resource')} />
 			</TagName>
 		</>
 	);

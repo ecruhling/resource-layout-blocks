@@ -1017,7 +1017,7 @@ function edit(_ref) {
     'container': !isFluid,
     'container-fluid': isFluid
   }, Object.values(classNameAttributes), className);
-  console.log(basePaddingTop);
+
   // TODO: Change the Class Inspector to an editable field. Consider PlainText component.
 
   // TODO: Create inline style editor
@@ -1055,14 +1055,14 @@ function edit(_ref) {
     isShady: true,
     size: "small",
     className: "resource-card-header"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('CONTAINER', 'resource-layout-blocks')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.CardBody, {
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('CONTAINER', 'resource')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.CardBody, {
     size: "small"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Flex, {
     wrap: true
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.SelectControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('HTML element', 'resource-layout-blocks'),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('HTML element', 'resource'),
     options: [{
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Default (<div>)'),
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Default (<div>)', 'resource'),
       value: 'div'
     }, {
       label: '<header>',
@@ -1089,7 +1089,7 @@ function edit(_ref) {
     }),
     help: _block_help_tagNameMessages__WEBPACK_IMPORTED_MODULE_6__.tagNameMessages[TagName]
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.CheckboxControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Fluid', 'resource-layout-blocks'),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Fluid', 'resource'),
     checked: isFluid,
     onChange: value => setAttributes({
       isFluid: value
@@ -1741,7 +1741,7 @@ function edit(_ref) {
       className: className
     }, content);
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(TagName, blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks, {
-    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Insert Rows', 'resource-layout-blocks')
+    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Insert Rows', 'resource')
   })));
 }
 
