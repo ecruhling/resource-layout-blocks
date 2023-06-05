@@ -5,7 +5,35 @@
  */
 
 // Row block
-.editor-styles-wrapper [data-type="resource-layout-blocks/row"] {
+[data-type="resource-layout-blocks/row"] {
+	outline: 1px dashed rgba(purple, 0.25);
+
+	// move the .row styles two descendants down:
+	> .block-editor-inner-blocks {
+		padding-left: 0;
+		padding-right: 0;
+
+		> .block-editor-block-list__layout { // make into .row
+			--bs-gutter-x: 1.5rem;
+			--bs-gutter-y: 0;
+			display: flex;
+			flex-wrap: wrap;
+			//margin-top: calc(-1 * var(--bs-gutter-y));
+			//margin-right: calc(-.5 * var(--bs-gutter-x));
+			//margin-left: calc(-.5 * var(--bs-gutter-x));
+
+			// move the .row > * styles
+			> * {
+				flex-shrink: 0;
+				//width: 100%;
+				max-width: 100%;
+				padding-right: calc(var(--bs-gutter-x) * .5);
+				padding-left: calc(var(--bs-gutter-x) * .5);
+				margin-top: var(--bs-gutter-y);
+			}
+		}
+	}
+
 	// WordPress overrides the negative margin on the row. Get it back.
 	// (only needed for 'classic' themes that load classic.css
 	//margin-right: calc(-.5 * var(--bs-gutter-x));
@@ -19,7 +47,7 @@
 	//	height: 100%;
 	//}
 
-	// Container background on hover to make it visible
+	// background on hover to make it visible
 	&:not(.is-selected):not(.has-child-selected):hover,
 	&.is-selected {
 		outline: 1px dashed purple;

@@ -54,8 +54,10 @@ div.resource-card-header {
 }
 
 // Container block
-.editor-styles-wrapper [data-type="resource-layout-blocks/container"] {
-	// Container background on hover to make it visible
+[data-type="resource-layout-blocks/container"] {
+	outline: 1px dashed rgba(red, 0.25);
+
+	// background on hover to make it visible
 	&:not(.is-selected):not(.has-child-selected):hover,
 	&.is-selected {
 		outline: 1px dashed red;

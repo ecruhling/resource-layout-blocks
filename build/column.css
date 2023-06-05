@@ -1,4 +1,21 @@
 /*!************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./includes/block-editor/blocks/column/editor.scss ***!
   \************************************************************************************************************************************************************************************************************************************************************************/
+[data-type="resource-layout-blocks/column"] {
+  outline: 1px dashed rgba(255, 0, 255, 0.25);
+}
+[data-type="resource-layout-blocks/column"]:not(.is-selected):not(.has-child-selected):hover, [data-type="resource-layout-blocks/column"].is-selected {
+  outline: 1px dashed magenta;
+  position: relative;
+}
+[data-type="resource-layout-blocks/column"]:not(.is-selected):not(.has-child-selected):hover::before, [data-type="resource-layout-blocks/column"].is-selected::before {
+  content: "column";
+  position: absolute;
+  top: -11px;
+  left: 1px;
+  display: block;
+  color: magenta;
+  font-size: 0.5rem;
+}
 
+/*# sourceMappingURL=column.css.map*/

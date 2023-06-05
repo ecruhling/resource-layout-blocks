@@ -6,11 +6,31 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-.editor-styles-wrapper [data-type="resource-layout-blocks/row"]:not(.is-selected):not(.has-child-selected):hover, .editor-styles-wrapper [data-type="resource-layout-blocks/row"].is-selected {
+[data-type="resource-layout-blocks/row"] {
+  outline: 1px dashed rgba(128, 0, 128, 0.25);
+}
+[data-type="resource-layout-blocks/row"] > .block-editor-inner-blocks {
+  padding-left: 0;
+  padding-right: 0;
+}
+[data-type="resource-layout-blocks/row"] > .block-editor-inner-blocks > .block-editor-block-list__layout {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+[data-type="resource-layout-blocks/row"] > .block-editor-inner-blocks > .block-editor-block-list__layout > * {
+  flex-shrink: 0;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+}
+[data-type="resource-layout-blocks/row"]:not(.is-selected):not(.has-child-selected):hover, [data-type="resource-layout-blocks/row"].is-selected {
   outline: 1px dashed purple;
   position: relative;
 }
-.editor-styles-wrapper [data-type="resource-layout-blocks/row"]:not(.is-selected):not(.has-child-selected):hover::before, .editor-styles-wrapper [data-type="resource-layout-blocks/row"].is-selected::before {
+[data-type="resource-layout-blocks/row"]:not(.is-selected):not(.has-child-selected):hover::before, [data-type="resource-layout-blocks/row"].is-selected::before {
   content: "row";
   position: absolute;
   top: -11px;
