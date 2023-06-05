@@ -27,12 +27,11 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * AlignControl
- * Component for controlling Align & Justify attributes.
+ * Component for controlling the Text Align attribute.
  *
  * @param breakpoint
  * @param breakpoint_name
  * @param alignText
- * @param flexDirection
  * @param setAlignText
  * @returns {JSX.Element}
  * @constructor
@@ -100,16 +99,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * ColumnsControl
- * Component for controlling Columns attributes
+ * ColumnControl
+ * Component for controlling Column attributes
  *
  * @param breakpoint
  * @param breakpoint_name
  * @param columns
- * @param display
  * @param offset
  * @param setColumns
- * @param setDisplay
  * @param setOffset
  * @returns {JSX.Element}
  * @constructor
@@ -250,16 +247,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
 
 /**
- * WordPress dependencies.
+ * WordPress dependencies
  */
 
 
 
 /**
- * DisplayControl.
- * Component for controlling Display attributes.
+ * DisplayControl
+ * Component for controlling the Display attribute
  *
- * @param columns
+ * @param breakpoint
+ * @param breakpoint_name
  * @param display
  * @param setDisplay
  * @returns {JSX.Element}
@@ -346,14 +344,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
 
 /**
- * WordPress dependencies.
+ * WordPress dependencies
  */
 
 
 
 /**
  * FlexControl.
- * Component for controlling attributes of flex items.
+ * Component for controlling attributes of flex items
  *
  * @param breakpoint
  * @param breakpoint_name
@@ -620,14 +618,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
 
 /**
- * WordPress dependencies.
+ * WordPress dependencies
  */
 
 
 
 /**
- * MarginControl.
- * Component for controlling Margin attributes.
+ * MarginControl
+ * Component for controlling Margin attributes
  *
  * @param breakpoint
  * @param breakpoint_name
@@ -811,9 +809,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * OrderControl
- * Component for controlling Order attributes.
+ * Component for controlling Order attributes
  *
- * @param columns
+ * @param breakpoint
+ * @param breakpoint_name
  * @param order
  * @param setOrder
  * @returns {JSX.Element}
@@ -898,6 +897,7 @@ __webpack_require__.r(__webpack_exports__);
  * Component for controlling Padding attributes.
  *
  * @param breakpoint
+ * @param breakpoint_name
  * @param paddingTop
  * @param paddingRight
  * @param paddingBottom

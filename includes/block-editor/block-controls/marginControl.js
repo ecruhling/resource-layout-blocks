@@ -1,12 +1,12 @@
 /**
- * WordPress dependencies.
+ * WordPress dependencies
  */
 import {__} from '@wordpress/i18n';
 import {CardBody, CardHeader, Flex, FlexItem, SelectControl} from '@wordpress/components';
 
 /**
- * MarginControl.
- * Component for controlling Margin attributes.
+ * MarginControl
+ * Component for controlling Margin attributes
  *
  * @param breakpoint
  * @param breakpoint_name

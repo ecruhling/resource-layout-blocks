@@ -1,14 +1,15 @@
 /**
- * WordPress dependencies.
+ * WordPress dependencies
  */
 import {__} from '@wordpress/i18n';
 import {CardBody, CardHeader, Flex, FlexItem, SelectControl} from '@wordpress/components';
 
 /**
- * DisplayControl.
- * Component for controlling Display attributes.
+ * DisplayControl
+ * Component for controlling the Display attribute
  *
- * @param columns
+ * @param breakpoint
+ * @param breakpoint_name
  * @param display
  * @param setDisplay
  * @returns {JSX.Element}

@@ -27,12 +27,11 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * AlignControl
- * Component for controlling Align & Justify attributes.
+ * Component for controlling the Text Align attribute.
  *
  * @param breakpoint
  * @param breakpoint_name
  * @param alignText
- * @param flexDirection
  * @param setAlignText
  * @returns {JSX.Element}
  * @constructor
@@ -94,16 +93,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
 
 /**
- * WordPress dependencies.
+ * WordPress dependencies
  */
 
 
 
 /**
- * DisplayControl.
- * Component for controlling Display attributes.
+ * DisplayControl
+ * Component for controlling the Display attribute
  *
- * @param columns
+ * @param breakpoint
+ * @param breakpoint_name
  * @param display
  * @param setDisplay
  * @returns {JSX.Element}
@@ -190,14 +190,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
 
 /**
- * WordPress dependencies.
+ * WordPress dependencies
  */
 
 
 
 /**
  * FlexControl.
- * Component for controlling attributes of flex items.
+ * Component for controlling attributes of flex items
  *
  * @param breakpoint
  * @param breakpoint_name
@@ -464,14 +464,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
 
 /**
- * WordPress dependencies.
+ * WordPress dependencies
  */
 
 
 
 /**
- * MarginControl.
- * Component for controlling Margin attributes.
+ * MarginControl
+ * Component for controlling Margin attributes
  *
  * @param breakpoint
  * @param breakpoint_name
@@ -658,6 +658,7 @@ __webpack_require__.r(__webpack_exports__);
  * Component for controlling Padding attributes.
  *
  * @param breakpoint
+ * @param breakpoint_name
  * @param paddingTop
  * @param paddingRight
  * @param paddingBottom
@@ -1016,7 +1017,7 @@ function edit(_ref) {
     'container': !isFluid,
     'container-fluid': isFluid
   }, Object.values(classNameAttributes), className);
-
+  console.log(basePaddingTop);
   // TODO: Change the Class Inspector to an editable field. Consider PlainText component.
 
   // TODO: Create inline style editor
@@ -1058,19 +1059,7 @@ function edit(_ref) {
     size: "small"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Flex, {
     wrap: true
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.__experimentalBoxControl, {
-    allowReset: true,
-    inputProps: {
-      disableUnits: true,
-      min: 0,
-      max: 5,
-      step: 1
-    },
-    units: units,
-    values: values,
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Testing Margin', 'resource-layout-blocks'),
-    onChange: nextValues => setValues(nextValues)
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.SelectControl, {
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.SelectControl, {
     label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('HTML element', 'resource-layout-blocks'),
     options: [{
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Default (<div>)'),

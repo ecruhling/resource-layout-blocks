@@ -5,16 +5,14 @@ import {__} from '@wordpress/i18n';
 import {CardBody, CardHeader, Flex, FlexItem, SelectControl} from '@wordpress/components';
 
 /**
- * ColumnsControl
- * Component for controlling Columns attributes
+ * ColumnControl
+ * Component for controlling Column attributes
  *
  * @param breakpoint
  * @param breakpoint_name
  * @param columns
- * @param display
  * @param offset
  * @param setColumns
- * @param setDisplay
  * @param setOffset
  * @returns {JSX.Element}
  * @constructor

@@ -9,6 +9,7 @@ import {CardBody, CardHeader, Flex, FlexItem, SelectControl} from '@wordpress/co
  * Component for controlling Padding attributes.
  *
  * @param breakpoint
+ * @param breakpoint_name
  * @param paddingTop
  * @param paddingRight
  * @param paddingBottom

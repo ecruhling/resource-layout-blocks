@@ -19,7 +19,6 @@ import {
 	CardHeader,
 	Toolbar,
 	ToolbarItem,
-	__experimentalBoxControl as BoxControl,
 } from '@wordpress/components';
 import {useState} from '@wordpress/element';
 
@@ -182,7 +181,7 @@ export default function
 		Object.values(classNameAttributes),
 		className,
 	);
-
+	console.log(basePaddingTop);
 	// TODO: Change the Class Inspector to an editable field. Consider PlainText component.
 
 	// TODO: Create inline style editor
@@ -224,21 +223,6 @@ export default function
 											className='resource-card-header'>{__('CONTAINER', 'resource-layout-blocks')}</CardHeader>
 					<CardBody size='small'>
 						<Flex wrap={true}>
-							<FlexItem>
-								<BoxControl
-									allowReset
-									inputProps={{
-										disableUnits: true,
-										min: 0,
-										max: 5,
-										step: 1,
-									}}
-									units={units}
-									values={values}
-									label={__('Testing Margin', 'resource-layout-blocks')}
-									onChange={(nextValues) => setValues(nextValues)}
-								></BoxControl>
-							</FlexItem>
 							<FlexItem>
 								<SelectControl
 									label={__('HTML element', 'resource-layout-blocks')}

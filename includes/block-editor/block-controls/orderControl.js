@@ -6,9 +6,10 @@ import {CardBody, CardHeader, Flex, FlexItem, SelectControl} from '@wordpress/co
 
 /**
  * OrderControl
- * Component for controlling Order attributes.
+ * Component for controlling Order attributes
  *
- * @param columns
+ * @param breakpoint
+ * @param breakpoint_name
  * @param order
  * @param setOrder
  * @returns {JSX.Element}

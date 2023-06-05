@@ -6,12 +6,11 @@ import {CardBody, CardHeader, Flex, FlexItem, SelectControl} from '@wordpress/co
 
 /**
  * AlignControl
- * Component for controlling Align & Justify attributes.
+ * Component for controlling the Text Align attribute.
  *
  * @param breakpoint
  * @param breakpoint_name
  * @param alignText
- * @param flexDirection
  * @param setAlignText
  * @returns {JSX.Element}
  * @constructor
