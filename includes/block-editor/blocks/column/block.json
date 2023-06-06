@@ -18,7 +18,8 @@
 			"type": "string"
 		},
 		"baseColumns": {
-			"type": "string"
+			"type": "string",
+			"default": "col"
 		},
 		"baseOffset": {
 			"type": "string"
@@ -77,6 +78,12 @@
 		"smDisplay": {
 			"type": "string"
 		},
+		"smColumns": {
+			"type": "string"
+		},
+		"smOffset": {
+			"type": "string"
+		},
 		"smPaddingTop": {
 			"type": "string"
 		},
@@ -129,6 +136,12 @@
 			"type": "string"
 		},
 		"mdDisplay": {
+			"type": "string"
+		},
+		"mdColumns": {
+			"type": "string"
+		},
+		"mdOffset": {
 			"type": "string"
 		},
 		"mdPaddingTop": {
@@ -185,6 +198,12 @@
 		"lgDisplay": {
 			"type": "string"
 		},
+		"lgColumns": {
+			"type": "string"
+		},
+		"lgOffset": {
+			"type": "string"
+		},
 		"lgPaddingTop": {
 			"type": "string"
 		},
@@ -239,6 +258,12 @@
 		"xlDisplay": {
 			"type": "string"
 		},
+		"xlColumns": {
+			"type": "string"
+		},
+		"xlOffset": {
+			"type": "string"
+		},
 		"xlPaddingTop": {
 			"type": "string"
 		},
@@ -291,6 +316,12 @@
 			"type": "string"
 		},
 		"xxlDisplay": {
+			"type": "string"
+		},
+		"xxlColumns": {
+			"type": "string"
+		},
+		"xxlOffset": {
 			"type": "string"
 		},
 		"xxlPaddingTop": {

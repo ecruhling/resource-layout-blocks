@@ -25,6 +25,15 @@ export default function ColumnControl ({
 																				 setColumns,
 																				 setOffset,
 																			 }) {
+	// since the equal column class has no dash at the end, e.g. 'col', 'col-sm', 'col-md', etc,
+	// check to see if there happens to be a dash on the end in the breakpoint builder.
+	// if there is, remove the last character (dash)
+	let equal_column_class = `col-${breakpoint}`;
+
+	if (equal_column_class.slice(-1) === '-') {
+		equal_column_class = equal_column_class.slice(0, -1);
+	}
+
 	return (
 		<div>
 			<CardHeader isBorderless={true} isShady={true} size='small' className='resource-card-header'>
@@ -37,7 +46,7 @@ export default function ColumnControl ({
 													 value={columns}
 													 options={[
 														 {value: '', label: __('Select Value', 'resource')},
-														 {value: `col-${breakpoint}`, label: __('equal', 'resource')},
+														 {value: equal_column_class, label: __('equal', 'resource')},
 														 {value: `col-${breakpoint}1`, label: __('1', 'resource')},
 														 {value: `col-${breakpoint}2`, label: __('2', 'resource')},
 														 {value: `col-${breakpoint}3`, label: __('3', 'resource')},

@@ -185,6 +185,8 @@ export default function
 		className: classes,
 	});
 
+	console.log(classes);
+
 	return (
 		<>
 			<BlockControls>
