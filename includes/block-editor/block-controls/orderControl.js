@@ -24,22 +24,22 @@ export default function OrderControl ({
 	return (
 		<div>
 			<CardHeader isBorderless={true} isShady={true} size='small' className='resource-card-header'>
-				{__(`${breakpoint_name} ORDER`, 'resource-layout-blocks')}
+				{__(`${breakpoint_name} ORDER`, 'resource')}
 			</CardHeader>
 			<CardBody size='small'>
 				<Flex wrap={true}>
 					<FlexItem>
-						<SelectControl label={__('Order', 'resource-layout-blocks')}
+						<SelectControl label={__('Order', 'resource')}
 													 value={order}
 													 options={[
-														 {value: '', label: __('Select Option', 'resource-layout-blocks')},
-														 {value: `order-${breakpoint}first`, label: __('first', 'resource-layout-blocks')},
-														 {value: `order-${breakpoint}1`, label: __('1', 'resource-layout-blocks')},
-														 {value: `order-${breakpoint}2`, label: __('2', 'resource-layout-blocks')},
-														 {value: `order-${breakpoint}3`, label: __('3', 'resource-layout-blocks')},
-														 {value: `order-${breakpoint}4`, label: __('4', 'resource-layout-blocks')},
-														 {value: `order-${breakpoint}5`, label: __('5', 'resource-layout-blocks')},
-														 {value: `order-${breakpoint}last`, label: __('last', 'resource-layout-blocks')},
+														 {value: '', label: __('Select Option', 'resource')},
+														 {value: `order-${breakpoint}first`, label: __('first', 'resource')},
+														 {value: `order-${breakpoint}1`, label: __('1', 'resource')},
+														 {value: `order-${breakpoint}2`, label: __('2', 'resource')},
+														 {value: `order-${breakpoint}3`, label: __('3', 'resource')},
+														 {value: `order-${breakpoint}4`, label: __('4', 'resource')},
+														 {value: `order-${breakpoint}5`, label: __('5', 'resource')},
+														 {value: `order-${breakpoint}last`, label: __('last', 'resource')},
 													 ]}
 													 onChange={setOrder}
 						/>

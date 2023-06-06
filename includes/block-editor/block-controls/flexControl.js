@@ -5,7 +5,7 @@ import {__} from '@wordpress/i18n';
 import {CardBody, CardHeader, Flex, FlexItem, SelectControl} from '@wordpress/components';
 
 /**
- * FlexControl.
+ * FlexControl
  * Component for controlling attributes of flex items
  *
  * @param breakpoint
@@ -53,166 +53,166 @@ export default function FlexControl ({
 		<div>
 			<CardHeader isBorderless={true} isShady={true}
 									size='small'
-									className='resource-card-header'>{__(`${breakpoint_name} FLEX ATTRIBUTES`, 'resource-layout-blocks')}</CardHeader>
+									className='resource-card-header'>{__(`${breakpoint_name} FLEX ATTRIBUTES`, 'resource')}</CardHeader>
 			<CardBody size='small'>
 				<Flex wrap={true}>
 					<FlexItem>
-						<SelectControl label={__('Direction', 'resource-layout-blocks')}
+						<SelectControl label={__('Direction', 'resource')}
 													 value={flexDirection}
 													 options={[
-														 {value: '', label: __('Select Option', 'resource-layout-blocks')},
-														 {value: `flex-${breakpoint}row`, label: __('Flex Row', 'resource-layout-blocks')},
+														 {value: '', label: __('Select Option', 'resource')},
+														 {value: `flex-${breakpoint}row`, label: __('Flex Row', 'resource')},
 														 {
 															 value: `flex-${breakpoint}row-reverse`,
-															 label: __('Flex Row Reverse', 'resource-layout-blocks'),
+															 label: __('Flex Row Reverse', 'resource'),
 														 },
-														 {value: `flex-${breakpoint}column`, label: __('Flex Column', 'resource-layout-blocks')},
+														 {value: `flex-${breakpoint}column`, label: __('Flex Column', 'resource')},
 														 {
 															 value: `flex-${breakpoint}column-reverse`,
-															 label: __('Flex Column Reverse', 'resource-layout-blocks'),
+															 label: __('Flex Column Reverse', 'resource'),
 														 },
 													 ]}
 													 onChange={setFlexDirection}
 						/>
 					</FlexItem>
 					<FlexItem>
-						<SelectControl label={__('Justify Content', 'resource-layout-blocks')}
+						<SelectControl label={__('Justify Content', 'resource')}
 													 value={justifyContent}
 													 options={[
-														 {value: '', label: __('Select Option', 'resource-layout-blocks')},
+														 {value: '', label: __('Select Option', 'resource')},
 														 {
 															 value: `justify-content-${breakpoint}start`,
-															 label: __('Start', 'resource-layout-blocks'),
+															 label: __('Start', 'resource'),
 														 },
-														 {value: `justify-content-${breakpoint}end`, label: __('End', 'resource-layout-blocks')},
+														 {value: `justify-content-${breakpoint}end`, label: __('End', 'resource')},
 														 {
 															 value: `justify-content-${breakpoint}center`,
-															 label: __('Center', 'resource-layout-blocks'),
+															 label: __('Center', 'resource'),
 														 },
 														 {
 															 value: `justify-content-${breakpoint}between`,
-															 label: __('Between', 'resource-layout-blocks'),
+															 label: __('Between', 'resource'),
 														 },
 														 {
 															 value: `justify-content-${breakpoint}around`,
-															 label: __('Around', 'resource-layout-blocks'),
+															 label: __('Around', 'resource'),
 														 },
 														 {
 															 value: `justify-content-${breakpoint}evenly`,
-															 label: __('Evenly', 'resource-layout-blocks'),
+															 label: __('Evenly', 'resource'),
 														 },
 													 ]}
 													 onChange={setJustifyContent}
 						/>
 					</FlexItem>
 					<FlexItem>
-						<SelectControl label={__('Align Items', 'resource-layout-blocks')}
+						<SelectControl label={__('Align Items', 'resource')}
 													 value={alignItems}
 													 options={[
-														 {value: '', label: __('Select Option', 'resource-layout-blocks')},
-														 {value: `align-items-${breakpoint}start`, label: __('Start', 'resource-layout-blocks')},
-														 {value: `align-items-${breakpoint}end`, label: __('End', 'resource-layout-blocks')},
-														 {value: `align-items-${breakpoint}center`, label: __('Center', 'resource-layout-blocks')},
+														 {value: '', label: __('Select Option', 'resource')},
+														 {value: `align-items-${breakpoint}start`, label: __('Start', 'resource')},
+														 {value: `align-items-${breakpoint}end`, label: __('End', 'resource')},
+														 {value: `align-items-${breakpoint}center`, label: __('Center', 'resource')},
 														 {
 															 value: `align-items-${breakpoint}baseline`,
-															 label: __('Baseline', 'resource-layout-blocks'),
+															 label: __('Baseline', 'resource'),
 														 },
 														 {
 															 value: `align-items-${breakpoint}stretch`,
-															 label: __('Stretch', 'resource-layout-blocks'),
+															 label: __('Stretch', 'resource'),
 														 },
 													 ]}
 													 onChange={setAlignItems}
 						/>
 					</FlexItem>
 					<FlexItem>
-						<SelectControl label={__('Align Self', 'resource-layout-blocks')}
+						<SelectControl label={__('Align Self', 'resource')}
 													 value={alignSelf}
 													 options={[
-														 {value: '', label: __('Select Option', 'resource-layout-blocks')},
-														 {value: `align-self-${breakpoint}start`, label: __('Start', 'resource-layout-blocks')},
-														 {value: `align-self-${breakpoint}end`, label: __('End', 'resource-layout-blocks')},
-														 {value: `align-self-${breakpoint}center`, label: __('Center', 'resource-layout-blocks')},
+														 {value: '', label: __('Select Option', 'resource')},
+														 {value: `align-self-${breakpoint}start`, label: __('Start', 'resource')},
+														 {value: `align-self-${breakpoint}end`, label: __('End', 'resource')},
+														 {value: `align-self-${breakpoint}center`, label: __('Center', 'resource')},
 														 {
 															 value: `align-self-${breakpoint}baseline`,
-															 label: __('Baseline', 'resource-layout-blocks'),
+															 label: __('Baseline', 'resource'),
 														 },
-														 {value: `align-self-${breakpoint}stretch`, label: __('Stretch', 'resource-layout-blocks')},
+														 {value: `align-self-${breakpoint}stretch`, label: __('Stretch', 'resource')},
 													 ]}
 													 onChange={setAlignSelf}
 						/>
 					</FlexItem>
 					<FlexItem>
-						<SelectControl label={__('Fill, Grow, & Shrink', 'resource-layout-blocks')}
+						<SelectControl label={__('Fill, Grow, & Shrink', 'resource')}
 													 value={fillGrowShrink}
 													 options={[
-														 {value: '', label: __('Select Option', 'resource-layout-blocks')},
-														 {value: `flex-${breakpoint}fill`, label: __('Fill', 'resource-layout-blocks')},
-														 {value: `flex-${breakpoint}grow-0`, label: __('Grow 0', 'resource-layout-blocks')},
-														 {value: `flex-${breakpoint}grow-1`, label: __('Grow 1', 'resource-layout-blocks')},
-														 {value: `flex-${breakpoint}shrink-0`, label: __('Shrink 0', 'resource-layout-blocks')},
-														 {value: `flex-${breakpoint}shrink-1`, label: __('Shrink 1', 'resource-layout-blocks')},
+														 {value: '', label: __('Select Option', 'resource')},
+														 {value: `flex-${breakpoint}fill`, label: __('Fill', 'resource')},
+														 {value: `flex-${breakpoint}grow-0`, label: __('Grow 0', 'resource')},
+														 {value: `flex-${breakpoint}grow-1`, label: __('Grow 1', 'resource')},
+														 {value: `flex-${breakpoint}shrink-0`, label: __('Shrink 0', 'resource')},
+														 {value: `flex-${breakpoint}shrink-1`, label: __('Shrink 1', 'resource')},
 													 ]}
 													 onChange={setFillGrowShrink}
 						/>
 					</FlexItem>
 					<FlexItem>
-						<SelectControl label={__('Wrap', 'resource-layout-blocks')}
+						<SelectControl label={__('Wrap', 'resource')}
 													 value={wrap}
 													 options={[
-														 {value: '', label: __('Select Option', 'resource-layout-blocks')},
-														 {value: `flex-${breakpoint}nowrap`, label: __('No Wrap', 'resource-layout-blocks')},
-														 {value: `flex-${breakpoint}wrap`, label: __('Wrap', 'resource-layout-blocks')},
+														 {value: '', label: __('Select Option', 'resource')},
+														 {value: `flex-${breakpoint}nowrap`, label: __('No Wrap', 'resource')},
+														 {value: `flex-${breakpoint}wrap`, label: __('Wrap', 'resource')},
 														 {
 															 value: `flex-${breakpoint}wrap-reverse`,
-															 label: __('Wrap Reverse', 'resource-layout-blocks'),
+															 label: __('Wrap Reverse', 'resource'),
 														 },
 													 ]}
 													 onChange={setWrap}
 						/>
 					</FlexItem>
 					<FlexItem>
-						<SelectControl label={__('Order', 'resource-layout-blocks')}
+						<SelectControl label={__('Order', 'resource')}
 													 value={order}
 													 options={[
-														 {value: '', label: __('Select Option', 'resource-layout-blocks')},
-														 {value: 'order-first', label: __('first', 'resource-layout-blocks')},
-														 {value: 'order-0', label: __('0', 'resource-layout-blocks')},
-														 {value: 'order-1', label: __('1', 'resource-layout-blocks')},
-														 {value: 'order-2', label: __('2', 'resource-layout-blocks')},
-														 {value: 'order-3', label: __('3', 'resource-layout-blocks')},
-														 {value: 'order-4', label: __('4', 'resource-layout-blocks')},
-														 {value: 'order-5', label: __('5', 'resource-layout-blocks')},
-														 {value: 'order-last', label: __('last', 'resource-layout-blocks')},
+														 {value: '', label: __('Select Option', 'resource')},
+														 {value: 'order-first', label: __('first', 'resource')},
+														 {value: 'order-0', label: __('0', 'resource')},
+														 {value: 'order-1', label: __('1', 'resource')},
+														 {value: 'order-2', label: __('2', 'resource')},
+														 {value: 'order-3', label: __('3', 'resource')},
+														 {value: 'order-4', label: __('4', 'resource')},
+														 {value: 'order-5', label: __('5', 'resource')},
+														 {value: 'order-last', label: __('last', 'resource')},
 													 ]}
 													 onChange={setOrder}
 						/>
 					</FlexItem>
 					<FlexItem>
-						<SelectControl label={__('Align Content', 'resource-layout-blocks')}
+						<SelectControl label={__('Align Content', 'resource')}
 													 value={alignContent}
 													 options={[
-														 {value: '', label: __('Select Option', 'resource-layout-blocks')},
+														 {value: '', label: __('Select Option', 'resource')},
 														 {
 															 value: `align-content-${breakpoint}start`,
-															 label: __('Start', 'resource-layout-blocks'),
+															 label: __('Start', 'resource'),
 														 },
-														 {value: `align-content-${breakpoint}end`, label: __('End', 'resource-layout-blocks')},
+														 {value: `align-content-${breakpoint}end`, label: __('End', 'resource')},
 														 {
 															 value: `justify-content-${breakpoint}center`,
-															 label: __('Center', 'resource-layout-blocks'),
+															 label: __('Center', 'resource'),
 														 },
 														 {
 															 value: `align-content-${breakpoint}between`,
-															 label: __('Between', 'resource-layout-blocks'),
+															 label: __('Between', 'resource'),
 														 },
 														 {
 															 value: `align-content-${breakpoint}around`,
-															 label: __('Around', 'resource-layout-blocks'),
+															 label: __('Around', 'resource'),
 														 },
 														 {
 															 value: `align-content-${breakpoint}stretch`,
-															 label: __('Stretch', 'resource-layout-blocks'),
+															 label: __('Stretch', 'resource'),
 														 },
 													 ]}
 													 onChange={setAlignContent}

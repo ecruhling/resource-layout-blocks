@@ -36,69 +36,69 @@ export default function MarginControl ({
 	return (
 		<div>
 			<CardHeader isBorderless={true} isShady={true} size='small'
-									className='resource-card-header'>{__(`${breakpoint_name} MARGIN`, 'resource-layout-blocks')}</CardHeader>
+									className='resource-card-header'>{__(`${breakpoint_name} MARGIN`, 'resource')}</CardHeader>
 			<CardBody size='small'>
 				<Flex wrap={true}>
 					<FlexItem>
-						<SelectControl label={__('Top', 'resource-layout-blocks')}
+						<SelectControl label={__('Top', 'resource')}
 													 value={marginTop}
 													 options={[
-														 {value: '', label: __('Select Value', 'resource-layout-blocks')},
-														 {value: `mt-${breakpoint}0`, label: __('0', 'resource-layout-blocks')},
-														 {value: `mt-${breakpoint}1`, label: __('1', 'resource-layout-blocks')},
-														 {value: `mt-${breakpoint}2`, label: __('2', 'resource-layout-blocks')},
-														 {value: `mt-${breakpoint}3`, label: __('3', 'resource-layout-blocks')},
-														 {value: `mt-${breakpoint}4`, label: __('4', 'resource-layout-blocks')},
-														 {value: `mt-${breakpoint}5`, label: __('5', 'resource-layout-blocks')},
-														 {value: `mt-${breakpoint}auto`, label: __('Auto', 'resource-layout-blocks')},
+														 {value: '', label: __('Select Value', 'resource')},
+														 {value: `mt-${breakpoint}0`, label: __('0', 'resource')},
+														 {value: `mt-${breakpoint}1`, label: __('1', 'resource')},
+														 {value: `mt-${breakpoint}2`, label: __('2', 'resource')},
+														 {value: `mt-${breakpoint}3`, label: __('3', 'resource')},
+														 {value: `mt-${breakpoint}4`, label: __('4', 'resource')},
+														 {value: `mt-${breakpoint}5`, label: __('5', 'resource')},
+														 {value: `mt-${breakpoint}auto`, label: __('Auto', 'resource')},
 													 ]}
 													 onChange={setMarginTop}
 						/>
 					</FlexItem>
 					<FlexItem>
-						<SelectControl label={__('Right', 'resource-layout-blocks')}
+						<SelectControl label={__('Right', 'resource')}
 													 value={marginRight}
 													 options={[
-														 {value: '', label: __('Select Value', 'resource-layout-blocks')},
-														 {value: `me-${breakpoint}0`, label: __('0', 'resource-layout-blocks')},
-														 {value: `me-${breakpoint}1`, label: __('1', 'resource-layout-blocks')},
-														 {value: `me-${breakpoint}2`, label: __('2', 'resource-layout-blocks')},
-														 {value: `me-${breakpoint}3`, label: __('3', 'resource-layout-blocks')},
-														 {value: `me-${breakpoint}4`, label: __('4', 'resource-layout-blocks')},
-														 {value: `me-${breakpoint}5`, label: __('5', 'resource-layout-blocks')},
-														 {value: `me-${breakpoint}auto`, label: __('Auto', 'resource-layout-blocks')},
+														 {value: '', label: __('Select Value', 'resource')},
+														 {value: `me-${breakpoint}0`, label: __('0', 'resource')},
+														 {value: `me-${breakpoint}1`, label: __('1', 'resource')},
+														 {value: `me-${breakpoint}2`, label: __('2', 'resource')},
+														 {value: `me-${breakpoint}3`, label: __('3', 'resource')},
+														 {value: `me-${breakpoint}4`, label: __('4', 'resource')},
+														 {value: `me-${breakpoint}5`, label: __('5', 'resource')},
+														 {value: `me-${breakpoint}auto`, label: __('Auto', 'resource')},
 													 ]}
 													 onChange={setMarginRight}
 						/>
 					</FlexItem>
 					<FlexItem>
-						<SelectControl label={__('Bottom', 'resource-layout-blocks')}
+						<SelectControl label={__('Bottom', 'resource')}
 													 value={marginBottom}
 													 options={[
-														 {value: '', label: __('Select Value', 'resource-layout-blocks')},
-														 {value: `mb-${breakpoint}0`, label: __('0', 'resource-layout-blocks')},
-														 {value: `mb-${breakpoint}1`, label: __('1', 'resource-layout-blocks')},
-														 {value: `mb-${breakpoint}2`, label: __('2', 'resource-layout-blocks')},
-														 {value: `mb-${breakpoint}3`, label: __('3', 'resource-layout-blocks')},
-														 {value: `mb-${breakpoint}4`, label: __('4', 'resource-layout-blocks')},
-														 {value: `mb-${breakpoint}5`, label: __('5', 'resource-layout-blocks')},
-														 {value: `mb-${breakpoint}auto`, label: __('Auto', 'resource-layout-blocks')},
+														 {value: '', label: __('Select Value', 'resource')},
+														 {value: `mb-${breakpoint}0`, label: __('0', 'resource')},
+														 {value: `mb-${breakpoint}1`, label: __('1', 'resource')},
+														 {value: `mb-${breakpoint}2`, label: __('2', 'resource')},
+														 {value: `mb-${breakpoint}3`, label: __('3', 'resource')},
+														 {value: `mb-${breakpoint}4`, label: __('4', 'resource')},
+														 {value: `mb-${breakpoint}5`, label: __('5', 'resource')},
+														 {value: `mb-${breakpoint}auto`, label: __('Auto', 'resource')},
 													 ]}
 													 onChange={setMarginBottom}
 						/>
 					</FlexItem>
 					<FlexItem>
-						<SelectControl label={__('Left', 'resource-layout-blocks')}
+						<SelectControl label={__('Left', 'resource')}
 													 value={marginLeft}
 													 options={[
-														 {value: '', label: __('Select Value', 'resource-layout-blocks')},
-														 {value: `ms-${breakpoint}0`, label: __('0', 'resource-layout-blocks')},
-														 {value: `ms-${breakpoint}1`, label: __('1', 'resource-layout-blocks')},
-														 {value: `ms-${breakpoint}2`, label: __('2', 'resource-layout-blocks')},
-														 {value: `ms-${breakpoint}3`, label: __('3', 'resource-layout-blocks')},
-														 {value: `ms-${breakpoint}4`, label: __('4', 'resource-layout-blocks')},
-														 {value: `ms-${breakpoint}5`, label: __('5', 'resource-layout-blocks')},
-														 {value: `ms-${breakpoint}auto`, label: __('Auto', 'resource-layout-blocks')},
+														 {value: '', label: __('Select Value', 'resource')},
+														 {value: `ms-${breakpoint}0`, label: __('0', 'resource')},
+														 {value: `ms-${breakpoint}1`, label: __('1', 'resource')},
+														 {value: `ms-${breakpoint}2`, label: __('2', 'resource')},
+														 {value: `ms-${breakpoint}3`, label: __('3', 'resource')},
+														 {value: `ms-${breakpoint}4`, label: __('4', 'resource')},
+														 {value: `ms-${breakpoint}5`, label: __('5', 'resource')},
+														 {value: `ms-${breakpoint}auto`, label: __('Auto', 'resource')},
 													 ]}
 													 onChange={setMarginLeft}
 						/>
