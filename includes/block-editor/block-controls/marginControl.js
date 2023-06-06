@@ -5,6 +5,14 @@ import {__} from '@wordpress/i18n';
 import {CardBody, CardHeader, Flex, FlexItem, SelectControl} from '@wordpress/components';
 
 /**
+ * Internal dependencies
+ */
+import iconTop from './iconTop';
+import iconEnd from './iconEnd';
+import iconBottom from './iconBottom';
+import iconStart from './iconStart';
+
+/**
  * MarginControl
  * Component for controlling Margin attributes
  *
@@ -40,10 +48,11 @@ export default function MarginControl ({
 			<CardBody size='small'>
 				<Flex wrap={true}>
 					<FlexItem>
-						<SelectControl label={__('Top', 'resource')}
+						<SelectControl label={iconTop}
 													 value={marginTop}
+													 style={{maxWidth: '42.5px'}}
 													 options={[
-														 {value: '', label: __('Select Value', 'resource')},
+														 {value: '', label: __('-', 'resource')},
 														 {value: `mt-${breakpoint}0`, label: __('0', 'resource')},
 														 {value: `mt-${breakpoint}1`, label: __('1', 'resource')},
 														 {value: `mt-${breakpoint}2`, label: __('2', 'resource')},
@@ -56,10 +65,11 @@ export default function MarginControl ({
 						/>
 					</FlexItem>
 					<FlexItem>
-						<SelectControl label={__('Right', 'resource')}
+						<SelectControl label={iconEnd}
 													 value={marginRight}
+													 style={{maxWidth: '42.5px'}}
 													 options={[
-														 {value: '', label: __('Select Value', 'resource')},
+														 {value: '', label: __('-', 'resource')},
 														 {value: `me-${breakpoint}0`, label: __('0', 'resource')},
 														 {value: `me-${breakpoint}1`, label: __('1', 'resource')},
 														 {value: `me-${breakpoint}2`, label: __('2', 'resource')},
@@ -72,10 +82,11 @@ export default function MarginControl ({
 						/>
 					</FlexItem>
 					<FlexItem>
-						<SelectControl label={__('Bottom', 'resource')}
+						<SelectControl label={iconBottom}
 													 value={marginBottom}
+													 style={{maxWidth: '42.5px'}}
 													 options={[
-														 {value: '', label: __('Select Value', 'resource')},
+														 {value: '', label: __('-', 'resource')},
 														 {value: `mb-${breakpoint}0`, label: __('0', 'resource')},
 														 {value: `mb-${breakpoint}1`, label: __('1', 'resource')},
 														 {value: `mb-${breakpoint}2`, label: __('2', 'resource')},
@@ -88,10 +99,11 @@ export default function MarginControl ({
 						/>
 					</FlexItem>
 					<FlexItem>
-						<SelectControl label={__('Left', 'resource')}
+						<SelectControl label={iconStart}
 													 value={marginLeft}
+													 style={{maxWidth: '42.5px'}}
 													 options={[
-														 {value: '', label: __('Select Value', 'resource')},
+														 {value: '', label: __('-', 'resource')},
 														 {value: `ms-${breakpoint}0`, label: __('0', 'resource')},
 														 {value: `ms-${breakpoint}1`, label: __('1', 'resource')},
 														 {value: `ms-${breakpoint}2`, label: __('2', 'resource')},

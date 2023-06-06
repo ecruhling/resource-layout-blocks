@@ -20,13 +20,13 @@ import {
 	Toolbar,
 	ToolbarItem,
 } from '@wordpress/components';
-import {useState} from '@wordpress/element';
 
 /**
  * External dependencies
  */
 import classnames from 'classnames';
 import {omit} from 'lodash';
+import TextareaAutosize from 'react-textarea-autosize';
 
 /**
  * Internal dependencies
@@ -182,7 +182,7 @@ export default function
 		className,
 	);
 
-	// TODO: Change the Class Inspector to an editable field. Consider PlainText component.
+	// TODO: Change the Class Inspector to an editable field.
 
 	// TODO: Create inline style editor
 	// inline styles example:
@@ -198,22 +198,16 @@ export default function
 		// style: styles,
 	});
 
-	const [values, setValues] = useState({
-		top: '',
-		left: '',
-		right: '',
-		bottom: '',
-	});
-
-	const units = [
-		{value: '', label: '', default: ''},
-	];
-
 	return (
 		<>
 			<BlockControls>
 				<Toolbar label='Class Inspector' id='class-inspector'>
-					<ToolbarItem as='p'>{classes}</ToolbarItem>
+					<TextareaAutosize
+						style={{fontSize: '12px', padding: '0.3rem', lineHeight: '1.2'}}
+						minRows={2}
+						value={classes}
+						onChange={(nextValue) => console.log(nextValue)}
+					></TextareaAutosize>
 				</Toolbar>
 			</BlockControls>
 			<InspectorControls>

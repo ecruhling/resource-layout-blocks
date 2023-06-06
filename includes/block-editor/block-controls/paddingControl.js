@@ -5,6 +5,14 @@ import {__} from '@wordpress/i18n';
 import {CardBody, CardHeader, Flex, FlexItem, SelectControl} from '@wordpress/components';
 
 /**
+ * Internal dependencies
+ */
+import iconTop from './iconTop';
+import iconEnd from './iconEnd';
+import iconBottom from './iconBottom';
+import iconStart from './iconStart';
+
+/**
  * PaddingControl
  * Component for controlling Padding attributes
  *
@@ -40,8 +48,9 @@ export default function PaddingControl ({
 			<CardBody size='small'>
 				<Flex wrap={true}>
 					<FlexItem>
-						<SelectControl label={__('Top', 'resource')}
+						<SelectControl label={iconTop}
 													 value={paddingTop}
+													 style={{maxWidth: '42.5px'}}
 													 options={[
 														 {value: '', label: __('-', 'resource')},
 														 {value: `pt-${breakpoint}0`, label: __('0', 'resource')},
@@ -55,8 +64,9 @@ export default function PaddingControl ({
 						/>
 					</FlexItem>
 					<FlexItem>
-						<SelectControl label={__('Right', 'resource')}
+						<SelectControl label={iconEnd}
 													 value={paddingRight}
+													 style={{maxWidth: '42.5px'}}
 													 options={[
 														 {value: '', label: __('-', 'resource')},
 														 {value: `pe-${breakpoint}0`, label: __('0', 'resource')},
@@ -70,8 +80,9 @@ export default function PaddingControl ({
 						/>
 					</FlexItem>
 					<FlexItem>
-						<SelectControl label={__('Bottom', 'resource')}
+						<SelectControl label={iconBottom}
 													 value={paddingBottom}
+													 style={{maxWidth: '42.5px'}}
 													 options={[
 														 {value: '', label: __('-', 'resource')},
 														 {value: `pb-${breakpoint}0`, label: __('0', 'resource')},
@@ -85,8 +96,9 @@ export default function PaddingControl ({
 						/>
 					</FlexItem>
 					<FlexItem>
-						<SelectControl label={__('Left', 'resource')}
+						<SelectControl label={iconStart}
 													 value={paddingLeft}
+													 style={{maxWidth: '42.5px'}}
 													 options={[
 														 {value: '', label: __('-', 'resource')},
 														 {value: `ps-${breakpoint}0`, label: __('0', 'resource')},

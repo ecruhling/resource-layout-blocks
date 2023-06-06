@@ -445,6 +445,152 @@ function FlexControl(_ref) {
 
 /***/ }),
 
+/***/ "./includes/block-editor/block-controls/iconBottom.js":
+/*!************************************************************!*\
+  !*** ./includes/block-editor/block-controls/iconBottom.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ iconBottom)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+
+const iconBottom = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
+  height: "16",
+  viewBox: "0 0 16 16",
+  width: "16",
+  xmlns: "http://www.w3.org/2000/svg"
+}, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m3 0h10v1.9h-10z",
+  fill: "#bbb"
+}), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m3 14.1h10v1.9h-10z"
+}), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("g", {
+  fill: "#bbb"
+}, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m10 7h10v1.9h-10z",
+  transform: "matrix(0 1 -1 0 23.0293 -7.0293)"
+}), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m-4.1 7h10v1.9h-10z",
+  transform: "matrix(0 1 -1 0 8.9707 7.0293)"
+})));
+
+
+/***/ }),
+
+/***/ "./includes/block-editor/block-controls/iconEnd.js":
+/*!*********************************************************!*\
+  !*** ./includes/block-editor/block-controls/iconEnd.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ iconEnd)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+
+const iconEnd = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
+  height: "16",
+  viewBox: "0 0 16 16",
+  width: "16",
+  xmlns: "http://www.w3.org/2000/svg"
+}, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m3 0h10v1.9h-10z",
+  fill: "#bbb"
+}), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m3 14.1h10v1.9h-10z",
+  fill: "#bbb"
+}), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m10 7h10v1.9h-10z",
+  transform: "matrix(0 1 -1 0 23.0293 -7.0293)"
+}), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m-4.1 7h10v1.9h-10z",
+  fill: "#bbb",
+  transform: "matrix(0 1 -1 0 8.9707 7.0293)"
+}));
+
+
+/***/ }),
+
+/***/ "./includes/block-editor/block-controls/iconStart.js":
+/*!***********************************************************!*\
+  !*** ./includes/block-editor/block-controls/iconStart.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ iconStart)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+
+const iconStart = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
+  height: "16",
+  viewBox: "0 0 16 16",
+  width: "16",
+  xmlns: "http://www.w3.org/2000/svg"
+}, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("g", {
+  fill: "#bbb"
+}, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m3 0h10v1.9h-10z"
+}), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m3 14.1h10v1.9h-10z"
+}), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m10 7h10v1.9h-10z",
+  transform: "matrix(0 1 -1 0 23.0293 -7.0293)"
+})), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m-4.1 7h10v1.9h-10z",
+  transform: "matrix(0 1 -1 0 8.9707 7.0293)"
+}));
+
+
+/***/ }),
+
+/***/ "./includes/block-editor/block-controls/iconTop.js":
+/*!*********************************************************!*\
+  !*** ./includes/block-editor/block-controls/iconTop.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ iconTop)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+
+const iconTop = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
+  height: "16",
+  viewBox: "0 0 16 16",
+  width: "16",
+  xmlns: "http://www.w3.org/2000/svg"
+}, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m3 0h10v1.9h-10z"
+}), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("g", {
+  fill: "#bbb"
+}, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m3 14.1h10v1.9h-10z"
+}), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m10 7h10v1.9h-10z",
+  transform: "matrix(0 1 -1 0 23.0293 -7.0293)"
+}), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m-4.1 7h10v1.9h-10z",
+  transform: "matrix(0 1 -1 0 8.9707 7.0293)"
+})));
+
+
+/***/ }),
+
 /***/ "./includes/block-editor/block-controls/marginControl.js":
 /*!***************************************************************!*\
   !*** ./includes/block-editor/block-controls/marginControl.js ***!
@@ -462,10 +608,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _iconTop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./iconTop */ "./includes/block-editor/block-controls/iconTop.js");
+/* harmony import */ var _iconEnd__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./iconEnd */ "./includes/block-editor/block-controls/iconEnd.js");
+/* harmony import */ var _iconBottom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./iconBottom */ "./includes/block-editor/block-controls/iconBottom.js");
+/* harmony import */ var _iconStart__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./iconStart */ "./includes/block-editor/block-controls/iconStart.js");
 
 /**
  * WordPress dependencies
  */
+
+
+
+/**
+ * Internal dependencies
+ */
+
+
 
 
 
@@ -509,11 +667,14 @@ function MarginControl(_ref) {
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Flex, {
     wrap: true
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Top', 'resource'),
+    label: _iconTop__WEBPACK_IMPORTED_MODULE_3__["default"],
     value: marginTop,
+    style: {
+      maxWidth: '42.5px'
+    },
     options: [{
       value: '',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select Value', 'resource')
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('-', 'resource')
     }, {
       value: `mt-${breakpoint}0`,
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('0', 'resource')
@@ -538,11 +699,14 @@ function MarginControl(_ref) {
     }],
     onChange: setMarginTop
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Right', 'resource'),
+    label: _iconEnd__WEBPACK_IMPORTED_MODULE_4__["default"],
     value: marginRight,
+    style: {
+      maxWidth: '42.5px'
+    },
     options: [{
       value: '',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select Value', 'resource')
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('-', 'resource')
     }, {
       value: `me-${breakpoint}0`,
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('0', 'resource')
@@ -567,11 +731,14 @@ function MarginControl(_ref) {
     }],
     onChange: setMarginRight
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Bottom', 'resource'),
+    label: _iconBottom__WEBPACK_IMPORTED_MODULE_5__["default"],
     value: marginBottom,
+    style: {
+      maxWidth: '42.5px'
+    },
     options: [{
       value: '',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select Value', 'resource')
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('-', 'resource')
     }, {
       value: `mb-${breakpoint}0`,
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('0', 'resource')
@@ -596,11 +763,14 @@ function MarginControl(_ref) {
     }],
     onChange: setMarginBottom
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Left', 'resource'),
+    label: _iconStart__WEBPACK_IMPORTED_MODULE_6__["default"],
     value: marginLeft,
+    style: {
+      maxWidth: '42.5px'
+    },
     options: [{
       value: '',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select Value', 'resource')
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('-', 'resource')
     }, {
       value: `ms-${breakpoint}0`,
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('0', 'resource')
@@ -646,10 +816,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
 /* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _iconTop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./iconTop */ "./includes/block-editor/block-controls/iconTop.js");
+/* harmony import */ var _iconEnd__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./iconEnd */ "./includes/block-editor/block-controls/iconEnd.js");
+/* harmony import */ var _iconBottom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./iconBottom */ "./includes/block-editor/block-controls/iconBottom.js");
+/* harmony import */ var _iconStart__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./iconStart */ "./includes/block-editor/block-controls/iconStart.js");
 
 /**
  * WordPress dependencies
  */
+
+
+
+/**
+ * Internal dependencies
+ */
+
+
 
 
 
@@ -693,8 +875,11 @@ function PaddingControl(_ref) {
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Flex, {
     wrap: true
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Top', 'resource'),
+    label: _iconTop__WEBPACK_IMPORTED_MODULE_3__["default"],
     value: paddingTop,
+    style: {
+      maxWidth: '42.5px'
+    },
     options: [{
       value: '',
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('-', 'resource')
@@ -719,8 +904,11 @@ function PaddingControl(_ref) {
     }],
     onChange: setPaddingTop
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Right', 'resource'),
+    label: _iconEnd__WEBPACK_IMPORTED_MODULE_4__["default"],
     value: paddingRight,
+    style: {
+      maxWidth: '42.5px'
+    },
     options: [{
       value: '',
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('-', 'resource')
@@ -745,8 +933,11 @@ function PaddingControl(_ref) {
     }],
     onChange: setPaddingRight
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Bottom', 'resource'),
+    label: _iconBottom__WEBPACK_IMPORTED_MODULE_5__["default"],
     value: paddingBottom,
+    style: {
+      maxWidth: '42.5px'
+    },
     options: [{
       value: '',
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('-', 'resource')
@@ -771,8 +962,11 @@ function PaddingControl(_ref) {
     }],
     onChange: setPaddingBottom
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Left', 'resource'),
+    label: _iconStart__WEBPACK_IMPORTED_MODULE_6__["default"],
     value: paddingLeft,
+    style: {
+      maxWidth: '42.5px'
+    },
     options: [{
       value: '',
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('-', 'resource')
@@ -849,6 +1043,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lodash */ "lodash");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_textarea_autosize__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react-textarea-autosize */ "./node_modules/react-textarea-autosize/dist/react-textarea-autosize.browser.esm.js");
 /* harmony import */ var _block_help_tagNameMessages__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../block-help/tagNameMessages */ "./includes/block-editor/block-help/tagNameMessages.js");
 /* harmony import */ var _block_controls_displayControl__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../block-controls/displayControl */ "./includes/block-editor/block-controls/displayControl.js");
 /* harmony import */ var _block_controls_paddingControl__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../block-controls/paddingControl */ "./includes/block-editor/block-controls/paddingControl.js");
@@ -864,10 +1059,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 /**
  * External dependencies
  */
+
 
 
 
@@ -1018,7 +1213,7 @@ function edit(_ref) {
     'container-fluid': isFluid
   }, Object.values(classNameAttributes), className);
 
-  // TODO: Change the Class Inspector to an editable field. Consider PlainText component.
+  // TODO: Change the Class Inspector to an editable field.
 
   // TODO: Create inline style editor
   // inline styles example:
@@ -1034,23 +1229,19 @@ function edit(_ref) {
     // style: styles,
   });
 
-  const [values, setValues] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)({
-    top: '',
-    left: '',
-    right: '',
-    bottom: ''
-  });
-  const units = [{
-    value: '',
-    label: '',
-    default: ''
-  }];
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.BlockControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Toolbar, {
     label: "Class Inspector",
     id: "class-inspector"
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ToolbarItem, {
-    as: "p"
-  }, classes))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.CardHeader, {
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(react_textarea_autosize__WEBPACK_IMPORTED_MODULE_13__["default"], {
+    style: {
+      fontSize: '12px',
+      padding: '0.3rem',
+      lineHeight: '1.2'
+    },
+    minRows: 2,
+    value: classes,
+    onChange: nextValue => console.log(nextValue)
+  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.CardHeader, {
     isBorderless: true,
     isShady: true,
     size: "small",
@@ -2050,6 +2241,342 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/react-textarea-autosize/dist/react-textarea-autosize.browser.esm.js":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/react-textarea-autosize/dist/react-textarea-autosize.browser.esm.js ***!
+  \******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/react-textarea-autosize/node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/react-textarea-autosize/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var use_latest__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! use-latest */ "./node_modules/use-latest/dist/use-latest.esm.js");
+/* harmony import */ var use_composed_ref__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! use-composed-ref */ "./node_modules/use-composed-ref/dist/use-composed-ref.esm.js");
+
+
+
+
+
+
+var HIDDEN_TEXTAREA_STYLE = {
+  'min-height': '0',
+  'max-height': 'none',
+  height: '0',
+  visibility: 'hidden',
+  overflow: 'hidden',
+  position: 'absolute',
+  'z-index': '-1000',
+  top: '0',
+  right: '0'
+};
+var forceHiddenStyles = function forceHiddenStyles(node) {
+  Object.keys(HIDDEN_TEXTAREA_STYLE).forEach(function (key) {
+    node.style.setProperty(key, HIDDEN_TEXTAREA_STYLE[key], 'important');
+  });
+};
+
+// TODO: use labelled tuples once they are avaiable:
+//   export type CalculatedNodeHeights = [height: number, rowHeight: number];
+// https://github.com/microsoft/TypeScript/issues/28259
+
+var hiddenTextarea = null;
+var getHeight = function getHeight(node, sizingData) {
+  var height = node.scrollHeight;
+  if (sizingData.sizingStyle.boxSizing === 'border-box') {
+    // border-box: add border, since height = content + padding + border
+    return height + sizingData.borderSize;
+  }
+
+  // remove padding, since height = content
+  return height - sizingData.paddingSize;
+};
+function calculateNodeHeight(sizingData, value, minRows, maxRows) {
+  if (minRows === void 0) {
+    minRows = 1;
+  }
+  if (maxRows === void 0) {
+    maxRows = Infinity;
+  }
+  if (!hiddenTextarea) {
+    hiddenTextarea = document.createElement('textarea');
+    hiddenTextarea.setAttribute('tabindex', '-1');
+    hiddenTextarea.setAttribute('aria-hidden', 'true');
+    forceHiddenStyles(hiddenTextarea);
+  }
+  if (hiddenTextarea.parentNode === null) {
+    document.body.appendChild(hiddenTextarea);
+  }
+  var paddingSize = sizingData.paddingSize,
+    borderSize = sizingData.borderSize,
+    sizingStyle = sizingData.sizingStyle;
+  var boxSizing = sizingStyle.boxSizing;
+  Object.keys(sizingStyle).forEach(function (_key) {
+    var key = _key;
+    hiddenTextarea.style[key] = sizingStyle[key];
+  });
+  forceHiddenStyles(hiddenTextarea);
+  hiddenTextarea.value = value;
+  var height = getHeight(hiddenTextarea, sizingData);
+  // Double set and calc due to Firefox bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1795904
+  hiddenTextarea.value = value;
+  height = getHeight(hiddenTextarea, sizingData);
+
+  // measure height of a textarea with a single row
+  hiddenTextarea.value = 'x';
+  var rowHeight = hiddenTextarea.scrollHeight - paddingSize;
+  var minHeight = rowHeight * minRows;
+  if (boxSizing === 'border-box') {
+    minHeight = minHeight + paddingSize + borderSize;
+  }
+  height = Math.max(minHeight, height);
+  var maxHeight = rowHeight * maxRows;
+  if (boxSizing === 'border-box') {
+    maxHeight = maxHeight + paddingSize + borderSize;
+  }
+  height = Math.min(maxHeight, height);
+  return [height, rowHeight];
+}
+
+var noop = function noop() {};
+var pick = function pick(props, obj) {
+  return props.reduce(function (acc, prop) {
+    acc[prop] = obj[prop];
+    return acc;
+  }, {});
+};
+
+var SIZING_STYLE = ['borderBottomWidth', 'borderLeftWidth', 'borderRightWidth', 'borderTopWidth', 'boxSizing', 'fontFamily', 'fontSize', 'fontStyle', 'fontWeight', 'letterSpacing', 'lineHeight', 'paddingBottom', 'paddingLeft', 'paddingRight', 'paddingTop',
+// non-standard
+'tabSize', 'textIndent',
+// non-standard
+'textRendering', 'textTransform', 'width', 'wordBreak'];
+var isIE = !!document.documentElement.currentStyle ;
+var getSizingData = function getSizingData(node) {
+  var style = window.getComputedStyle(node);
+  if (style === null) {
+    return null;
+  }
+  var sizingStyle = pick(SIZING_STYLE, style);
+  var boxSizing = sizingStyle.boxSizing;
+
+  // probably node is detached from DOM, can't read computed dimensions
+  if (boxSizing === '') {
+    return null;
+  }
+
+  // IE (Edge has already correct behaviour) returns content width as computed width
+  // so we need to add manually padding and border widths
+  if (isIE && boxSizing === 'border-box') {
+    sizingStyle.width = parseFloat(sizingStyle.width) + parseFloat(sizingStyle.borderRightWidth) + parseFloat(sizingStyle.borderLeftWidth) + parseFloat(sizingStyle.paddingRight) + parseFloat(sizingStyle.paddingLeft) + 'px';
+  }
+  var paddingSize = parseFloat(sizingStyle.paddingBottom) + parseFloat(sizingStyle.paddingTop);
+  var borderSize = parseFloat(sizingStyle.borderBottomWidth) + parseFloat(sizingStyle.borderTopWidth);
+  return {
+    sizingStyle: sizingStyle,
+    paddingSize: paddingSize,
+    borderSize: borderSize
+  };
+};
+
+function useListener(target, type, listener) {
+  var latestListener = (0,use_latest__WEBPACK_IMPORTED_MODULE_3__["default"])(listener);
+  (0,react__WEBPACK_IMPORTED_MODULE_2__.useLayoutEffect)(function () {
+    var handler = function handler(ev) {
+      return latestListener.current(ev);
+    };
+    target.addEventListener(type, handler);
+    return function () {
+      return target.removeEventListener(type, handler);
+    };
+  }, []);
+}
+var useWindowResizeListener = function useWindowResizeListener(listener) {
+  useListener(window, 'resize', listener);
+};
+var useFontsLoadedListener = function useFontsLoadedListener(listener) {
+  useListener(document.fonts, 'loadingdone', listener);
+};
+
+var _excluded = ["cacheMeasurements", "maxRows", "minRows", "onChange", "onHeightChange"];
+var TextareaAutosize = function TextareaAutosize(_ref, userRef) {
+  var cacheMeasurements = _ref.cacheMeasurements,
+    maxRows = _ref.maxRows,
+    minRows = _ref.minRows,
+    _ref$onChange = _ref.onChange,
+    onChange = _ref$onChange === void 0 ? noop : _ref$onChange,
+    _ref$onHeightChange = _ref.onHeightChange,
+    onHeightChange = _ref$onHeightChange === void 0 ? noop : _ref$onHeightChange,
+    props = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, _excluded);
+  if ( true && props.style) {
+    if ('maxHeight' in props.style) {
+      throw new Error('Using `style.maxHeight` for <TextareaAutosize/> is not supported. Please use `maxRows`.');
+    }
+    if ('minHeight' in props.style) {
+      throw new Error('Using `style.minHeight` for <TextareaAutosize/> is not supported. Please use `minRows`.');
+    }
+  }
+  var isControlled = props.value !== undefined;
+  var libRef = (0,react__WEBPACK_IMPORTED_MODULE_2__.useRef)(null);
+  var ref = (0,use_composed_ref__WEBPACK_IMPORTED_MODULE_4__["default"])(libRef, userRef);
+  var heightRef = (0,react__WEBPACK_IMPORTED_MODULE_2__.useRef)(0);
+  var measurementsCacheRef = (0,react__WEBPACK_IMPORTED_MODULE_2__.useRef)();
+  var resizeTextarea = function resizeTextarea() {
+    var node = libRef.current;
+    var nodeSizingData = cacheMeasurements && measurementsCacheRef.current ? measurementsCacheRef.current : getSizingData(node);
+    if (!nodeSizingData) {
+      return;
+    }
+    measurementsCacheRef.current = nodeSizingData;
+    var _calculateNodeHeight = calculateNodeHeight(nodeSizingData, node.value || node.placeholder || 'x', minRows, maxRows),
+      height = _calculateNodeHeight[0],
+      rowHeight = _calculateNodeHeight[1];
+    if (heightRef.current !== height) {
+      heightRef.current = height;
+      node.style.setProperty('height', height + "px", 'important');
+      onHeightChange(height, {
+        rowHeight: rowHeight
+      });
+    }
+  };
+  var handleChange = function handleChange(event) {
+    if (!isControlled) {
+      resizeTextarea();
+    }
+    onChange(event);
+  };
+  {
+    (0,react__WEBPACK_IMPORTED_MODULE_2__.useLayoutEffect)(resizeTextarea);
+    useWindowResizeListener(resizeTextarea);
+    useFontsLoadedListener(resizeTextarea);
+  }
+  return /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_2__.createElement)("textarea", (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    onChange: handleChange,
+    ref: ref
+  }));
+};
+var index = /* #__PURE__ */(0,react__WEBPACK_IMPORTED_MODULE_2__.forwardRef)(TextareaAutosize);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (index);
+
+
+/***/ }),
+
+/***/ "./node_modules/use-composed-ref/dist/use-composed-ref.esm.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/use-composed-ref/dist/use-composed-ref.esm.js ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var updateRef = function updateRef(ref, value) {
+  if (typeof ref === 'function') {
+    ref(value);
+    return;
+  }
+  ref.current = value;
+};
+
+var useComposedRef = function useComposedRef(libRef, userRef) {
+  var prevUserRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)();
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.useCallback)(function (instance) {
+    libRef.current = instance;
+
+    if (prevUserRef.current) {
+      updateRef(prevUserRef.current, null);
+    }
+
+    prevUserRef.current = userRef;
+
+    if (!userRef) {
+      return;
+    }
+
+    updateRef(userRef, instance);
+  }, [userRef]);
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (useComposedRef);
+
+
+/***/ }),
+
+/***/ "./node_modules/use-isomorphic-layout-effect/dist/use-isomorphic-layout-effect.browser.esm.js":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/use-isomorphic-layout-effect/dist/use-isomorphic-layout-effect.browser.esm.js ***!
+  \****************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var index =  react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect ;
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (index);
+
+
+/***/ }),
+
+/***/ "./node_modules/use-latest/dist/use-latest.esm.js":
+/*!********************************************************!*\
+  !*** ./node_modules/use-latest/dist/use-latest.esm.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ useLatest)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var use_isomorphic_layout_effect__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! use-isomorphic-layout-effect */ "./node_modules/use-isomorphic-layout-effect/dist/use-isomorphic-layout-effect.browser.esm.js");
+
+
+
+var useLatest = function useLatest(value) {
+  var ref = react__WEBPACK_IMPORTED_MODULE_0__.useRef(value);
+  (0,use_isomorphic_layout_effect__WEBPACK_IMPORTED_MODULE_1__["default"])(function () {
+    ref.current = value;
+  });
+  return ref;
+};
+
+
+
+
+/***/ }),
+
+/***/ "react":
+/*!************************!*\
+  !*** external "React" ***!
+  \************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["React"];
+
+/***/ }),
+
 /***/ "lodash":
 /*!*************************!*\
   !*** external "lodash" ***!
@@ -2113,6 +2640,60 @@ module.exports = window["wp"]["element"];
 
 "use strict";
 module.exports = window["wp"]["i18n"];
+
+/***/ }),
+
+/***/ "./node_modules/react-textarea-autosize/node_modules/@babel/runtime/helpers/esm/extends.js":
+/*!*************************************************************************************************!*\
+  !*** ./node_modules/react-textarea-autosize/node_modules/@babel/runtime/helpers/esm/extends.js ***!
+  \*************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _extends)
+/* harmony export */ });
+function _extends() {
+  _extends = Object.assign ? Object.assign.bind() : function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+    return target;
+  };
+  return _extends.apply(this, arguments);
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-textarea-autosize/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js":
+/*!**********************************************************************************************************************!*\
+  !*** ./node_modules/react-textarea-autosize/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js ***!
+  \**********************************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _objectWithoutPropertiesLoose)
+/* harmony export */ });
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+  return target;
+}
 
 /***/ }),
 
