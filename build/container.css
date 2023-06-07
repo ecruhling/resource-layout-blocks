@@ -50,6 +50,12 @@ div.resource-card-header {
 [data-type="resource-layout-blocks/container"] {
   outline: 1px dashed rgba(255, 0, 0, 0.25);
 }
+[data-type="resource-layout-blocks/container"] > .block-editor-inner-blocks {
+  display: contents;
+}
+[data-type="resource-layout-blocks/container"] > .block-editor-inner-blocks > .block-editor-block-list__layout {
+  display: contents;
+}
 [data-type="resource-layout-blocks/container"]:not(.is-selected):not(.has-child-selected):hover, [data-type="resource-layout-blocks/container"].is-selected {
   outline: 1px dashed red;
   position: relative;

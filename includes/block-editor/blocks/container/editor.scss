@@ -57,6 +57,15 @@ div.resource-card-header {
 [data-type="resource-layout-blocks/container"] {
 	outline: 1px dashed rgba(red, 0.25);
 
+	// 'Collapses' the inner blocks so that .container > .row works properly.
+	> .block-editor-inner-blocks {
+		display: contents;
+
+		> .block-editor-block-list__layout {
+			display: contents;
+		}
+	}
+
 	// background on hover to make it visible
 	&:not(.is-selected):not(.has-child-selected):hover,
 	&.is-selected {
