@@ -45,7 +45,7 @@ export default function ColumnControl ({
 						<SelectControl label={__('Columns', 'resource')}
 													 value={columns}
 													 options={[
-														 {value: '', label: __('Select Value', 'resource')},
+														 {value: '', label: __('-', 'resource')},
 														 {value: equal_column_class, label: __('equal', 'resource')},
 														 {value: `col-${breakpoint}1`, label: __('1', 'resource')},
 														 {value: `col-${breakpoint}2`, label: __('2', 'resource')},
@@ -68,7 +68,7 @@ export default function ColumnControl ({
 						<SelectControl label={__('Offset', 'resource')}
 													 value={offset}
 													 options={[
-														 {value: '', label: __('Select Value', 'resource')},
+														 {value: '', label: __('-', 'resource')},
 														 {value: `offset-${breakpoint}1`, label: __('1', 'resource')},
 														 {value: `offset-${breakpoint}2`, label: __('2', 'resource')},
 														 {value: `offset-${breakpoint}3`, label: __('3', 'resource')},

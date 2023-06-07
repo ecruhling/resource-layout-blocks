@@ -20,17 +20,12 @@ export default function save ({
 															}) {
 
 	const {
-		isFluid,
 		tagName: TagName = 'div',
 	} = attributes;
 
-	const classNameAttributes = omit(attributes, ['anchor', 'isFluid', 'tagName', 'className']);
+	const classNameAttributes = omit(attributes, ['anchor', 'className']);
 
 	const className = classnames(
-		{
-			'container': !isFluid,
-			'container-fluid': isFluid,
-		},
 		Object.values(classNameAttributes),
 	);
 

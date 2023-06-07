@@ -141,7 +141,7 @@ function ColumnControl(_ref) {
     value: columns,
     options: [{
       value: '',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select Value', 'resource')
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('-', 'resource')
     }, {
       value: equal_column_class,
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('equal', 'resource')
@@ -191,7 +191,7 @@ function ColumnControl(_ref) {
     value: offset,
     options: [{
       value: '',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select Value', 'resource')
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('-', 'resource')
     }, {
       value: `offset-${breakpoint}1`,
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('1', 'resource')
@@ -2359,14 +2359,10 @@ function save(_ref) {
     attributes
   } = _ref;
   const {
-    isFluid,
     tagName: TagName = 'div'
   } = attributes;
-  const classNameAttributes = (0,lodash__WEBPACK_IMPORTED_MODULE_3__.omit)(attributes, ['anchor', 'isFluid', 'tagName', 'className']);
-  const className = classnames__WEBPACK_IMPORTED_MODULE_2___default()({
-    'container': !isFluid,
-    'container-fluid': isFluid
-  }, Object.values(classNameAttributes));
+  const classNameAttributes = (0,lodash__WEBPACK_IMPORTED_MODULE_3__.omit)(attributes, ['anchor', 'className']);
+  const className = classnames__WEBPACK_IMPORTED_MODULE_2___default()(Object.values(classNameAttributes));
   const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save({
     className
   });
