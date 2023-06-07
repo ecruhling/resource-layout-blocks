@@ -19,6 +19,11 @@
   margin-top: 0;
 }
 
+@media (min-width: 782px) {
+  .interface-complementary-area {
+    width: 290px;
+  }
+}
 .breakpoint-tab-panel button.breakpoint-tab {
   font-size: 0.7rem;
 }
