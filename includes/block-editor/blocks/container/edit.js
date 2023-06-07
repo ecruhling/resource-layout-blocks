@@ -19,6 +19,7 @@ import {
 	CardHeader,
 	Toolbar,
 	ToolbarItem,
+	TextControl,
 } from '@wordpress/components';
 
 /**
@@ -26,7 +27,6 @@ import {
  */
 import classnames from 'classnames';
 import {omit} from 'lodash';
-import TextareaAutosize from 'react-textarea-autosize';
 
 /**
  * Internal dependencies
@@ -61,6 +61,7 @@ export default function
 		isFluid,
 		tagName: TagName = 'div',
 		className,
+		inlineStyles,
 		baseDisplay,
 		basePaddingTop,
 		basePaddingRight,
@@ -171,7 +172,7 @@ export default function
 		xxlJustifyContent,
 	} = attributes;
 
-	const classNameAttributes = omit(attributes, ['anchor', 'isFluid', 'tagName', 'className']);
+	const classNameAttributes = omit(attributes, ['anchor', 'isFluid', 'tagName', 'inlineStyles', 'className']);
 
 	const classes = classnames(
 		{
@@ -181,8 +182,6 @@ export default function
 		Object.values(classNameAttributes),
 		className,
 	);
-
-	// TODO: Change the Class Inspector to an editable field.
 
 	// TODO: Create inline style editor
 	// inline styles example:
@@ -202,12 +201,7 @@ export default function
 		<>
 			<BlockControls>
 				<Toolbar label='Class Inspector' id='class-inspector'>
-					<TextareaAutosize
-						style={{fontSize: '12px', padding: '0.3rem', lineHeight: '1.2'}}
-						minRows={2}
-						value={classes}
-						onChange={(nextValue) => console.log(nextValue)}
-					></TextareaAutosize>
+					<ToolbarItem as='p'>{classes}</ToolbarItem>
 				</Toolbar>
 			</BlockControls>
 			<InspectorControls>
@@ -730,7 +724,26 @@ export default function
 						</div>}
 				</TabPanel>
 			</InspectorControls>
-			<TagName {...blockProps}>
+			<InspectorControls group='advanced'>
+				<TextControl
+					__nextHasNoMarginBottom
+					className='inline-style-control'
+					autoComplete='off'
+					label={__('Inline CSS')}
+					value={inlineStyles || ''}
+					onChange={(nextValue) => {
+						setAttributes({
+							inlineStyles:
+								nextValue !== ''
+									? nextValue
+									: undefined,
+						});
+					}}
+				/>
+			</InspectorControls>
+			<TagName {...blockProps}
+				// style={{backgroundColor: '#090'}}
+			>
 				<InnerBlocks placeholder={__('Insert Rows', 'resource')} />
 			</TagName>
 		</>

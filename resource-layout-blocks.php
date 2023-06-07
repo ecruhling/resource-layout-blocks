@@ -11,13 +11,15 @@
  * @package           resource-layout-blocks
  */
 
+// TODO: Change the Class Inspector to an editable field.
+
 /**
- * Constants.
+ * Constants
  */
 const RESOURCE_LAYOUT_BLOCKS_SLUG = 'resource-layout-blocks';
 
 /**
- * Register the layout blocks.
+ * Register the layout blocks
  */
 function resource_layout_blocks_init() {
 	// The order below is the order that they will appear in the editor.
@@ -51,8 +53,8 @@ add_action( 'init', 'resource_layout_blocks_init' );
  * Render callback function.
  * A generic function that routes to a PHP template stored in the named block's directory.
  *
- * @param array $attributes Block attributes.
- * @param string $content Block default content.
+ * @param array    $attributes Block attributes.
+ * @param string   $content Block default content.
  * @param WP_Block $block Block instance.
  *
  * @return string The rendered output.
