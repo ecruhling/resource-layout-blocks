@@ -1212,20 +1212,29 @@ function edit(_ref) {
     'container-fluid': isFluid
   }, Object.values(classNameAttributes), className);
 
-  // TODO: Create inline style editor
-  // inline styles example:
-  // const styles = {
-  // 	backgroundColor: '#090',
-  // 	color: '#fff',
-  // 	padding: '20px',
-  // 	maxWidth: '1200px',
-  // };
-
+  /**
+   * Converts inline styles attribute to style object
+   *
+   * @param stringStyles
+   * @returns {{}|{}}
+   * @see https://gist.github.com/goldhand/70de06a3bdbdb51565878ad1ee37e92b
+   */
+  const convertStylesStringToObject = stringStyles => typeof stringStyles === 'string' ? stringStyles.split(';').reduce((acc, style) => {
+    const colonPosition = style.indexOf(':');
+    if (colonPosition === -1) {
+      return acc;
+    }
+    const camelCaseProperty = style.substr(0, colonPosition).trim().replace(/^-ms-/, 'ms-').replace(/-./g, c => c.substr(1).toUpperCase()),
+      value = style.substr(colonPosition + 1).trim();
+    return value ? {
+      ...acc,
+      [camelCaseProperty]: value
+    } : acc;
+  }, {}) : {};
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
-    className: classes
-    // style: styles,
+    className: classes,
+    style: convertStylesStringToObject(inlineStyles)
   });
-
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.BlockControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Toolbar, {
     label: "Class Inspector",
     id: "class-inspector"
@@ -1927,7 +1936,7 @@ function edit(_ref) {
     __nextHasNoMarginBottom: true,
     className: "inline-style-control",
     autoComplete: "off",
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Inline CSS'),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Inline Styles'),
     value: inlineStyles || '',
     onChange: nextValue => {
       setAttributes({

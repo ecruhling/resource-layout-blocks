@@ -183,18 +183,36 @@ export default function
 		className,
 	);
 
-	// TODO: Create inline style editor
-	// inline styles example:
-	// const styles = {
-	// 	backgroundColor: '#090',
-	// 	color: '#fff',
-	// 	padding: '20px',
-	// 	maxWidth: '1200px',
-	// };
+	/**
+	 * Converts inline styles attribute to style object
+	 *
+	 * @param stringStyles
+	 * @returns {{}|{}}
+	 * @see https://gist.github.com/goldhand/70de06a3bdbdb51565878ad1ee37e92b
+	 */
+	const convertStylesStringToObject = stringStyles => typeof stringStyles === 'string' ? stringStyles
+		.split(';')
+		.reduce((acc, style) => {
+			const colonPosition = style.indexOf(':');
+
+			if (colonPosition === -1) {
+				return acc;
+			}
+
+			const
+				camelCaseProperty = style
+					.substr(0, colonPosition)
+					.trim()
+					.replace(/^-ms-/, 'ms-')
+					.replace(/-./g, c => c.substr(1).toUpperCase()),
+				value = style.substr(colonPosition + 1).trim();
+
+			return value ? {...acc, [camelCaseProperty]: value} : acc;
+		}, {}) : {};
 
 	const blockProps = useBlockProps({
 		className: classes,
-		// style: styles,
+		style: convertStylesStringToObject(inlineStyles),
 	});
 
 	return (
@@ -729,7 +747,7 @@ export default function
 					__nextHasNoMarginBottom
 					className='inline-style-control'
 					autoComplete='off'
-					label={__('Inline CSS')}
+					label={__('Inline Styles')}
 					value={inlineStyles || ''}
 					onChange={(nextValue) => {
 						setAttributes({
@@ -741,9 +759,7 @@ export default function
 					}}
 				/>
 			</InspectorControls>
-			<TagName {...blockProps}
-				// style={{backgroundColor: '#090'}}
-			>
+			<TagName {...blockProps}>
 				<InnerBlocks placeholder={__('Insert Rows', 'resource')} />
 			</TagName>
 		</>

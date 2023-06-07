@@ -23,6 +23,18 @@
   font-size: 0.7rem;
 }
 
+.block-editor-block-inspector__advanced > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.block-editor-block-inspector__advanced > div > div {
+  flex: 1 1 100%;
+}
+.block-editor-block-inspector__advanced > div > div.inline-style-control {
+  order: 99;
+}
+
 div.resource-card-header {
   font-size: 0.75rem;
   padding-top: 5px;
