@@ -57,7 +57,7 @@ function AlignControl(_ref) {
     value: alignText,
     options: [{
       value: '',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select Option', 'resource')
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('None', 'resource')
     }, {
       value: `text-${breakpoint}start`,
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Start', 'resource')
@@ -291,7 +291,7 @@ function ColumnsDisplayControl(_ref) {
     value: display,
     options: [{
       value: '',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select Option', 'resource')
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Default', 'resource')
     }, {
       value: `d-${breakpoint}none`,
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('None', 'resource')
@@ -416,7 +416,7 @@ function FlexControl(_ref) {
     value: flexDirection,
     options: [{
       value: '',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select Option', 'resource')
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('None', 'resource')
     }, {
       value: `flex-${breakpoint}row`,
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Flex Row', 'resource')
@@ -436,7 +436,7 @@ function FlexControl(_ref) {
     value: justifyContent,
     options: [{
       value: '',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select Option', 'resource')
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('None', 'resource')
     }, {
       value: `justify-content-${breakpoint}start`,
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Start', 'resource')
@@ -462,7 +462,7 @@ function FlexControl(_ref) {
     value: alignItems,
     options: [{
       value: '',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select Option', 'resource')
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('None', 'resource')
     }, {
       value: `align-items-${breakpoint}start`,
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Start', 'resource')
@@ -485,7 +485,7 @@ function FlexControl(_ref) {
     value: alignSelf,
     options: [{
       value: '',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select Option', 'resource')
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('None', 'resource')
     }, {
       value: `align-self-${breakpoint}start`,
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Start', 'resource')
@@ -508,7 +508,7 @@ function FlexControl(_ref) {
     value: fillGrowShrink,
     options: [{
       value: '',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select Option', 'resource')
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('None', 'resource')
     }, {
       value: `flex-${breakpoint}fill`,
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Fill', 'resource')
@@ -531,7 +531,7 @@ function FlexControl(_ref) {
     value: wrap,
     options: [{
       value: '',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select Option', 'resource')
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('None', 'resource')
     }, {
       value: `flex-${breakpoint}nowrap`,
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('No Wrap', 'resource')
@@ -548,7 +548,7 @@ function FlexControl(_ref) {
     value: order,
     options: [{
       value: '',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select Option', 'resource')
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('None', 'resource')
     }, {
       value: 'order-first',
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('first', 'resource')
@@ -580,7 +580,7 @@ function FlexControl(_ref) {
     value: alignContent,
     options: [{
       value: '',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select Option', 'resource')
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('None', 'resource')
     }, {
       value: `align-content-${breakpoint}start`,
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Start', 'resource')
@@ -1016,7 +1016,7 @@ function OrderControl(_ref) {
     value: order,
     options: [{
       value: '',
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select Option', 'resource')
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Default', 'resource')
     }, {
       value: `order-${breakpoint}first`,
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('first', 'resource')

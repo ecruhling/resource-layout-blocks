@@ -32,7 +32,7 @@ export default function ColumnsDisplayControl ({
 						<SelectControl label={__('Display', 'resource')}
 													 value={display}
 													 options={[
-														 {value: '', label: __('Select Option', 'resource')},
+														 {value: '', label: __('Default', 'resource')},
 														 {value: `d-${breakpoint}none`, label: __('None', 'resource')},
 														 {value: `d-${breakpoint}inline`, label: __('Inline', 'resource')},
 														 {

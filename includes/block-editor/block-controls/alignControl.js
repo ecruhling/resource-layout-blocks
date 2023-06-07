@@ -32,7 +32,7 @@ export default function AlignControl ({
 						<SelectControl label={__('Align Text', 'resource')}
 													 value={alignText}
 													 options={[
-														 {value: '', label: __('Select Option', 'resource')},
+														 {value: '', label: __('None', 'resource')},
 														 {value: `text-${breakpoint}start`, label: __('Start', 'resource')},
 														 {value: `text-${breakpoint}center`, label: __('Center', 'resource')},
 														 {value: `text-${breakpoint}end`, label: __('End', 'resource')},

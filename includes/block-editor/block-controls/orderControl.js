@@ -32,7 +32,7 @@ export default function OrderControl ({
 						<SelectControl label={__('Order', 'resource')}
 													 value={order}
 													 options={[
-														 {value: '', label: __('Select Option', 'resource')},
+														 {value: '', label: __('Default', 'resource')},
 														 {value: `order-${breakpoint}first`, label: __('first', 'resource')},
 														 {value: `order-${breakpoint}1`, label: __('1', 'resource')},
 														 {value: `order-${breakpoint}2`, label: __('2', 'resource')},

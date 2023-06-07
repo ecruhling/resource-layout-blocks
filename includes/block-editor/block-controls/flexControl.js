@@ -60,7 +60,7 @@ export default function FlexControl ({
 						<SelectControl label={__('Direction', 'resource')}
 													 value={flexDirection}
 													 options={[
-														 {value: '', label: __('Select Option', 'resource')},
+														 {value: '', label: __('None', 'resource')},
 														 {value: `flex-${breakpoint}row`, label: __('Flex Row', 'resource')},
 														 {
 															 value: `flex-${breakpoint}row-reverse`,
@@ -79,7 +79,7 @@ export default function FlexControl ({
 						<SelectControl label={__('Justify Content', 'resource')}
 													 value={justifyContent}
 													 options={[
-														 {value: '', label: __('Select Option', 'resource')},
+														 {value: '', label: __('None', 'resource')},
 														 {
 															 value: `justify-content-${breakpoint}start`,
 															 label: __('Start', 'resource'),
@@ -109,7 +109,7 @@ export default function FlexControl ({
 						<SelectControl label={__('Align Items', 'resource')}
 													 value={alignItems}
 													 options={[
-														 {value: '', label: __('Select Option', 'resource')},
+														 {value: '', label: __('None', 'resource')},
 														 {value: `align-items-${breakpoint}start`, label: __('Start', 'resource')},
 														 {value: `align-items-${breakpoint}end`, label: __('End', 'resource')},
 														 {value: `align-items-${breakpoint}center`, label: __('Center', 'resource')},
@@ -129,7 +129,7 @@ export default function FlexControl ({
 						<SelectControl label={__('Align Self', 'resource')}
 													 value={alignSelf}
 													 options={[
-														 {value: '', label: __('Select Option', 'resource')},
+														 {value: '', label: __('None', 'resource')},
 														 {value: `align-self-${breakpoint}start`, label: __('Start', 'resource')},
 														 {value: `align-self-${breakpoint}end`, label: __('End', 'resource')},
 														 {value: `align-self-${breakpoint}center`, label: __('Center', 'resource')},
@@ -146,7 +146,7 @@ export default function FlexControl ({
 						<SelectControl label={__('Fill, Grow, & Shrink', 'resource')}
 													 value={fillGrowShrink}
 													 options={[
-														 {value: '', label: __('Select Option', 'resource')},
+														 {value: '', label: __('None', 'resource')},
 														 {value: `flex-${breakpoint}fill`, label: __('Fill', 'resource')},
 														 {value: `flex-${breakpoint}grow-0`, label: __('Grow 0', 'resource')},
 														 {value: `flex-${breakpoint}grow-1`, label: __('Grow 1', 'resource')},
@@ -160,7 +160,7 @@ export default function FlexControl ({
 						<SelectControl label={__('Wrap', 'resource')}
 													 value={wrap}
 													 options={[
-														 {value: '', label: __('Select Option', 'resource')},
+														 {value: '', label: __('None', 'resource')},
 														 {value: `flex-${breakpoint}nowrap`, label: __('No Wrap', 'resource')},
 														 {value: `flex-${breakpoint}wrap`, label: __('Wrap', 'resource')},
 														 {
@@ -175,7 +175,7 @@ export default function FlexControl ({
 						<SelectControl label={__('Order', 'resource')}
 													 value={order}
 													 options={[
-														 {value: '', label: __('Select Option', 'resource')},
+														 {value: '', label: __('None', 'resource')},
 														 {value: 'order-first', label: __('first', 'resource')},
 														 {value: 'order-0', label: __('0', 'resource')},
 														 {value: 'order-1', label: __('1', 'resource')},
@@ -192,7 +192,7 @@ export default function FlexControl ({
 						<SelectControl label={__('Align Content', 'resource')}
 													 value={alignContent}
 													 options={[
-														 {value: '', label: __('Select Option', 'resource')},
+														 {value: '', label: __('None', 'resource')},
 														 {
 															 value: `align-content-${breakpoint}start`,
 															 label: __('Start', 'resource'),
