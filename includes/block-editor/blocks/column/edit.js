@@ -1,7 +1,7 @@
 /**
  * WordPress dependencies
  */
-import {__} from '@wordpress/i18n';
+import { __ } from '@wordpress/i18n';
 import {
 	BlockControls,
 	InnerBlocks,
@@ -9,9 +9,9 @@ import {
 	useBlockProps,
 } from '@wordpress/block-editor';
 import {
-	TabPanel,
 	Card,
 	CardHeader,
+	TabPanel,
 	Toolbar,
 	ToolbarItem,
 } from '@wordpress/components';
@@ -20,7 +20,7 @@ import {
  * External dependencies
  */
 import classnames from 'classnames';
-import {omit} from 'lodash';
+import { omit } from 'lodash';
 
 /**
  * Internal dependencies
@@ -46,12 +46,7 @@ import './editor.scss';
  * @returns {JSX.Element}
  * @constructor
  */
-export default function
-	edit ({
-					attributes,
-					setAttributes,
-				}) {
-
+export default function edit( { attributes, setAttributes } ) {
 	const {
 		baseDisplay,
 		baseColumns,
@@ -175,614 +170,1417 @@ export default function
 		xxlJustifyContent,
 	} = attributes;
 
-	const classNameAttributes = omit(attributes, ['anchor', 'className']);
+	const classNameAttributes = omit( attributes, [ 'anchor', 'className' ] );
 
-	const classes = classnames(
-		Object.values(classNameAttributes),
-	);
+	const classes = classnames( Object.values( classNameAttributes ) );
 
-	const blockProps = useBlockProps({
+	const blockProps = useBlockProps( {
 		className: classes,
-	});
+	} );
 
 	return (
 		<>
 			<BlockControls>
-				<Toolbar label='Class Inspector' id='class-inspector'>
-					<ToolbarItem as='p'>{classes}</ToolbarItem>
+				<Toolbar label="Class Inspector" id="class-inspector">
+					<ToolbarItem as="p">{ classes }</ToolbarItem>
 				</Toolbar>
 			</BlockControls>
 			<InspectorControls>
 				<Card>
-					<CardHeader isBorderless={true} isShady={true}
-											size='small'
-											className='resource-card-header'>{__('COLUMN', 'resource')}</CardHeader>
+					<CardHeader
+						isBorderless={ true }
+						isShady={ true }
+						size="small"
+						className="resource-card-header"
+					>
+						{ __( 'COLUMN', 'resource' ) }
+					</CardHeader>
 				</Card>
 				<TabPanel
-					className='breakpoint-tab-panel'
-					activeClass='is-active'
-					orientation='horizontal'
-					tabs={[
+					className="breakpoint-tab-panel"
+					activeClass="is-active"
+					orientation="horizontal"
+					tabs={ [
 						{
 							name: 'base',
 							title: '—',
 							className: 'breakpoint-tab',
-							content:
+							content: (
 								<Card>
 									<DisplayControl
-										breakpoint=''
-										breakpoint_name=''
-										display={baseDisplay}
-										setDisplay={baseDisplay => setAttributes({baseDisplay})}
+										breakpoint=""
+										breakpoint_name=""
+										display={ baseDisplay }
+										setDisplay={ ( baseDisplay ) =>
+											setAttributes( { baseDisplay } )
+										}
 										__nextHasNoMarginBottom
 									></DisplayControl>
-									{(baseDisplay === 'd-flex' || baseDisplay === 'd-inline-flex') && (
+									{ ( baseDisplay === 'd-flex' ||
+										baseDisplay === 'd-inline-flex' ) && (
 										<FlexControl
-											breakpoint=''
-											breakpoint_name=''
-											flexDirection={baseFlexDirection}
-											justifyContent={baseJustifyContent}
-											alignItems={baseAlignItems}
-											alignSelf={baseAlignSelf}
-											fillGrowShrink={baseFillGrowShrink}
-											wrap={baseWrap}
-											order={baseOrder}
-											alignContent={baseAlignContent}
-											setFlexDirection={baseFlexDirection => setAttributes({baseFlexDirection})}
-											setJustifyContent={baseJustifyContent => setAttributes({baseJustifyContent})}
-											setAlignItems={baseAlignItems => setAttributes({baseAlignItems})}
-											setAlignSelf={baseAlignSelf => setAttributes({baseAlignSelf})}
-											setFillGrowShrink={baseFillGrowShrink => setAttributes({baseFillGrowShrink})}
-											setWrap={baseWrap => setAttributes({baseWrap})}
-											setOrder={baseOrder => setAttributes({baseOrder})}
-											setAlignContent={baseAlignContent => setAttributes({baseAlignContent})}
-										>
-										</FlexControl>
-									)}
-									{(baseDisplay !== 'd-none') && (
+											breakpoint=""
+											breakpoint_name=""
+											flexDirection={ baseFlexDirection }
+											justifyContent={
+												baseJustifyContent
+											}
+											alignItems={ baseAlignItems }
+											alignSelf={ baseAlignSelf }
+											fillGrowShrink={
+												baseFillGrowShrink
+											}
+											wrap={ baseWrap }
+											order={ baseOrder }
+											alignContent={ baseAlignContent }
+											setFlexDirection={ (
+												baseFlexDirection
+											) =>
+												setAttributes( {
+													baseFlexDirection,
+												} )
+											}
+											setJustifyContent={ (
+												baseJustifyContent
+											) =>
+												setAttributes( {
+													baseJustifyContent,
+												} )
+											}
+											setAlignItems={ (
+												baseAlignItems
+											) =>
+												setAttributes( {
+													baseAlignItems,
+												} )
+											}
+											setAlignSelf={ ( baseAlignSelf ) =>
+												setAttributes( {
+													baseAlignSelf,
+												} )
+											}
+											setFillGrowShrink={ (
+												baseFillGrowShrink
+											) =>
+												setAttributes( {
+													baseFillGrowShrink,
+												} )
+											}
+											setWrap={ ( baseWrap ) =>
+												setAttributes( { baseWrap } )
+											}
+											setOrder={ ( baseOrder ) =>
+												setAttributes( { baseOrder } )
+											}
+											setAlignContent={ (
+												baseAlignContent
+											) =>
+												setAttributes( {
+													baseAlignContent,
+												} )
+											}
+										></FlexControl>
+									) }
+									{ baseDisplay !== 'd-none' && (
 										<>
 											<ColumnControl
-												breakpoint=''
-												breakpoint_name=''
-												columns={baseColumns}
-												offset={baseOffset}
-												setColumns={baseColumns => setAttributes({baseColumns})}
-												setOffset={baseOffset => setAttributes({baseOffset})}
-											>
-											</ColumnControl>
+												breakpoint=""
+												breakpoint_name=""
+												columns={ baseColumns }
+												offset={ baseOffset }
+												setColumns={ ( baseColumns ) =>
+													setAttributes( {
+														baseColumns,
+													} )
+												}
+												setOffset={ ( baseOffset ) =>
+													setAttributes( {
+														baseOffset,
+													} )
+												}
+											></ColumnControl>
 											<PaddingControl
-												breakpoint=''
-												breakpoint_name=''
-												paddingTop={basePaddingTop}
-												paddingRight={basePaddingRight}
-												paddingBottom={basePaddingBottom}
-												paddingLeft={basePaddingLeft}
-												setPaddingTop={basePaddingTop => setAttributes({basePaddingTop})}
-												setPaddingRight={basePaddingRight => setAttributes({basePaddingRight})}
-												setPaddingBottom={basePaddingBottom => setAttributes({basePaddingBottom})}
-												setPaddingLeft={basePaddingLeft => setAttributes({basePaddingLeft})}
+												breakpoint=""
+												breakpoint_name=""
+												paddingTop={ basePaddingTop }
+												paddingRight={
+													basePaddingRight
+												}
+												paddingBottom={
+													basePaddingBottom
+												}
+												paddingLeft={ basePaddingLeft }
+												setPaddingTop={ (
+													basePaddingTop
+												) =>
+													setAttributes( {
+														basePaddingTop,
+													} )
+												}
+												setPaddingRight={ (
+													basePaddingRight
+												) =>
+													setAttributes( {
+														basePaddingRight,
+													} )
+												}
+												setPaddingBottom={ (
+													basePaddingBottom
+												) =>
+													setAttributes( {
+														basePaddingBottom,
+													} )
+												}
+												setPaddingLeft={ (
+													basePaddingLeft
+												) =>
+													setAttributes( {
+														basePaddingLeft,
+													} )
+												}
 											></PaddingControl>
 											<MarginControl
-												breakpoint=''
-												breakpoint_name=''
-												marginTop={baseMarginTop}
-												marginRight={baseMarginRight}
-												marginBottom={baseMarginBottom}
-												marginLeft={baseMarginLeft}
-												setMarginTop={baseMarginTop => setAttributes({baseMarginTop})}
-												setMarginRight={baseMarginRight => setAttributes({baseMarginRight})}
-												setMarginBottom={baseMarginBottom => setAttributes({baseMarginBottom})}
-												setMarginLeft={baseMarginLeft => setAttributes({baseMarginLeft})}
+												breakpoint=""
+												breakpoint_name=""
+												marginTop={ baseMarginTop }
+												marginRight={ baseMarginRight }
+												marginBottom={
+													baseMarginBottom
+												}
+												marginLeft={ baseMarginLeft }
+												setMarginTop={ (
+													baseMarginTop
+												) =>
+													setAttributes( {
+														baseMarginTop,
+													} )
+												}
+												setMarginRight={ (
+													baseMarginRight
+												) =>
+													setAttributes( {
+														baseMarginRight,
+													} )
+												}
+												setMarginBottom={ (
+													baseMarginBottom
+												) =>
+													setAttributes( {
+														baseMarginBottom,
+													} )
+												}
+												setMarginLeft={ (
+													baseMarginLeft
+												) =>
+													setAttributes( {
+														baseMarginLeft,
+													} )
+												}
 											></MarginControl>
 											<AlignControl
-												breakpoint=''
-												breakpoint_name=''
-												alignText={baseAlignText}
-												flexDirection={baseFlexDirection}
-												alignItems={baseAlignItems}
-												alignSelf={baseAlignSelf}
-												justifyContent={baseJustifyContent}
-												setAlignText={baseAlignText => setAttributes({baseAlignText})}
-												setFlexDirection={baseFlexDirection => setAttributes({baseFlexDirection})}
-												setAlignItems={baseAlignItems => setAttributes({baseAlignItems})}
-												setAlignSelf={baseAlignSelf => setAttributes({baseAlignSelf})}
-												setJustifyContent={baseJustifyContent => setAttributes({baseJustifyContent})}
+												breakpoint=""
+												breakpoint_name=""
+												alignText={ baseAlignText }
+												flexDirection={
+													baseFlexDirection
+												}
+												alignItems={ baseAlignItems }
+												alignSelf={ baseAlignSelf }
+												justifyContent={
+													baseJustifyContent
+												}
+												setAlignText={ (
+													baseAlignText
+												) =>
+													setAttributes( {
+														baseAlignText,
+													} )
+												}
+												setFlexDirection={ (
+													baseFlexDirection
+												) =>
+													setAttributes( {
+														baseFlexDirection,
+													} )
+												}
+												setAlignItems={ (
+													baseAlignItems
+												) =>
+													setAttributes( {
+														baseAlignItems,
+													} )
+												}
+												setAlignSelf={ (
+													baseAlignSelf
+												) =>
+													setAttributes( {
+														baseAlignSelf,
+													} )
+												}
+												setJustifyContent={ (
+													baseJustifyContent
+												) =>
+													setAttributes( {
+														baseJustifyContent,
+													} )
+												}
 											></AlignControl>
 											<OrderControl
-												breakpoint=''
-												breakpoint_name=''
-												order={baseOrder}
-												setOrder={baseOrder => setAttributes({baseOrder})}
+												breakpoint=""
+												breakpoint_name=""
+												order={ baseOrder }
+												setOrder={ ( baseOrder ) =>
+													setAttributes( {
+														baseOrder,
+													} )
+												}
 											></OrderControl>
 										</>
-									)}
-								</Card>,
+									) }
+								</Card>
+							),
 						},
 						{
 							name: 'small',
 							title: 'SM',
 							className: 'breakpoint-tab',
-							content:
+							content: (
 								<Card>
 									<DisplayControl
-										breakpoint='sm-'
-										breakpoint_name='SM'
-										display={smDisplay}
-										setDisplay={smDisplay => setAttributes({smDisplay})}
+										breakpoint="sm-"
+										breakpoint_name="SM"
+										display={ smDisplay }
+										setDisplay={ ( smDisplay ) =>
+											setAttributes( { smDisplay } )
+										}
 										__nextHasNoMarginBottom
 									></DisplayControl>
-									{(smDisplay === 'd-sm-flex' || smDisplay === 'd-sm-inline-flex') && (
+									{ ( smDisplay === 'd-sm-flex' ||
+										smDisplay === 'd-sm-inline-flex' ) && (
 										<FlexControl
-											breakpoint='sm-'
-											breakpoint_name='SM'
-											flexDirection={smFlexDirection}
-											justifyContent={smJustifyContent}
-											alignItems={smAlignItems}
-											alignSelf={smAlignSelf}
-											fillGrowShrink={smFillGrowShrink}
-											wrap={smWrap}
-											order={smOrder}
-											alignContent={smAlignContent}
-											setFlexDirection={smFlexDirection => setAttributes({smFlexDirection})}
-											setJustifyContent={smJustifyContent => setAttributes({smJustifyContent})}
-											setAlignItems={smAlignItems => setAttributes({smAlignItems})}
-											setAlignSelf={smAlignSelf => setAttributes({smAlignSelf})}
-											setFillGrowShrink={smFillGrowShrink => setAttributes({smFillGrowShrink})}
-											setWrap={smWrap => setAttributes({smWrap})}
-											setOrder={smOrder => setAttributes({smOrder})}
-											setAlignContent={smAlignContent => setAttributes({smAlignContent})}
-										>
-										</FlexControl>
-									)}
-									{(smDisplay !== 'd-sm-none') && (
+											breakpoint="sm-"
+											breakpoint_name="SM"
+											flexDirection={ smFlexDirection }
+											justifyContent={ smJustifyContent }
+											alignItems={ smAlignItems }
+											alignSelf={ smAlignSelf }
+											fillGrowShrink={ smFillGrowShrink }
+											wrap={ smWrap }
+											order={ smOrder }
+											alignContent={ smAlignContent }
+											setFlexDirection={ (
+												smFlexDirection
+											) =>
+												setAttributes( {
+													smFlexDirection,
+												} )
+											}
+											setJustifyContent={ (
+												smJustifyContent
+											) =>
+												setAttributes( {
+													smJustifyContent,
+												} )
+											}
+											setAlignItems={ ( smAlignItems ) =>
+												setAttributes( {
+													smAlignItems,
+												} )
+											}
+											setAlignSelf={ ( smAlignSelf ) =>
+												setAttributes( { smAlignSelf } )
+											}
+											setFillGrowShrink={ (
+												smFillGrowShrink
+											) =>
+												setAttributes( {
+													smFillGrowShrink,
+												} )
+											}
+											setWrap={ ( smWrap ) =>
+												setAttributes( { smWrap } )
+											}
+											setOrder={ ( smOrder ) =>
+												setAttributes( { smOrder } )
+											}
+											setAlignContent={ (
+												smAlignContent
+											) =>
+												setAttributes( {
+													smAlignContent,
+												} )
+											}
+										></FlexControl>
+									) }
+									{ smDisplay !== 'd-sm-none' && (
 										<>
 											<ColumnControl
-												breakpoint='sm-'
-												breakpoint_name='SM'
-												columns={smColumns}
-												offset={smOffset}
-												setColumns={smColumns => setAttributes({smColumns})}
-												setOffset={smOffset => setAttributes({smOffset})}
-											>
-											</ColumnControl>
+												breakpoint="sm-"
+												breakpoint_name="SM"
+												columns={ smColumns }
+												offset={ smOffset }
+												setColumns={ ( smColumns ) =>
+													setAttributes( {
+														smColumns,
+													} )
+												}
+												setOffset={ ( smOffset ) =>
+													setAttributes( {
+														smOffset,
+													} )
+												}
+											></ColumnControl>
 											<PaddingControl
-												breakpoint='sm-'
-												breakpoint_name='SM'
-												paddingTop={smPaddingTop}
-												paddingRight={smPaddingRight}
-												paddingBottom={smPaddingBottom}
-												paddingLeft={smPaddingLeft}
-												setPaddingTop={smPaddingTop => setAttributes({smPaddingTop})}
-												setPaddingRight={smPaddingRight => setAttributes({smPaddingRight})}
-												setPaddingBottom={smPaddingBottom => setAttributes({smPaddingBottom})}
-												setPaddingLeft={smPaddingLeft => setAttributes({smPaddingLeft})}
+												breakpoint="sm-"
+												breakpoint_name="SM"
+												paddingTop={ smPaddingTop }
+												paddingRight={ smPaddingRight }
+												paddingBottom={
+													smPaddingBottom
+												}
+												paddingLeft={ smPaddingLeft }
+												setPaddingTop={ (
+													smPaddingTop
+												) =>
+													setAttributes( {
+														smPaddingTop,
+													} )
+												}
+												setPaddingRight={ (
+													smPaddingRight
+												) =>
+													setAttributes( {
+														smPaddingRight,
+													} )
+												}
+												setPaddingBottom={ (
+													smPaddingBottom
+												) =>
+													setAttributes( {
+														smPaddingBottom,
+													} )
+												}
+												setPaddingLeft={ (
+													smPaddingLeft
+												) =>
+													setAttributes( {
+														smPaddingLeft,
+													} )
+												}
 											></PaddingControl>
 											<MarginControl
-												breakpoint='sm-'
-												breakpoint_name='SM'
-												marginTop={smMarginTop}
-												marginRight={smMarginRight}
-												marginBottom={smMarginBottom}
-												marginLeft={smMarginLeft}
-												setMarginTop={smMarginTop => setAttributes({smMarginTop})}
-												setMarginRight={smMarginRight => setAttributes({smMarginRight})}
-												setMarginBottom={smMarginBottom => setAttributes({smMarginBottom})}
-												setMarginLeft={smMarginLeft => setAttributes({smMarginLeft})}
+												breakpoint="sm-"
+												breakpoint_name="SM"
+												marginTop={ smMarginTop }
+												marginRight={ smMarginRight }
+												marginBottom={ smMarginBottom }
+												marginLeft={ smMarginLeft }
+												setMarginTop={ (
+													smMarginTop
+												) =>
+													setAttributes( {
+														smMarginTop,
+													} )
+												}
+												setMarginRight={ (
+													smMarginRight
+												) =>
+													setAttributes( {
+														smMarginRight,
+													} )
+												}
+												setMarginBottom={ (
+													smMarginBottom
+												) =>
+													setAttributes( {
+														smMarginBottom,
+													} )
+												}
+												setMarginLeft={ (
+													smMarginLeft
+												) =>
+													setAttributes( {
+														smMarginLeft,
+													} )
+												}
 											></MarginControl>
 											<AlignControl
-												breakpoint='sm-'
-												breakpoint_name='SM'
-												alignText={smAlignText}
-												flexDirection={smFlexDirection}
-												alignItems={smAlignItems}
-												alignSelf={smAlignSelf}
-												justifyContent={smJustifyContent}
-												setAlignText={smAlignText => setAttributes({smAlignText})}
-												setFlexDirection={smFlexDirection => setAttributes({smFlexDirection})}
-												setAlignItems={smAlignItems => setAttributes({smAlignItems})}
-												setAlignSelf={smAlignSelf => setAttributes({smAlignSelf})}
-												setJustifyContent={smJustifyContent => setAttributes({smJustifyContent})}
+												breakpoint="sm-"
+												breakpoint_name="SM"
+												alignText={ smAlignText }
+												flexDirection={
+													smFlexDirection
+												}
+												alignItems={ smAlignItems }
+												alignSelf={ smAlignSelf }
+												justifyContent={
+													smJustifyContent
+												}
+												setAlignText={ (
+													smAlignText
+												) =>
+													setAttributes( {
+														smAlignText,
+													} )
+												}
+												setFlexDirection={ (
+													smFlexDirection
+												) =>
+													setAttributes( {
+														smFlexDirection,
+													} )
+												}
+												setAlignItems={ (
+													smAlignItems
+												) =>
+													setAttributes( {
+														smAlignItems,
+													} )
+												}
+												setAlignSelf={ (
+													smAlignSelf
+												) =>
+													setAttributes( {
+														smAlignSelf,
+													} )
+												}
+												setJustifyContent={ (
+													smJustifyContent
+												) =>
+													setAttributes( {
+														smJustifyContent,
+													} )
+												}
 											></AlignControl>
 											<OrderControl
-												breakpoint='sm-'
-												breakpoint_name='SM'
-												order={smOrder}
-												setOrder={smOrder => setAttributes({smOrder})}
+												breakpoint="sm-"
+												breakpoint_name="SM"
+												order={ smOrder }
+												setOrder={ ( smOrder ) =>
+													setAttributes( { smOrder } )
+												}
 											></OrderControl>
 										</>
-									)}
-								</Card>,
+									) }
+								</Card>
+							),
 						},
 						{
 							name: 'medium',
 							title: 'MD',
 							className: 'breakpoint-tab',
-							content:
+							content: (
 								<Card>
 									<DisplayControl
-										breakpoint='md-'
-										breakpoint_name='MD'
-										display={mdDisplay}
-										setDisplay={mdDisplay => setAttributes({mdDisplay})}
+										breakpoint="md-"
+										breakpoint_name="MD"
+										display={ mdDisplay }
+										setDisplay={ ( mdDisplay ) =>
+											setAttributes( { mdDisplay } )
+										}
 										__nextHasNoMarginBottom
 									></DisplayControl>
-									{(mdDisplay === 'd-md-flex' || mdDisplay === 'd-md-inline-flex') && (
+									{ ( mdDisplay === 'd-md-flex' ||
+										mdDisplay === 'd-md-inline-flex' ) && (
 										<FlexControl
-											breakpoint='md-'
-											breakpoint_name='MD'
-											flexDirection={mdFlexDirection}
-											justifyContent={mdJustifyContent}
-											alignItems={mdAlignItems}
-											alignSelf={mdAlignSelf}
-											fillGrowShrink={mdFillGrowShrink}
-											wrap={mdWrap}
-											order={mdOrder}
-											alignContent={mdAlignContent}
-											setFlexDirection={mdFlexDirection => setAttributes({mdFlexDirection})}
-											setJustifyContent={mdJustifyContent => setAttributes({mdJustifyContent})}
-											setAlignItems={mdAlignItems => setAttributes({mdAlignItems})}
-											setAlignSelf={mdAlignSelf => setAttributes({mdAlignSelf})}
-											setFillGrowShrink={mdFillGrowShrink => setAttributes({mdFillGrowShrink})}
-											setWrap={mdWrap => setAttributes({mdWrap})}
-											setOrder={mdOrder => setAttributes({mdOrder})}
-											setAlignContent={mdAlignContent => setAttributes({mdAlignContent})}
-										>
-										</FlexControl>
-									)}
-									{(mdDisplay !== 'd-md-none') && (
+											breakpoint="md-"
+											breakpoint_name="MD"
+											flexDirection={ mdFlexDirection }
+											justifyContent={ mdJustifyContent }
+											alignItems={ mdAlignItems }
+											alignSelf={ mdAlignSelf }
+											fillGrowShrink={ mdFillGrowShrink }
+											wrap={ mdWrap }
+											order={ mdOrder }
+											alignContent={ mdAlignContent }
+											setFlexDirection={ (
+												mdFlexDirection
+											) =>
+												setAttributes( {
+													mdFlexDirection,
+												} )
+											}
+											setJustifyContent={ (
+												mdJustifyContent
+											) =>
+												setAttributes( {
+													mdJustifyContent,
+												} )
+											}
+											setAlignItems={ ( mdAlignItems ) =>
+												setAttributes( {
+													mdAlignItems,
+												} )
+											}
+											setAlignSelf={ ( mdAlignSelf ) =>
+												setAttributes( { mdAlignSelf } )
+											}
+											setFillGrowShrink={ (
+												mdFillGrowShrink
+											) =>
+												setAttributes( {
+													mdFillGrowShrink,
+												} )
+											}
+											setWrap={ ( mdWrap ) =>
+												setAttributes( { mdWrap } )
+											}
+											setOrder={ ( mdOrder ) =>
+												setAttributes( { mdOrder } )
+											}
+											setAlignContent={ (
+												mdAlignContent
+											) =>
+												setAttributes( {
+													mdAlignContent,
+												} )
+											}
+										></FlexControl>
+									) }
+									{ mdDisplay !== 'd-md-none' && (
 										<>
 											<ColumnControl
-												breakpoint='md-'
-												breakpoint_name='MD'
-												columns={mdColumns}
-												offset={mdOffset}
-												setColumns={mdColumns => setAttributes({mdColumns})}
-												setOffset={mdOffset => setAttributes({mdOffset})}
-											>
-											</ColumnControl>
+												breakpoint="md-"
+												breakpoint_name="MD"
+												columns={ mdColumns }
+												offset={ mdOffset }
+												setColumns={ ( mdColumns ) =>
+													setAttributes( {
+														mdColumns,
+													} )
+												}
+												setOffset={ ( mdOffset ) =>
+													setAttributes( {
+														mdOffset,
+													} )
+												}
+											></ColumnControl>
 											<PaddingControl
-												breakpoint='md-'
-												breakpoint_name='MD'
-												paddingTop={mdPaddingTop}
-												paddingRight={mdPaddingRight}
-												paddingBottom={mdPaddingBottom}
-												paddingLeft={mdPaddingLeft}
-												setPaddingTop={mdPaddingTop => setAttributes({mdPaddingTop})}
-												setPaddingRight={mdPaddingRight => setAttributes({mdPaddingRight})}
-												setPaddingBottom={mdPaddingBottom => setAttributes({mdPaddingBottom})}
-												setPaddingLeft={mdPaddingLeft => setAttributes({mdPaddingLeft})}
+												breakpoint="md-"
+												breakpoint_name="MD"
+												paddingTop={ mdPaddingTop }
+												paddingRight={ mdPaddingRight }
+												paddingBottom={
+													mdPaddingBottom
+												}
+												paddingLeft={ mdPaddingLeft }
+												setPaddingTop={ (
+													mdPaddingTop
+												) =>
+													setAttributes( {
+														mdPaddingTop,
+													} )
+												}
+												setPaddingRight={ (
+													mdPaddingRight
+												) =>
+													setAttributes( {
+														mdPaddingRight,
+													} )
+												}
+												setPaddingBottom={ (
+													mdPaddingBottom
+												) =>
+													setAttributes( {
+														mdPaddingBottom,
+													} )
+												}
+												setPaddingLeft={ (
+													mdPaddingLeft
+												) =>
+													setAttributes( {
+														mdPaddingLeft,
+													} )
+												}
 											></PaddingControl>
 											<MarginControl
-												breakpoint='md-'
-												breakpoint_name='MD'
-												marginTop={mdMarginTop}
-												marginRight={mdMarginRight}
-												marginBottom={mdMarginBottom}
-												marginLeft={mdMarginLeft}
-												setMarginTop={mdMarginTop => setAttributes({mdMarginTop})}
-												setMarginRight={mdMarginRight => setAttributes({mdMarginRight})}
-												setMarginBottom={mdMarginBottom => setAttributes({mdMarginBottom})}
-												setMarginLeft={mdMarginLeft => setAttributes({mdMarginLeft})}
+												breakpoint="md-"
+												breakpoint_name="MD"
+												marginTop={ mdMarginTop }
+												marginRight={ mdMarginRight }
+												marginBottom={ mdMarginBottom }
+												marginLeft={ mdMarginLeft }
+												setMarginTop={ (
+													mdMarginTop
+												) =>
+													setAttributes( {
+														mdMarginTop,
+													} )
+												}
+												setMarginRight={ (
+													mdMarginRight
+												) =>
+													setAttributes( {
+														mdMarginRight,
+													} )
+												}
+												setMarginBottom={ (
+													mdMarginBottom
+												) =>
+													setAttributes( {
+														mdMarginBottom,
+													} )
+												}
+												setMarginLeft={ (
+													mdMarginLeft
+												) =>
+													setAttributes( {
+														mdMarginLeft,
+													} )
+												}
 											></MarginControl>
 											<AlignControl
-												breakpoint='md-'
-												breakpoint_name='MD'
-												alignText={mdAlignText}
-												flexDirection={mdFlexDirection}
-												alignItems={mdAlignItems}
-												alignSelf={mdAlignSelf}
-												justifyContent={mdJustifyContent}
-												setAlignText={mdAlignText => setAttributes({mdAlignText})}
-												setFlexDirection={mdFlexDirection => setAttributes({mdFlexDirection})}
-												setAlignItems={mdAlignItems => setAttributes({mdAlignItems})}
-												setAlignSelf={mdAlignSelf => setAttributes({mdAlignSelf})}
-												setJustifyContent={mdJustifyContent => setAttributes({mdJustifyContent})}
+												breakpoint="md-"
+												breakpoint_name="MD"
+												alignText={ mdAlignText }
+												flexDirection={
+													mdFlexDirection
+												}
+												alignItems={ mdAlignItems }
+												alignSelf={ mdAlignSelf }
+												justifyContent={
+													mdJustifyContent
+												}
+												setAlignText={ (
+													mdAlignText
+												) =>
+													setAttributes( {
+														mdAlignText,
+													} )
+												}
+												setFlexDirection={ (
+													mdFlexDirection
+												) =>
+													setAttributes( {
+														mdFlexDirection,
+													} )
+												}
+												setAlignItems={ (
+													mdAlignItems
+												) =>
+													setAttributes( {
+														mdAlignItems,
+													} )
+												}
+												setAlignSelf={ (
+													mdAlignSelf
+												) =>
+													setAttributes( {
+														mdAlignSelf,
+													} )
+												}
+												setJustifyContent={ (
+													mdJustifyContent
+												) =>
+													setAttributes( {
+														mdJustifyContent,
+													} )
+												}
 											></AlignControl>
 											<OrderControl
-												breakpoint='md-'
-												breakpoint_name='MD'
-												order={mdOrder}
-												setOrder={mdOrder => setAttributes({mdOrder})}
+												breakpoint="md-"
+												breakpoint_name="MD"
+												order={ mdOrder }
+												setOrder={ ( mdOrder ) =>
+													setAttributes( { mdOrder } )
+												}
 											></OrderControl>
 										</>
-									)}
-								</Card>,
+									) }
+								</Card>
+							),
 						},
 						{
 							name: 'large',
 							title: 'LG',
 							className: 'breakpoint-tab',
-							content:
+							content: (
 								<Card>
 									<DisplayControl
-										breakpoint='lg-'
-										breakpoint_name='LG'
-										display={lgDisplay}
-										setDisplay={lgDisplay => setAttributes({lgDisplay})}
+										breakpoint="lg-"
+										breakpoint_name="LG"
+										display={ lgDisplay }
+										setDisplay={ ( lgDisplay ) =>
+											setAttributes( { lgDisplay } )
+										}
 										__nextHasNoMarginBottom
 									></DisplayControl>
-									{(lgDisplay === 'd-lg-flex' || lgDisplay === 'd-lg-inline-flex') && (
+									{ ( lgDisplay === 'd-lg-flex' ||
+										lgDisplay === 'd-lg-inline-flex' ) && (
 										<FlexControl
-											breakpoint='lg-'
-											breakpoint_name='LG'
-											flexDirection={lgFlexDirection}
-											justifyContent={lgJustifyContent}
-											alignItems={lgAlignItems}
-											alignSelf={lgAlignSelf}
-											fillGrowShrink={lgFillGrowShrink}
-											wrap={lgWrap}
-											order={lgOrder}
-											alignContent={lgAlignContent}
-											setFlexDirection={lgFlexDirection => setAttributes({lgFlexDirection})}
-											setJustifyContent={lgJustifyContent => setAttributes({lgJustifyContent})}
-											setAlignItems={lgAlignItems => setAttributes({lgAlignItems})}
-											setAlignSelf={lgAlignSelf => setAttributes({lgAlignSelf})}
-											setFillGrowShrink={lgFillGrowShrink => setAttributes({lgFillGrowShrink})}
-											setWrap={lgWrap => setAttributes({lgWrap})}
-											setOrder={lgOrder => setAttributes({lgOrder})}
-											setAlignContent={lgAlignContent => setAttributes({lgAlignContent})}
-										>
-										</FlexControl>
-									)}
-									{(lgDisplay !== 'd-lg-none') && (
+											breakpoint="lg-"
+											breakpoint_name="LG"
+											flexDirection={ lgFlexDirection }
+											justifyContent={ lgJustifyContent }
+											alignItems={ lgAlignItems }
+											alignSelf={ lgAlignSelf }
+											fillGrowShrink={ lgFillGrowShrink }
+											wrap={ lgWrap }
+											order={ lgOrder }
+											alignContent={ lgAlignContent }
+											setFlexDirection={ (
+												lgFlexDirection
+											) =>
+												setAttributes( {
+													lgFlexDirection,
+												} )
+											}
+											setJustifyContent={ (
+												lgJustifyContent
+											) =>
+												setAttributes( {
+													lgJustifyContent,
+												} )
+											}
+											setAlignItems={ ( lgAlignItems ) =>
+												setAttributes( {
+													lgAlignItems,
+												} )
+											}
+											setAlignSelf={ ( lgAlignSelf ) =>
+												setAttributes( { lgAlignSelf } )
+											}
+											setFillGrowShrink={ (
+												lgFillGrowShrink
+											) =>
+												setAttributes( {
+													lgFillGrowShrink,
+												} )
+											}
+											setWrap={ ( lgWrap ) =>
+												setAttributes( { lgWrap } )
+											}
+											setOrder={ ( lgOrder ) =>
+												setAttributes( { lgOrder } )
+											}
+											setAlignContent={ (
+												lgAlignContent
+											) =>
+												setAttributes( {
+													lgAlignContent,
+												} )
+											}
+										></FlexControl>
+									) }
+									{ lgDisplay !== 'd-lg-none' && (
 										<>
 											<ColumnControl
-												breakpoint='lg-'
-												breakpoint_name='LG'
-												columns={lgColumns}
-												offset={lgOffset}
-												setColumns={lgColumns => setAttributes({lgColumns})}
-												setOffset={lgOffset => setAttributes({lgOffset})}
-											>
-											</ColumnControl>
+												breakpoint="lg-"
+												breakpoint_name="LG"
+												columns={ lgColumns }
+												offset={ lgOffset }
+												setColumns={ ( lgColumns ) =>
+													setAttributes( {
+														lgColumns,
+													} )
+												}
+												setOffset={ ( lgOffset ) =>
+													setAttributes( {
+														lgOffset,
+													} )
+												}
+											></ColumnControl>
 											<PaddingControl
-												breakpoint='lg-'
-												breakpoint_name='LG'
-												paddingTop={lgPaddingTop}
-												paddingRight={lgPaddingRight}
-												paddingBottom={lgPaddingBottom}
-												paddingLeft={lgPaddingLeft}
-												setPaddingTop={lgPaddingTop => setAttributes({lgPaddingTop})}
-												setPaddingRight={lgPaddingRight => setAttributes({lgPaddingRight})}
-												setPaddingBottom={lgPaddingBottom => setAttributes({lgPaddingBottom})}
-												setPaddingLeft={lgPaddingLeft => setAttributes({lgPaddingLeft})}
+												breakpoint="lg-"
+												breakpoint_name="LG"
+												paddingTop={ lgPaddingTop }
+												paddingRight={ lgPaddingRight }
+												paddingBottom={
+													lgPaddingBottom
+												}
+												paddingLeft={ lgPaddingLeft }
+												setPaddingTop={ (
+													lgPaddingTop
+												) =>
+													setAttributes( {
+														lgPaddingTop,
+													} )
+												}
+												setPaddingRight={ (
+													lgPaddingRight
+												) =>
+													setAttributes( {
+														lgPaddingRight,
+													} )
+												}
+												setPaddingBottom={ (
+													lgPaddingBottom
+												) =>
+													setAttributes( {
+														lgPaddingBottom,
+													} )
+												}
+												setPaddingLeft={ (
+													lgPaddingLeft
+												) =>
+													setAttributes( {
+														lgPaddingLeft,
+													} )
+												}
 											></PaddingControl>
 											<MarginControl
-												breakpoint='lg-'
-												breakpoint_name='LG'
-												marginTop={lgMarginTop}
-												marginRight={lgMarginRight}
-												marginBottom={lgMarginBottom}
-												marginLeft={lgMarginLeft}
-												setMarginTop={lgMarginTop => setAttributes({lgMarginTop})}
-												setMarginRight={lgMarginRight => setAttributes({lgMarginRight})}
-												setMarginBottom={lgMarginBottom => setAttributes({lgMarginBottom})}
-												setMarginLeft={lgMarginLeft => setAttributes({lgMarginLeft})}
+												breakpoint="lg-"
+												breakpoint_name="LG"
+												marginTop={ lgMarginTop }
+												marginRight={ lgMarginRight }
+												marginBottom={ lgMarginBottom }
+												marginLeft={ lgMarginLeft }
+												setMarginTop={ (
+													lgMarginTop
+												) =>
+													setAttributes( {
+														lgMarginTop,
+													} )
+												}
+												setMarginRight={ (
+													lgMarginRight
+												) =>
+													setAttributes( {
+														lgMarginRight,
+													} )
+												}
+												setMarginBottom={ (
+													lgMarginBottom
+												) =>
+													setAttributes( {
+														lgMarginBottom,
+													} )
+												}
+												setMarginLeft={ (
+													lgMarginLeft
+												) =>
+													setAttributes( {
+														lgMarginLeft,
+													} )
+												}
 											></MarginControl>
 											<AlignControl
-												breakpoint='lg-'
-												breakpoint_name='LG'
-												alignText={lgAlignText}
-												flexDirection={lgFlexDirection}
-												alignItems={lgAlignItems}
-												alignSelf={lgAlignSelf}
-												justifyContent={lgJustifyContent}
-												setAlignText={lgAlignText => setAttributes({lgAlignText})}
-												setFlexDirection={lgFlexDirection => setAttributes({lgFlexDirection})}
-												setAlignItems={lgAlignItems => setAttributes({lgAlignItems})}
-												setAlignSelf={lgAlignSelf => setAttributes({lgAlignSelf})}
-												setJustifyContent={lgJustifyContent => setAttributes({lgJustifyContent})}
+												breakpoint="lg-"
+												breakpoint_name="LG"
+												alignText={ lgAlignText }
+												flexDirection={
+													lgFlexDirection
+												}
+												alignItems={ lgAlignItems }
+												alignSelf={ lgAlignSelf }
+												justifyContent={
+													lgJustifyContent
+												}
+												setAlignText={ (
+													lgAlignText
+												) =>
+													setAttributes( {
+														lgAlignText,
+													} )
+												}
+												setFlexDirection={ (
+													lgFlexDirection
+												) =>
+													setAttributes( {
+														lgFlexDirection,
+													} )
+												}
+												setAlignItems={ (
+													lgAlignItems
+												) =>
+													setAttributes( {
+														lgAlignItems,
+													} )
+												}
+												setAlignSelf={ (
+													lgAlignSelf
+												) =>
+													setAttributes( {
+														lgAlignSelf,
+													} )
+												}
+												setJustifyContent={ (
+													lgJustifyContent
+												) =>
+													setAttributes( {
+														lgJustifyContent,
+													} )
+												}
 											></AlignControl>
 											<OrderControl
-												breakpoint='lg-'
-												breakpoint_name='LG'
-												order={lgOrder}
-												setOrder={lgOrder => setAttributes({lgOrder})}
+												breakpoint="lg-"
+												breakpoint_name="LG"
+												order={ lgOrder }
+												setOrder={ ( lgOrder ) =>
+													setAttributes( { lgOrder } )
+												}
 											></OrderControl>
 										</>
-									)}
-								</Card>,
+									) }
+								</Card>
+							),
 						},
 						{
 							name: 'extra-large',
 							title: 'XL',
 							className: 'breakpoint-tab',
-							content:
+							content: (
 								<Card>
 									<DisplayControl
-										breakpoint='xl-'
-										breakpoint_name='XL'
-										display={xlDisplay}
-										setDisplay={xlDisplay => setAttributes({xlDisplay})}
+										breakpoint="xl-"
+										breakpoint_name="XL"
+										display={ xlDisplay }
+										setDisplay={ ( xlDisplay ) =>
+											setAttributes( { xlDisplay } )
+										}
 										__nextHasNoMarginBottom
 									></DisplayControl>
-									{(xlDisplay === 'd-xl-flex' || xlDisplay === 'd-xl-inline-flex') && (
+									{ ( xlDisplay === 'd-xl-flex' ||
+										xlDisplay === 'd-xl-inline-flex' ) && (
 										<FlexControl
-											breakpoint='xl-'
-											breakpoint_name='XL'
-											flexDirection={xlFlexDirection}
-											justifyContent={xlJustifyContent}
-											alignItems={xlAlignItems}
-											alignSelf={xlAlignSelf}
-											fillGrowShrink={xlFillGrowShrink}
-											wrap={xlWrap}
-											order={xlOrder}
-											alignContent={xlAlignContent}
-											setFlexDirection={xlFlexDirection => setAttributes({xlFlexDirection})}
-											setJustifyContent={xlJustifyContent => setAttributes({xlJustifyContent})}
-											setAlignItems={xlAlignItems => setAttributes({xlAlignItems})}
-											setAlignSelf={xlAlignSelf => setAttributes({xlAlignSelf})}
-											setFillGrowShrink={xlFillGrowShrink => setAttributes({xlFillGrowShrink})}
-											setWrap={xlWrap => setAttributes({xlWrap})}
-											setOrder={xlOrder => setAttributes({xlOrder})}
-											setAlignContent={xlAlignContent => setAttributes({xlAlignContent})}
-										>
-										</FlexControl>
-									)}
-									{(xlDisplay !== 'd-xl-none') && (
+											breakpoint="xl-"
+											breakpoint_name="XL"
+											flexDirection={ xlFlexDirection }
+											justifyContent={ xlJustifyContent }
+											alignItems={ xlAlignItems }
+											alignSelf={ xlAlignSelf }
+											fillGrowShrink={ xlFillGrowShrink }
+											wrap={ xlWrap }
+											order={ xlOrder }
+											alignContent={ xlAlignContent }
+											setFlexDirection={ (
+												xlFlexDirection
+											) =>
+												setAttributes( {
+													xlFlexDirection,
+												} )
+											}
+											setJustifyContent={ (
+												xlJustifyContent
+											) =>
+												setAttributes( {
+													xlJustifyContent,
+												} )
+											}
+											setAlignItems={ ( xlAlignItems ) =>
+												setAttributes( {
+													xlAlignItems,
+												} )
+											}
+											setAlignSelf={ ( xlAlignSelf ) =>
+												setAttributes( { xlAlignSelf } )
+											}
+											setFillGrowShrink={ (
+												xlFillGrowShrink
+											) =>
+												setAttributes( {
+													xlFillGrowShrink,
+												} )
+											}
+											setWrap={ ( xlWrap ) =>
+												setAttributes( { xlWrap } )
+											}
+											setOrder={ ( xlOrder ) =>
+												setAttributes( { xlOrder } )
+											}
+											setAlignContent={ (
+												xlAlignContent
+											) =>
+												setAttributes( {
+													xlAlignContent,
+												} )
+											}
+										></FlexControl>
+									) }
+									{ xlDisplay !== 'd-xl-none' && (
 										<>
 											<ColumnControl
-												breakpoint='xl-'
-												breakpoint_name='XL'
-												columns={xlColumns}
-												offset={xlOffset}
-												setColumns={xlColumns => setAttributes({xlColumns})}
-												setOffset={xlOffset => setAttributes({xlOffset})}
-											>
-											</ColumnControl>
+												breakpoint="xl-"
+												breakpoint_name="XL"
+												columns={ xlColumns }
+												offset={ xlOffset }
+												setColumns={ ( xlColumns ) =>
+													setAttributes( {
+														xlColumns,
+													} )
+												}
+												setOffset={ ( xlOffset ) =>
+													setAttributes( {
+														xlOffset,
+													} )
+												}
+											></ColumnControl>
 											<PaddingControl
-												breakpoint='xl-'
-												breakpoint_name='XL'
-												paddingTop={xlPaddingTop}
-												paddingRight={xlPaddingRight}
-												paddingBottom={xlPaddingBottom}
-												paddingLeft={xlPaddingLeft}
-												setPaddingTop={xlPaddingTop => setAttributes({xlPaddingTop})}
-												setPaddingRight={xlPaddingRight => setAttributes({xlPaddingRight})}
-												setPaddingBottom={xlPaddingBottom => setAttributes({xlPaddingBottom})}
-												setPaddingLeft={xlPaddingLeft => setAttributes({xlPaddingLeft})}
+												breakpoint="xl-"
+												breakpoint_name="XL"
+												paddingTop={ xlPaddingTop }
+												paddingRight={ xlPaddingRight }
+												paddingBottom={
+													xlPaddingBottom
+												}
+												paddingLeft={ xlPaddingLeft }
+												setPaddingTop={ (
+													xlPaddingTop
+												) =>
+													setAttributes( {
+														xlPaddingTop,
+													} )
+												}
+												setPaddingRight={ (
+													xlPaddingRight
+												) =>
+													setAttributes( {
+														xlPaddingRight,
+													} )
+												}
+												setPaddingBottom={ (
+													xlPaddingBottom
+												) =>
+													setAttributes( {
+														xlPaddingBottom,
+													} )
+												}
+												setPaddingLeft={ (
+													xlPaddingLeft
+												) =>
+													setAttributes( {
+														xlPaddingLeft,
+													} )
+												}
 											></PaddingControl>
 											<MarginControl
-												breakpoint='xl-'
-												breakpoint_name='XL'
-												marginTop={xlMarginTop}
-												marginRight={xlMarginRight}
-												marginBottom={xlMarginBottom}
-												marginLeft={xlMarginLeft}
-												setMarginTop={xlMarginTop => setAttributes({xlMarginTop})}
-												setMarginRight={xlMarginRight => setAttributes({xlMarginRight})}
-												setMarginBottom={xlMarginBottom => setAttributes({xlMarginBottom})}
-												setMarginLeft={xlMarginLeft => setAttributes({xlMarginLeft})}
+												breakpoint="xl-"
+												breakpoint_name="XL"
+												marginTop={ xlMarginTop }
+												marginRight={ xlMarginRight }
+												marginBottom={ xlMarginBottom }
+												marginLeft={ xlMarginLeft }
+												setMarginTop={ (
+													xlMarginTop
+												) =>
+													setAttributes( {
+														xlMarginTop,
+													} )
+												}
+												setMarginRight={ (
+													xlMarginRight
+												) =>
+													setAttributes( {
+														xlMarginRight,
+													} )
+												}
+												setMarginBottom={ (
+													xlMarginBottom
+												) =>
+													setAttributes( {
+														xlMarginBottom,
+													} )
+												}
+												setMarginLeft={ (
+													xlMarginLeft
+												) =>
+													setAttributes( {
+														xlMarginLeft,
+													} )
+												}
 											></MarginControl>
 											<AlignControl
-												breakpoint='xl-'
-												breakpoint_name='XL'
-												alignText={xlAlignText}
-												flexDirection={xlFlexDirection}
-												alignItems={xlAlignItems}
-												alignSelf={xlAlignSelf}
-												justifyContent={xlJustifyContent}
-												setAlignText={xlAlignText => setAttributes({xlAlignText})}
-												setFlexDirection={xlFlexDirection => setAttributes({xlFlexDirection})}
-												setAlignItems={xlAlignItems => setAttributes({xlAlignItems})}
-												setAlignSelf={xlAlignSelf => setAttributes({xlAlignSelf})}
-												setJustifyContent={xlJustifyContent => setAttributes({xlJustifyContent})}
+												breakpoint="xl-"
+												breakpoint_name="XL"
+												alignText={ xlAlignText }
+												flexDirection={
+													xlFlexDirection
+												}
+												alignItems={ xlAlignItems }
+												alignSelf={ xlAlignSelf }
+												justifyContent={
+													xlJustifyContent
+												}
+												setAlignText={ (
+													xlAlignText
+												) =>
+													setAttributes( {
+														xlAlignText,
+													} )
+												}
+												setFlexDirection={ (
+													xlFlexDirection
+												) =>
+													setAttributes( {
+														xlFlexDirection,
+													} )
+												}
+												setAlignItems={ (
+													xlAlignItems
+												) =>
+													setAttributes( {
+														xlAlignItems,
+													} )
+												}
+												setAlignSelf={ (
+													xlAlignSelf
+												) =>
+													setAttributes( {
+														xlAlignSelf,
+													} )
+												}
+												setJustifyContent={ (
+													xlJustifyContent
+												) =>
+													setAttributes( {
+														xlJustifyContent,
+													} )
+												}
 											></AlignControl>
 											<OrderControl
-												breakpoint='xl-'
-												breakpoint_name='XL'
-												order={xlOrder}
-												setOrder={xlOrder => setAttributes({xlOrder})}
+												breakpoint="xl-"
+												breakpoint_name="XL"
+												order={ xlOrder }
+												setOrder={ ( xlOrder ) =>
+													setAttributes( { xlOrder } )
+												}
 											></OrderControl>
 										</>
-									)}
-								</Card>,
+									) }
+								</Card>
+							),
 						},
 						{
 							name: 'extra-extra-large',
 							title: 'XXL',
 							className: 'breakpoint-tab',
-							content:
+							content: (
 								<Card>
 									<DisplayControl
-										breakpoint='xxl-'
-										breakpoint_name='XXL'
-										display={xxlDisplay}
-										setDisplay={xxlDisplay => setAttributes({xxlDisplay})}
+										breakpoint="xxl-"
+										breakpoint_name="XXL"
+										display={ xxlDisplay }
+										setDisplay={ ( xxlDisplay ) =>
+											setAttributes( { xxlDisplay } )
+										}
 										__nextHasNoMarginBottom
 									></DisplayControl>
-									{(xxlDisplay === 'd-xxl-flex' || xxlDisplay === 'd-xxl-inline-flex') && (
+									{ ( xxlDisplay === 'd-xxl-flex' ||
+										xxlDisplay ===
+											'd-xxl-inline-flex' ) && (
 										<FlexControl
-											breakpoint='xxl-'
-											breakpoint_name='XXL'
-											flexDirection={xxlFlexDirection}
-											justifyContent={xxlJustifyContent}
-											alignItems={xxlAlignItems}
-											alignSelf={xxlAlignSelf}
-											fillGrowShrink={xxlFillGrowShrink}
-											wrap={xxlWrap}
-											order={xxlOrder}
-											alignContent={xxlAlignContent}
-											setFlexDirection={xxlFlexDirection => setAttributes({xxlFlexDirection})}
-											setJustifyContent={xxlJustifyContent => setAttributes({xxlJustifyContent})}
-											setAlignItems={xxlAlignItems => setAttributes({xxlAlignItems})}
-											setAlignSelf={xxlAlignSelf => setAttributes({xxlAlignSelf})}
-											setFillGrowShrink={xxlFillGrowShrink => setAttributes({xxlFillGrowShrink})}
-											setWrap={xxlWrap => setAttributes({xxlWrap})}
-											setOrder={xxlOrder => setAttributes({xxlOrder})}
-											setAlignContent={xxlAlignContent => setAttributes({xxlAlignContent})}
-										>
-										</FlexControl>
-									)}
-									{(xxlDisplay !== 'd-xxl-none') && (
+											breakpoint="xxl-"
+											breakpoint_name="XXL"
+											flexDirection={ xxlFlexDirection }
+											justifyContent={ xxlJustifyContent }
+											alignItems={ xxlAlignItems }
+											alignSelf={ xxlAlignSelf }
+											fillGrowShrink={ xxlFillGrowShrink }
+											wrap={ xxlWrap }
+											order={ xxlOrder }
+											alignContent={ xxlAlignContent }
+											setFlexDirection={ (
+												xxlFlexDirection
+											) =>
+												setAttributes( {
+													xxlFlexDirection,
+												} )
+											}
+											setJustifyContent={ (
+												xxlJustifyContent
+											) =>
+												setAttributes( {
+													xxlJustifyContent,
+												} )
+											}
+											setAlignItems={ ( xxlAlignItems ) =>
+												setAttributes( {
+													xxlAlignItems,
+												} )
+											}
+											setAlignSelf={ ( xxlAlignSelf ) =>
+												setAttributes( {
+													xxlAlignSelf,
+												} )
+											}
+											setFillGrowShrink={ (
+												xxlFillGrowShrink
+											) =>
+												setAttributes( {
+													xxlFillGrowShrink,
+												} )
+											}
+											setWrap={ ( xxlWrap ) =>
+												setAttributes( { xxlWrap } )
+											}
+											setOrder={ ( xxlOrder ) =>
+												setAttributes( { xxlOrder } )
+											}
+											setAlignContent={ (
+												xxlAlignContent
+											) =>
+												setAttributes( {
+													xxlAlignContent,
+												} )
+											}
+										></FlexControl>
+									) }
+									{ xxlDisplay !== 'd-xxl-none' && (
 										<>
 											<ColumnControl
-												breakpoint='xxl-'
-												breakpoint_name='XXL'
-												columns={xxlColumns}
-												offset={xxlOffset}
-												setColumns={xxlColumns => setAttributes({xxlColumns})}
-												setOffset={xxlOffset => setAttributes({xxlOffset})}
-											>
-											</ColumnControl>
+												breakpoint="xxl-"
+												breakpoint_name="XXL"
+												columns={ xxlColumns }
+												offset={ xxlOffset }
+												setColumns={ ( xxlColumns ) =>
+													setAttributes( {
+														xxlColumns,
+													} )
+												}
+												setOffset={ ( xxlOffset ) =>
+													setAttributes( {
+														xxlOffset,
+													} )
+												}
+											></ColumnControl>
 											<PaddingControl
-												breakpoint='xxl-'
-												breakpoint_name='XXL'
-												paddingTop={xxlPaddingTop}
-												paddingRight={xxlPaddingRight}
-												paddingBottom={xxlPaddingBottom}
-												paddingLeft={xxlPaddingLeft}
-												setPaddingTop={xxlPaddingTop => setAttributes({xxlPaddingTop})}
-												setPaddingRight={xxlPaddingRight => setAttributes({xxlPaddingRight})}
-												setPaddingBottom={xxlPaddingBottom => setAttributes({xxlPaddingBottom})}
-												setPaddingLeft={xxlPaddingLeft => setAttributes({xxlPaddingLeft})}
+												breakpoint="xxl-"
+												breakpoint_name="XXL"
+												paddingTop={ xxlPaddingTop }
+												paddingRight={ xxlPaddingRight }
+												paddingBottom={
+													xxlPaddingBottom
+												}
+												paddingLeft={ xxlPaddingLeft }
+												setPaddingTop={ (
+													xxlPaddingTop
+												) =>
+													setAttributes( {
+														xxlPaddingTop,
+													} )
+												}
+												setPaddingRight={ (
+													xxlPaddingRight
+												) =>
+													setAttributes( {
+														xxlPaddingRight,
+													} )
+												}
+												setPaddingBottom={ (
+													xxlPaddingBottom
+												) =>
+													setAttributes( {
+														xxlPaddingBottom,
+													} )
+												}
+												setPaddingLeft={ (
+													xxlPaddingLeft
+												) =>
+													setAttributes( {
+														xxlPaddingLeft,
+													} )
+												}
 											></PaddingControl>
 											<MarginControl
-												breakpoint='xxl-'
-												breakpoint_name='XXL'
-												marginTop={xxlMarginTop}
-												marginRight={xxlMarginRight}
-												marginBottom={xxlMarginBottom}
-												marginLeft={xxlMarginLeft}
-												setMarginTop={xxlMarginTop => setAttributes({xxlMarginTop})}
-												setMarginRight={xxlMarginRight => setAttributes({xxlMarginRight})}
-												setMarginBottom={xxlMarginBottom => setAttributes({xxlMarginBottom})}
-												setMarginLeft={xxlMarginLeft => setAttributes({xxlMarginLeft})}
+												breakpoint="xxl-"
+												breakpoint_name="XXL"
+												marginTop={ xxlMarginTop }
+												marginRight={ xxlMarginRight }
+												marginBottom={ xxlMarginBottom }
+												marginLeft={ xxlMarginLeft }
+												setMarginTop={ (
+													xxlMarginTop
+												) =>
+													setAttributes( {
+														xxlMarginTop,
+													} )
+												}
+												setMarginRight={ (
+													xxlMarginRight
+												) =>
+													setAttributes( {
+														xxlMarginRight,
+													} )
+												}
+												setMarginBottom={ (
+													xxlMarginBottom
+												) =>
+													setAttributes( {
+														xxlMarginBottom,
+													} )
+												}
+												setMarginLeft={ (
+													xxlMarginLeft
+												) =>
+													setAttributes( {
+														xxlMarginLeft,
+													} )
+												}
 											></MarginControl>
 											<AlignControl
-												breakpoint='xxl-'
-												breakpoint_name='XXL'
-												alignText={xxlAlignText}
-												flexDirection={xxlFlexDirection}
-												alignItems={xxlAlignItems}
-												alignSelf={xxlAlignSelf}
-												justifyContent={xxlJustifyContent}
-												setAlignText={xxlAlignText => setAttributes({xxlAlignText})}
-												setFlexDirection={xxlFlexDirection => setAttributes({xxlFlexDirection})}
-												setAlignItems={xxlAlignItems => setAttributes({xxlAlignItems})}
-												setAlignSelf={xxlAlignSelf => setAttributes({xxlAlignSelf})}
-												setJustifyContent={xxlJustifyContent => setAttributes({xxlJustifyContent})}
+												breakpoint="xxl-"
+												breakpoint_name="XXL"
+												alignText={ xxlAlignText }
+												flexDirection={
+													xxlFlexDirection
+												}
+												alignItems={ xxlAlignItems }
+												alignSelf={ xxlAlignSelf }
+												justifyContent={
+													xxlJustifyContent
+												}
+												setAlignText={ (
+													xxlAlignText
+												) =>
+													setAttributes( {
+														xxlAlignText,
+													} )
+												}
+												setFlexDirection={ (
+													xxlFlexDirection
+												) =>
+													setAttributes( {
+														xxlFlexDirection,
+													} )
+												}
+												setAlignItems={ (
+													xxlAlignItems
+												) =>
+													setAttributes( {
+														xxlAlignItems,
+													} )
+												}
+												setAlignSelf={ (
+													xxlAlignSelf
+												) =>
+													setAttributes( {
+														xxlAlignSelf,
+													} )
+												}
+												setJustifyContent={ (
+													xxlJustifyContent
+												) =>
+													setAttributes( {
+														xxlJustifyContent,
+													} )
+												}
 											></AlignControl>
 											<OrderControl
-												breakpoint='xxl-'
-												breakpoint_name='XXL'
-												order={xxlOrder}
-												setOrder={xxlOrder => setAttributes({xxlOrder})}
+												breakpoint="xxl-"
+												breakpoint_name="XXL"
+												order={ xxlOrder }
+												setOrder={ ( xxlOrder ) =>
+													setAttributes( {
+														xxlOrder,
+													} )
+												}
 											></OrderControl>
 										</>
-									)}
-								</Card>,
+									) }
+								</Card>
+							),
 						},
-					]}
+					] }
 				>
-					{({content, className}) =>
-						<div className={className}>
-							{content}
-						</div>}
+					{ ( { content, className } ) => (
+						<div className={ className }>{ content }</div>
+					) }
 				</TabPanel>
 			</InspectorControls>
-			<div {...blockProps}>
-				<InnerBlocks placeholder={__('Insert Blocks', 'resource')} />
+			<div { ...blockProps }>
+				<InnerBlocks
+					placeholder={ __( 'Insert Blocks', 'resource' ) }
+				/>
 			</div>
 		</>
 	);

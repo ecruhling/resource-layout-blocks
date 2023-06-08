@@ -1,18 +1,18 @@
 /**
  * WordPress dependencies
  */
-import { useInnerBlocksProps, useBlockProps } from "@wordpress/block-editor";
+import { useBlockProps, useInnerBlocksProps } from '@wordpress/block-editor';
 
 /**
  * External dependencies
  */
-import classnames from "classnames";
-import { omit } from "lodash";
+import classnames from 'classnames';
+import { omit } from 'lodash';
 
 /**
  * Internal dependencies
  */
-import { convertStylesStringToObject } from "../../../lib/convertStylesStringToObject";
+import { convertStylesStringToObject } from '../../../lib/convertStylesStringToObject';
 
 /**
  * The Block save function
@@ -20,31 +20,31 @@ import { convertStylesStringToObject } from "../../../lib/convertStylesStringToO
  * @returns {JSX.Element}
  * @constructor
  */
-export default function save({ attributes }) {
-	const { isFluid, tagName: TagName = "div", inlineStyles } = attributes;
+export default function save( { attributes } ) {
+	const { isFluid, tagName: TagName = 'div', inlineStyles } = attributes;
 
-	const classNameAttributes = omit(attributes, [
-		"anchor",
-		"isFluid",
-		"tagName",
-		"inlineStyles",
-		"className",
-	]);
+	const classNameAttributes = omit( attributes, [
+		'anchor',
+		'isFluid',
+		'tagName',
+		'inlineStyles',
+		'className',
+	] );
 
 	const className = classnames(
 		{
-			container: !isFluid,
-			"container-fluid": isFluid,
+			container: ! isFluid,
+			'container-fluid': isFluid,
 		},
-		Object.values(classNameAttributes)
+		Object.values( classNameAttributes )
 	);
 
-	const blockProps = useBlockProps.save({
+	const blockProps = useBlockProps.save( {
 		className,
-		style: convertStylesStringToObject(inlineStyles),
-	});
+		style: convertStylesStringToObject( inlineStyles ),
+	} );
 
-	const innerBlocksProps = useInnerBlocksProps.save(blockProps);
+	const innerBlocksProps = useInnerBlocksProps.save( blockProps );
 
-	return <TagName {...innerBlocksProps} />;
+	return <TagName { ...innerBlocksProps } />;
 }

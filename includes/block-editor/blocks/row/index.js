@@ -1,29 +1,29 @@
 /**
- * Import registerBlockType.
+ * Import registerBlockType
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 import { registerBlockType } from '@wordpress/blocks';
 
 /**
- * Styles are applied both to the front of your site and to the editor.
+ * Styles are applied both to the front of your site and to the editor
  *
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
 import './style.scss';
 
 /**
- * Internal dependencies.
+ * Internal dependencies
  */
 import json from './block.json';
-import {icon} from './icon';
+import { icon } from './icon';
 import edit from './edit';
 import save from './save';
 
 const { name, ...settings } = json;
 
 /**
- * Register this Block Type.
+ * Register this Block Type
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
