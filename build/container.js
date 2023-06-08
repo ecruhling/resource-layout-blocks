@@ -2033,6 +2033,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash */ "lodash");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _lib_convertStylesStringToObject__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../lib/convertStylesStringToObject */ "./includes/lib/convertStylesStringToObject.js");
 
 /**
  * WordPress dependencies
@@ -2046,6 +2047,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
+ * Internal dependencies
+ */
+
+
+/**
  * The Block save function
  *
  * @returns {JSX.Element}
@@ -2056,15 +2062,17 @@ function save({
 }) {
   const {
     isFluid,
-    tagName: TagName = 'div'
+    tagName: TagName = 'div',
+    inlineStyles
   } = attributes;
-  const classNameAttributes = (0,lodash__WEBPACK_IMPORTED_MODULE_3__.omit)(attributes, ['anchor', 'isFluid', 'tagName', 'className']);
+  const classNameAttributes = (0,lodash__WEBPACK_IMPORTED_MODULE_3__.omit)(attributes, ['anchor', 'isFluid', 'tagName', 'inlineStyles', 'className']);
   const className = classnames__WEBPACK_IMPORTED_MODULE_2___default()({
     'container': !isFluid,
     'container-fluid': isFluid
   }, Object.values(classNameAttributes));
   const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save({
-    className
+    className,
+    style: (0,_lib_convertStylesStringToObject__WEBPACK_IMPORTED_MODULE_4__.convertStylesStringToObject)(inlineStyles)
   });
   const innerBlocksProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useInnerBlocksProps.save(blockProps);
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(TagName, innerBlocksProps);

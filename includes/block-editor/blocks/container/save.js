@@ -10,6 +10,11 @@ import classnames from 'classnames';
 import {omit} from 'lodash';
 
 /**
+ * Internal dependencies
+ */
+import {convertStylesStringToObject} from '../../../lib/convertStylesStringToObject';
+
+/**
  * The Block save function
  *
  * @returns {JSX.Element}
@@ -22,9 +27,10 @@ export default function save ({
 	const {
 		isFluid,
 		tagName: TagName = 'div',
+		inlineStyles,
 	} = attributes;
 
-	const classNameAttributes = omit(attributes, ['anchor', 'isFluid', 'tagName', 'className']);
+	const classNameAttributes = omit(attributes, ['anchor', 'isFluid', 'tagName', 'inlineStyles', 'className']);
 
 	const className = classnames(
 		{
@@ -36,6 +42,7 @@ export default function save ({
 
 	const blockProps = useBlockProps.save({
 		className,
+		style: convertStylesStringToObject(inlineStyles),
 	});
 
 	const innerBlocksProps = useInnerBlocksProps.save(blockProps);
