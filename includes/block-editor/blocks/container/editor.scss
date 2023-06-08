@@ -1,17 +1,15 @@
 /**
- * The following styles get applied inside the editor only.
- *
- * Replace them with your own styles or remove the file completely.
+ * Editor only styles.
  */
 
-// Container block
 [data-type="resource-layout-blocks/container"] {
-	outline: 1px dashed rgba(red, 0.25);
+	outline: 1px dashed rgba(#f00, 0.25);
 
 	// 'Collapses' the inner blocks so that .container > .row works properly.
 	> .block-editor-inner-blocks {
 		display: contents;
 
+		/* stylelint-disable-next-line */
 		> .block-editor-block-list__layout {
 			display: contents;
 		}
@@ -20,7 +18,7 @@
 	// background on hover to make it visible
 	&:not(.is-selected):not(.has-child-selected):hover,
 	&.is-selected {
-		outline: 1px dashed red;
+		outline: 1px dashed #f00;
 		position: relative;
 
 		&::before {
@@ -29,7 +27,7 @@
 			top: -11px;
 			left: 1px;
 			display: block;
-			color: red;
+			color: #f00;
 			font-size: 0.5rem;
 		}
 	}

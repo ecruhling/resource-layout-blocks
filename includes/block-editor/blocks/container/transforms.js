@@ -1,24 +1,24 @@
 /**
  * WordPress dependencies
  */
-import {createBlock} from '@wordpress/blocks';
+import { createBlock } from "@wordpress/blocks";
 
 const transforms = {
 	from: [
 		{
-			type: 'block',
-			blocks: ['core/group'],
-			transform: ({content}) => {
-				return createBlock('resource-layout-blocks/container', {
+			type: "block",
+			blocks: ["core/group"],
+			transform: ({ content }) => {
+				return createBlock("resource-layout-blocks/container", {
 					content,
 				});
 			},
 		},
 		{
-			type: 'block',
-			blocks: ['resource-layout-blocks/row'],
-			transform: ({content}) => {
-				return createBlock('resource-layout-blocks/container', {
+			type: "block",
+			blocks: ["resource-layout-blocks/row"],
+			transform: ({ content }) => {
+				return createBlock("resource-layout-blocks/container", {
 					content,
 				});
 			},
@@ -26,10 +26,10 @@ const transforms = {
 	],
 	to: [
 		{
-			type: 'block',
-			blocks: ['resource-layout-blocks/row'],
-			transform: ({content}) => {
-				return createBlock('resource-layout-blocks/row', {
+			type: "block",
+			blocks: ["resource-layout-blocks/row"],
+			transform: ({ content }) => {
+				return createBlock("resource-layout-blocks/row", {
 					content,
 				});
 			},

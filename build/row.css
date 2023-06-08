@@ -2,15 +2,14 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./includes/block-editor/blocks/row/editor.scss ***!
   \*********************************************************************************************************************************************************************************************************************************************************************/
 /**
- * The following styles get applied inside the editor only.
- *
- * Replace them with your own styles or remove the file completely.
+ * Editor only styles.
  */
 [data-type="resource-layout-blocks/row"] {
   outline: 1px dashed rgba(128, 0, 128, 0.25);
 }
 [data-type="resource-layout-blocks/row"] > .block-editor-inner-blocks {
   display: contents;
+  /* stylelint-disable-next-line */
 }
 [data-type="resource-layout-blocks/row"] > .block-editor-inner-blocks > .block-editor-block-list__layout {
   display: contents;
@@ -23,7 +22,7 @@
   margin-top: var(--bs-gutter-y);
 }
 [data-type="resource-layout-blocks/row"]:not(.is-selected):not(.has-child-selected):hover, [data-type="resource-layout-blocks/row"].is-selected {
-  outline: 1px dashed purple;
+  outline: 1px dashed #800080;
   position: relative;
 }
 [data-type="resource-layout-blocks/row"]:not(.is-selected):not(.has-child-selected):hover::before, [data-type="resource-layout-blocks/row"].is-selected::before {
@@ -32,7 +31,7 @@
   top: -11px;
   left: 1px;
   display: block;
-  color: purple;
+  color: #800080;
   font-size: 0.5rem;
 }
 

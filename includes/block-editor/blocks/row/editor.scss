@@ -1,64 +1,35 @@
 /**
- * The following styles get applied inside the editor only.
- *
- * Replace them with your own styles or remove the file completely.
+ * Editor only styles.
  */
 
-// Row block
 [data-type="resource-layout-blocks/row"] {
-	outline: 1px dashed rgba(purple, 0.25);
+	outline: 1px dashed rgba(#800080, 0.25);
 
 	// 'Collapses' the inner blocks so that .row > * works properly.
 	> .block-editor-inner-blocks {
 		display: contents;
 
+		/* stylelint-disable-next-line */
 		> .block-editor-block-list__layout {
 			display: contents;
 
-			// looks like two levels of display: contents does not exactly work, so here is the Bootstrap CSS:
+			// looks like two levels of display: contents does not exactly work,
+			// so here is the Bootstrap CSS:
 			> * {
 				flex-shrink: 0;
 				//width: 100%;
 				max-width: 100%;
-				padding-right: calc(var(--bs-gutter-x) * .5);
-				padding-left: calc(var(--bs-gutter-x) * .5);
+				padding-right: calc(var(--bs-gutter-x) * 0.5);
+				padding-left: calc(var(--bs-gutter-x) * 0.5);
 				margin-top: var(--bs-gutter-y);
 			}
 		}
 	}
 
-	// old way of 'collapsing' the elements:
-
-	// move the .row styles two descendants down:
-	//> .block-editor-inner-blocks {
-	//	padding-left: 0;
-	//	padding-right: 0;
-	//
-	//	> .block-editor-block-list__layout { // make into .row
-	//		--bs-gutter-x: 1.5rem;
-	//		--bs-gutter-y: 0;
-	//		display: flex;
-	//		flex-wrap: wrap;
-	//		//margin-top: calc(-1 * var(--bs-gutter-y));
-	//		//margin-right: calc(-.5 * var(--bs-gutter-x));
-	//		//margin-left: calc(-.5 * var(--bs-gutter-x));
-	//
-	//		// move the .row > * styles
-	//		> * {
-	//			flex-shrink: 0;
-	//			//width: 100%;
-	//			max-width: 100%;
-	//			padding-right: calc(var(--bs-gutter-x) * .5);
-	//			padding-left: calc(var(--bs-gutter-x) * .5);
-	//			margin-top: var(--bs-gutter-y);
-	//		}
-	//	}
-	//}
-
 	// background on hover to make it visible
 	&:not(.is-selected):not(.has-child-selected):hover,
 	&.is-selected {
-		outline: 1px dashed purple;
+		outline: 1px dashed #800080;
 		position: relative;
 
 		&::before {
@@ -67,7 +38,7 @@
 			top: -11px;
 			left: 1px;
 			display: block;
-			color: purple;
+			color: #800080;
 			font-size: 0.5rem;
 		}
 	}

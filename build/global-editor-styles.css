@@ -1,12 +1,14 @@
 /*!******************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./includes/global/global-editor-styles.scss ***!
   \******************************************************************************************************************************************************************************************************************************************************************/
+/* stylelint-disable */
 .editor-styles-wrapper .block-editor-block-list__block.is-highlighted,
 .editor-styles-wrapper .block-editor-block-list__block.is-highlighted ~ .is-multi-selected,
 .editor-styles-wrapper .block-editor-block-list__block:not([contenteditable]):focus,
 .editor-styles-wrapper .is-block-moving-mode.block-editor-block-list__block.has-child-selected {
+  /* stylelint-enable */
   box-shadow: none;
-  outline: 1px dashed magenta;
+  outline: 1px dashed fuchsia;
 }
 
 .editor-styles-wrapper :where(.wp-block) {
@@ -23,6 +25,7 @@
   font-size: 0.7rem;
 }
 
+/* stylelint-disable-next-line */
 .block-editor-block-inspector__advanced > div {
   display: flex;
   flex-direction: row;
