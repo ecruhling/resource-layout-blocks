@@ -36,13 +36,12 @@ __webpack_require__.r(__webpack_exports__);
  * @returns {JSX.Element}
  * @constructor
  */
-function AlignControl(_ref) {
-  let {
-    breakpoint,
-    breakpoint_name,
-    alignText,
-    setAlignText
-  } = _ref;
+function AlignControl({
+  breakpoint,
+  breakpoint_name,
+  alignText,
+  setAlignText
+}) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardHeader, {
     isBorderless: true,
     isShady: true,
@@ -111,15 +110,14 @@ __webpack_require__.r(__webpack_exports__);
  * @returns {JSX.Element}
  * @constructor
  */
-function ColumnControl(_ref) {
-  let {
-    breakpoint,
-    breakpoint_name,
-    columns,
-    offset,
-    setColumns,
-    setOffset
-  } = _ref;
+function ColumnControl({
+  breakpoint,
+  breakpoint_name,
+  columns,
+  offset,
+  setColumns,
+  setOffset
+}) {
   // since the equal column class has no dash at the end, e.g. 'col', 'col-sm', 'col-md', etc,
   // check to see if there happens to be a dash on the end in the breakpoint builder.
   // if there is, remove the last character (dash)
@@ -270,13 +268,12 @@ __webpack_require__.r(__webpack_exports__);
  * @returns {JSX.Element}
  * @constructor
  */
-function ColumnsDisplayControl(_ref) {
-  let {
-    breakpoint,
-    breakpoint_name,
-    display,
-    setDisplay
-  } = _ref;
+function ColumnsDisplayControl({
+  breakpoint,
+  breakpoint_name,
+  display,
+  setDisplay
+}) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardHeader, {
     isBorderless: true,
     isShady: true,
@@ -381,27 +378,26 @@ __webpack_require__.r(__webpack_exports__);
  * @returns {JSX.Element}
  * @constructor
  */
-function FlexControl(_ref) {
-  let {
-    breakpoint,
-    breakpoint_name,
-    flexDirection,
-    justifyContent,
-    alignItems,
-    alignSelf,
-    fillGrowShrink,
-    wrap,
-    order,
-    alignContent,
-    setFlexDirection,
-    setJustifyContent,
-    setAlignItems,
-    setAlignSelf,
-    setFillGrowShrink,
-    setWrap,
-    setOrder,
-    setAlignContent
-  } = _ref;
+function FlexControl({
+  breakpoint,
+  breakpoint_name,
+  flexDirection,
+  justifyContent,
+  alignItems,
+  alignSelf,
+  fillGrowShrink,
+  wrap,
+  order,
+  alignContent,
+  setFlexDirection,
+  setJustifyContent,
+  setAlignItems,
+  setAlignSelf,
+  setFillGrowShrink,
+  setWrap,
+  setOrder,
+  setAlignContent
+}) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardHeader, {
     isBorderless: true,
     isShady: true,
@@ -805,19 +801,18 @@ __webpack_require__.r(__webpack_exports__);
  * @returns {JSX.Element}
  * @constructor
  */
-function MarginControl(_ref) {
-  let {
-    breakpoint,
-    breakpoint_name,
-    marginTop,
-    marginRight,
-    marginBottom,
-    marginLeft,
-    setMarginTop,
-    setMarginRight,
-    setMarginBottom,
-    setMarginLeft
-  } = _ref;
+function MarginControl({
+  breakpoint,
+  breakpoint_name,
+  marginTop,
+  marginRight,
+  marginBottom,
+  marginLeft,
+  setMarginTop,
+  setMarginRight,
+  setMarginBottom,
+  setMarginLeft
+}) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardHeader, {
     isBorderless: true,
     isShady: true,
@@ -995,13 +990,12 @@ __webpack_require__.r(__webpack_exports__);
  * @returns {JSX.Element}
  * @constructor
  */
-function OrderControl(_ref) {
-  let {
-    breakpoint,
-    breakpoint_name,
-    order,
-    setOrder
-  } = _ref;
+function OrderControl({
+  breakpoint,
+  breakpoint_name,
+  order,
+  setOrder
+}) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardHeader, {
     isBorderless: true,
     isShady: true,
@@ -1098,19 +1092,18 @@ __webpack_require__.r(__webpack_exports__);
  * @returns {JSX.Element}
  * @constructor
  */
-function PaddingControl(_ref) {
-  let {
-    breakpoint,
-    breakpoint_name,
-    paddingTop,
-    paddingRight,
-    paddingBottom,
-    paddingLeft,
-    setPaddingTop,
-    setPaddingRight,
-    setPaddingBottom,
-    setPaddingLeft
-  } = _ref;
+function PaddingControl({
+  breakpoint,
+  breakpoint_name,
+  paddingTop,
+  paddingRight,
+  paddingBottom,
+  paddingLeft,
+  setPaddingTop,
+  setPaddingRight,
+  setPaddingBottom,
+  setPaddingLeft
+}) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardHeader, {
     isBorderless: true,
     isShady: true,
@@ -1310,11 +1303,10 @@ __webpack_require__.r(__webpack_exports__);
  * @returns {JSX.Element}
  * @constructor
  */
-function edit(_ref) {
-  let {
-    attributes,
-    setAttributes
-  } = _ref;
+function edit({
+  attributes,
+  setAttributes
+}) {
   const {
     baseDisplay,
     baseColumns,
@@ -2219,15 +2211,12 @@ function edit(_ref) {
         })
       })))
     }]
-  }, _ref2 => {
-    let {
-      content,
-      className
-    } = _ref2;
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-      className: className
-    }, content);
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks, {
+  }, ({
+    content,
+    className
+  }) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: className
+  }, content))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks, {
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Insert Blocks', 'resource')
   })));
 }
@@ -2354,10 +2343,9 @@ __webpack_require__.r(__webpack_exports__);
  * @returns {JSX.Element}
  * @constructor
  */
-function save(_ref) {
-  let {
-    attributes
-  } = _ref;
+function save({
+  attributes
+}) {
   const {
     tagName: TagName = 'div'
   } = attributes;

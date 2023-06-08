@@ -90,7 +90,7 @@ function resource_category( array $block_categories ): array {
 add_action( 'block_categories_all', 'resource_category', 10, 2 );
 
 /**
- * Enqueue Bootstrap CSS on the frontend.
+ * Enqueue Bootstrap CSS on the frontend. (for development only).
  */
 add_action(
 	'wp_enqueue_scripts',
@@ -101,7 +101,7 @@ add_action(
 );
 
 /**
- * Enqueue Bootstrap CSS on the backend.
+ * Enqueue Bootstrap CSS on the backend. (for development only).
  */
 add_action(
 	'admin_enqueue_scripts',

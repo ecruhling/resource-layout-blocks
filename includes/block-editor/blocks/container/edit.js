@@ -37,6 +37,7 @@ import PaddingControl from '../../block-controls/paddingControl';
 import MarginControl from '../../block-controls/marginControl';
 import AlignControl from '../../block-controls/alignControl';
 import FlexControl from '../../block-controls/flexControl';
+import {convertStylesStringToObject} from '../../../lib/convertStylesStringToObject';
 
 /**
  * Styles are applied only to the editor
@@ -182,33 +183,6 @@ export default function
 		Object.values(classNameAttributes),
 		className,
 	);
-
-	/**
-	 * Converts inline styles attribute to style object
-	 *
-	 * @param stringStyles
-	 * @returns {{}|{}}
-	 * @see https://gist.github.com/goldhand/70de06a3bdbdb51565878ad1ee37e92b
-	 */
-	const convertStylesStringToObject = stringStyles => typeof stringStyles === 'string' ? stringStyles
-		.split(';')
-		.reduce((acc, style) => {
-			const colonPosition = style.indexOf(':');
-
-			if (colonPosition === -1) {
-				return acc;
-			}
-
-			const
-				camelCaseProperty = style
-					.substr(0, colonPosition)
-					.trim()
-					.replace(/^-ms-/, 'ms-')
-					.replace(/-./g, c => c.substr(1).toUpperCase()),
-				value = style.substr(colonPosition + 1).trim();
-
-			return value ? {...acc, [camelCaseProperty]: value} : acc;
-		}, {}) : {};
 
 	const blockProps = useBlockProps({
 		className: classes,

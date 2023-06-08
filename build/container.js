@@ -36,13 +36,12 @@ __webpack_require__.r(__webpack_exports__);
  * @returns {JSX.Element}
  * @constructor
  */
-function AlignControl(_ref) {
-  let {
-    breakpoint,
-    breakpoint_name,
-    alignText,
-    setAlignText
-  } = _ref;
+function AlignControl({
+  breakpoint,
+  breakpoint_name,
+  alignText,
+  setAlignText
+}) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardHeader, {
     isBorderless: true,
     isShady: true,
@@ -109,13 +108,12 @@ __webpack_require__.r(__webpack_exports__);
  * @returns {JSX.Element}
  * @constructor
  */
-function ColumnsDisplayControl(_ref) {
-  let {
-    breakpoint,
-    breakpoint_name,
-    display,
-    setDisplay
-  } = _ref;
+function ColumnsDisplayControl({
+  breakpoint,
+  breakpoint_name,
+  display,
+  setDisplay
+}) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardHeader, {
     isBorderless: true,
     isShady: true,
@@ -220,27 +218,26 @@ __webpack_require__.r(__webpack_exports__);
  * @returns {JSX.Element}
  * @constructor
  */
-function FlexControl(_ref) {
-  let {
-    breakpoint,
-    breakpoint_name,
-    flexDirection,
-    justifyContent,
-    alignItems,
-    alignSelf,
-    fillGrowShrink,
-    wrap,
-    order,
-    alignContent,
-    setFlexDirection,
-    setJustifyContent,
-    setAlignItems,
-    setAlignSelf,
-    setFillGrowShrink,
-    setWrap,
-    setOrder,
-    setAlignContent
-  } = _ref;
+function FlexControl({
+  breakpoint,
+  breakpoint_name,
+  flexDirection,
+  justifyContent,
+  alignItems,
+  alignSelf,
+  fillGrowShrink,
+  wrap,
+  order,
+  alignContent,
+  setFlexDirection,
+  setJustifyContent,
+  setAlignItems,
+  setAlignSelf,
+  setFillGrowShrink,
+  setWrap,
+  setOrder,
+  setAlignContent
+}) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardHeader, {
     isBorderless: true,
     isShady: true,
@@ -644,19 +641,18 @@ __webpack_require__.r(__webpack_exports__);
  * @returns {JSX.Element}
  * @constructor
  */
-function MarginControl(_ref) {
-  let {
-    breakpoint,
-    breakpoint_name,
-    marginTop,
-    marginRight,
-    marginBottom,
-    marginLeft,
-    setMarginTop,
-    setMarginRight,
-    setMarginBottom,
-    setMarginLeft
-  } = _ref;
+function MarginControl({
+  breakpoint,
+  breakpoint_name,
+  marginTop,
+  marginRight,
+  marginBottom,
+  marginLeft,
+  setMarginTop,
+  setMarginRight,
+  setMarginBottom,
+  setMarginLeft
+}) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardHeader, {
     isBorderless: true,
     isShady: true,
@@ -852,19 +848,18 @@ __webpack_require__.r(__webpack_exports__);
  * @returns {JSX.Element}
  * @constructor
  */
-function PaddingControl(_ref) {
-  let {
-    breakpoint,
-    breakpoint_name,
-    paddingTop,
-    paddingRight,
-    paddingBottom,
-    paddingLeft,
-    setPaddingTop,
-    setPaddingRight,
-    setPaddingBottom,
-    setPaddingLeft
-  } = _ref;
+function PaddingControl({
+  breakpoint,
+  breakpoint_name,
+  paddingTop,
+  paddingRight,
+  paddingBottom,
+  paddingLeft,
+  setPaddingTop,
+  setPaddingRight,
+  setPaddingBottom,
+  setPaddingLeft
+}) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardHeader, {
     isBorderless: true,
     isShady: true,
@@ -1049,7 +1044,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _block_controls_marginControl__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../block-controls/marginControl */ "./includes/block-editor/block-controls/marginControl.js");
 /* harmony import */ var _block_controls_alignControl__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../block-controls/alignControl */ "./includes/block-editor/block-controls/alignControl.js");
 /* harmony import */ var _block_controls_flexControl__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../block-controls/flexControl */ "./includes/block-editor/block-controls/flexControl.js");
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./editor.scss */ "./includes/block-editor/blocks/container/editor.scss");
+/* harmony import */ var _lib_convertStylesStringToObject__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../lib/convertStylesStringToObject */ "./includes/lib/convertStylesStringToObject.js");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./editor.scss */ "./includes/block-editor/blocks/container/editor.scss");
 
 /**
  * WordPress dependencies
@@ -1074,6 +1070,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 /**
  * Styles are applied only to the editor
  *
@@ -1087,11 +1084,10 @@ __webpack_require__.r(__webpack_exports__);
  * @returns {JSX.Element}
  * @constructor
  */
-function edit(_ref) {
-  let {
-    attributes,
-    setAttributes
-  } = _ref;
+function edit({
+  attributes,
+  setAttributes
+}) {
   const {
     isFluid,
     tagName: TagName = 'div',
@@ -1211,29 +1207,9 @@ function edit(_ref) {
     'container': !isFluid,
     'container-fluid': isFluid
   }, Object.values(classNameAttributes), className);
-
-  /**
-   * Converts inline styles attribute to style object
-   *
-   * @param stringStyles
-   * @returns {{}|{}}
-   * @see https://gist.github.com/goldhand/70de06a3bdbdb51565878ad1ee37e92b
-   */
-  const convertStylesStringToObject = stringStyles => typeof stringStyles === 'string' ? stringStyles.split(';').reduce((acc, style) => {
-    const colonPosition = style.indexOf(':');
-    if (colonPosition === -1) {
-      return acc;
-    }
-    const camelCaseProperty = style.substr(0, colonPosition).trim().replace(/^-ms-/, 'ms-').replace(/-./g, c => c.substr(1).toUpperCase()),
-      value = style.substr(colonPosition + 1).trim();
-    return value ? {
-      ...acc,
-      [camelCaseProperty]: value
-    } : acc;
-  }, {}) : {};
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
     className: classes,
-    style: convertStylesStringToObject(inlineStyles)
+    style: (0,_lib_convertStylesStringToObject__WEBPACK_IMPORTED_MODULE_12__.convertStylesStringToObject)(inlineStyles)
   });
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.BlockControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Toolbar, {
     label: "Class Inspector",
@@ -1922,15 +1898,12 @@ function edit(_ref) {
         })
       })))
     }]
-  }, _ref2 => {
-    let {
-      content,
-      className
-    } = _ref2;
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-      className: className
-    }, content);
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, {
+  }, ({
+    content,
+    className
+  }) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: className
+  }, content))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, {
     group: "advanced"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextControl, {
     __nextHasNoMarginBottom: true,
@@ -2078,10 +2051,9 @@ __webpack_require__.r(__webpack_exports__);
  * @returns {JSX.Element}
  * @constructor
  */
-function save(_ref) {
-  let {
-    attributes
-  } = _ref;
+function save({
+  attributes
+}) {
   const {
     isFluid,
     tagName: TagName = 'div'
@@ -2121,10 +2093,9 @@ const transforms = {
   from: [{
     type: 'block',
     blocks: ['core/group'],
-    transform: _ref => {
-      let {
-        content
-      } = _ref;
+    transform: ({
+      content
+    }) => {
       return (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.createBlock)('resource-layout-blocks/container', {
         content
       });
@@ -2132,10 +2103,9 @@ const transforms = {
   }, {
     type: 'block',
     blocks: ['resource-layout-blocks/row'],
-    transform: _ref2 => {
-      let {
-        content
-      } = _ref2;
+    transform: ({
+      content
+    }) => {
       return (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.createBlock)('resource-layout-blocks/container', {
         content
       });
@@ -2144,10 +2114,9 @@ const transforms = {
   to: [{
     type: 'block',
     blocks: ['resource-layout-blocks/row'],
-    transform: _ref3 => {
-      let {
-        content
-      } = _ref3;
+    transform: ({
+      content
+    }) => {
       return (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.createBlock)('resource-layout-blocks/row', {
         content
       });
@@ -2155,6 +2124,39 @@ const transforms = {
   }]
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (transforms);
+
+/***/ }),
+
+/***/ "./includes/lib/convertStylesStringToObject.js":
+/*!*****************************************************!*\
+  !*** ./includes/lib/convertStylesStringToObject.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "convertStylesStringToObject": () => (/* binding */ convertStylesStringToObject)
+/* harmony export */ });
+/**
+ * Converts inline styles attribute to style object
+ *
+ * @param stringStyles
+ * @returns {{}|{}}
+ * @see https://gist.github.com/goldhand/70de06a3bdbdb51565878ad1ee37e92b
+ */
+const convertStylesStringToObject = stringStyles => typeof stringStyles === 'string' ? stringStyles.split(';').reduce((acc, style) => {
+  const colonPosition = style.indexOf(':');
+  if (colonPosition === -1) {
+    return acc;
+  }
+  const camelCaseProperty = style.slice(0, colonPosition).trim().replace(/^-ms-/, 'ms-').replace(/-./g, c => c.slice(1).toUpperCase()),
+    value = style.slice(colonPosition + 1).trim();
+  return value ? {
+    ...acc,
+    [camelCaseProperty]: value
+  } : acc;
+}, {}) : {};
 
 /***/ }),
 
