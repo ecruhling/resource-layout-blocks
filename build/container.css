@@ -6,64 +6,6 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-.editor-styles-wrapper .block-editor-block-list__block.is-highlighted,
-.editor-styles-wrapper .block-editor-block-list__block.is-highlighted ~ .is-multi-selected,
-.editor-styles-wrapper .block-editor-block-list__block:not([contenteditable]):focus,
-.editor-styles-wrapper .is-block-moving-mode.block-editor-block-list__block.has-child-selected {
-  box-shadow: none;
-  outline: 1px dashed magenta;
-}
-
-.editor-styles-wrapper :where(.wp-block) {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-@media (min-width: 782px) {
-  .interface-complementary-area {
-    width: 290px;
-  }
-}
-.breakpoint-tab-panel button.breakpoint-tab {
-  font-size: 0.7rem;
-}
-
-.block-editor-block-inspector__advanced > div {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.block-editor-block-inspector__advanced > div > div {
-  flex: 1 1 100%;
-}
-.block-editor-block-inspector__advanced > div > div.inline-style-control {
-  order: 99;
-}
-
-div.resource-card-header {
-  font-size: 0.75rem;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  font-weight: 600;
-  letter-spacing: 2px;
-}
-
-#class-inspector.components-accessible-toolbar {
-  border: 0;
-  border-right: 1px solid #1e1e1e;
-  justify-content: center;
-  align-items: center;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-#class-inspector.components-accessible-toolbar p {
-  margin-top: 0.35rem;
-  margin-bottom: 0.35rem;
-  font-size: 0.75rem;
-  max-width: 200px;
-  line-height: 1.3;
-}
-
 [data-type="resource-layout-blocks/container"] {
   outline: 1px dashed rgba(255, 0, 0, 0.25);
 }

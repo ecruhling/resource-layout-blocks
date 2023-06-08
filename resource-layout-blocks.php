@@ -33,7 +33,7 @@ function resource_layout_blocks_init() {
 		$render_callback = array();
 		$block_json      = wp_json_file_decode( plugin_dir_path( __FILE__ ) . 'includes/block-editor/blocks/' . $block . '/block.json' );
 		// check block.json for existence of 'render' key.
-		// it does not work presently, but if it does exist, then this is a dynamic block,
+		// if it does exist, then this is a dynamic block,
 		// and a render_callback needs to be sent to the block registration.
 		if ( property_exists( $block_json, 'render' ) ) {
 			$render_callback = array(
@@ -53,8 +53,8 @@ add_action( 'init', 'resource_layout_blocks_init' );
  * Render callback function.
  * A generic function that routes to a PHP template stored in the named block's directory.
  *
- * @param array    $attributes Block attributes.
- * @param string   $content Block default content.
+ * @param array $attributes Block attributes.
+ * @param string $content Block default content.
  * @param WP_Block $block Block instance.
  *
  * @return string The rendered output.
@@ -108,5 +108,24 @@ add_action(
 	function () {
 		wp_register_style( 'bootstrap-css', '//cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css', array(), null, 'all' );
 		wp_enqueue_style( 'bootstrap-css' );
+	}
+);
+
+/**
+ * Enqueue Global CSS on the backend, for the editor.
+ */
+$deps_file = plugin_dir_path( __FILE__ ) . 'build/global-editor-styles.asset.php';
+$deps      = array();
+
+if ( file_exists( $deps_file ) ) {
+	$deps_file = require $deps_file;
+	$deps      = $deps_file['dependencies'];
+}
+
+add_action(
+	'admin_enqueue_scripts',
+	function () {
+		wp_register_style( 'global-editor-styles', plugins_url( 'build/global-editor-styles.css', __FILE__ ), $deps );
+		wp_enqueue_style( 'global-editor-styles' );
 	}
 );
