@@ -57,6 +57,7 @@ import './editor.scss';
 export default function edit( { attributes, setAttributes } ) {
 	const {
 		tagName: TagName = 'div',
+		className,
 		inlineStyles,
 		baseDisplay,
 		basePaddingTop,
@@ -175,7 +176,11 @@ export default function edit( { attributes, setAttributes } ) {
 		'className',
 	] );
 
-	const classes = classnames( 'row', Object.values( classNameAttributes ) );
+	const classes = classnames(
+		'row',
+		Object.values( classNameAttributes ),
+		className
+	);
 
 	const blockProps = useBlockProps( {
 		className: classes,

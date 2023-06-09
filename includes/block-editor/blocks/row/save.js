@@ -8,6 +8,7 @@ import { useBlockProps, useInnerBlocksProps } from '@wordpress/block-editor';
  */
 import classnames from 'classnames';
 import { omit } from 'lodash';
+import { convertStylesStringToObject } from '../../../lib/convertStylesStringToObject';
 
 /**
  * The Block save function
@@ -18,11 +19,12 @@ import { omit } from 'lodash';
  * @class
  */
 export default function save( { attributes } ) {
-	const { tagName: TagName = 'div' } = attributes;
+	const { tagName: TagName = 'div', inlineStyles } = attributes;
 
 	const classNameAttributes = omit( attributes, [
 		'anchor',
 		'tagName',
+		'inlineStyles',
 		'className',
 	] );
 
@@ -30,6 +32,7 @@ export default function save( { attributes } ) {
 
 	const blockProps = useBlockProps.save( {
 		className,
+		style: convertStylesStringToObject( inlineStyles ),
 	} );
 
 	const innerBlocksProps = useInnerBlocksProps.save( blockProps );

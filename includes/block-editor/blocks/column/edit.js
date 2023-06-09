@@ -50,6 +50,7 @@ import './editor.scss';
  */
 export default function edit( { attributes, setAttributes } ) {
 	const {
+		className,
 		inlineStyles,
 		baseDisplay,
 		baseColumns,
@@ -179,7 +180,10 @@ export default function edit( { attributes, setAttributes } ) {
 		'inlineStyles',
 	] );
 
-	const classes = classnames( Object.values( classNameAttributes ) );
+	const classes = classnames(
+		Object.values( classNameAttributes ),
+		className
+	);
 
 	const blockProps = useBlockProps( {
 		className: classes,

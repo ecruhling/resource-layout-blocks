@@ -1093,6 +1093,7 @@ function edit({
 }) {
   const {
     tagName: TagName = 'div',
+    className,
     inlineStyles,
     baseDisplay,
     basePaddingTop,
@@ -1204,7 +1205,7 @@ function edit({
     xxlJustifyContent
   } = attributes;
   const classNameAttributes = (0,lodash__WEBPACK_IMPORTED_MODULE_5__.omit)(attributes, ['anchor', 'tagName', 'inlineStyles', 'className']);
-  const classes = classnames__WEBPACK_IMPORTED_MODULE_4___default()('row', Object.values(classNameAttributes));
+  const classes = classnames__WEBPACK_IMPORTED_MODULE_4___default()('row', Object.values(classNameAttributes), className);
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
     className: classes,
     style: (0,_lib_convertStylesStringToObject__WEBPACK_IMPORTED_MODULE_12__.convertStylesStringToObject)(inlineStyles)
@@ -2066,6 +2067,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash */ "lodash");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _lib_convertStylesStringToObject__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../lib/convertStylesStringToObject */ "./includes/lib/convertStylesStringToObject.js");
 
 /**
  * WordPress dependencies
@@ -2075,6 +2077,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * External dependencies
  */
+
 
 
 
@@ -2090,12 +2093,14 @@ function save({
   attributes
 }) {
   const {
-    tagName: TagName = 'div'
+    tagName: TagName = 'div',
+    inlineStyles
   } = attributes;
-  const classNameAttributes = (0,lodash__WEBPACK_IMPORTED_MODULE_3__.omit)(attributes, ['anchor', 'tagName', 'className']);
+  const classNameAttributes = (0,lodash__WEBPACK_IMPORTED_MODULE_3__.omit)(attributes, ['anchor', 'tagName', 'inlineStyles', 'className']);
   const className = classnames__WEBPACK_IMPORTED_MODULE_2___default()('row', Object.values(classNameAttributes));
   const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save({
-    className
+    className,
+    style: (0,_lib_convertStylesStringToObject__WEBPACK_IMPORTED_MODULE_4__.convertStylesStringToObject)(inlineStyles)
   });
   const innerBlocksProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useInnerBlocksProps.save(blockProps);
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(TagName, innerBlocksProps);
