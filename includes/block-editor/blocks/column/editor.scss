@@ -9,16 +9,5 @@
 	&:not(.is-selected):not(.has-child-selected):hover,
 	&.is-selected {
 		outline: 1px dashed #f0ff;
-		position: relative;
-
-		&::before {
-			content: "column";
-			position: absolute;
-			top: -11px;
-			left: 1px;
-			display: block;
-			color: #f0ff;
-			font-size: 0.5rem;
-		}
 	}
 }

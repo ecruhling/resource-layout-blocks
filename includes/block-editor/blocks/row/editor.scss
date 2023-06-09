@@ -30,16 +30,5 @@
 	&:not(.is-selected):not(.has-child-selected):hover,
 	&.is-selected {
 		outline: 1px dashed #800080;
-		position: relative;
-
-		&::before {
-			content: "row";
-			position: absolute;
-			top: -11px;
-			left: 1px;
-			display: block;
-			color: #800080;
-			font-size: 0.5rem;
-		}
 	}
 }
