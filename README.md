@@ -83,19 +83,22 @@ Requires PHP >= 7.0. Requires WordPress >= 5.9.
 
 ## Features
 
-A 'Class Inspector' area is added to the Block Control Toolbar. This dynamically
-lists all the CSS classes added to the block during creation and editing. It provides a concise, quick way
+Blocks have an 'inlineStyle' attribute. This attribute is editable in the side panel, under the Advanced accordion - '
+Inline Styles'. Must be a valid string of inline CSS. Be aware that as some native WordPress attributes (like
+'align' and 'alignWide') are dependent on inline CSS, these attributes are not compatible with these blocks.
+
+A 'Class Inspector' area is added to the Block Control Toolbar. This dynamically lists all the CSS classes added to the
+block during creation and editing. It provides a concise, quick way
 of telling exactly what classes are added throughout all breakpoints, including any custom CSS classes added in the
-Advanced
-sidebar.
+Advanced sidebar.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Roadmap
 
-- [ ] Add Controls for creating & editing inline style per block.
+- [X] Add Controls for creating & editing inline style per block.
 
-- [ ] Block for layout purposes only, placeholder, width 100% to break column, etc.
+- [ ] Block for layout purposes only: placeholder, grouping for alignment & justify, width 100%, to break column, etc.
 
 - [ ] Enable CSS class editing from within the Class Inspector.
 
