@@ -1451,10 +1451,9 @@ export default function edit( { attributes, setAttributes } ) {
 					autoComplete="off"
 					label={ __( 'Inline Styles' ) }
 					value={ inlineStyles || '' }
-					onChange={ ( nextValue ) => {
+					onChange={ ( value ) => {
 						setAttributes( {
-							inlineStyles:
-								nextValue !== '' ? nextValue : undefined,
+							inlineStyles: value !== '' ? value : undefined,
 						} );
 					} }
 				/>

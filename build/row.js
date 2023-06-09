@@ -1,1 +1,2476 @@
-(()=>{var e,t={259:(e,t,l)=>{"use strict";const n=window.wp.blocks,a=JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"resource-layout-blocks/row","title":"Row","category":"resource-layout-blocks","description":"A Row used to contain Column blocks. By default, Rows get negative margin on both sides; half of the gutter value - usually -12px. The number of Columns is set by manually adding Column blocks and adjusting the CSS classes.","keywords":["row"],"version":"1.0.0","textdomain":"resource","attributes":{"anchor":{"type":"string"},"tagName":{"type":"string","default":"div"},"baseDisplay":{"type":"string"},"basePaddingTop":{"type":"string"},"basePaddingRight":{"type":"string"},"basePaddingBottom":{"type":"string"},"basePaddingLeft":{"type":"string"},"baseMarginTop":{"type":"string"},"baseMarginRight":{"type":"string"},"baseMarginBottom":{"type":"string"},"baseMarginLeft":{"type":"string"},"baseAlignText":{"type":"string"},"baseFlexDirection":{"type":"string"},"baseFillGrowShrink":{"type":"string"},"baseWrap":{"type":"string"},"baseOrder":{"type":"string"},"baseAlignContent":{"type":"string"},"baseAlignItems":{"type":"string"},"baseAlignSelf":{"type":"string"},"baseJustifyContent":{"type":"string"},"smDisplay":{"type":"string"},"smPaddingTop":{"type":"string"},"smPaddingRight":{"type":"string"},"smPaddingBottom":{"type":"string"},"smPaddingLeft":{"type":"string"},"smMarginTop":{"type":"string"},"smMarginRight":{"type":"string"},"smMarginBottom":{"type":"string"},"smMarginLeft":{"type":"string"},"smAlignText":{"type":"string"},"smFlexDirection":{"type":"string"},"smFillGrowShrink":{"type":"string"},"smWrap":{"type":"string"},"smOrder":{"type":"string"},"smAlignContent":{"type":"string"},"smAlignItems":{"type":"string"},"smAlignSelf":{"type":"string"},"smJustifyContent":{"type":"string"},"mdDisplay":{"type":"string"},"mdPaddingTop":{"type":"string"},"mdPaddingRight":{"type":"string"},"mdPaddingBottom":{"type":"string"},"mdPaddingLeft":{"type":"string"},"mdMarginTop":{"type":"string"},"mdMarginRight":{"type":"string"},"mdMarginBottom":{"type":"string"},"mdMarginLeft":{"type":"string"},"mdAlignText":{"type":"string"},"mdFlexDirection":{"type":"string"},"mdFillGrowShrink":{"type":"string"},"mdWrap":{"type":"string"},"mdOrder":{"type":"string"},"mdAlignContent":{"type":"string"},"mdAlignItems":{"type":"string"},"mdAlignSelf":{"type":"string"},"mdJustifyContent":{"type":"string"},"lgDisplay":{"type":"string"},"lgPaddingTop":{"type":"string"},"lgPaddingRight":{"type":"string"},"lgPaddingBottom":{"type":"string"},"lgPaddingLeft":{"type":"string"},"lgMarginTop":{"type":"string"},"lgMarginRight":{"type":"string"},"lgMarginBottom":{"type":"string"},"lgMarginLeft":{"type":"string"},"lgAlignText":{"type":"string"},"lgFlexDirection":{"type":"string"},"lgFillGrowShrink":{"type":"string"},"lgWrap":{"type":"string"},"lgOrder":{"type":"string"},"lgAlignContent":{"type":"string"},"lgAlignItems":{"type":"string"},"lgAlignSelf":{"type":"string"},"lgJustifyContent":{"type":"string"},"xlDisplay":{"type":"string"},"xlPaddingTop":{"type":"string"},"xlPaddingRight":{"type":"string"},"xlPaddingBottom":{"type":"string"},"xlPaddingLeft":{"type":"string"},"xlMarginTop":{"type":"string"},"xlMarginRight":{"type":"string"},"xlMarginBottom":{"type":"string"},"xlMarginLeft":{"type":"string"},"xlAlignText":{"type":"string"},"xlFlexDirection":{"type":"string"},"xlFillGrowShrink":{"type":"string"},"xlWrap":{"type":"string"},"xlOrder":{"type":"string"},"xlAlignContent":{"type":"string"},"xlAlignItems":{"type":"string"},"xlAlignSelf":{"type":"string"},"xlJustifyContent":{"type":"string"},"xxlDisplay":{"type":"string"},"xxlPaddingTop":{"type":"string"},"xxlPaddingRight":{"type":"string"},"xxlPaddingBottom":{"type":"string"},"xxlPaddingLeft":{"type":"string"},"xxlMarginTop":{"type":"string"},"xxlMarginRight":{"type":"string"},"xxlMarginBottom":{"type":"string"},"xxlMarginLeft":{"type":"string"},"xxlAlignText":{"type":"string"},"xxlFlexDirection":{"type":"string"},"xxlFillGrowShrink":{"type":"string"},"xxlWrap":{"type":"string"},"xxlOrder":{"type":"string"},"xxlAlignContent":{"type":"string"},"xxlAlignItems":{"type":"string"},"xxlAlignSelf":{"type":"string"},"xxlJustifyContent":{"type":"string"}},"supports":{"anchor":true,"align":false,"alignWide":false,"ariaLabel":true,"className":true,"color":{"background":true,"gradients":false,"link":false,"text":false},"customClassName":true,"defaultStylePicker":true,"dimensions":{"minHeight":false},"filter":{"duotone":false},"html":false,"inserter":true,"multiple":true,"reusable":true,"lock":true,"position":{"sticky":false},"spacing":{"margin":false,"padding":false,"blockGap":false},"typography":{"fontSize":false,"lineHeight":false}},"editorScript":"file:../../../../build/row.js","editorStyle":"file:../../../../build/row.css","style":"file:../../../../build/style-row.css"}'),r=window.wp.element,i=(0,r.createElement)("svg",{height:"24",viewBox:"0 0 24 24",width:"24",xmlns:"http://www.w3.org/2000/svg"},(0,r.createElement)("path",{d:"m23.1 16.6h-.3v-9.2h.3c.5 0 .9-.4.9-.9s-.4-.9-.9-.9h-22.2c-.5 0-.9.4-.9.9s.4.9.9.9h.3v9.2h-.3c-.5 0-.9.4-.9.9s.4.9.9.9h22.2c.5 0 .9-.4.9-.9s-.4-.9-.9-.9zm-2.1 0h-18v-9.2h18z",fill:"#ccc"}),(0,r.createElement)("path",{d:"m4.6 12c0 .5.4.9.9.9h13c.5 0 .9-.4.9-.9s-.4-.9-.9-.9h-13c-.5 0-.9.4-.9.9z"})),s=window.wp.i18n,o=window.wp.blockEditor,g=window.wp.components;var m=l(184),d=l.n(m);const c=window.lodash,u={header:(0,s.__)("The <header> element should represent introductory content, typically a group of introductory or navigational aids."),main:(0,s.__)("The <main> element should be used for the primary content of your document only. "),section:(0,s.__)("The <section> element should represent a standalone portion of the document that can't be better represented by another element."),article:(0,s.__)("The <article> element should represent a self contained, syndicatable portion of the document."),aside:(0,s.__)("The <aside> element should represent a portion of a document whose content is only indirectly related to the document's main content."),footer:(0,s.__)("The <footer> element should represent a footer for its nearest sectioning element (e.g.: <section>, <article>, <main> etc.).")};function p({breakpoint:e,breakpoint_name:t,display:l,setDisplay:n}){return(0,r.createElement)("div",null,(0,r.createElement)(g.CardHeader,{isBorderless:!0,isShady:!0,size:"small",className:"resource-card-header"},(0,s.__)(`${t} DISPLAY`,"resource")),(0,r.createElement)(g.CardBody,{size:"small"},(0,r.createElement)(g.Flex,{wrap:!0},(0,r.createElement)(g.FlexItem,null,(0,r.createElement)(g.SelectControl,{label:(0,s.__)("Display","resource"),value:l,options:[{value:"",label:(0,s.__)("Default","resource")},{value:`d-${e}none`,label:(0,s.__)("None","resource")},{value:`d-${e}inline`,label:(0,s.__)("Inline","resource")},{value:`d-${e}inline-block`,label:(0,s.__)("Inline-Block","resource")},{value:`d-${e}block`,label:(0,s.__)("Block","resource")},{value:`d-${e}grid`,label:(0,s.__)("Grid","resource")},{value:`d-${e}inline-grid`,label:(0,s.__)("Inline Grid","resource")},{value:`d-${e}table`,label:(0,s.__)("Table","resource")},{value:`d-${e}table-cell`,label:(0,s.__)("Table Cell","resource")},{value:`d-${e}table-row`,label:(0,s.__)("Table Row","resource")},{value:`d-${e}flex`,label:(0,s.__)("Flex","resource")},{value:`d-${e}inline-flex`,label:(0,s.__)("Inline Flex","resource")}],onChange:n})))))}function b({breakpoint:e,breakpoint_name:t,flexDirection:l,justifyContent:n,alignItems:a,alignSelf:i,fillGrowShrink:o,wrap:m,order:d,alignContent:c,setFlexDirection:u,setJustifyContent:p,setAlignItems:b,setAlignSelf:x,setFillGrowShrink:_,setWrap:f,setOrder:h,setAlignContent:y}){return(0,r.createElement)("div",null,(0,r.createElement)(g.CardHeader,{isBorderless:!0,isShady:!0,size:"small",className:"resource-card-header"},(0,s.__)(`${t} FLEX ATTRIBUTES`,"resource")),(0,r.createElement)(g.CardBody,{size:"small"},(0,r.createElement)(g.Flex,{wrap:!0},(0,r.createElement)(g.FlexItem,null,(0,r.createElement)(g.SelectControl,{label:(0,s.__)("Direction","resource"),value:l,options:[{value:"",label:(0,s.__)("None","resource")},{value:`flex-${e}row`,label:(0,s.__)("Flex Row","resource")},{value:`flex-${e}row-reverse`,label:(0,s.__)("Flex Row Reverse","resource")},{value:`flex-${e}column`,label:(0,s.__)("Flex Column","resource")},{value:`flex-${e}column-reverse`,label:(0,s.__)("Flex Column Reverse","resource")}],onChange:u})),(0,r.createElement)(g.FlexItem,null,(0,r.createElement)(g.SelectControl,{label:(0,s.__)("Justify Content","resource"),value:n,options:[{value:"",label:(0,s.__)("None","resource")},{value:`justify-content-${e}start`,label:(0,s.__)("Start","resource")},{value:`justify-content-${e}end`,label:(0,s.__)("End","resource")},{value:`justify-content-${e}center`,label:(0,s.__)("Center","resource")},{value:`justify-content-${e}between`,label:(0,s.__)("Between","resource")},{value:`justify-content-${e}around`,label:(0,s.__)("Around","resource")},{value:`justify-content-${e}evenly`,label:(0,s.__)("Evenly","resource")}],onChange:p})),(0,r.createElement)(g.FlexItem,null,(0,r.createElement)(g.SelectControl,{label:(0,s.__)("Align Items","resource"),value:a,options:[{value:"",label:(0,s.__)("None","resource")},{value:`align-items-${e}start`,label:(0,s.__)("Start","resource")},{value:`align-items-${e}end`,label:(0,s.__)("End","resource")},{value:`align-items-${e}center`,label:(0,s.__)("Center","resource")},{value:`align-items-${e}baseline`,label:(0,s.__)("Baseline","resource")},{value:`align-items-${e}stretch`,label:(0,s.__)("Stretch","resource")}],onChange:b})),(0,r.createElement)(g.FlexItem,null,(0,r.createElement)(g.SelectControl,{label:(0,s.__)("Align Self","resource"),value:i,options:[{value:"",label:(0,s.__)("None","resource")},{value:`align-self-${e}start`,label:(0,s.__)("Start","resource")},{value:`align-self-${e}end`,label:(0,s.__)("End","resource")},{value:`align-self-${e}center`,label:(0,s.__)("Center","resource")},{value:`align-self-${e}baseline`,label:(0,s.__)("Baseline","resource")},{value:`align-self-${e}stretch`,label:(0,s.__)("Stretch","resource")}],onChange:x})),(0,r.createElement)(g.FlexItem,null,(0,r.createElement)(g.SelectControl,{label:(0,s.__)("Fill, Grow, & Shrink","resource"),value:o,options:[{value:"",label:(0,s.__)("None","resource")},{value:`flex-${e}fill`,label:(0,s.__)("Fill","resource")},{value:`flex-${e}grow-0`,label:(0,s.__)("Grow 0","resource")},{value:`flex-${e}grow-1`,label:(0,s.__)("Grow 1","resource")},{value:`flex-${e}shrink-0`,label:(0,s.__)("Shrink 0","resource")},{value:`flex-${e}shrink-1`,label:(0,s.__)("Shrink 1","resource")}],onChange:_})),(0,r.createElement)(g.FlexItem,null,(0,r.createElement)(g.SelectControl,{label:(0,s.__)("Wrap","resource"),value:m,options:[{value:"",label:(0,s.__)("None","resource")},{value:`flex-${e}nowrap`,label:(0,s.__)("No Wrap","resource")},{value:`flex-${e}wrap`,label:(0,s.__)("Wrap","resource")},{value:`flex-${e}wrap-reverse`,label:(0,s.__)("Wrap Reverse","resource")}],onChange:f})),(0,r.createElement)(g.FlexItem,null,(0,r.createElement)(g.SelectControl,{label:(0,s.__)("Order","resource"),value:d,options:[{value:"",label:(0,s.__)("None","resource")},{value:"order-first",label:(0,s.__)("first","resource")},{value:"order-0",label:(0,s.__)("0","resource")},{value:"order-1",label:(0,s.__)("1","resource")},{value:"order-2",label:(0,s.__)("2","resource")},{value:"order-3",label:(0,s.__)("3","resource")},{value:"order-4",label:(0,s.__)("4","resource")},{value:"order-5",label:(0,s.__)("5","resource")},{value:"order-last",label:(0,s.__)("last","resource")}],onChange:h})),(0,r.createElement)(g.FlexItem,null,(0,r.createElement)(g.SelectControl,{label:(0,s.__)("Align Content","resource"),value:c,options:[{value:"",label:(0,s.__)("None","resource")},{value:`align-content-${e}start`,label:(0,s.__)("Start","resource")},{value:`align-content-${e}end`,label:(0,s.__)("End","resource")},{value:`justify-content-${e}center`,label:(0,s.__)("Center","resource")},{value:`align-content-${e}between`,label:(0,s.__)("Between","resource")},{value:`align-content-${e}around`,label:(0,s.__)("Around","resource")},{value:`align-content-${e}stretch`,label:(0,s.__)("Stretch","resource")}],onChange:y})))))}const x=(0,r.createElement)("svg",{height:"16",viewBox:"0 0 16 16",width:"16",xmlns:"http://www.w3.org/2000/svg"},(0,r.createElement)("path",{d:"m3 0h10v1.9h-10z"}),(0,r.createElement)("g",{fill:"#bbb"},(0,r.createElement)("path",{d:"m3 14.1h10v1.9h-10z"}),(0,r.createElement)("path",{d:"m10 7h10v1.9h-10z",transform:"matrix(0 1 -1 0 23.0293 -7.0293)"}),(0,r.createElement)("path",{d:"m-4.1 7h10v1.9h-10z",transform:"matrix(0 1 -1 0 8.9707 7.0293)"}))),_=(0,r.createElement)("svg",{height:"16",viewBox:"0 0 16 16",width:"16",xmlns:"http://www.w3.org/2000/svg"},(0,r.createElement)("path",{d:"m3 0h10v1.9h-10z",fill:"#bbb"}),(0,r.createElement)("path",{d:"m3 14.1h10v1.9h-10z",fill:"#bbb"}),(0,r.createElement)("path",{d:"m10 7h10v1.9h-10z",transform:"matrix(0 1 -1 0 23.0293 -7.0293)"}),(0,r.createElement)("path",{d:"m-4.1 7h10v1.9h-10z",fill:"#bbb",transform:"matrix(0 1 -1 0 8.9707 7.0293)"})),f=(0,r.createElement)("svg",{height:"16",viewBox:"0 0 16 16",width:"16",xmlns:"http://www.w3.org/2000/svg"},(0,r.createElement)("path",{d:"m3 0h10v1.9h-10z",fill:"#bbb"}),(0,r.createElement)("path",{d:"m3 14.1h10v1.9h-10z"}),(0,r.createElement)("g",{fill:"#bbb"},(0,r.createElement)("path",{d:"m10 7h10v1.9h-10z",transform:"matrix(0 1 -1 0 23.0293 -7.0293)"}),(0,r.createElement)("path",{d:"m-4.1 7h10v1.9h-10z",transform:"matrix(0 1 -1 0 8.9707 7.0293)"}))),h=(0,r.createElement)("svg",{height:"16",viewBox:"0 0 16 16",width:"16",xmlns:"http://www.w3.org/2000/svg"},(0,r.createElement)("g",{fill:"#bbb"},(0,r.createElement)("path",{d:"m3 0h10v1.9h-10z"}),(0,r.createElement)("path",{d:"m3 14.1h10v1.9h-10z"}),(0,r.createElement)("path",{d:"m10 7h10v1.9h-10z",transform:"matrix(0 1 -1 0 23.0293 -7.0293)"})),(0,r.createElement)("path",{d:"m-4.1 7h10v1.9h-10z",transform:"matrix(0 1 -1 0 8.9707 7.0293)"}));function y({breakpoint:e,breakpoint_name:t,paddingTop:l,paddingRight:n,paddingBottom:a,paddingLeft:i,setPaddingTop:o,setPaddingRight:m,setPaddingBottom:d,setPaddingLeft:c}){return(0,r.createElement)("div",null,(0,r.createElement)(g.CardHeader,{isBorderless:!0,isShady:!0,size:"small",className:"resource-card-header"},(0,s.__)(`${t} PADDING`,"resource")),(0,r.createElement)(g.CardBody,{size:"small"},(0,r.createElement)(g.Flex,{wrap:!0},(0,r.createElement)(g.FlexItem,null,(0,r.createElement)(g.SelectControl,{label:x,value:l,style:{maxWidth:"42.5px"},options:[{value:"",label:(0,s.__)("-","resource")},{value:`pt-${e}0`,label:(0,s.__)("0","resource")},{value:`pt-${e}1`,label:(0,s.__)("1","resource")},{value:`pt-${e}2`,label:(0,s.__)("2","resource")},{value:`pt-${e}3`,label:(0,s.__)("3","resource")},{value:`pt-${e}4`,label:(0,s.__)("4","resource")},{value:`pt-${e}5`,label:(0,s.__)("5","resource")}],onChange:o})),(0,r.createElement)(g.FlexItem,null,(0,r.createElement)(g.SelectControl,{label:_,value:n,style:{maxWidth:"42.5px"},options:[{value:"",label:(0,s.__)("-","resource")},{value:`pe-${e}0`,label:(0,s.__)("0","resource")},{value:`pe-${e}1`,label:(0,s.__)("1","resource")},{value:`pe-${e}2`,label:(0,s.__)("2","resource")},{value:`pe-${e}3`,label:(0,s.__)("3","resource")},{value:`pe-${e}4`,label:(0,s.__)("4","resource")},{value:`pe-${e}5`,label:(0,s.__)("5","resource")}],onChange:m})),(0,r.createElement)(g.FlexItem,null,(0,r.createElement)(g.SelectControl,{label:f,value:a,style:{maxWidth:"42.5px"},options:[{value:"",label:(0,s.__)("-","resource")},{value:`pb-${e}0`,label:(0,s.__)("0","resource")},{value:`pb-${e}1`,label:(0,s.__)("1","resource")},{value:`pb-${e}2`,label:(0,s.__)("2","resource")},{value:`pb-${e}3`,label:(0,s.__)("3","resource")},{value:`pb-${e}4`,label:(0,s.__)("4","resource")},{value:`pb-${e}5`,label:(0,s.__)("5","resource")}],onChange:d})),(0,r.createElement)(g.FlexItem,null,(0,r.createElement)(g.SelectControl,{label:h,value:i,style:{maxWidth:"42.5px"},options:[{value:"",label:(0,s.__)("-","resource")},{value:`ps-${e}0`,label:(0,s.__)("0","resource")},{value:`ps-${e}1`,label:(0,s.__)("1","resource")},{value:`ps-${e}2`,label:(0,s.__)("2","resource")},{value:`ps-${e}3`,label:(0,s.__)("3","resource")},{value:`ps-${e}4`,label:(0,s.__)("4","resource")},{value:`ps-${e}5`,label:(0,s.__)("5","resource")}],onChange:c})))))}function v({breakpoint:e,breakpoint_name:t,marginTop:l,marginRight:n,marginBottom:a,marginLeft:i,setMarginTop:o,setMarginRight:m,setMarginBottom:d,setMarginLeft:c}){return(0,r.createElement)("div",null,(0,r.createElement)(g.CardHeader,{isBorderless:!0,isShady:!0,size:"small",className:"resource-card-header"},(0,s.__)(`${t} MARGIN`,"resource")),(0,r.createElement)(g.CardBody,{size:"small"},(0,r.createElement)(g.Flex,{wrap:!0},(0,r.createElement)(g.FlexItem,null,(0,r.createElement)(g.SelectControl,{label:x,value:l,style:{maxWidth:"42.5px"},options:[{value:"",label:(0,s.__)("-","resource")},{value:`mt-${e}0`,label:(0,s.__)("0","resource")},{value:`mt-${e}1`,label:(0,s.__)("1","resource")},{value:`mt-${e}2`,label:(0,s.__)("2","resource")},{value:`mt-${e}3`,label:(0,s.__)("3","resource")},{value:`mt-${e}4`,label:(0,s.__)("4","resource")},{value:`mt-${e}5`,label:(0,s.__)("5","resource")},{value:`mt-${e}auto`,label:(0,s.__)("Auto","resource")}],onChange:o})),(0,r.createElement)(g.FlexItem,null,(0,r.createElement)(g.SelectControl,{label:_,value:n,style:{maxWidth:"42.5px"},options:[{value:"",label:(0,s.__)("-","resource")},{value:`me-${e}0`,label:(0,s.__)("0","resource")},{value:`me-${e}1`,label:(0,s.__)("1","resource")},{value:`me-${e}2`,label:(0,s.__)("2","resource")},{value:`me-${e}3`,label:(0,s.__)("3","resource")},{value:`me-${e}4`,label:(0,s.__)("4","resource")},{value:`me-${e}5`,label:(0,s.__)("5","resource")},{value:`me-${e}auto`,label:(0,s.__)("Auto","resource")}],onChange:m})),(0,r.createElement)(g.FlexItem,null,(0,r.createElement)(g.SelectControl,{label:f,value:a,style:{maxWidth:"42.5px"},options:[{value:"",label:(0,s.__)("-","resource")},{value:`mb-${e}0`,label:(0,s.__)("0","resource")},{value:`mb-${e}1`,label:(0,s.__)("1","resource")},{value:`mb-${e}2`,label:(0,s.__)("2","resource")},{value:`mb-${e}3`,label:(0,s.__)("3","resource")},{value:`mb-${e}4`,label:(0,s.__)("4","resource")},{value:`mb-${e}5`,label:(0,s.__)("5","resource")},{value:`mb-${e}auto`,label:(0,s.__)("Auto","resource")}],onChange:d})),(0,r.createElement)(g.FlexItem,null,(0,r.createElement)(g.SelectControl,{label:h,value:i,style:{maxWidth:"42.5px"},options:[{value:"",label:(0,s.__)("-","resource")},{value:`ms-${e}0`,label:(0,s.__)("0","resource")},{value:`ms-${e}1`,label:(0,s.__)("1","resource")},{value:`ms-${e}2`,label:(0,s.__)("2","resource")},{value:`ms-${e}3`,label:(0,s.__)("3","resource")},{value:`ms-${e}4`,label:(0,s.__)("4","resource")},{value:`ms-${e}5`,label:(0,s.__)("5","resource")},{value:`ms-${e}auto`,label:(0,s.__)("Auto","resource")}],onChange:c})))))}function E({breakpoint:e,breakpoint_name:t,alignText:l,setAlignText:n}){return(0,r.createElement)("div",null,(0,r.createElement)(g.CardHeader,{isBorderless:!0,isShady:!0,size:"small",className:"resource-card-header"},(0,s.__)(`${t} ALIGN`,"resource")),(0,r.createElement)(g.CardBody,{size:"small"},(0,r.createElement)(g.Flex,{wrap:!0},(0,r.createElement)(g.FlexItem,null,(0,r.createElement)(g.SelectControl,{label:(0,s.__)("Align Text","resource"),value:l,options:[{value:"",label:(0,s.__)("None","resource")},{value:`text-${e}start`,label:(0,s.__)("Start","resource")},{value:`text-${e}center`,label:(0,s.__)("Center","resource")},{value:`text-${e}end`,label:(0,s.__)("End","resource")}],onChange:n})))))}const{name:C,...k}=a;(0,n.registerBlockType)(C,{...k,icon:i,edit:function({attributes:e,setAttributes:t}){const{tagName:l="div",baseDisplay:n,basePaddingTop:a,basePaddingRight:i,basePaddingBottom:m,basePaddingLeft:x,baseMarginTop:_,baseMarginRight:f,baseMarginBottom:h,baseMarginLeft:C,baseAlignText:k,baseFlexDirection:A,baseFillGrowShrink:w,baseWrap:S,baseOrder:T,baseAlignContent:M,baseAlignItems:F,baseAlignSelf:P,baseJustifyContent:B,smDisplay:$,smPaddingTop:I,smPaddingRight:L,smPaddingBottom:R,smPaddingLeft:D,smMarginTop:G,smMarginRight:N,smMarginBottom:O,smMarginLeft:z,smAlignText:J,smFlexDirection:W,smFillGrowShrink:j,smWrap:X,smOrder:H,smAlignContent:U,smAlignItems:V,smAlignSelf:Y,smJustifyContent:q,mdDisplay:K,mdPaddingTop:Q,mdPaddingRight:Z,mdPaddingBottom:ee,mdPaddingLeft:te,mdMarginTop:le,mdMarginRight:ne,mdMarginBottom:ae,mdMarginLeft:re,mdAlignText:ie,mdFlexDirection:se,mdFillGrowShrink:oe,mdWrap:ge,mdOrder:me,mdAlignContent:de,mdAlignItems:ce,mdAlignSelf:ue,mdJustifyContent:pe,lgDisplay:be,lgPaddingTop:xe,lgPaddingRight:_e,lgPaddingBottom:fe,lgPaddingLeft:he,lgMarginTop:ye,lgMarginRight:ve,lgMarginBottom:Ee,lgMarginLeft:Ce,lgAlignText:ke,lgFlexDirection:Ae,lgFillGrowShrink:we,lgWrap:Se,lgOrder:Te,lgAlignContent:Me,lgAlignItems:Fe,lgAlignSelf:Pe,lgJustifyContent:Be,xlDisplay:$e,xlPaddingTop:Ie,xlPaddingRight:Le,xlPaddingBottom:Re,xlPaddingLeft:De,xlMarginTop:Ge,xlMarginRight:Ne,xlMarginBottom:Oe,xlMarginLeft:ze,xlAlignText:Je,xlFlexDirection:We,xlFillGrowShrink:je,xlWrap:Xe,xlOrder:He,xlAlignContent:Ue,xlAlignItems:Ve,xlAlignSelf:Ye,xlJustifyContent:qe,xxlDisplay:Ke,xxlPaddingTop:Qe,xxlPaddingRight:Ze,xxlPaddingBottom:et,xxlPaddingLeft:tt,xxlMarginTop:lt,xxlMarginRight:nt,xxlMarginBottom:at,xxlMarginLeft:rt,xxlAlignText:it,xxlFlexDirection:st,xxlFillGrowShrink:ot,xxlWrap:gt,xxlOrder:mt,xxlAlignContent:dt,xxlAlignItems:ct,xxlAlignSelf:ut,xxlJustifyContent:pt}=e,bt=(0,c.omit)(e,["anchor","tagName","className"]),xt=d()("row",Object.values(bt)),_t=(0,o.useBlockProps)({className:xt});return(0,r.createElement)(r.Fragment,null,(0,r.createElement)(o.BlockControls,null,(0,r.createElement)(g.Toolbar,{label:"Class Inspector",id:"class-inspector"},(0,r.createElement)(g.ToolbarItem,{as:"p"},xt))),(0,r.createElement)(o.InspectorControls,null,(0,r.createElement)(g.Card,null,(0,r.createElement)(g.CardHeader,{isBorderless:!0,isShady:!0,size:"small",className:"resource-card-header"},(0,s.__)("ROW","resource")),(0,r.createElement)(g.CardBody,{size:"small"},(0,r.createElement)(g.Flex,{wrap:!0},(0,r.createElement)(g.FlexItem,null,(0,r.createElement)(g.SelectControl,{label:(0,s.__)("HTML element","resource"),options:[{label:(0,s.__)("Default (<div>)","resource"),value:"div"},{label:"<header>",value:"header"},{label:"<main>",value:"main"},{label:"<section>",value:"section"},{label:"<article>",value:"article"},{label:"<aside>",value:"aside"},{label:"<footer>",value:"footer"}],value:l,onChange:e=>t({tagName:e}),help:u[l]}))))),(0,r.createElement)(g.TabPanel,{className:"breakpoint-tab-panel",activeClass:"is-active",orientation:"horizontal",tabs:[{name:"base",title:"—",className:"breakpoint-tab",content:(0,r.createElement)(g.Card,null,(0,r.createElement)(p,{breakpoint:"",breakpoint_name:"",display:n,setDisplay:e=>t({baseDisplay:e}),__nextHasNoMarginBottom:!0}),(""===n||"d-flex"===n||"d-inline-flex"===n)&&(0,r.createElement)(r.Fragment,null,(0,r.createElement)(g.CardBody,{size:"small",style:{paddingTop:0,paddingBottom:0}},(0,r.createElement)(g.Flex,{wrap:!0},(0,r.createElement)(g.FlexItem,null,(0,r.createElement)("p",null,(0,r.createElement)("em",null,"Row block default display attribute is 'flex'"))))),(0,r.createElement)(b,{breakpoint:"",breakpoint_name:"",flexDirection:A,justifyContent:B,alignItems:F,alignSelf:P,fillGrowShrink:w,wrap:S,order:T,alignContent:M,setFlexDirection:e=>t({baseFlexDirection:e}),setJustifyContent:e=>t({baseJustifyContent:e}),setAlignItems:e=>t({baseAlignItems:e}),setAlignSelf:e=>t({baseAlignSelf:e}),setFillGrowShrink:e=>t({baseFillGrowShrink:e}),setWrap:e=>t({baseWrap:e}),setOrder:e=>t({baseOrder:e}),setAlignContent:e=>t({baseAlignContent:e})})),"d-none"!==n&&(0,r.createElement)(r.Fragment,null,(0,r.createElement)(y,{breakpoint:"",breakpoint_name:"",paddingTop:a,paddingRight:i,paddingBottom:m,paddingLeft:x,setPaddingTop:e=>t({basePaddingTop:e}),setPaddingRight:e=>t({basePaddingRight:e}),setPaddingBottom:e=>t({basePaddingBottom:e}),setPaddingLeft:e=>t({basePaddingLeft:e})}),(0,r.createElement)(v,{breakpoint:"",breakpoint_name:"",marginTop:_,marginRight:f,marginBottom:h,marginLeft:C,setMarginTop:e=>t({baseMarginTop:e}),setMarginRight:e=>t({baseMarginRight:e}),setMarginBottom:e=>t({baseMarginBottom:e}),setMarginLeft:e=>t({baseMarginLeft:e})}),(0,r.createElement)(E,{breakpoint:"",breakpoint_name:"",alignText:k,flexDirection:A,alignItems:F,alignSelf:P,justifyContent:B,setAlignText:e=>t({baseAlignText:e}),setFlexDirection:e=>t({baseFlexDirection:e}),setAlignItems:e=>t({baseAlignItems:e}),setAlignSelf:e=>t({baseAlignSelf:e}),setJustifyContent:e=>t({baseJustifyContent:e})})))},{name:"small",title:"SM",className:"breakpoint-tab",content:(0,r.createElement)(g.Card,null,(0,r.createElement)(p,{breakpoint:"sm-",breakpoint_name:"SM",display:$,setDisplay:e=>t({smDisplay:e})}),(""===$||"d-sm-flex"===$||"d-sm-inline-flex"===$)&&(0,r.createElement)(r.Fragment,null,(0,r.createElement)(g.CardBody,{size:"small",style:{paddingTop:0,paddingBottom:0}},(0,r.createElement)(g.Flex,{wrap:!0},(0,r.createElement)(g.FlexItem,null,(0,r.createElement)("p",null,(0,r.createElement)("em",null,"Row block default display attribute is 'flex'"))))),(0,r.createElement)(b,{breakpoint:"sm-",breakpoint_name:"SM",flexDirection:W,justifyContent:q,alignItems:V,alignSelf:Y,fillGrowShrink:j,wrap:X,order:H,alignContent:U,setFlexDirection:e=>t({smFlexDirection:e}),setJustifyContent:e=>t({smJustifyContent:e}),setAlignItems:e=>t({smAlignItems:e}),setAlignSelf:e=>t({smAlignSelf:e}),setFillGrowShrink:e=>t({smFillGrowShrink:e}),setWrap:e=>t({smWrap:e}),setOrder:e=>t({smOrder:e}),setAlignContent:e=>t({smAlignContent:e})})),"d-sm-none"!==$&&(0,r.createElement)(r.Fragment,null,(0,r.createElement)(y,{breakpoint:"sm-",breakpoint_name:"SM",paddingTop:I,paddingRight:L,paddingBottom:R,paddingLeft:D,setPaddingTop:e=>t({smPaddingTop:e}),setPaddingRight:e=>t({smPaddingRight:e}),setPaddingBottom:e=>t({smPaddingBottom:e}),setPaddingLeft:e=>t({smPaddingLeft:e})}),(0,r.createElement)(v,{breakpoint:"sm-",breakpoint_name:"SM",marginTop:G,marginRight:N,marginBottom:O,marginLeft:z,setMarginTop:e=>t({smMarginTop:e}),setMarginRight:e=>t({smMarginRight:e}),setMarginBottom:e=>t({smMarginBottom:e}),setMarginLeft:e=>t({smMarginLeft:e})}),(0,r.createElement)(E,{breakpoint:"sm-",breakpoint_name:"SM",alignText:J,flexDirection:W,alignItems:V,alignSelf:Y,justifyContent:q,setAlignText:e=>t({smAlignText:e}),setAlignItems:e=>t({smAlignItems:e}),setAlignSelf:e=>t({smAlignSelf:e}),setJustifyContent:e=>t({smJustifyContent:e})})))},{name:"medium",title:"MD",className:"breakpoint-tab",content:(0,r.createElement)(g.Card,null,(0,r.createElement)(p,{breakpoint:"md-",breakpoint_name:"MD",display:K,setDisplay:e=>t({mdDisplay:e})}),(""===K||"d-md-flex"===K||"d-md-inline-flex"===K)&&(0,r.createElement)(r.Fragment,null,(0,r.createElement)(g.CardBody,{size:"small",style:{paddingTop:0,paddingBottom:0}},(0,r.createElement)(g.Flex,{wrap:!0},(0,r.createElement)(g.FlexItem,null,(0,r.createElement)("p",null,(0,r.createElement)("em",null,"Row block default display attribute is 'flex'"))))),(0,r.createElement)(b,{breakpoint:"md-",breakpoint_name:"MD",flexDirection:se,justifyContent:pe,alignItems:ce,alignSelf:ue,fillGrowShrink:oe,wrap:ge,order:me,alignContent:de,setFlexDirection:e=>t({mdFlexDirection:e}),setJustifyContent:e=>t({mdJustifyContent:e}),setAlignItems:e=>t({mdAlignItems:e}),setAlignSelf:e=>t({mdAlignSelf:e}),setFillGrowShrink:e=>t({mdFillGrowShrink:e}),setWrap:e=>t({mdWrap:e}),setOrder:e=>t({mdOrder:e}),setAlignContent:e=>t({mdAlignContent:e})})),"d-md-none"!==K&&(0,r.createElement)(r.Fragment,null,(0,r.createElement)(y,{breakpoint:"md-",breakpoint_name:"MD",paddingTop:Q,paddingRight:Z,paddingBottom:ee,paddingLeft:te,setPaddingTop:e=>t({mdPaddingTop:e}),setPaddingRight:e=>t({mdPaddingRight:e}),setPaddingBottom:e=>t({mdPaddingBottom:e}),setPaddingLeft:e=>t({mdPaddingLeft:e})}),(0,r.createElement)(v,{breakpoint:"md-",breakpoint_name:"MD",marginTop:le,marginRight:ne,marginBottom:ae,marginLeft:re,setMarginTop:e=>t({mdMarginTop:e}),setMarginRight:e=>t({mdMarginRight:e}),setMarginBottom:e=>t({mdMarginBottom:e}),setMarginLeft:e=>t({mdMarginLeft:e})}),(0,r.createElement)(E,{breakpoint:"md-",breakpoint_name:"MD",alignText:ie,flexDirection:se,alignItems:ce,alignSelf:ue,justifyContent:pe,setAlignText:e=>t({mdAlignText:e}),setAlignItems:e=>t({mdAlignItems:e}),setAlignSelf:e=>t({mdAlignSelf:e}),setJustifyContent:e=>t({mdJustifyContent:e})})))},{name:"large",title:"LG",className:"breakpoint-tab",content:(0,r.createElement)(g.Card,null,(0,r.createElement)(p,{breakpoint:"lg-",breakpoint_name:"LG",display:be,setDisplay:e=>t({lgDisplay:e})}),(""===be||"d-lg-flex"===be||"d-lg-inline-flex"===be)&&(0,r.createElement)(r.Fragment,null,(0,r.createElement)(g.CardBody,{size:"small",style:{paddingTop:0,paddingBottom:0}},(0,r.createElement)(g.Flex,{wrap:!0},(0,r.createElement)(g.FlexItem,null,(0,r.createElement)("p",null,(0,r.createElement)("em",null,"Row block default display attribute is 'flex'"))))),(0,r.createElement)(b,{breakpoint:"lg-",breakpoint_name:"LG",flexDirection:Ae,justifyContent:Be,alignItems:Fe,alignSelf:Pe,fillGrowShrink:we,wrap:Se,order:Te,alignContent:Me,setFlexDirection:e=>t({lgFlexDirection:e}),setJustifyContent:e=>t({lgJustifyContent:e}),setAlignItems:e=>t({lgAlignItems:e}),setAlignSelf:e=>t({lgAlignSelf:e}),setFillGrowShrink:e=>t({lgFillGrowShrink:e}),setWrap:e=>t({lgWrap:e}),setOrder:e=>t({lgOrder:e}),setAlignContent:e=>t({lgAlignContent:e})})),"d-lg-none"!==be&&(0,r.createElement)(r.Fragment,null,(0,r.createElement)(y,{breakpoint:"lg-",breakpoint_name:"LG",paddingTop:xe,paddingRight:_e,paddingBottom:fe,paddingLeft:he,setPaddingTop:e=>t({lgPaddingTop:e}),setPaddingRight:e=>t({lgPaddingRight:e}),setPaddingBottom:e=>t({lgPaddingBottom:e}),setPaddingLeft:e=>t({lgPaddingLeft:e})}),(0,r.createElement)(v,{breakpoint:"lg-",breakpoint_name:"LG",marginTop:ye,marginRight:ve,marginBottom:Ee,marginLeft:Ce,setMarginTop:e=>t({lgMarginTop:e}),setMarginRight:e=>t({lgMarginRight:e}),setMarginBottom:e=>t({lgMarginBottom:e}),setMarginLeft:e=>t({lgMarginLeft:e})}),(0,r.createElement)(E,{breakpoint:"lg-",breakpoint_name:"LG",alignText:ke,flexDirection:Ae,alignItems:Fe,alignSelf:Pe,justifyContent:Be,setAlignText:e=>t({lgAlignText:e}),setAlignItems:e=>t({lgAlignItems:e}),setAlignSelf:e=>t({lgAlignSelf:e}),setJustifyContent:e=>t({lgJustifyContent:e})})))},{name:"extra-large",title:"XL",className:"breakpoint-tab",content:(0,r.createElement)(g.Card,null,(0,r.createElement)(p,{breakpoint:"xl-",breakpoint_name:"XL",display:$e,setDisplay:e=>t({xlDisplay:e})}),(""===$e||"d-xl-flex"===$e||"d-xl-inline-flex"===$e)&&(0,r.createElement)(r.Fragment,null,(0,r.createElement)(g.CardBody,{size:"small",style:{paddingTop:0,paddingBottom:0}},(0,r.createElement)(g.Flex,{wrap:!0},(0,r.createElement)(g.FlexItem,null,(0,r.createElement)("p",null,(0,r.createElement)("em",null,"Row block default display attribute is 'flex'"))))),(0,r.createElement)(b,{breakpoint:"xl-",breakpoint_name:"XL",flexDirection:We,justifyContent:qe,alignItems:Ve,alignSelf:Ye,fillGrowShrink:je,wrap:Xe,order:He,alignContent:Ue,setFlexDirection:e=>t({xlFlexDirection:e}),setJustifyContent:e=>t({xlJustifyContent:e}),setAlignItems:e=>t({xlAlignItems:e}),setAlignSelf:e=>t({xlAlignSelf:e}),setFillGrowShrink:e=>t({xlFillGrowShrink:e}),setWrap:e=>t({xlWrap:e}),setOrder:e=>t({xlOrder:e}),setAlignContent:e=>t({xlAlignContent:e})})),"d-xl-none"!==$e&&(0,r.createElement)(r.Fragment,null,(0,r.createElement)(y,{breakpoint:"xl-",breakpoint_name:"XL",paddingTop:Ie,paddingRight:Le,paddingBottom:Re,paddingLeft:De,setPaddingTop:e=>t({xlPaddingTop:e}),setPaddingRight:e=>t({xlPaddingRight:e}),setPaddingBottom:e=>t({xlPaddingBottom:e}),setPaddingLeft:e=>t({xlPaddingLeft:e})}),(0,r.createElement)(v,{breakpoint:"xl-",breakpoint_name:"XL",marginTop:Ge,marginRight:Ne,marginBottom:Oe,marginLeft:ze,setMarginTop:e=>t({xlMarginTop:e}),setMarginRight:e=>t({xlMarginRight:e}),setMarginBottom:e=>t({xlMarginBottom:e}),setMarginLeft:e=>t({xlMarginLeft:e})}),(0,r.createElement)(E,{breakpoint:"xl-",breakpoint_name:"XL",alignText:Je,flexDirection:We,alignItems:Ve,alignSelf:Ye,justifyContent:qe,setAlignText:e=>t({xlAlignText:e}),setAlignItems:e=>t({xlAlignItems:e}),setAlignSelf:e=>t({xlAlignSelf:e}),setJustifyContent:e=>t({xlJustifyContent:e})})))},{name:"extra-extra-large",title:"XXL",className:"breakpoint-tab",content:(0,r.createElement)(g.Card,null,(0,r.createElement)(p,{breakpoint:"xxl-",breakpoint_name:"XXL",display:Ke,setDisplay:e=>t({xxlDisplay:e})}),(""===Ke||"d-xxl-flex"===Ke||"d-xxl-inline-flex"===Ke)&&(0,r.createElement)(r.Fragment,null,(0,r.createElement)(g.CardBody,{size:"small",style:{paddingTop:0,paddingBottom:0}},(0,r.createElement)(g.Flex,{wrap:!0},(0,r.createElement)(g.FlexItem,null,(0,r.createElement)("p",null,(0,r.createElement)("em",null,"Row block default display attribute is ‘flex’"))))),(0,r.createElement)(b,{breakpoint:"xxl-",breakpoint_name:"XXL",flexDirection:st,justifyContent:pt,alignItems:ct,alignSelf:ut,fillGrowShrink:ot,wrap:gt,order:mt,alignContent:dt,setFlexDirection:e=>t({xxlFlexDirection:e}),setJustifyContent:e=>t({xxlJustifyContent:e}),setAlignItems:e=>t({xxlAlignItems:e}),setAlignSelf:e=>t({xxlAlignSelf:e}),setFillGrowShrink:e=>t({xxlFillGrowShrink:e}),setWrap:e=>t({xxlWrap:e}),setOrder:e=>t({xxlOrder:e}),setAlignContent:e=>t({xxlAlignContent:e})})),"d-xxl-none"!==Ke&&(0,r.createElement)(r.Fragment,null,(0,r.createElement)(y,{breakpoint:"xxl-",breakpoint_name:"XXL",paddingTop:Qe,paddingRight:Ze,paddingBottom:et,paddingLeft:tt,setPaddingTop:e=>t({xxlPaddingTop:e}),setPaddingRight:e=>t({xxlPaddingRight:e}),setPaddingBottom:e=>t({xxlPaddingBottom:e}),setPaddingLeft:e=>t({xxlPaddingLeft:e})}),(0,r.createElement)(v,{breakpoint:"xxl-",breakpoint_name:"XXL",marginTop:lt,marginRight:nt,marginBottom:at,marginLeft:rt,setMarginTop:e=>t({xxlMarginTop:e}),setMarginRight:e=>t({xxlMarginRight:e}),setMarginBottom:e=>t({xxlMarginBottom:e}),setMarginLeft:e=>t({xxlMarginLeft:e})}),(0,r.createElement)(E,{breakpoint:"xxl-",breakpoint_name:"XXL",alignText:it,flexDirection:st,alignItems:ct,alignSelf:ut,justifyContent:pt,setAlignText:e=>t({xxlAlignText:e}),setAlignItems:e=>t({xxlAlignItems:e}),setAlignSelf:e=>t({xxlAlignSelf:e}),setJustifyContent:e=>t({xxlJustifyContent:e})})))}]},(({content:e,className:t})=>(0,r.createElement)("div",{className:t},e)))),(0,r.createElement)(l,_t,(0,r.createElement)(o.InnerBlocks,{placeholder:(0,s.__)("Insert Columns","resource")})))},save:function({attributes:e}){const{tagName:t="div"}=e,l=(0,c.omit)(e,["anchor","tagName","className"]),n=d()("row",Object.values(l)),a=o.useBlockProps.save({className:n}),i=o.useInnerBlocksProps.save(a);return(0,r.createElement)(t,i)}})},184:(e,t)=>{var l;!function(){"use strict";var n={}.hasOwnProperty;function a(){for(var e=[],t=0;t<arguments.length;t++){var l=arguments[t];if(l){var r=typeof l;if("string"===r||"number"===r)e.push(l);else if(Array.isArray(l)){if(l.length){var i=a.apply(null,l);i&&e.push(i)}}else if("object"===r){if(l.toString!==Object.prototype.toString&&!l.toString.toString().includes("[native code]")){e.push(l.toString());continue}for(var s in l)n.call(l,s)&&l[s]&&e.push(s)}}}return e.join(" ")}e.exports?(a.default=a,e.exports=a):void 0===(l=function(){return a}.apply(t,[]))||(e.exports=l)}()}},l={};function n(e){var a=l[e];if(void 0!==a)return a.exports;var r=l[e]={exports:{}};return t[e](r,r.exports,n),r.exports}n.m=t,e=[],n.O=(t,l,a,r)=>{if(!l){var i=1/0;for(m=0;m<e.length;m++){for(var[l,a,r]=e[m],s=!0,o=0;o<l.length;o++)(!1&r||i>=r)&&Object.keys(n.O).every((e=>n.O[e](l[o])))?l.splice(o--,1):(s=!1,r<i&&(i=r));if(s){e.splice(m--,1);var g=a();void 0!==g&&(t=g)}}return t}r=r||0;for(var m=e.length;m>0&&e[m-1][2]>r;m--)e[m]=e[m-1];e[m]=[l,a,r]},n.n=e=>{var t=e&&e.__esModule?()=>e.default:()=>e;return n.d(t,{a:t}),t},n.d=(e,t)=>{for(var l in t)n.o(t,l)&&!n.o(e,l)&&Object.defineProperty(e,l,{enumerable:!0,get:t[l]})},n.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),(()=>{var e={906:0,899:0};n.O.j=t=>0===e[t];var t=(t,l)=>{var a,r,[i,s,o]=l,g=0;if(i.some((t=>0!==e[t]))){for(a in s)n.o(s,a)&&(n.m[a]=s[a]);if(o)var m=o(n)}for(t&&t(l);g<i.length;g++)r=i[g],n.o(e,r)&&e[r]&&e[r][0](),e[r]=0;return n.O(m)},l=globalThis.webpackChunkresource_layout_blocks=globalThis.webpackChunkresource_layout_blocks||[];l.forEach(t.bind(null,0)),l.push=t.bind(null,l.push.bind(l))})();var a=n.O(void 0,[899],(()=>n(259)));a=n.O(a)})();
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./includes/block-editor/block-controls/alignControl.js":
+/*!**************************************************************!*\
+  !*** ./includes/block-editor/block-controls/alignControl.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ AlignControl)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+
+/**
+ * WordPress dependencies
+ */
+
+
+
+/**
+ * AlignControl
+ * Component for controlling the Text Align attribute
+ *
+ * @param breakpoint
+ * @param breakpoint_name
+ * @param alignText
+ * @param setAlignText
+ * @returns {JSX.Element}
+ * @constructor
+ */
+function AlignControl({
+  breakpoint,
+  breakpoint_name,
+  alignText,
+  setAlignText
+}) {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardHeader, {
+    isBorderless: true,
+    isShady: true,
+    size: "small",
+    className: "resource-card-header"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)(`${breakpoint_name} ALIGN`, 'resource')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardBody, {
+    size: "small"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Flex, {
+    wrap: true
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Align Text', 'resource'),
+    value: alignText,
+    options: [{
+      value: '',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('None', 'resource')
+    }, {
+      value: `text-${breakpoint}start`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Start', 'resource')
+    }, {
+      value: `text-${breakpoint}center`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Center', 'resource')
+    }, {
+      value: `text-${breakpoint}end`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('End', 'resource')
+    }],
+    onChange: setAlignText
+  })))));
+}
+
+/***/ }),
+
+/***/ "./includes/block-editor/block-controls/displayControl.js":
+/*!****************************************************************!*\
+  !*** ./includes/block-editor/block-controls/displayControl.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ ColumnsDisplayControl)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+
+/**
+ * WordPress dependencies
+ */
+
+
+
+/**
+ * DisplayControl
+ * Component for controlling the Display attribute
+ *
+ * @param breakpoint
+ * @param breakpoint_name
+ * @param display
+ * @param setDisplay
+ * @returns {JSX.Element}
+ * @constructor
+ */
+function ColumnsDisplayControl({
+  breakpoint,
+  breakpoint_name,
+  display,
+  setDisplay
+}) {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardHeader, {
+    isBorderless: true,
+    isShady: true,
+    size: "small",
+    className: "resource-card-header"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)(`${breakpoint_name} DISPLAY`, 'resource')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardBody, {
+    size: "small"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Flex, {
+    wrap: true
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Display', 'resource'),
+    value: display,
+    options: [{
+      value: '',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Default', 'resource')
+    }, {
+      value: `d-${breakpoint}none`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('None', 'resource')
+    }, {
+      value: `d-${breakpoint}inline`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Inline', 'resource')
+    }, {
+      value: `d-${breakpoint}inline-block`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Inline-Block', 'resource')
+    }, {
+      value: `d-${breakpoint}block`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Block', 'resource')
+    }, {
+      value: `d-${breakpoint}grid`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Grid', 'resource')
+    }, {
+      value: `d-${breakpoint}inline-grid`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Inline Grid', 'resource')
+    }, {
+      value: `d-${breakpoint}table`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Table', 'resource')
+    }, {
+      value: `d-${breakpoint}table-cell`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Table Cell', 'resource')
+    }, {
+      value: `d-${breakpoint}table-row`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Table Row', 'resource')
+    }, {
+      value: `d-${breakpoint}flex`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Flex', 'resource')
+    }, {
+      value: `d-${breakpoint}inline-flex`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Inline Flex', 'resource')
+    }],
+    onChange: setDisplay
+  })))));
+}
+
+/***/ }),
+
+/***/ "./includes/block-editor/block-controls/flexControl.js":
+/*!*************************************************************!*\
+  !*** ./includes/block-editor/block-controls/flexControl.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ FlexControl)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+
+/**
+ * WordPress dependencies
+ */
+
+
+
+/**
+ * FlexControl
+ * Component for controlling attributes of flex items
+ *
+ * @param breakpoint
+ * @param breakpoint_name
+ * @param flexDirection
+ * @param justifyContent
+ * @param alignItems
+ * @param alignSelf
+ * @param fillGrowShrink
+ * @param wrap
+ * @param order
+ * @param alignContent
+ * @param setFlexDirection
+ * @param setJustifyContent
+ * @param setAlignItems
+ * @param setAlignSelf
+ * @param setFillGrowShrink
+ * @param setWrap
+ * @param setOrder
+ * @param setAlignContent
+ * @returns {JSX.Element}
+ * @constructor
+ */
+function FlexControl({
+  breakpoint,
+  breakpoint_name,
+  flexDirection,
+  justifyContent,
+  alignItems,
+  alignSelf,
+  fillGrowShrink,
+  wrap,
+  order,
+  alignContent,
+  setFlexDirection,
+  setJustifyContent,
+  setAlignItems,
+  setAlignSelf,
+  setFillGrowShrink,
+  setWrap,
+  setOrder,
+  setAlignContent
+}) {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardHeader, {
+    isBorderless: true,
+    isShady: true,
+    size: "small",
+    className: "resource-card-header"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)(`${breakpoint_name} FLEX ATTRIBUTES`, 'resource')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardBody, {
+    size: "small"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Flex, {
+    wrap: true
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Direction', 'resource'),
+    value: flexDirection,
+    options: [{
+      value: '',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('None', 'resource')
+    }, {
+      value: `flex-${breakpoint}row`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Flex Row', 'resource')
+    }, {
+      value: `flex-${breakpoint}row-reverse`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Flex Row Reverse', 'resource')
+    }, {
+      value: `flex-${breakpoint}column`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Flex Column', 'resource')
+    }, {
+      value: `flex-${breakpoint}column-reverse`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Flex Column Reverse', 'resource')
+    }],
+    onChange: setFlexDirection
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Justify Content', 'resource'),
+    value: justifyContent,
+    options: [{
+      value: '',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('None', 'resource')
+    }, {
+      value: `justify-content-${breakpoint}start`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Start', 'resource')
+    }, {
+      value: `justify-content-${breakpoint}end`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('End', 'resource')
+    }, {
+      value: `justify-content-${breakpoint}center`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Center', 'resource')
+    }, {
+      value: `justify-content-${breakpoint}between`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Between', 'resource')
+    }, {
+      value: `justify-content-${breakpoint}around`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Around', 'resource')
+    }, {
+      value: `justify-content-${breakpoint}evenly`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Evenly', 'resource')
+    }],
+    onChange: setJustifyContent
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Align Items', 'resource'),
+    value: alignItems,
+    options: [{
+      value: '',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('None', 'resource')
+    }, {
+      value: `align-items-${breakpoint}start`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Start', 'resource')
+    }, {
+      value: `align-items-${breakpoint}end`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('End', 'resource')
+    }, {
+      value: `align-items-${breakpoint}center`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Center', 'resource')
+    }, {
+      value: `align-items-${breakpoint}baseline`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Baseline', 'resource')
+    }, {
+      value: `align-items-${breakpoint}stretch`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Stretch', 'resource')
+    }],
+    onChange: setAlignItems
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Align Self', 'resource'),
+    value: alignSelf,
+    options: [{
+      value: '',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('None', 'resource')
+    }, {
+      value: `align-self-${breakpoint}start`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Start', 'resource')
+    }, {
+      value: `align-self-${breakpoint}end`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('End', 'resource')
+    }, {
+      value: `align-self-${breakpoint}center`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Center', 'resource')
+    }, {
+      value: `align-self-${breakpoint}baseline`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Baseline', 'resource')
+    }, {
+      value: `align-self-${breakpoint}stretch`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Stretch', 'resource')
+    }],
+    onChange: setAlignSelf
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Fill, Grow, & Shrink', 'resource'),
+    value: fillGrowShrink,
+    options: [{
+      value: '',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('None', 'resource')
+    }, {
+      value: `flex-${breakpoint}fill`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Fill', 'resource')
+    }, {
+      value: `flex-${breakpoint}grow-0`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Grow 0', 'resource')
+    }, {
+      value: `flex-${breakpoint}grow-1`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Grow 1', 'resource')
+    }, {
+      value: `flex-${breakpoint}shrink-0`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Shrink 0', 'resource')
+    }, {
+      value: `flex-${breakpoint}shrink-1`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Shrink 1', 'resource')
+    }],
+    onChange: setFillGrowShrink
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Wrap', 'resource'),
+    value: wrap,
+    options: [{
+      value: '',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('None', 'resource')
+    }, {
+      value: `flex-${breakpoint}nowrap`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('No Wrap', 'resource')
+    }, {
+      value: `flex-${breakpoint}wrap`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Wrap', 'resource')
+    }, {
+      value: `flex-${breakpoint}wrap-reverse`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Wrap Reverse', 'resource')
+    }],
+    onChange: setWrap
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Order', 'resource'),
+    value: order,
+    options: [{
+      value: '',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('None', 'resource')
+    }, {
+      value: 'order-first',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('first', 'resource')
+    }, {
+      value: 'order-0',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('0', 'resource')
+    }, {
+      value: 'order-1',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('1', 'resource')
+    }, {
+      value: 'order-2',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('2', 'resource')
+    }, {
+      value: 'order-3',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('3', 'resource')
+    }, {
+      value: 'order-4',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('4', 'resource')
+    }, {
+      value: 'order-5',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('5', 'resource')
+    }, {
+      value: 'order-last',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('last', 'resource')
+    }],
+    onChange: setOrder
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Align Content', 'resource'),
+    value: alignContent,
+    options: [{
+      value: '',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('None', 'resource')
+    }, {
+      value: `align-content-${breakpoint}start`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Start', 'resource')
+    }, {
+      value: `align-content-${breakpoint}end`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('End', 'resource')
+    }, {
+      value: `justify-content-${breakpoint}center`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Center', 'resource')
+    }, {
+      value: `align-content-${breakpoint}between`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Between', 'resource')
+    }, {
+      value: `align-content-${breakpoint}around`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Around', 'resource')
+    }, {
+      value: `align-content-${breakpoint}stretch`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Stretch', 'resource')
+    }],
+    onChange: setAlignContent
+  })))));
+}
+
+/***/ }),
+
+/***/ "./includes/block-editor/block-controls/iconBottom.js":
+/*!************************************************************!*\
+  !*** ./includes/block-editor/block-controls/iconBottom.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ iconBottom)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+
+const iconBottom = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
+  height: "16",
+  viewBox: "0 0 16 16",
+  width: "16",
+  xmlns: "http://www.w3.org/2000/svg"
+}, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m3 0h10v1.9h-10z",
+  fill: "#bbb"
+}), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m3 14.1h10v1.9h-10z"
+}), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("g", {
+  fill: "#bbb"
+}, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m10 7h10v1.9h-10z",
+  transform: "matrix(0 1 -1 0 23.0293 -7.0293)"
+}), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m-4.1 7h10v1.9h-10z",
+  transform: "matrix(0 1 -1 0 8.9707 7.0293)"
+})));
+
+
+/***/ }),
+
+/***/ "./includes/block-editor/block-controls/iconEnd.js":
+/*!*********************************************************!*\
+  !*** ./includes/block-editor/block-controls/iconEnd.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ iconEnd)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+
+const iconEnd = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
+  height: "16",
+  viewBox: "0 0 16 16",
+  width: "16",
+  xmlns: "http://www.w3.org/2000/svg"
+}, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m3 0h10v1.9h-10z",
+  fill: "#bbb"
+}), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m3 14.1h10v1.9h-10z",
+  fill: "#bbb"
+}), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m10 7h10v1.9h-10z",
+  transform: "matrix(0 1 -1 0 23.0293 -7.0293)"
+}), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m-4.1 7h10v1.9h-10z",
+  fill: "#bbb",
+  transform: "matrix(0 1 -1 0 8.9707 7.0293)"
+}));
+
+
+/***/ }),
+
+/***/ "./includes/block-editor/block-controls/iconStart.js":
+/*!***********************************************************!*\
+  !*** ./includes/block-editor/block-controls/iconStart.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ iconStart)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+
+const iconStart = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
+  height: "16",
+  viewBox: "0 0 16 16",
+  width: "16",
+  xmlns: "http://www.w3.org/2000/svg"
+}, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("g", {
+  fill: "#bbb"
+}, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m3 0h10v1.9h-10z"
+}), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m3 14.1h10v1.9h-10z"
+}), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m10 7h10v1.9h-10z",
+  transform: "matrix(0 1 -1 0 23.0293 -7.0293)"
+})), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m-4.1 7h10v1.9h-10z",
+  transform: "matrix(0 1 -1 0 8.9707 7.0293)"
+}));
+
+
+/***/ }),
+
+/***/ "./includes/block-editor/block-controls/iconTop.js":
+/*!*********************************************************!*\
+  !*** ./includes/block-editor/block-controls/iconTop.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ iconTop)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+
+const iconTop = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
+  height: "16",
+  viewBox: "0 0 16 16",
+  width: "16",
+  xmlns: "http://www.w3.org/2000/svg"
+}, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m3 0h10v1.9h-10z"
+}), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("g", {
+  fill: "#bbb"
+}, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m3 14.1h10v1.9h-10z"
+}), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m10 7h10v1.9h-10z",
+  transform: "matrix(0 1 -1 0 23.0293 -7.0293)"
+}), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m-4.1 7h10v1.9h-10z",
+  transform: "matrix(0 1 -1 0 8.9707 7.0293)"
+})));
+
+
+/***/ }),
+
+/***/ "./includes/block-editor/block-controls/marginControl.js":
+/*!***************************************************************!*\
+  !*** ./includes/block-editor/block-controls/marginControl.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ MarginControl)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _iconTop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./iconTop */ "./includes/block-editor/block-controls/iconTop.js");
+/* harmony import */ var _iconEnd__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./iconEnd */ "./includes/block-editor/block-controls/iconEnd.js");
+/* harmony import */ var _iconBottom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./iconBottom */ "./includes/block-editor/block-controls/iconBottom.js");
+/* harmony import */ var _iconStart__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./iconStart */ "./includes/block-editor/block-controls/iconStart.js");
+
+/**
+ * WordPress dependencies
+ */
+
+
+
+/**
+ * Internal dependencies
+ */
+
+
+
+
+
+/**
+ * MarginControl
+ * Component for controlling Margin attributes
+ *
+ * @param breakpoint
+ * @param breakpoint_name
+ * @param marginTop
+ * @param marginRight
+ * @param marginBottom
+ * @param marginLeft
+ * @param setMarginTop
+ * @param setMarginRight
+ * @param setMarginBottom
+ * @param setMarginLeft
+ * @returns {JSX.Element}
+ * @constructor
+ */
+function MarginControl({
+  breakpoint,
+  breakpoint_name,
+  marginTop,
+  marginRight,
+  marginBottom,
+  marginLeft,
+  setMarginTop,
+  setMarginRight,
+  setMarginBottom,
+  setMarginLeft
+}) {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardHeader, {
+    isBorderless: true,
+    isShady: true,
+    size: "small",
+    className: "resource-card-header"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)(`${breakpoint_name} MARGIN`, 'resource')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardBody, {
+    size: "small"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Flex, {
+    wrap: true
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+    label: _iconTop__WEBPACK_IMPORTED_MODULE_3__["default"],
+    value: marginTop,
+    style: {
+      maxWidth: '42.5px'
+    },
+    options: [{
+      value: '',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('-', 'resource')
+    }, {
+      value: `mt-${breakpoint}0`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('0', 'resource')
+    }, {
+      value: `mt-${breakpoint}1`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('1', 'resource')
+    }, {
+      value: `mt-${breakpoint}2`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('2', 'resource')
+    }, {
+      value: `mt-${breakpoint}3`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('3', 'resource')
+    }, {
+      value: `mt-${breakpoint}4`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('4', 'resource')
+    }, {
+      value: `mt-${breakpoint}5`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('5', 'resource')
+    }, {
+      value: `mt-${breakpoint}auto`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Auto', 'resource')
+    }],
+    onChange: setMarginTop
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+    label: _iconEnd__WEBPACK_IMPORTED_MODULE_4__["default"],
+    value: marginRight,
+    style: {
+      maxWidth: '42.5px'
+    },
+    options: [{
+      value: '',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('-', 'resource')
+    }, {
+      value: `me-${breakpoint}0`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('0', 'resource')
+    }, {
+      value: `me-${breakpoint}1`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('1', 'resource')
+    }, {
+      value: `me-${breakpoint}2`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('2', 'resource')
+    }, {
+      value: `me-${breakpoint}3`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('3', 'resource')
+    }, {
+      value: `me-${breakpoint}4`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('4', 'resource')
+    }, {
+      value: `me-${breakpoint}5`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('5', 'resource')
+    }, {
+      value: `me-${breakpoint}auto`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Auto', 'resource')
+    }],
+    onChange: setMarginRight
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+    label: _iconBottom__WEBPACK_IMPORTED_MODULE_5__["default"],
+    value: marginBottom,
+    style: {
+      maxWidth: '42.5px'
+    },
+    options: [{
+      value: '',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('-', 'resource')
+    }, {
+      value: `mb-${breakpoint}0`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('0', 'resource')
+    }, {
+      value: `mb-${breakpoint}1`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('1', 'resource')
+    }, {
+      value: `mb-${breakpoint}2`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('2', 'resource')
+    }, {
+      value: `mb-${breakpoint}3`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('3', 'resource')
+    }, {
+      value: `mb-${breakpoint}4`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('4', 'resource')
+    }, {
+      value: `mb-${breakpoint}5`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('5', 'resource')
+    }, {
+      value: `mb-${breakpoint}auto`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Auto', 'resource')
+    }],
+    onChange: setMarginBottom
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+    label: _iconStart__WEBPACK_IMPORTED_MODULE_6__["default"],
+    value: marginLeft,
+    style: {
+      maxWidth: '42.5px'
+    },
+    options: [{
+      value: '',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('-', 'resource')
+    }, {
+      value: `ms-${breakpoint}0`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('0', 'resource')
+    }, {
+      value: `ms-${breakpoint}1`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('1', 'resource')
+    }, {
+      value: `ms-${breakpoint}2`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('2', 'resource')
+    }, {
+      value: `ms-${breakpoint}3`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('3', 'resource')
+    }, {
+      value: `ms-${breakpoint}4`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('4', 'resource')
+    }, {
+      value: `ms-${breakpoint}5`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('5', 'resource')
+    }, {
+      value: `ms-${breakpoint}auto`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Auto', 'resource')
+    }],
+    onChange: setMarginLeft
+  })))));
+}
+
+/***/ }),
+
+/***/ "./includes/block-editor/block-controls/paddingControl.js":
+/*!****************************************************************!*\
+  !*** ./includes/block-editor/block-controls/paddingControl.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ PaddingControl)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _iconTop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./iconTop */ "./includes/block-editor/block-controls/iconTop.js");
+/* harmony import */ var _iconEnd__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./iconEnd */ "./includes/block-editor/block-controls/iconEnd.js");
+/* harmony import */ var _iconBottom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./iconBottom */ "./includes/block-editor/block-controls/iconBottom.js");
+/* harmony import */ var _iconStart__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./iconStart */ "./includes/block-editor/block-controls/iconStart.js");
+
+/**
+ * WordPress dependencies
+ */
+
+
+
+/**
+ * Internal dependencies
+ */
+
+
+
+
+
+/**
+ * PaddingControl
+ * Component for controlling Padding attributes
+ *
+ * @param breakpoint
+ * @param breakpoint_name
+ * @param paddingTop
+ * @param paddingRight
+ * @param paddingBottom
+ * @param paddingLeft
+ * @param setPaddingTop
+ * @param setPaddingRight
+ * @param setPaddingBottom
+ * @param setPaddingLeft
+ * @returns {JSX.Element}
+ * @constructor
+ */
+function PaddingControl({
+  breakpoint,
+  breakpoint_name,
+  paddingTop,
+  paddingRight,
+  paddingBottom,
+  paddingLeft,
+  setPaddingTop,
+  setPaddingRight,
+  setPaddingBottom,
+  setPaddingLeft
+}) {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardHeader, {
+    isBorderless: true,
+    isShady: true,
+    size: "small",
+    className: "resource-card-header"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)(`${breakpoint_name} PADDING`, 'resource')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.CardBody, {
+    size: "small"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Flex, {
+    wrap: true
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+    label: _iconTop__WEBPACK_IMPORTED_MODULE_3__["default"],
+    value: paddingTop,
+    style: {
+      maxWidth: '42.5px'
+    },
+    options: [{
+      value: '',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('-', 'resource')
+    }, {
+      value: `pt-${breakpoint}0`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('0', 'resource')
+    }, {
+      value: `pt-${breakpoint}1`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('1', 'resource')
+    }, {
+      value: `pt-${breakpoint}2`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('2', 'resource')
+    }, {
+      value: `pt-${breakpoint}3`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('3', 'resource')
+    }, {
+      value: `pt-${breakpoint}4`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('4', 'resource')
+    }, {
+      value: `pt-${breakpoint}5`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('5', 'resource')
+    }],
+    onChange: setPaddingTop
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+    label: _iconEnd__WEBPACK_IMPORTED_MODULE_4__["default"],
+    value: paddingRight,
+    style: {
+      maxWidth: '42.5px'
+    },
+    options: [{
+      value: '',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('-', 'resource')
+    }, {
+      value: `pe-${breakpoint}0`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('0', 'resource')
+    }, {
+      value: `pe-${breakpoint}1`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('1', 'resource')
+    }, {
+      value: `pe-${breakpoint}2`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('2', 'resource')
+    }, {
+      value: `pe-${breakpoint}3`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('3', 'resource')
+    }, {
+      value: `pe-${breakpoint}4`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('4', 'resource')
+    }, {
+      value: `pe-${breakpoint}5`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('5', 'resource')
+    }],
+    onChange: setPaddingRight
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+    label: _iconBottom__WEBPACK_IMPORTED_MODULE_5__["default"],
+    value: paddingBottom,
+    style: {
+      maxWidth: '42.5px'
+    },
+    options: [{
+      value: '',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('-', 'resource')
+    }, {
+      value: `pb-${breakpoint}0`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('0', 'resource')
+    }, {
+      value: `pb-${breakpoint}1`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('1', 'resource')
+    }, {
+      value: `pb-${breakpoint}2`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('2', 'resource')
+    }, {
+      value: `pb-${breakpoint}3`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('3', 'resource')
+    }, {
+      value: `pb-${breakpoint}4`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('4', 'resource')
+    }, {
+      value: `pb-${breakpoint}5`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('5', 'resource')
+    }],
+    onChange: setPaddingBottom
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+    label: _iconStart__WEBPACK_IMPORTED_MODULE_6__["default"],
+    value: paddingLeft,
+    style: {
+      maxWidth: '42.5px'
+    },
+    options: [{
+      value: '',
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('-', 'resource')
+    }, {
+      value: `ps-${breakpoint}0`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('0', 'resource')
+    }, {
+      value: `ps-${breakpoint}1`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('1', 'resource')
+    }, {
+      value: `ps-${breakpoint}2`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('2', 'resource')
+    }, {
+      value: `ps-${breakpoint}3`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('3', 'resource')
+    }, {
+      value: `ps-${breakpoint}4`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('4', 'resource')
+    }, {
+      value: `ps-${breakpoint}5`,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('5', 'resource')
+    }],
+    onChange: setPaddingLeft
+  })))));
+}
+
+/***/ }),
+
+/***/ "./includes/block-editor/block-help/tagNameMessages.js":
+/*!*************************************************************!*\
+  !*** ./includes/block-editor/block-help/tagNameMessages.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "tagNameMessages": () => (/* binding */ tagNameMessages)
+/* harmony export */ });
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
+
+const tagNameMessages = {
+  header: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('The <header> element should represent introductory content, typically a group of introductory or navigational aids.'),
+  main: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('The <main> element should be used for the primary content of your document only. '),
+  section: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("The <section> element should represent a standalone portion of the document that can't be better represented by another element."),
+  article: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('The <article> element should represent a self contained, syndicatable portion of the document.'),
+  aside: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)("The <aside> element should represent a portion of a document whose content is only indirectly related to the document's main content."),
+  footer: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('The <footer> element should represent a footer for its nearest sectioning element (e.g.: <section>, <article>, <main> etc.).')
+};
+
+/***/ }),
+
+/***/ "./includes/block-editor/blocks/row/edit.js":
+/*!**************************************************!*\
+  !*** ./includes/block-editor/blocks/row/edit.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ edit)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lodash */ "lodash");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _block_help_tagNameMessages__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../block-help/tagNameMessages */ "./includes/block-editor/block-help/tagNameMessages.js");
+/* harmony import */ var _block_controls_displayControl__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../block-controls/displayControl */ "./includes/block-editor/block-controls/displayControl.js");
+/* harmony import */ var _block_controls_flexControl__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../block-controls/flexControl */ "./includes/block-editor/block-controls/flexControl.js");
+/* harmony import */ var _block_controls_paddingControl__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../block-controls/paddingControl */ "./includes/block-editor/block-controls/paddingControl.js");
+/* harmony import */ var _block_controls_marginControl__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../block-controls/marginControl */ "./includes/block-editor/block-controls/marginControl.js");
+/* harmony import */ var _block_controls_alignControl__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../block-controls/alignControl */ "./includes/block-editor/block-controls/alignControl.js");
+/* harmony import */ var _lib_convertStylesStringToObject__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../lib/convertStylesStringToObject */ "./includes/lib/convertStylesStringToObject.js");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./editor.scss */ "./includes/block-editor/blocks/row/editor.scss");
+
+/**
+ * WordPress dependencies
+ */
+
+
+
+
+/**
+ * External dependencies
+ */
+
+
+
+/**
+ * Internal dependencies
+ */
+
+
+
+
+
+
+
+
+/**
+ * Styles are applied only to the editor
+ *
+ * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
+ */
+
+
+/**
+ * The Block edit function
+ *
+ * @param {Object} root0
+ * @param {Object} root0.attributes
+ * @param {Object} root0.setAttributes
+ * @return {JSX.Element} React Element.
+ * @class
+ */
+function edit({
+  attributes,
+  setAttributes
+}) {
+  const {
+    tagName: TagName = 'div',
+    inlineStyles,
+    baseDisplay,
+    basePaddingTop,
+    basePaddingRight,
+    basePaddingBottom,
+    basePaddingLeft,
+    baseMarginTop,
+    baseMarginRight,
+    baseMarginBottom,
+    baseMarginLeft,
+    baseAlignText,
+    baseFlexDirection,
+    baseFillGrowShrink,
+    baseWrap,
+    baseOrder,
+    baseAlignContent,
+    baseAlignItems,
+    baseAlignSelf,
+    baseJustifyContent,
+    smDisplay,
+    smPaddingTop,
+    smPaddingRight,
+    smPaddingBottom,
+    smPaddingLeft,
+    smMarginTop,
+    smMarginRight,
+    smMarginBottom,
+    smMarginLeft,
+    smAlignText,
+    smFlexDirection,
+    smFillGrowShrink,
+    smWrap,
+    smOrder,
+    smAlignContent,
+    smAlignItems,
+    smAlignSelf,
+    smJustifyContent,
+    mdDisplay,
+    mdPaddingTop,
+    mdPaddingRight,
+    mdPaddingBottom,
+    mdPaddingLeft,
+    mdMarginTop,
+    mdMarginRight,
+    mdMarginBottom,
+    mdMarginLeft,
+    mdAlignText,
+    mdFlexDirection,
+    mdFillGrowShrink,
+    mdWrap,
+    mdOrder,
+    mdAlignContent,
+    mdAlignItems,
+    mdAlignSelf,
+    mdJustifyContent,
+    lgDisplay,
+    lgPaddingTop,
+    lgPaddingRight,
+    lgPaddingBottom,
+    lgPaddingLeft,
+    lgMarginTop,
+    lgMarginRight,
+    lgMarginBottom,
+    lgMarginLeft,
+    lgAlignText,
+    lgFlexDirection,
+    lgFillGrowShrink,
+    lgWrap,
+    lgOrder,
+    lgAlignContent,
+    lgAlignItems,
+    lgAlignSelf,
+    lgJustifyContent,
+    xlDisplay,
+    xlPaddingTop,
+    xlPaddingRight,
+    xlPaddingBottom,
+    xlPaddingLeft,
+    xlMarginTop,
+    xlMarginRight,
+    xlMarginBottom,
+    xlMarginLeft,
+    xlAlignText,
+    xlFlexDirection,
+    xlFillGrowShrink,
+    xlWrap,
+    xlOrder,
+    xlAlignContent,
+    xlAlignItems,
+    xlAlignSelf,
+    xlJustifyContent,
+    xxlDisplay,
+    xxlPaddingTop,
+    xxlPaddingRight,
+    xxlPaddingBottom,
+    xxlPaddingLeft,
+    xxlMarginTop,
+    xxlMarginRight,
+    xxlMarginBottom,
+    xxlMarginLeft,
+    xxlAlignText,
+    xxlFlexDirection,
+    xxlFillGrowShrink,
+    xxlWrap,
+    xxlOrder,
+    xxlAlignContent,
+    xxlAlignItems,
+    xxlAlignSelf,
+    xxlJustifyContent
+  } = attributes;
+  const classNameAttributes = (0,lodash__WEBPACK_IMPORTED_MODULE_5__.omit)(attributes, ['anchor', 'tagName', 'inlineStyles', 'className']);
+  const classes = classnames__WEBPACK_IMPORTED_MODULE_4___default()('row', Object.values(classNameAttributes));
+  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({
+    className: classes,
+    style: (0,_lib_convertStylesStringToObject__WEBPACK_IMPORTED_MODULE_12__.convertStylesStringToObject)(inlineStyles)
+  });
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.BlockControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Toolbar, {
+    label: "Class Inspector",
+    id: "class-inspector"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ToolbarItem, {
+    as: "p"
+  }, classes))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.CardHeader, {
+    isBorderless: true,
+    isShady: true,
+    size: "small",
+    className: "resource-card-header"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('ROW', 'resource')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.CardBody, {
+    size: "small"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Flex, {
+    wrap: true
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.SelectControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('HTML element', 'resource'),
+    options: [{
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Default (<div>)', 'resource'),
+      value: 'div'
+    }, {
+      label: '<header>',
+      value: 'header'
+    }, {
+      label: '<main>',
+      value: 'main'
+    }, {
+      label: '<section>',
+      value: 'section'
+    }, {
+      label: '<article>',
+      value: 'article'
+    }, {
+      label: '<aside>',
+      value: 'aside'
+    }, {
+      label: '<footer>',
+      value: 'footer'
+    }],
+    value: TagName,
+    onChange: value => setAttributes({
+      tagName: value
+    }),
+    help: _block_help_tagNameMessages__WEBPACK_IMPORTED_MODULE_6__.tagNameMessages[TagName]
+  }))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TabPanel, {
+    className: "breakpoint-tab-panel",
+    activeClass: "is-active",
+    orientation: "horizontal",
+    tabs: [{
+      name: 'base',
+      title: '—',
+      className: 'breakpoint-tab',
+      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_displayControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        breakpoint: "",
+        breakpoint_name: "",
+        display: baseDisplay,
+        setDisplay: baseDisplay => setAttributes({
+          baseDisplay
+        }),
+        __nextHasNoMarginBottom: true
+      }), (baseDisplay === '' || baseDisplay === 'd-flex' || baseDisplay === 'd-inline-flex') && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.CardBody, {
+        size: "small",
+        style: {
+          paddingTop: 0,
+          paddingBottom: 0
+        }
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Flex, {
+        wrap: true
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("em", null, "Row block default display attribute is 'flex'"))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_flexControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        breakpoint: "",
+        breakpoint_name: "",
+        flexDirection: baseFlexDirection,
+        justifyContent: baseJustifyContent,
+        alignItems: baseAlignItems,
+        alignSelf: baseAlignSelf,
+        fillGrowShrink: baseFillGrowShrink,
+        wrap: baseWrap,
+        order: baseOrder,
+        alignContent: baseAlignContent,
+        setFlexDirection: baseFlexDirection => setAttributes({
+          baseFlexDirection
+        }),
+        setJustifyContent: baseJustifyContent => setAttributes({
+          baseJustifyContent
+        }),
+        setAlignItems: baseAlignItems => setAttributes({
+          baseAlignItems
+        }),
+        setAlignSelf: baseAlignSelf => setAttributes({
+          baseAlignSelf
+        }),
+        setFillGrowShrink: baseFillGrowShrink => setAttributes({
+          baseFillGrowShrink
+        }),
+        setWrap: baseWrap => setAttributes({
+          baseWrap
+        }),
+        setOrder: baseOrder => setAttributes({
+          baseOrder
+        }),
+        setAlignContent: baseAlignContent => setAttributes({
+          baseAlignContent
+        })
+      })), baseDisplay !== 'd-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_paddingControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        breakpoint: "",
+        breakpoint_name: "",
+        paddingTop: basePaddingTop,
+        paddingRight: basePaddingRight,
+        paddingBottom: basePaddingBottom,
+        paddingLeft: basePaddingLeft,
+        setPaddingTop: basePaddingTop => setAttributes({
+          basePaddingTop
+        }),
+        setPaddingRight: basePaddingRight => setAttributes({
+          basePaddingRight
+        }),
+        setPaddingBottom: basePaddingBottom => setAttributes({
+          basePaddingBottom
+        }),
+        setPaddingLeft: basePaddingLeft => setAttributes({
+          basePaddingLeft
+        })
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_marginControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
+        breakpoint: "",
+        breakpoint_name: "",
+        marginTop: baseMarginTop,
+        marginRight: baseMarginRight,
+        marginBottom: baseMarginBottom,
+        marginLeft: baseMarginLeft,
+        setMarginTop: baseMarginTop => setAttributes({
+          baseMarginTop
+        }),
+        setMarginRight: baseMarginRight => setAttributes({
+          baseMarginRight
+        }),
+        setMarginBottom: baseMarginBottom => setAttributes({
+          baseMarginBottom
+        }),
+        setMarginLeft: baseMarginLeft => setAttributes({
+          baseMarginLeft
+        })
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_alignControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
+        breakpoint: "",
+        breakpoint_name: "",
+        alignText: baseAlignText,
+        flexDirection: baseFlexDirection,
+        alignItems: baseAlignItems,
+        alignSelf: baseAlignSelf,
+        justifyContent: baseJustifyContent,
+        setAlignText: baseAlignText => setAttributes({
+          baseAlignText
+        }),
+        setFlexDirection: baseFlexDirection => setAttributes({
+          baseFlexDirection
+        }),
+        setAlignItems: baseAlignItems => setAttributes({
+          baseAlignItems
+        }),
+        setAlignSelf: baseAlignSelf => setAttributes({
+          baseAlignSelf
+        }),
+        setJustifyContent: baseJustifyContent => setAttributes({
+          baseJustifyContent
+        })
+      })))
+    }, {
+      name: 'small',
+      title: 'SM',
+      className: 'breakpoint-tab',
+      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_displayControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        breakpoint: "sm-",
+        breakpoint_name: "SM",
+        display: smDisplay,
+        setDisplay: smDisplay => setAttributes({
+          smDisplay
+        })
+      }), (smDisplay === '' || smDisplay === 'd-sm-flex' || smDisplay === 'd-sm-inline-flex') && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.CardBody, {
+        size: "small",
+        style: {
+          paddingTop: 0,
+          paddingBottom: 0
+        }
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Flex, {
+        wrap: true
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("em", null, "Row block default display attribute is 'flex'"))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_flexControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        breakpoint: "sm-",
+        breakpoint_name: "SM",
+        flexDirection: smFlexDirection,
+        justifyContent: smJustifyContent,
+        alignItems: smAlignItems,
+        alignSelf: smAlignSelf,
+        fillGrowShrink: smFillGrowShrink,
+        wrap: smWrap,
+        order: smOrder,
+        alignContent: smAlignContent,
+        setFlexDirection: smFlexDirection => setAttributes({
+          smFlexDirection
+        }),
+        setJustifyContent: smJustifyContent => setAttributes({
+          smJustifyContent
+        }),
+        setAlignItems: smAlignItems => setAttributes({
+          smAlignItems
+        }),
+        setAlignSelf: smAlignSelf => setAttributes({
+          smAlignSelf
+        }),
+        setFillGrowShrink: smFillGrowShrink => setAttributes({
+          smFillGrowShrink
+        }),
+        setWrap: smWrap => setAttributes({
+          smWrap
+        }),
+        setOrder: smOrder => setAttributes({
+          smOrder
+        }),
+        setAlignContent: smAlignContent => setAttributes({
+          smAlignContent
+        })
+      })), smDisplay !== 'd-sm-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_paddingControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        breakpoint: "sm-",
+        breakpoint_name: "SM",
+        paddingTop: smPaddingTop,
+        paddingRight: smPaddingRight,
+        paddingBottom: smPaddingBottom,
+        paddingLeft: smPaddingLeft,
+        setPaddingTop: smPaddingTop => setAttributes({
+          smPaddingTop
+        }),
+        setPaddingRight: smPaddingRight => setAttributes({
+          smPaddingRight
+        }),
+        setPaddingBottom: smPaddingBottom => setAttributes({
+          smPaddingBottom
+        }),
+        setPaddingLeft: smPaddingLeft => setAttributes({
+          smPaddingLeft
+        })
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_marginControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
+        breakpoint: "sm-",
+        breakpoint_name: "SM",
+        marginTop: smMarginTop,
+        marginRight: smMarginRight,
+        marginBottom: smMarginBottom,
+        marginLeft: smMarginLeft,
+        setMarginTop: smMarginTop => setAttributes({
+          smMarginTop
+        }),
+        setMarginRight: smMarginRight => setAttributes({
+          smMarginRight
+        }),
+        setMarginBottom: smMarginBottom => setAttributes({
+          smMarginBottom
+        }),
+        setMarginLeft: smMarginLeft => setAttributes({
+          smMarginLeft
+        })
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_alignControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
+        breakpoint: "sm-",
+        breakpoint_name: "SM",
+        alignText: smAlignText,
+        flexDirection: smFlexDirection,
+        alignItems: smAlignItems,
+        alignSelf: smAlignSelf,
+        justifyContent: smJustifyContent,
+        setAlignText: smAlignText => setAttributes({
+          smAlignText
+        }),
+        setAlignItems: smAlignItems => setAttributes({
+          smAlignItems
+        }),
+        setAlignSelf: smAlignSelf => setAttributes({
+          smAlignSelf
+        }),
+        setJustifyContent: smJustifyContent => setAttributes({
+          smJustifyContent
+        })
+      })))
+    }, {
+      name: 'medium',
+      title: 'MD',
+      className: 'breakpoint-tab',
+      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_displayControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        breakpoint: "md-",
+        breakpoint_name: "MD",
+        display: mdDisplay,
+        setDisplay: mdDisplay => setAttributes({
+          mdDisplay
+        })
+      }), (mdDisplay === '' || mdDisplay === 'd-md-flex' || mdDisplay === 'd-md-inline-flex') && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.CardBody, {
+        size: "small",
+        style: {
+          paddingTop: 0,
+          paddingBottom: 0
+        }
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Flex, {
+        wrap: true
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("em", null, "Row block default display attribute is 'flex'"))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_flexControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        breakpoint: "md-",
+        breakpoint_name: "MD",
+        flexDirection: mdFlexDirection,
+        justifyContent: mdJustifyContent,
+        alignItems: mdAlignItems,
+        alignSelf: mdAlignSelf,
+        fillGrowShrink: mdFillGrowShrink,
+        wrap: mdWrap,
+        order: mdOrder,
+        alignContent: mdAlignContent,
+        setFlexDirection: mdFlexDirection => setAttributes({
+          mdFlexDirection
+        }),
+        setJustifyContent: mdJustifyContent => setAttributes({
+          mdJustifyContent
+        }),
+        setAlignItems: mdAlignItems => setAttributes({
+          mdAlignItems
+        }),
+        setAlignSelf: mdAlignSelf => setAttributes({
+          mdAlignSelf
+        }),
+        setFillGrowShrink: mdFillGrowShrink => setAttributes({
+          mdFillGrowShrink
+        }),
+        setWrap: mdWrap => setAttributes({
+          mdWrap
+        }),
+        setOrder: mdOrder => setAttributes({
+          mdOrder
+        }),
+        setAlignContent: mdAlignContent => setAttributes({
+          mdAlignContent
+        })
+      })), mdDisplay !== 'd-md-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_paddingControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        breakpoint: "md-",
+        breakpoint_name: "MD",
+        paddingTop: mdPaddingTop,
+        paddingRight: mdPaddingRight,
+        paddingBottom: mdPaddingBottom,
+        paddingLeft: mdPaddingLeft,
+        setPaddingTop: mdPaddingTop => setAttributes({
+          mdPaddingTop
+        }),
+        setPaddingRight: mdPaddingRight => setAttributes({
+          mdPaddingRight
+        }),
+        setPaddingBottom: mdPaddingBottom => setAttributes({
+          mdPaddingBottom
+        }),
+        setPaddingLeft: mdPaddingLeft => setAttributes({
+          mdPaddingLeft
+        })
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_marginControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
+        breakpoint: "md-",
+        breakpoint_name: "MD",
+        marginTop: mdMarginTop,
+        marginRight: mdMarginRight,
+        marginBottom: mdMarginBottom,
+        marginLeft: mdMarginLeft,
+        setMarginTop: mdMarginTop => setAttributes({
+          mdMarginTop
+        }),
+        setMarginRight: mdMarginRight => setAttributes({
+          mdMarginRight
+        }),
+        setMarginBottom: mdMarginBottom => setAttributes({
+          mdMarginBottom
+        }),
+        setMarginLeft: mdMarginLeft => setAttributes({
+          mdMarginLeft
+        })
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_alignControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
+        breakpoint: "md-",
+        breakpoint_name: "MD",
+        alignText: mdAlignText,
+        flexDirection: mdFlexDirection,
+        alignItems: mdAlignItems,
+        alignSelf: mdAlignSelf,
+        justifyContent: mdJustifyContent,
+        setAlignText: mdAlignText => setAttributes({
+          mdAlignText
+        }),
+        setAlignItems: mdAlignItems => setAttributes({
+          mdAlignItems
+        }),
+        setAlignSelf: mdAlignSelf => setAttributes({
+          mdAlignSelf
+        }),
+        setJustifyContent: mdJustifyContent => setAttributes({
+          mdJustifyContent
+        })
+      })))
+    }, {
+      name: 'large',
+      title: 'LG',
+      className: 'breakpoint-tab',
+      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_displayControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        breakpoint: "lg-",
+        breakpoint_name: "LG",
+        display: lgDisplay,
+        setDisplay: lgDisplay => setAttributes({
+          lgDisplay
+        })
+      }), (lgDisplay === '' || lgDisplay === 'd-lg-flex' || lgDisplay === 'd-lg-inline-flex') && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.CardBody, {
+        size: "small",
+        style: {
+          paddingTop: 0,
+          paddingBottom: 0
+        }
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Flex, {
+        wrap: true
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("em", null, "Row block default display attribute is 'flex'"))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_flexControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        breakpoint: "lg-",
+        breakpoint_name: "LG",
+        flexDirection: lgFlexDirection,
+        justifyContent: lgJustifyContent,
+        alignItems: lgAlignItems,
+        alignSelf: lgAlignSelf,
+        fillGrowShrink: lgFillGrowShrink,
+        wrap: lgWrap,
+        order: lgOrder,
+        alignContent: lgAlignContent,
+        setFlexDirection: lgFlexDirection => setAttributes({
+          lgFlexDirection
+        }),
+        setJustifyContent: lgJustifyContent => setAttributes({
+          lgJustifyContent
+        }),
+        setAlignItems: lgAlignItems => setAttributes({
+          lgAlignItems
+        }),
+        setAlignSelf: lgAlignSelf => setAttributes({
+          lgAlignSelf
+        }),
+        setFillGrowShrink: lgFillGrowShrink => setAttributes({
+          lgFillGrowShrink
+        }),
+        setWrap: lgWrap => setAttributes({
+          lgWrap
+        }),
+        setOrder: lgOrder => setAttributes({
+          lgOrder
+        }),
+        setAlignContent: lgAlignContent => setAttributes({
+          lgAlignContent
+        })
+      })), lgDisplay !== 'd-lg-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_paddingControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        breakpoint: "lg-",
+        breakpoint_name: "LG",
+        paddingTop: lgPaddingTop,
+        paddingRight: lgPaddingRight,
+        paddingBottom: lgPaddingBottom,
+        paddingLeft: lgPaddingLeft,
+        setPaddingTop: lgPaddingTop => setAttributes({
+          lgPaddingTop
+        }),
+        setPaddingRight: lgPaddingRight => setAttributes({
+          lgPaddingRight
+        }),
+        setPaddingBottom: lgPaddingBottom => setAttributes({
+          lgPaddingBottom
+        }),
+        setPaddingLeft: lgPaddingLeft => setAttributes({
+          lgPaddingLeft
+        })
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_marginControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
+        breakpoint: "lg-",
+        breakpoint_name: "LG",
+        marginTop: lgMarginTop,
+        marginRight: lgMarginRight,
+        marginBottom: lgMarginBottom,
+        marginLeft: lgMarginLeft,
+        setMarginTop: lgMarginTop => setAttributes({
+          lgMarginTop
+        }),
+        setMarginRight: lgMarginRight => setAttributes({
+          lgMarginRight
+        }),
+        setMarginBottom: lgMarginBottom => setAttributes({
+          lgMarginBottom
+        }),
+        setMarginLeft: lgMarginLeft => setAttributes({
+          lgMarginLeft
+        })
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_alignControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
+        breakpoint: "lg-",
+        breakpoint_name: "LG",
+        alignText: lgAlignText,
+        flexDirection: lgFlexDirection,
+        alignItems: lgAlignItems,
+        alignSelf: lgAlignSelf,
+        justifyContent: lgJustifyContent,
+        setAlignText: lgAlignText => setAttributes({
+          lgAlignText
+        }),
+        setAlignItems: lgAlignItems => setAttributes({
+          lgAlignItems
+        }),
+        setAlignSelf: lgAlignSelf => setAttributes({
+          lgAlignSelf
+        }),
+        setJustifyContent: lgJustifyContent => setAttributes({
+          lgJustifyContent
+        })
+      })))
+    }, {
+      name: 'extra-large',
+      title: 'XL',
+      className: 'breakpoint-tab',
+      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_displayControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        breakpoint: "xl-",
+        breakpoint_name: "XL",
+        display: xlDisplay,
+        setDisplay: xlDisplay => setAttributes({
+          xlDisplay
+        })
+      }), (xlDisplay === '' || xlDisplay === 'd-xl-flex' || xlDisplay === 'd-xl-inline-flex') && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.CardBody, {
+        size: "small",
+        style: {
+          paddingTop: 0,
+          paddingBottom: 0
+        }
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Flex, {
+        wrap: true
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("em", null, "Row block default display attribute is 'flex'"))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_flexControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        breakpoint: "xl-",
+        breakpoint_name: "XL",
+        flexDirection: xlFlexDirection,
+        justifyContent: xlJustifyContent,
+        alignItems: xlAlignItems,
+        alignSelf: xlAlignSelf,
+        fillGrowShrink: xlFillGrowShrink,
+        wrap: xlWrap,
+        order: xlOrder,
+        alignContent: xlAlignContent,
+        setFlexDirection: xlFlexDirection => setAttributes({
+          xlFlexDirection
+        }),
+        setJustifyContent: xlJustifyContent => setAttributes({
+          xlJustifyContent
+        }),
+        setAlignItems: xlAlignItems => setAttributes({
+          xlAlignItems
+        }),
+        setAlignSelf: xlAlignSelf => setAttributes({
+          xlAlignSelf
+        }),
+        setFillGrowShrink: xlFillGrowShrink => setAttributes({
+          xlFillGrowShrink
+        }),
+        setWrap: xlWrap => setAttributes({
+          xlWrap
+        }),
+        setOrder: xlOrder => setAttributes({
+          xlOrder
+        }),
+        setAlignContent: xlAlignContent => setAttributes({
+          xlAlignContent
+        })
+      })), xlDisplay !== 'd-xl-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_paddingControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        breakpoint: "xl-",
+        breakpoint_name: "XL",
+        paddingTop: xlPaddingTop,
+        paddingRight: xlPaddingRight,
+        paddingBottom: xlPaddingBottom,
+        paddingLeft: xlPaddingLeft,
+        setPaddingTop: xlPaddingTop => setAttributes({
+          xlPaddingTop
+        }),
+        setPaddingRight: xlPaddingRight => setAttributes({
+          xlPaddingRight
+        }),
+        setPaddingBottom: xlPaddingBottom => setAttributes({
+          xlPaddingBottom
+        }),
+        setPaddingLeft: xlPaddingLeft => setAttributes({
+          xlPaddingLeft
+        })
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_marginControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
+        breakpoint: "xl-",
+        breakpoint_name: "XL",
+        marginTop: xlMarginTop,
+        marginRight: xlMarginRight,
+        marginBottom: xlMarginBottom,
+        marginLeft: xlMarginLeft,
+        setMarginTop: xlMarginTop => setAttributes({
+          xlMarginTop
+        }),
+        setMarginRight: xlMarginRight => setAttributes({
+          xlMarginRight
+        }),
+        setMarginBottom: xlMarginBottom => setAttributes({
+          xlMarginBottom
+        }),
+        setMarginLeft: xlMarginLeft => setAttributes({
+          xlMarginLeft
+        })
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_alignControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
+        breakpoint: "xl-",
+        breakpoint_name: "XL",
+        alignText: xlAlignText,
+        flexDirection: xlFlexDirection,
+        alignItems: xlAlignItems,
+        alignSelf: xlAlignSelf,
+        justifyContent: xlJustifyContent,
+        setAlignText: xlAlignText => setAttributes({
+          xlAlignText
+        }),
+        setAlignItems: xlAlignItems => setAttributes({
+          xlAlignItems
+        }),
+        setAlignSelf: xlAlignSelf => setAttributes({
+          xlAlignSelf
+        }),
+        setJustifyContent: xlJustifyContent => setAttributes({
+          xlJustifyContent
+        })
+      })))
+    }, {
+      name: 'extra-extra-large',
+      title: 'XXL',
+      className: 'breakpoint-tab',
+      content: (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Card, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_displayControl__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        breakpoint: "xxl-",
+        breakpoint_name: "XXL",
+        display: xxlDisplay,
+        setDisplay: xxlDisplay => setAttributes({
+          xxlDisplay
+        })
+      }), (xxlDisplay === '' || xxlDisplay === 'd-xxl-flex' || xxlDisplay === 'd-xxl-inline-flex') && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.CardBody, {
+        size: "small",
+        style: {
+          paddingTop: 0,
+          paddingBottom: 0
+        }
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Flex, {
+        wrap: true
+      }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.FlexItem, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("em", null, "Row block default display attribute is \u2018flex\u2019"))))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_flexControl__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        breakpoint: "xxl-",
+        breakpoint_name: "XXL",
+        flexDirection: xxlFlexDirection,
+        justifyContent: xxlJustifyContent,
+        alignItems: xxlAlignItems,
+        alignSelf: xxlAlignSelf,
+        fillGrowShrink: xxlFillGrowShrink,
+        wrap: xxlWrap,
+        order: xxlOrder,
+        alignContent: xxlAlignContent,
+        setFlexDirection: xxlFlexDirection => setAttributes({
+          xxlFlexDirection
+        }),
+        setJustifyContent: xxlJustifyContent => setAttributes({
+          xxlJustifyContent
+        }),
+        setAlignItems: xxlAlignItems => setAttributes({
+          xxlAlignItems
+        }),
+        setAlignSelf: xxlAlignSelf => setAttributes({
+          xxlAlignSelf
+        }),
+        setFillGrowShrink: xxlFillGrowShrink => setAttributes({
+          xxlFillGrowShrink
+        }),
+        setWrap: xxlWrap => setAttributes({
+          xxlWrap
+        }),
+        setOrder: xxlOrder => setAttributes({
+          xxlOrder
+        }),
+        setAlignContent: xxlAlignContent => setAttributes({
+          xxlAlignContent
+        })
+      })), xxlDisplay !== 'd-xxl-none' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_paddingControl__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        breakpoint: "xxl-",
+        breakpoint_name: "XXL",
+        paddingTop: xxlPaddingTop,
+        paddingRight: xxlPaddingRight,
+        paddingBottom: xxlPaddingBottom,
+        paddingLeft: xxlPaddingLeft,
+        setPaddingTop: xxlPaddingTop => setAttributes({
+          xxlPaddingTop
+        }),
+        setPaddingRight: xxlPaddingRight => setAttributes({
+          xxlPaddingRight
+        }),
+        setPaddingBottom: xxlPaddingBottom => setAttributes({
+          xxlPaddingBottom
+        }),
+        setPaddingLeft: xxlPaddingLeft => setAttributes({
+          xxlPaddingLeft
+        })
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_marginControl__WEBPACK_IMPORTED_MODULE_10__["default"], {
+        breakpoint: "xxl-",
+        breakpoint_name: "XXL",
+        marginTop: xxlMarginTop,
+        marginRight: xxlMarginRight,
+        marginBottom: xxlMarginBottom,
+        marginLeft: xxlMarginLeft,
+        setMarginTop: xxlMarginTop => setAttributes({
+          xxlMarginTop
+        }),
+        setMarginRight: xxlMarginRight => setAttributes({
+          xxlMarginRight
+        }),
+        setMarginBottom: xxlMarginBottom => setAttributes({
+          xxlMarginBottom
+        }),
+        setMarginLeft: xxlMarginLeft => setAttributes({
+          xxlMarginLeft
+        })
+      }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_block_controls_alignControl__WEBPACK_IMPORTED_MODULE_11__["default"], {
+        breakpoint: "xxl-",
+        breakpoint_name: "XXL",
+        alignText: xxlAlignText,
+        flexDirection: xxlFlexDirection,
+        alignItems: xxlAlignItems,
+        alignSelf: xxlAlignSelf,
+        justifyContent: xxlJustifyContent,
+        setAlignText: xxlAlignText => setAttributes({
+          xxlAlignText
+        }),
+        setAlignItems: xxlAlignItems => setAttributes({
+          xxlAlignItems
+        }),
+        setAlignSelf: xxlAlignSelf => setAttributes({
+          xxlAlignSelf
+        }),
+        setJustifyContent: xxlJustifyContent => setAttributes({
+          xxlJustifyContent
+        })
+      })))
+    }]
+  }, ({
+    content,
+    className
+  }) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: className
+  }, content))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, {
+    group: "advanced"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.TextControl, {
+    __nextHasNoMarginBottom: true,
+    className: "inline-style-control",
+    autoComplete: "off",
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Inline Styles'),
+    value: inlineStyles || '',
+    onChange: value => {
+      setAttributes({
+        inlineStyles: value !== '' ? value : undefined
+      });
+    }
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(TagName, blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks, {
+    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Insert Columns', 'resource')
+  })));
+}
+
+/***/ }),
+
+/***/ "./includes/block-editor/blocks/row/icon.js":
+/*!**************************************************!*\
+  !*** ./includes/block-editor/blocks/row/icon.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "icon": () => (/* binding */ icon)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+
+const icon = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
+  height: "24",
+  viewBox: "0 0 24 24",
+  width: "24",
+  xmlns: "http://www.w3.org/2000/svg"
+}, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m23.1 16.6h-.3v-9.2h.3c.5 0 .9-.4.9-.9s-.4-.9-.9-.9h-22.2c-.5 0-.9.4-.9.9s.4.9.9.9h.3v9.2h-.3c-.5 0-.9.4-.9.9s.4.9.9.9h22.2c.5 0 .9-.4.9-.9s-.4-.9-.9-.9zm-2.1 0h-18v-9.2h18z",
+  fill: "#ccc"
+}), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+  d: "m4.6 12c0 .5.4.9.9.9h13c.5 0 .9-.4.9-.9s-.4-.9-.9-.9h-13c-.5 0-.9.4-.9.9z"
+}));
+
+/***/ }),
+
+/***/ "./includes/block-editor/blocks/row/index.js":
+/*!***************************************************!*\
+  !*** ./includes/block-editor/blocks/row/index.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./includes/block-editor/blocks/row/style.scss");
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./block.json */ "./includes/block-editor/blocks/row/block.json");
+/* harmony import */ var _icon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./icon */ "./includes/block-editor/blocks/row/icon.js");
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./edit */ "./includes/block-editor/blocks/row/edit.js");
+/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./save */ "./includes/block-editor/blocks/row/save.js");
+/**
+ * Import registerBlockType
+ *
+ * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
+ */
+
+
+/**
+ * Styles are applied both to the front of your site and to the editor
+ *
+ * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
+ */
+
+
+/**
+ * Internal dependencies
+ */
+
+
+
+
+const {
+  name,
+  ...settings
+} = _block_json__WEBPACK_IMPORTED_MODULE_2__;
+
+/**
+ * Register this Block Type
+ *
+ * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
+ */
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(name, {
+  ...settings,
+  icon: _icon__WEBPACK_IMPORTED_MODULE_3__.icon,
+  edit: _edit__WEBPACK_IMPORTED_MODULE_4__["default"],
+  save: _save__WEBPACK_IMPORTED_MODULE_5__["default"]
+});
+
+/***/ }),
+
+/***/ "./includes/block-editor/blocks/row/save.js":
+/*!**************************************************!*\
+  !*** ./includes/block-editor/blocks/row/save.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ save)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash */ "lodash");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_3__);
+
+/**
+ * WordPress dependencies
+ */
+
+
+/**
+ * External dependencies
+ */
+
+
+
+/**
+ * The Block save function
+ *
+ * @param {Object} root0
+ * @param {Object} root0.attributes
+ * @return {JSX.Element} React Element.
+ * @class
+ */
+function save({
+  attributes
+}) {
+  const {
+    tagName: TagName = 'div'
+  } = attributes;
+  const classNameAttributes = (0,lodash__WEBPACK_IMPORTED_MODULE_3__.omit)(attributes, ['anchor', 'tagName', 'className']);
+  const className = classnames__WEBPACK_IMPORTED_MODULE_2___default()('row', Object.values(classNameAttributes));
+  const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save({
+    className
+  });
+  const innerBlocksProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useInnerBlocksProps.save(blockProps);
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(TagName, innerBlocksProps);
+}
+
+/***/ }),
+
+/***/ "./includes/lib/convertStylesStringToObject.js":
+/*!*****************************************************!*\
+  !*** ./includes/lib/convertStylesStringToObject.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "convertStylesStringToObject": () => (/* binding */ convertStylesStringToObject)
+/* harmony export */ });
+/**
+ * Converts inline styles attribute to style object
+ *
+ * @param {string} stringStyles
+ * @see https://gist.github.com/goldhand/70de06a3bdbdb51565878ad1ee37e92b
+ */
+const convertStylesStringToObject = stringStyles => typeof stringStyles === 'string' ? stringStyles.split(';').reduce((acc, style) => {
+  const colonPosition = style.indexOf(':');
+  if (colonPosition === -1) {
+    return acc;
+  }
+  const camelCaseProperty = style.slice(0, colonPosition).trim().replace(/^-ms-/, 'ms-').replace(/-./g, c => c.slice(1).toUpperCase()),
+    value = style.slice(colonPosition + 1).trim();
+  return value ? {
+    ...acc,
+    [camelCaseProperty]: value
+  } : acc;
+}, {}) : {};
+
+/***/ }),
+
+/***/ "./node_modules/classnames/index.js":
+/*!******************************************!*\
+  !*** ./node_modules/classnames/index.js ***!
+  \******************************************/
+/***/ ((module, exports) => {
+
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	Copyright (c) 2018 Jed Watson.
+	Licensed under the MIT License (MIT), see
+	http://jedwatson.github.io/classnames
+*/
+/* global define */
+
+(function () {
+	'use strict';
+
+	var hasOwn = {}.hasOwnProperty;
+	var nativeCodeString = '[native code]';
+
+	function classNames() {
+		var classes = [];
+
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (!arg) continue;
+
+			var argType = typeof arg;
+
+			if (argType === 'string' || argType === 'number') {
+				classes.push(arg);
+			} else if (Array.isArray(arg)) {
+				if (arg.length) {
+					var inner = classNames.apply(null, arg);
+					if (inner) {
+						classes.push(inner);
+					}
+				}
+			} else if (argType === 'object') {
+				if (arg.toString !== Object.prototype.toString && !arg.toString.toString().includes('[native code]')) {
+					classes.push(arg.toString());
+					continue;
+				}
+
+				for (var key in arg) {
+					if (hasOwn.call(arg, key) && arg[key]) {
+						classes.push(key);
+					}
+				}
+			}
+		}
+
+		return classes.join(' ');
+	}
+
+	if ( true && module.exports) {
+		classNames.default = classNames;
+		module.exports = classNames;
+	} else if (true) {
+		// register as 'classnames', consistent with npm package name
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
+			return classNames;
+		}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+}());
+
+
+/***/ }),
+
+/***/ "./includes/block-editor/blocks/row/editor.scss":
+/*!******************************************************!*\
+  !*** ./includes/block-editor/blocks/row/editor.scss ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./includes/block-editor/blocks/row/style.scss":
+/*!*****************************************************!*\
+  !*** ./includes/block-editor/blocks/row/style.scss ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "lodash":
+/*!*************************!*\
+  !*** external "lodash" ***!
+  \*************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["lodash"];
+
+/***/ }),
+
+/***/ "@wordpress/block-editor":
+/*!*************************************!*\
+  !*** external ["wp","blockEditor"] ***!
+  \*************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["blockEditor"];
+
+/***/ }),
+
+/***/ "@wordpress/blocks":
+/*!********************************!*\
+  !*** external ["wp","blocks"] ***!
+  \********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["blocks"];
+
+/***/ }),
+
+/***/ "@wordpress/components":
+/*!************************************!*\
+  !*** external ["wp","components"] ***!
+  \************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["components"];
+
+/***/ }),
+
+/***/ "@wordpress/element":
+/*!*********************************!*\
+  !*** external ["wp","element"] ***!
+  \*********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["element"];
+
+/***/ }),
+
+/***/ "@wordpress/i18n":
+/*!******************************!*\
+  !*** external ["wp","i18n"] ***!
+  \******************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["i18n"];
+
+/***/ }),
+
+/***/ "./includes/block-editor/blocks/row/block.json":
+/*!*****************************************************!*\
+  !*** ./includes/block-editor/blocks/row/block.json ***!
+  \*****************************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"resource-layout-blocks/row","title":"Row","category":"resource-layout-blocks","description":"A Row used to contain Column blocks. By default, Rows get negative margin on both sides; half of the gutter value - usually -12px. The number of Columns is set by manually adding Column blocks and adjusting the CSS classes.","keywords":["row"],"version":"1.0.0","textdomain":"resource","attributes":{"anchor":{"type":"string"},"tagName":{"type":"string","default":"div"},"inlineStyles":{"type":"string"},"baseDisplay":{"type":"string"},"basePaddingTop":{"type":"string"},"basePaddingRight":{"type":"string"},"basePaddingBottom":{"type":"string"},"basePaddingLeft":{"type":"string"},"baseMarginTop":{"type":"string"},"baseMarginRight":{"type":"string"},"baseMarginBottom":{"type":"string"},"baseMarginLeft":{"type":"string"},"baseAlignText":{"type":"string"},"baseFlexDirection":{"type":"string"},"baseFillGrowShrink":{"type":"string"},"baseWrap":{"type":"string"},"baseOrder":{"type":"string"},"baseAlignContent":{"type":"string"},"baseAlignItems":{"type":"string"},"baseAlignSelf":{"type":"string"},"baseJustifyContent":{"type":"string"},"smDisplay":{"type":"string"},"smPaddingTop":{"type":"string"},"smPaddingRight":{"type":"string"},"smPaddingBottom":{"type":"string"},"smPaddingLeft":{"type":"string"},"smMarginTop":{"type":"string"},"smMarginRight":{"type":"string"},"smMarginBottom":{"type":"string"},"smMarginLeft":{"type":"string"},"smAlignText":{"type":"string"},"smFlexDirection":{"type":"string"},"smFillGrowShrink":{"type":"string"},"smWrap":{"type":"string"},"smOrder":{"type":"string"},"smAlignContent":{"type":"string"},"smAlignItems":{"type":"string"},"smAlignSelf":{"type":"string"},"smJustifyContent":{"type":"string"},"mdDisplay":{"type":"string"},"mdPaddingTop":{"type":"string"},"mdPaddingRight":{"type":"string"},"mdPaddingBottom":{"type":"string"},"mdPaddingLeft":{"type":"string"},"mdMarginTop":{"type":"string"},"mdMarginRight":{"type":"string"},"mdMarginBottom":{"type":"string"},"mdMarginLeft":{"type":"string"},"mdAlignText":{"type":"string"},"mdFlexDirection":{"type":"string"},"mdFillGrowShrink":{"type":"string"},"mdWrap":{"type":"string"},"mdOrder":{"type":"string"},"mdAlignContent":{"type":"string"},"mdAlignItems":{"type":"string"},"mdAlignSelf":{"type":"string"},"mdJustifyContent":{"type":"string"},"lgDisplay":{"type":"string"},"lgPaddingTop":{"type":"string"},"lgPaddingRight":{"type":"string"},"lgPaddingBottom":{"type":"string"},"lgPaddingLeft":{"type":"string"},"lgMarginTop":{"type":"string"},"lgMarginRight":{"type":"string"},"lgMarginBottom":{"type":"string"},"lgMarginLeft":{"type":"string"},"lgAlignText":{"type":"string"},"lgFlexDirection":{"type":"string"},"lgFillGrowShrink":{"type":"string"},"lgWrap":{"type":"string"},"lgOrder":{"type":"string"},"lgAlignContent":{"type":"string"},"lgAlignItems":{"type":"string"},"lgAlignSelf":{"type":"string"},"lgJustifyContent":{"type":"string"},"xlDisplay":{"type":"string"},"xlPaddingTop":{"type":"string"},"xlPaddingRight":{"type":"string"},"xlPaddingBottom":{"type":"string"},"xlPaddingLeft":{"type":"string"},"xlMarginTop":{"type":"string"},"xlMarginRight":{"type":"string"},"xlMarginBottom":{"type":"string"},"xlMarginLeft":{"type":"string"},"xlAlignText":{"type":"string"},"xlFlexDirection":{"type":"string"},"xlFillGrowShrink":{"type":"string"},"xlWrap":{"type":"string"},"xlOrder":{"type":"string"},"xlAlignContent":{"type":"string"},"xlAlignItems":{"type":"string"},"xlAlignSelf":{"type":"string"},"xlJustifyContent":{"type":"string"},"xxlDisplay":{"type":"string"},"xxlPaddingTop":{"type":"string"},"xxlPaddingRight":{"type":"string"},"xxlPaddingBottom":{"type":"string"},"xxlPaddingLeft":{"type":"string"},"xxlMarginTop":{"type":"string"},"xxlMarginRight":{"type":"string"},"xxlMarginBottom":{"type":"string"},"xxlMarginLeft":{"type":"string"},"xxlAlignText":{"type":"string"},"xxlFlexDirection":{"type":"string"},"xxlFillGrowShrink":{"type":"string"},"xxlWrap":{"type":"string"},"xxlOrder":{"type":"string"},"xxlAlignContent":{"type":"string"},"xxlAlignItems":{"type":"string"},"xxlAlignSelf":{"type":"string"},"xxlJustifyContent":{"type":"string"}},"supports":{"anchor":true,"align":false,"alignWide":false,"ariaLabel":true,"className":true,"color":{"background":true,"gradients":false,"link":false,"text":false},"customClassName":true,"defaultStylePicker":true,"dimensions":{"minHeight":false},"filter":{"duotone":false},"html":false,"inserter":true,"multiple":true,"reusable":true,"lock":true,"position":{"sticky":false},"spacing":{"margin":false,"padding":false,"blockGap":false},"typography":{"fontSize":false,"lineHeight":false}},"editorScript":"file:../../../../build/row.js","editorStyle":"file:../../../../build/row.css","style":"file:../../../../build/style-row.css"}');
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				var [chunkIds, fn, priority] = deferred[i];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					var r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"row": 0,
+/******/ 			"./style-row": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkresource_layout_blocks"] = globalThis["webpackChunkresource_layout_blocks"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["./style-row"], () => (__webpack_require__("./includes/block-editor/blocks/row/index.js")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
+/******/ 	
+/******/ })()
+;
+//# sourceMappingURL=row.js.map

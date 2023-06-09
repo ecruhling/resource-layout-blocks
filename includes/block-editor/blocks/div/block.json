@@ -1,12 +1,13 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
-	"name": "resource-layout-blocks/column",
-	"title": "Column",
+	"name": "resource-layout-blocks/div",
+	"title": "Div",
 	"category": "resource-layout-blocks",
-	"description": "A column.",
+	"description": "A generic <div> that can be used to group other blocks, spacing, etc.",
 	"keywords": [
-		"column"
+		"div",
+		"spacer"
 	],
 	"version": "1.0.0",
 	"textdomain": "resource",
@@ -14,17 +15,14 @@
 		"anchor": {
 			"type": "string"
 		},
+		"tagName": {
+			"type": "string",
+			"default": "div"
+		},
 		"inlineStyles": {
 			"type": "string"
 		},
 		"baseDisplay": {
-			"type": "string"
-		},
-		"baseColumns": {
-			"type": "string",
-			"default": "col"
-		},
-		"baseOffset": {
 			"type": "string"
 		},
 		"basePaddingTop": {
@@ -81,12 +79,6 @@
 		"smDisplay": {
 			"type": "string"
 		},
-		"smColumns": {
-			"type": "string"
-		},
-		"smOffset": {
-			"type": "string"
-		},
 		"smPaddingTop": {
 			"type": "string"
 		},
@@ -139,12 +131,6 @@
 			"type": "string"
 		},
 		"mdDisplay": {
-			"type": "string"
-		},
-		"mdColumns": {
-			"type": "string"
-		},
-		"mdOffset": {
 			"type": "string"
 		},
 		"mdPaddingTop": {
@@ -201,12 +187,6 @@
 		"lgDisplay": {
 			"type": "string"
 		},
-		"lgColumns": {
-			"type": "string"
-		},
-		"lgOffset": {
-			"type": "string"
-		},
 		"lgPaddingTop": {
 			"type": "string"
 		},
@@ -261,12 +241,6 @@
 		"xlDisplay": {
 			"type": "string"
 		},
-		"xlColumns": {
-			"type": "string"
-		},
-		"xlOffset": {
-			"type": "string"
-		},
 		"xlPaddingTop": {
 			"type": "string"
 		},
@@ -319,12 +293,6 @@
 			"type": "string"
 		},
 		"xxlDisplay": {
-			"type": "string"
-		},
-		"xxlColumns": {
-			"type": "string"
-		},
-		"xxlOffset": {
 			"type": "string"
 		},
 		"xxlPaddingTop": {
@@ -405,7 +373,7 @@
 		"reusable": true,
 		"lock": true,
 		"position": {
-			"sticky": true
+			"sticky": false
 		},
 		"spacing": {
 			"margin": false,
@@ -417,7 +385,7 @@
 			"lineHeight": false
 		}
 	},
-	"editorScript": "file:../../../../build/column.js",
-	"editorStyle": "file:../../../../build/column.css",
-	"style": "file:../../../../build/style-column.css"
+	"editorScript": "file:../../../../build/div.js",
+	"editorStyle": "file:../../../../build/div.css",
+	"style": "file:../../../../build/style-div.css"
 }

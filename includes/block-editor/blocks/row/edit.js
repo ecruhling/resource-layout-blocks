@@ -16,6 +16,7 @@ import {
 	FlexItem,
 	SelectControl,
 	TabPanel,
+	TextControl,
 	Toolbar,
 	ToolbarItem,
 } from '@wordpress/components';
@@ -35,6 +36,7 @@ import FlexControl from '../../block-controls/flexControl';
 import PaddingControl from '../../block-controls/paddingControl';
 import MarginControl from '../../block-controls/marginControl';
 import AlignControl from '../../block-controls/alignControl';
+import { convertStylesStringToObject } from '../../../lib/convertStylesStringToObject';
 
 /**
  * Styles are applied only to the editor
@@ -55,6 +57,7 @@ import './editor.scss';
 export default function edit( { attributes, setAttributes } ) {
 	const {
 		tagName: TagName = 'div',
+		inlineStyles,
 		baseDisplay,
 		basePaddingTop,
 		basePaddingRight,
@@ -168,6 +171,7 @@ export default function edit( { attributes, setAttributes } ) {
 	const classNameAttributes = omit( attributes, [
 		'anchor',
 		'tagName',
+		'inlineStyles',
 		'className',
 	] );
 
@@ -175,6 +179,7 @@ export default function edit( { attributes, setAttributes } ) {
 
 	const blockProps = useBlockProps( {
 		className: classes,
+		style: convertStylesStringToObject( inlineStyles ),
 	} );
 
 	return (
@@ -1630,6 +1635,20 @@ export default function edit( { attributes, setAttributes } ) {
 						<div className={ className }>{ content }</div>
 					) }
 				</TabPanel>
+			</InspectorControls>
+			<InspectorControls group="advanced">
+				<TextControl
+					__nextHasNoMarginBottom
+					className="inline-style-control"
+					autoComplete="off"
+					label={ __( 'Inline Styles' ) }
+					value={ inlineStyles || '' }
+					onChange={ ( value ) => {
+						setAttributes( {
+							inlineStyles: value !== '' ? value : undefined,
+						} );
+					} }
+				/>
 			</InspectorControls>
 			<TagName { ...blockProps }>
 				<InnerBlocks

@@ -12,6 +12,7 @@ import {
 	Card,
 	CardHeader,
 	TabPanel,
+	TextControl,
 	Toolbar,
 	ToolbarItem,
 } from '@wordpress/components';
@@ -32,6 +33,7 @@ import MarginControl from '../../block-controls/marginControl';
 import AlignControl from '../../block-controls/alignControl';
 import ColumnControl from '../../block-controls/columnControl';
 import OrderControl from '../../block-controls/orderControl';
+import { convertStylesStringToObject } from '../../../lib/convertStylesStringToObject';
 
 /**
  * Styles are applied only to the editor
@@ -48,6 +50,7 @@ import './editor.scss';
  */
 export default function edit( { attributes, setAttributes } ) {
 	const {
+		inlineStyles,
 		baseDisplay,
 		baseColumns,
 		baseOffset,
@@ -170,12 +173,17 @@ export default function edit( { attributes, setAttributes } ) {
 		xxlJustifyContent,
 	} = attributes;
 
-	const classNameAttributes = omit( attributes, [ 'anchor', 'className' ] );
+	const classNameAttributes = omit( attributes, [
+		'anchor',
+		'className',
+		'inlineStyles',
+	] );
 
 	const classes = classnames( Object.values( classNameAttributes ) );
 
 	const blockProps = useBlockProps( {
 		className: classes,
+		style: convertStylesStringToObject( inlineStyles ),
 	} );
 
 	return (
@@ -1576,6 +1584,20 @@ export default function edit( { attributes, setAttributes } ) {
 						<div className={ className }>{ content }</div>
 					) }
 				</TabPanel>
+			</InspectorControls>
+			<InspectorControls group="advanced">
+				<TextControl
+					__nextHasNoMarginBottom
+					className="inline-style-control"
+					autoComplete="off"
+					label={ __( 'Inline Styles' ) }
+					value={ inlineStyles || '' }
+					onChange={ ( value ) => {
+						setAttributes( {
+							inlineStyles: value !== '' ? value : undefined,
+						} );
+					} }
+				/>
 			</InspectorControls>
 			<div { ...blockProps }>
 				<InnerBlocks

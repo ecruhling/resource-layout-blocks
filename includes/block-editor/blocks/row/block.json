@@ -18,6 +18,9 @@
 			"type": "string",
 			"default": "div"
 		},
+		"inlineStyles": {
+			"type": "string"
+		},
 		"baseDisplay": {
 			"type": "string"
 		},

@@ -17,8 +17,10 @@ module.exports = {
 			'./includes/global',
 			'global-editor-styles.scss'
 		),
+		// blocks (in order)
 		container: './includes/block-editor/blocks/container',
 		row: './includes/block-editor/blocks/row',
 		column: './includes/block-editor/blocks/column',
+		div: './includes/block-editor/blocks/div',
 	},
 };
