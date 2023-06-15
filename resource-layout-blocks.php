@@ -27,6 +27,7 @@ function resource_layout_blocks_init() {
 		'container',
 		'row',
 		'column',
+		'div',
 	);
 
 	foreach ( $blocks as $block ) {

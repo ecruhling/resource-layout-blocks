@@ -2,12 +2,13 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
 	"name": "resource-layout-blocks/div",
-	"title": "Div",
+	"title": "div",
 	"category": "resource-layout-blocks",
-	"description": "A generic <div> that can be used to group other blocks, spacing, etc.",
+	"description": "A generic <div> that can be used to group other blocks, for spacing, etc.",
 	"keywords": [
 		"div",
-		"spacer"
+		"spacer",
+		"group"
 	],
 	"version": "1.0.0",
 	"textdomain": "resource",

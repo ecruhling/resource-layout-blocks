@@ -29,7 +29,6 @@ const { name, ...settings } = json;
 registerBlockType( name, {
 	...settings,
 	icon,
-	transforms,
 	edit,
 	save,
 } );
