@@ -14,16 +14,16 @@ import {
  * AlignControl
  * Component for controlling the Text Align attribute
  *
- * @param breakpoint
- * @param breakpoint_name
- * @param alignText
- * @param setAlignText
- * @returns {JSX.Element}
- * @constructor
+ * @param {string} breakpoint
+ * @param {string} breakpointName
+ * @param {string} alignText
+ * @param {string} setAlignText
+ * @return {JSX.Element} The Alignment Control for the Block Editor sidebar.
+ * @class
  */
 export default function AlignControl( {
 	breakpoint,
-	breakpoint_name,
+	breakpointName,
 	alignText,
 	setAlignText,
 } ) {
@@ -35,7 +35,7 @@ export default function AlignControl( {
 				size="small"
 				className="resource-card-header"
 			>
-				{ __( `${ breakpoint_name } ALIGN`, 'resource' ) }
+				{ __( `${ breakpointName } ALIGN`, 'resource' ) }
 			</CardHeader>
 			<CardBody size="small">
 				<Flex wrap={ true }>

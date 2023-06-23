@@ -23,7 +23,7 @@ import iconStart from './iconStart';
  * Component for controlling Padding attributes
  *
  * @param breakpoint
- * @param breakpoint_name
+ * @param breakpointName
  * @param paddingTop
  * @param paddingRight
  * @param paddingBottom
@@ -37,7 +37,7 @@ import iconStart from './iconStart';
  */
 export default function PaddingControl( {
 	breakpoint,
-	breakpoint_name,
+	breakpointName,
 	paddingTop,
 	paddingRight,
 	paddingBottom,
@@ -55,7 +55,7 @@ export default function PaddingControl( {
 				size="small"
 				className="resource-card-header"
 			>
-				{ __( `${ breakpoint_name } PADDING`, 'resource' ) }
+				{ __( `${ breakpointName } PADDING`, 'resource' ) }
 			</CardHeader>
 			<CardBody size="small">
 				<Flex wrap={ true }>

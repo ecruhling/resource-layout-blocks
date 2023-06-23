@@ -5,9 +5,7 @@
 	"title": "Column",
 	"category": "resource-layout-blocks",
 	"description": "A column.",
-	"keywords": [
-		"column"
-	],
+	"keywords": [ "column" ],
 	"version": "1.0.0",
 	"textdomain": "resource",
 	"attributes": {

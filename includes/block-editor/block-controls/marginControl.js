@@ -23,7 +23,7 @@ import iconStart from './iconStart';
  * Component for controlling Margin attributes
  *
  * @param breakpoint
- * @param breakpoint_name
+ * @param breakpointName
  * @param marginTop
  * @param marginRight
  * @param marginBottom
@@ -37,7 +37,7 @@ import iconStart from './iconStart';
  */
 export default function MarginControl( {
 	breakpoint,
-	breakpoint_name,
+	breakpointName,
 	marginTop,
 	marginRight,
 	marginBottom,
@@ -55,7 +55,7 @@ export default function MarginControl( {
 				size="small"
 				className="resource-card-header"
 			>
-				{ __( `${ breakpoint_name } MARGIN`, 'resource' ) }
+				{ __( `${ breakpointName } MARGIN`, 'resource' ) }
 			</CardHeader>
 			<CardBody size="small">
 				<Flex wrap={ true }>

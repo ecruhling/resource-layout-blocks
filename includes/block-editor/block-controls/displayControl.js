@@ -15,7 +15,7 @@ import {
  * Component for controlling the Display attribute
  *
  * @param breakpoint
- * @param breakpoint_name
+ * @param breakpointName
  * @param display
  * @param setDisplay
  * @returns {JSX.Element}
@@ -23,7 +23,7 @@ import {
  */
 export default function ColumnsDisplayControl( {
 	breakpoint,
-	breakpoint_name,
+	breakpointName,
 	display,
 	setDisplay,
 } ) {
@@ -35,7 +35,7 @@ export default function ColumnsDisplayControl( {
 				size="small"
 				className="resource-card-header"
 			>
-				{ __( `${ breakpoint_name } DISPLAY`, 'resource' ) }
+				{ __( `${ breakpointName } DISPLAY`, 'resource' ) }
 			</CardHeader>
 			<CardBody size="small">
 				<Flex wrap={ true }>

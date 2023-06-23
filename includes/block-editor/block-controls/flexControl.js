@@ -15,7 +15,7 @@ import {
  * Component for controlling attributes of flex items
  *
  * @param breakpoint
- * @param breakpoint_name
+ * @param breakpointName
  * @param flexDirection
  * @param justifyContent
  * @param alignItems
@@ -37,7 +37,7 @@ import {
  */
 export default function FlexControl( {
 	breakpoint,
-	breakpoint_name,
+	breakpointName,
 	flexDirection,
 	justifyContent,
 	alignItems,
@@ -63,7 +63,7 @@ export default function FlexControl( {
 				size="small"
 				className="resource-card-header"
 			>
-				{ __( `${ breakpoint_name } FLEX ATTRIBUTES`, 'resource' ) }
+				{ __( `${ breakpointName } FLEX ATTRIBUTES`, 'resource' ) }
 			</CardHeader>
 			<CardBody size="small">
 				<Flex wrap={ true }>

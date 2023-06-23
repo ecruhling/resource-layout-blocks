@@ -5,20 +5,12 @@
 	"title": "div",
 	"category": "resource-layout-blocks",
 	"description": "A generic <div> that can be used to group other blocks, for spacing, etc.",
-	"keywords": [
-		"div",
-		"spacer",
-		"group"
-	],
+	"keywords": [ "div", "spacer", "group" ],
 	"version": "1.0.0",
 	"textdomain": "resource",
 	"attributes": {
 		"anchor": {
 			"type": "string"
-		},
-		"tagName": {
-			"type": "string",
-			"default": "div"
 		},
 		"inlineStyles": {
 			"type": "string"

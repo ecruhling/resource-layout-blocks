@@ -265,7 +265,7 @@ export default function edit( { attributes, setAttributes } ) {
 								<Card>
 									<DisplayControl
 										breakpoint=""
-										breakpoint_name=""
+										breakpointName=""
 										display={ baseDisplay }
 										setDisplay={ ( baseDisplay ) =>
 											setAttributes( { baseDisplay } )
@@ -275,7 +275,7 @@ export default function edit( { attributes, setAttributes } ) {
 										baseDisplay === 'd-inline-flex' ) && (
 										<FlexControl
 											breakpoint=""
-											breakpoint_name=""
+											breakpointName=""
 											flexDirection={ baseFlexDirection }
 											justifyContent={
 												baseJustifyContent
@@ -340,7 +340,7 @@ export default function edit( { attributes, setAttributes } ) {
 										<>
 											<PaddingControl
 												breakpoint=""
-												breakpoint_name=""
+												breakpointName=""
 												paddingTop={ basePaddingTop }
 												paddingRight={
 													basePaddingRight
@@ -380,7 +380,7 @@ export default function edit( { attributes, setAttributes } ) {
 											></PaddingControl>
 											<MarginControl
 												breakpoint=""
-												breakpoint_name=""
+												breakpointName=""
 												marginTop={ baseMarginTop }
 												marginRight={ baseMarginRight }
 												marginBottom={
@@ -418,7 +418,7 @@ export default function edit( { attributes, setAttributes } ) {
 											></MarginControl>
 											<AlignControl
 												breakpoint=""
-												breakpoint_name=""
+												breakpointName=""
 												alignText={ baseAlignText }
 												flexDirection={
 													baseFlexDirection
@@ -477,7 +477,7 @@ export default function edit( { attributes, setAttributes } ) {
 								<Card>
 									<DisplayControl
 										breakpoint="sm-"
-										breakpoint_name="SM"
+										breakpointName="SM"
 										display={ smDisplay }
 										setDisplay={ ( smDisplay ) =>
 											setAttributes( { smDisplay } )
@@ -487,7 +487,7 @@ export default function edit( { attributes, setAttributes } ) {
 										smDisplay === 'd-sm-inline-flex' ) && (
 										<FlexControl
 											breakpoint="sm-"
-											breakpoint_name="SM"
+											breakpointName="SM"
 											flexDirection={ smFlexDirection }
 											justifyContent={ smJustifyContent }
 											alignItems={ smAlignItems }
@@ -544,7 +544,7 @@ export default function edit( { attributes, setAttributes } ) {
 										<>
 											<PaddingControl
 												breakpoint="sm-"
-												breakpoint_name="SM"
+												breakpointName="SM"
 												paddingTop={ smPaddingTop }
 												paddingRight={ smPaddingRight }
 												paddingBottom={
@@ -582,7 +582,7 @@ export default function edit( { attributes, setAttributes } ) {
 											></PaddingControl>
 											<MarginControl
 												breakpoint="sm-"
-												breakpoint_name="SM"
+												breakpointName="SM"
 												marginTop={ smMarginTop }
 												marginRight={ smMarginRight }
 												marginBottom={ smMarginBottom }
@@ -618,7 +618,7 @@ export default function edit( { attributes, setAttributes } ) {
 											></MarginControl>
 											<AlignControl
 												breakpoint="sm-"
-												breakpoint_name="SM"
+												breakpointName="SM"
 												alignText={ smAlignText }
 												flexDirection={
 													smFlexDirection
@@ -670,7 +670,7 @@ export default function edit( { attributes, setAttributes } ) {
 								<Card>
 									<DisplayControl
 										breakpoint="md-"
-										breakpoint_name="MD"
+										breakpointName="MD"
 										display={ mdDisplay }
 										setDisplay={ ( mdDisplay ) =>
 											setAttributes( { mdDisplay } )
@@ -680,7 +680,7 @@ export default function edit( { attributes, setAttributes } ) {
 										mdDisplay === 'd-md-inline-flex' ) && (
 										<FlexControl
 											breakpoint="md-"
-											breakpoint_name="MD"
+											breakpointName="MD"
 											flexDirection={ mdFlexDirection }
 											justifyContent={ mdJustifyContent }
 											alignItems={ mdAlignItems }
@@ -737,7 +737,7 @@ export default function edit( { attributes, setAttributes } ) {
 										<>
 											<PaddingControl
 												breakpoint="md-"
-												breakpoint_name="MD"
+												breakpointName="MD"
 												paddingTop={ mdPaddingTop }
 												paddingRight={ mdPaddingRight }
 												paddingBottom={
@@ -775,7 +775,7 @@ export default function edit( { attributes, setAttributes } ) {
 											></PaddingControl>
 											<MarginControl
 												breakpoint="md-"
-												breakpoint_name="MD"
+												breakpointName="MD"
 												marginTop={ mdMarginTop }
 												marginRight={ mdMarginRight }
 												marginBottom={ mdMarginBottom }
@@ -811,7 +811,7 @@ export default function edit( { attributes, setAttributes } ) {
 											></MarginControl>
 											<AlignControl
 												breakpoint="md-"
-												breakpoint_name="MD"
+												breakpointName="MD"
 												alignText={ mdAlignText }
 												flexDirection={
 													mdFlexDirection
@@ -863,7 +863,7 @@ export default function edit( { attributes, setAttributes } ) {
 								<Card>
 									<DisplayControl
 										breakpoint="lg-"
-										breakpoint_name="LG"
+										breakpointName="LG"
 										display={ lgDisplay }
 										setDisplay={ ( lgDisplay ) =>
 											setAttributes( { lgDisplay } )
@@ -873,7 +873,7 @@ export default function edit( { attributes, setAttributes } ) {
 										lgDisplay === 'd-lg-inline-flex' ) && (
 										<FlexControl
 											breakpoint="lg-"
-											breakpoint_name="LG"
+											breakpointName="LG"
 											flexDirection={ lgFlexDirection }
 											justifyContent={ lgJustifyContent }
 											alignItems={ lgAlignItems }
@@ -930,7 +930,7 @@ export default function edit( { attributes, setAttributes } ) {
 										<>
 											<PaddingControl
 												breakpoint="lg-"
-												breakpoint_name="LG"
+												breakpointName="LG"
 												paddingTop={ lgPaddingTop }
 												paddingRight={ lgPaddingRight }
 												paddingBottom={
@@ -968,7 +968,7 @@ export default function edit( { attributes, setAttributes } ) {
 											></PaddingControl>
 											<MarginControl
 												breakpoint="lg-"
-												breakpoint_name="LG"
+												breakpointName="LG"
 												marginTop={ lgMarginTop }
 												marginRight={ lgMarginRight }
 												marginBottom={ lgMarginBottom }
@@ -1004,7 +1004,7 @@ export default function edit( { attributes, setAttributes } ) {
 											></MarginControl>
 											<AlignControl
 												breakpoint="lg-"
-												breakpoint_name="LG"
+												breakpointName="LG"
 												alignText={ lgAlignText }
 												flexDirection={
 													lgFlexDirection
@@ -1056,7 +1056,7 @@ export default function edit( { attributes, setAttributes } ) {
 								<Card>
 									<DisplayControl
 										breakpoint="xl-"
-										breakpoint_name="XL"
+										breakpointName="XL"
 										display={ xlDisplay }
 										setDisplay={ ( xlDisplay ) =>
 											setAttributes( { xlDisplay } )
@@ -1066,7 +1066,7 @@ export default function edit( { attributes, setAttributes } ) {
 										xlDisplay === 'd-xl-inline-flex' ) && (
 										<FlexControl
 											breakpoint="xl-"
-											breakpoint_name="XL"
+											breakpointName="XL"
 											flexDirection={ xlFlexDirection }
 											justifyContent={ xlJustifyContent }
 											alignItems={ xlAlignItems }
@@ -1123,7 +1123,7 @@ export default function edit( { attributes, setAttributes } ) {
 										<>
 											<PaddingControl
 												breakpoint="xl-"
-												breakpoint_name="XL"
+												breakpointName="XL"
 												paddingTop={ xlPaddingTop }
 												paddingRight={ xlPaddingRight }
 												paddingBottom={
@@ -1161,7 +1161,7 @@ export default function edit( { attributes, setAttributes } ) {
 											></PaddingControl>
 											<MarginControl
 												breakpoint="xl-"
-												breakpoint_name="XL"
+												breakpointName="XL"
 												marginTop={ xlMarginTop }
 												marginRight={ xlMarginRight }
 												marginBottom={ xlMarginBottom }
@@ -1197,7 +1197,7 @@ export default function edit( { attributes, setAttributes } ) {
 											></MarginControl>
 											<AlignControl
 												breakpoint="xl-"
-												breakpoint_name="XL"
+												breakpointName="XL"
 												alignText={ xlAlignText }
 												flexDirection={
 													xlFlexDirection
@@ -1249,7 +1249,7 @@ export default function edit( { attributes, setAttributes } ) {
 								<Card>
 									<DisplayControl
 										breakpoint="xxl-"
-										breakpoint_name="XXL"
+										breakpointName="XXL"
 										display={ xxlDisplay }
 										setDisplay={ ( xxlDisplay ) =>
 											setAttributes( { xxlDisplay } )
@@ -1260,7 +1260,7 @@ export default function edit( { attributes, setAttributes } ) {
 											'd-xxl-inline-flex' ) && (
 										<FlexControl
 											breakpoint="xxl-"
-											breakpoint_name="XXL"
+											breakpointName="XXL"
 											flexDirection={ xxlFlexDirection }
 											justifyContent={ xxlJustifyContent }
 											alignItems={ xxlAlignItems }
@@ -1319,7 +1319,7 @@ export default function edit( { attributes, setAttributes } ) {
 										<>
 											<PaddingControl
 												breakpoint="xxl-"
-												breakpoint_name="XXL"
+												breakpointName="XXL"
 												paddingTop={ xxlPaddingTop }
 												paddingRight={ xxlPaddingRight }
 												paddingBottom={
@@ -1357,7 +1357,7 @@ export default function edit( { attributes, setAttributes } ) {
 											></PaddingControl>
 											<MarginControl
 												breakpoint="xxl-"
-												breakpoint_name="XXL"
+												breakpointName="XXL"
 												marginTop={ xxlMarginTop }
 												marginRight={ xxlMarginRight }
 												marginBottom={ xxlMarginBottom }
@@ -1393,7 +1393,7 @@ export default function edit( { attributes, setAttributes } ) {
 											></MarginControl>
 											<AlignControl
 												breakpoint="xxl-"
-												breakpoint_name="XXL"
+												breakpointName="XXL"
 												alignText={ xxlAlignText }
 												flexDirection={
 													xxlFlexDirection

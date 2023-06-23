@@ -15,7 +15,7 @@ import {
  * Component for controlling Column attributes
  *
  * @param breakpoint
- * @param breakpoint_name
+ * @param breakpointName
  * @param columns
  * @param offset
  * @param setColumns
@@ -25,7 +25,7 @@ import {
  */
 export default function ColumnControl( {
 	breakpoint,
-	breakpoint_name,
+	breakpointName,
 	columns,
 	offset,
 	setColumns,
@@ -48,7 +48,7 @@ export default function ColumnControl( {
 				size="small"
 				className="resource-card-header"
 			>
-				{ __( `${ breakpoint_name } COLUMNS`, 'resource' ) }
+				{ __( `${ breakpointName } COLUMNS`, 'resource' ) }
 			</CardHeader>
 			<CardBody size="small">
 				<Flex wrap={ true }>

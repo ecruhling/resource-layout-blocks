@@ -15,7 +15,7 @@ import {
  * Component for controlling Order attributes
  *
  * @param breakpoint
- * @param breakpoint_name
+ * @param breakpointName
  * @param order
  * @param setOrder
  * @returns {JSX.Element}
@@ -23,7 +23,7 @@ import {
  */
 export default function OrderControl( {
 	breakpoint,
-	breakpoint_name,
+	breakpointName,
 	order,
 	setOrder,
 } ) {
@@ -35,7 +35,7 @@ export default function OrderControl( {
 				size="small"
 				className="resource-card-header"
 			>
-				{ __( `${ breakpoint_name } ORDER`, 'resource' ) }
+				{ __( `${ breakpointName } ORDER`, 'resource' ) }
 			</CardHeader>
 			<CardBody size="small">
 				<Flex wrap={ true }>

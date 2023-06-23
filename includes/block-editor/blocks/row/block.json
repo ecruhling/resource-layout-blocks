@@ -5,9 +5,7 @@
 	"title": "Row",
 	"category": "resource-layout-blocks",
 	"description": "A Row used to contain Column blocks. By default, Rows get negative margin on both sides; half of the gutter value - usually -12px. The number of Columns is set by manually adding Column blocks and adjusting the CSS classes.",
-	"keywords": [
-		"row"
-	],
+	"keywords": [ "row" ],
 	"version": "1.0.0",
 	"textdomain": "resource",
 	"attributes": {

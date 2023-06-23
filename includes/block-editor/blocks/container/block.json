@@ -5,10 +5,7 @@
 	"title": "Container",
 	"category": "resource-layout-blocks",
 	"description": "A Container/Wrapper; fluid or fixed width. By default, Containers get padding on both sides; half of the gutter value - usually 12px.",
-	"keywords": [
-		"container",
-		"wrapper"
-	],
+	"keywords": [ "container", "wrapper" ],
 	"version": "1.0.0",
 	"textdomain": "resource",
 	"attributes": {
