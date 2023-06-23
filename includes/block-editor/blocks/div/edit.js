@@ -33,26 +33,27 @@ import { convertStylesStringToObject } from '../../../lib/convertStylesStringToO
 import './editor.scss';
 import {
 	Card,
-	CardBody,
 	CardHeader,
-	CheckboxControl,
-	Flex,
-	FlexItem,
-	SelectControl,
 	TabPanel,
 	TextControl,
 	Toolbar,
 	ToolbarItem,
 } from '@wordpress/components';
-import { tagNameMessages } from '../../block-help/tagNameMessages';
 
 /**
- * The Block edit function
+ * The Block edit function.
  *
- * @returns {JSX.Element}
- * @constructor
+ * @since      1.0.0
+ *
+ * @class
+ *
+ * @param {Object}   root0
+ * @param {Object}   root0.attributes
+ * @param {Function} root0.setAttributes
+ *
+ * @return {JSX.Element} React Element.
  */
-export default function edit( { attributes, setAttributes } ) {
+export default ( { attributes, setAttributes } ) => {
 	const {
 		className,
 		inlineStyles,
@@ -1413,4 +1414,4 @@ export default function edit( { attributes, setAttributes } ) {
 			</div>
 		</>
 	);
-}
+};

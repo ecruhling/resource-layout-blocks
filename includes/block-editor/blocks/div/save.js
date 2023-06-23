@@ -15,12 +15,18 @@ import { omit } from 'lodash';
 import { convertStylesStringToObject } from '../../../lib/convertStylesStringToObject';
 
 /**
- * The Block save function
+ * The Block save function.
  *
- * @returns {JSX.Element}
- * @constructor
+ * @since      1.0.0
+ *
+ * @class
+ *
+ * @param {Object} root0
+ * @param {Object} root0.attributes
+ *
+ * @return {JSX.Element} React Element.
  */
-export default function save( { attributes } ) {
+export default ( { attributes } ) => {
 	const { inlineStyles } = attributes;
 
 	const classNameAttributes = omit( attributes, [
@@ -39,4 +45,4 @@ export default function save( { attributes } ) {
 	const innerBlocksProps = useInnerBlocksProps.save( blockProps );
 
 	return <div { ...innerBlocksProps } />;
-}
+};

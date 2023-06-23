@@ -46,15 +46,19 @@ import { convertStylesStringToObject } from '../../../lib/convertStylesStringToO
 import './editor.scss';
 
 /**
- * The Block edit function
+ * The Block edit function.
+ *
+ * @since      1.0.0
+ *
+ * @class
  *
  * @param {Object}   root0
  * @param {Object}   root0.attributes
  * @param {Function} root0.setAttributes
+ *
  * @return {JSX.Element} React Element.
- * @class
  */
-export default function edit( { attributes, setAttributes } ) {
+export default ( { attributes, setAttributes } ) => {
 	const {
 		tagName: TagName = 'div',
 		className,
@@ -278,7 +282,7 @@ export default function edit( { attributes, setAttributes } ) {
 																Row block
 																default display
 																attribute is
-																'flex'
+																&#39;flex&#39;
 															</em>
 														</p>
 													</FlexItem>
@@ -523,7 +527,7 @@ export default function edit( { attributes, setAttributes } ) {
 																Row block
 																default display
 																attribute is
-																'flex'
+																&#39;flex&#39;
 															</em>
 														</p>
 													</FlexItem>
@@ -751,7 +755,7 @@ export default function edit( { attributes, setAttributes } ) {
 																Row block
 																default display
 																attribute is
-																'flex'
+																&#39;flex&#39;
 															</em>
 														</p>
 													</FlexItem>
@@ -979,7 +983,7 @@ export default function edit( { attributes, setAttributes } ) {
 																Row block
 																default display
 																attribute is
-																'flex'
+																&#39;flex&#39;
 															</em>
 														</p>
 													</FlexItem>
@@ -1207,7 +1211,7 @@ export default function edit( { attributes, setAttributes } ) {
 																Row block
 																default display
 																attribute is
-																'flex'
+																&#39;flex&#39;
 															</em>
 														</p>
 													</FlexItem>
@@ -1662,4 +1666,4 @@ export default function edit( { attributes, setAttributes } ) {
 			</TagName>
 		</>
 	);
-}
+};

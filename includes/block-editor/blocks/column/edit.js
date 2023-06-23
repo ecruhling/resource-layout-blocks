@@ -43,15 +43,19 @@ import { convertStylesStringToObject } from '../../../lib/convertStylesStringToO
 import './editor.scss';
 
 /**
- * The Block edit function
+ * The Block edit function.
+ *
+ * @since      1.0.0
+ *
+ * @class
  *
  * @param {Object}   root0
  * @param {Object}   root0.attributes
  * @param {Function} root0.setAttributes
+ *
  * @return {JSX.Element} React Element.
- * @class
  */
-export default function edit( { attributes, setAttributes } ) {
+export default ( { attributes, setAttributes } ) => {
 	const {
 		className,
 		inlineStyles,
@@ -1613,4 +1617,4 @@ export default function edit( { attributes, setAttributes } ) {
 			</div>
 		</>
 	);
-}
+};

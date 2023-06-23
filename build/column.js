@@ -1285,7 +1285,7 @@ function PaddingControl({
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ edit)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
@@ -1342,18 +1342,22 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * The Block edit function
+ * The Block edit function.
+ *
+ * @since      1.0.0
+ *
+ * @class
  *
  * @param {Object}   root0
  * @param {Object}   root0.attributes
  * @param {Function} root0.setAttributes
+ *
  * @return {JSX.Element} React Element.
- * @class
  */
-function edit({
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (({
   attributes,
   setAttributes
-}) {
+}) => {
   const {
     className,
     inlineStyles,
@@ -2282,7 +2286,7 @@ function edit({
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks, {
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Insert Blocks', 'resource')
   })));
-}
+});
 
 /***/ }),
 
@@ -2377,7 +2381,7 @@ const {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ save)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
@@ -2402,14 +2406,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * The Block save function
+ * The Block save function.
  *
- * @returns {JSX.Element}
- * @constructor
+ * @since      1.0.0
+ *
+ * @class
+ *
+ * @param {Object} root0
+ * @param {Object} root0.attributes
+ *
+ * @return {JSX.Element} React Element.
  */
-function save({
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (({
   attributes
-}) {
+}) => {
   const {
     tagName: TagName = 'div',
     inlineStyles
@@ -2422,7 +2432,7 @@ function save({
   });
   const innerBlocksProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useInnerBlocksProps.save(blockProps);
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(TagName, innerBlocksProps);
-}
+});
 
 /***/ }),
 
