@@ -197,52 +197,8 @@ export default function edit( { attributes, setAttributes } ) {
 						size="small"
 						className="resource-card-header"
 					>
-						{ __( 'CONTAINER', 'resource' ) }
+						{ __( 'DIV', 'resource' ) }
 					</CardHeader>
-					<CardBody size="small">
-						<Flex wrap={ true }>
-							<FlexItem>
-								<SelectControl
-									label={ __( 'HTML element', 'resource' ) }
-									options={ [
-										{
-											label: __(
-												'Default (<div>)',
-												'resource'
-											),
-											value: 'div',
-										},
-										{ label: '<header>', value: 'header' },
-										{ label: '<main>', value: 'main' },
-										{
-											label: '<section>',
-											value: 'section',
-										},
-										{
-											label: '<article>',
-											value: 'article',
-										},
-										{ label: '<aside>', value: 'aside' },
-										{ label: '<footer>', value: 'footer' },
-									] }
-									value={ TagName }
-									onChange={ ( value ) =>
-										setAttributes( { tagName: value } )
-									}
-									help={ tagNameMessages[ TagName ] }
-								/>
-							</FlexItem>
-							<FlexItem>
-								<CheckboxControl
-									label={ __( 'Fluid', 'resource' ) }
-									checked={ isFluid }
-									onChange={ ( value ) =>
-										setAttributes( { isFluid: value } )
-									}
-								/>
-							</FlexItem>
-						</Flex>
-					</CardBody>
 				</Card>
 				<TabPanel
 					className="breakpoint-tab-panel"

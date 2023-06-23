@@ -14,12 +14,12 @@ import {
  * OrderControl
  * Component for controlling Order attributes
  *
- * @param breakpoint
- * @param breakpointName
- * @param order
- * @param setOrder
- * @returns {JSX.Element}
- * @constructor
+ * @param {string}   breakpoint
+ * @param {string}   breakpointName
+ * @param {string}   order
+ * @param {Function} setOrder
+ * @return {JSX.Element} The Order Control for the Block Editor sidebar.
+ * @class
  */
 export default function OrderControl( {
 	breakpoint,
@@ -35,7 +35,7 @@ export default function OrderControl( {
 				size="small"
 				className="resource-card-header"
 			>
-				{ __( `${ breakpointName } ORDER`, 'resource' ) }
+				{ `${ breakpointName } ORDER` }
 			</CardHeader>
 			<CardBody size="small">
 				<Flex wrap={ true }>

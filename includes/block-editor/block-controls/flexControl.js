@@ -14,26 +14,26 @@ import {
  * FlexControl
  * Component for controlling attributes of flex items
  *
- * @param breakpoint
- * @param breakpointName
- * @param flexDirection
- * @param justifyContent
- * @param alignItems
- * @param alignSelf
- * @param fillGrowShrink
- * @param wrap
- * @param order
- * @param alignContent
- * @param setFlexDirection
- * @param setJustifyContent
- * @param setAlignItems
- * @param setAlignSelf
- * @param setFillGrowShrink
- * @param setWrap
- * @param setOrder
- * @param setAlignContent
- * @returns {JSX.Element}
- * @constructor
+ * @param {string}   breakpoint
+ * @param {string}   breakpointName
+ * @param {string}   flexDirection
+ * @param {string}   justifyContent
+ * @param {string}   alignItems
+ * @param {string}   alignSelf
+ * @param {string}   fillGrowShrink
+ * @param {string}   wrap
+ * @param {string}   order
+ * @param {string}   alignContent
+ * @param {Function} setFlexDirection
+ * @param {Function} setJustifyContent
+ * @param {Function} setAlignItems
+ * @param {Function} setAlignSelf
+ * @param {Function} setFillGrowShrink
+ * @param {Function} setWrap
+ * @param {Function} setOrder
+ * @param {Function} setAlignContent
+ * @return {JSX.Element} The Flex Control for the Block Editor sidebar.
+ * @class
  */
 export default function FlexControl( {
 	breakpoint,
@@ -63,7 +63,7 @@ export default function FlexControl( {
 				size="small"
 				className="resource-card-header"
 			>
-				{ __( `${ breakpointName } FLEX ATTRIBUTES`, 'resource' ) }
+				{ `${ breakpointName } FLEX ATTRIBUTES` }
 			</CardHeader>
 			<CardBody size="small">
 				<Flex wrap={ true }>

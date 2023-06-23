@@ -22,18 +22,18 @@ import iconStart from './iconStart';
  * PaddingControl
  * Component for controlling Padding attributes
  *
- * @param breakpoint
- * @param breakpointName
- * @param paddingTop
- * @param paddingRight
- * @param paddingBottom
- * @param paddingLeft
- * @param setPaddingTop
- * @param setPaddingRight
- * @param setPaddingBottom
- * @param setPaddingLeft
- * @returns {JSX.Element}
- * @constructor
+ * @param {string}   breakpoint
+ * @param {string}   breakpointName
+ * @param {string}   paddingTop
+ * @param {string}   paddingRight
+ * @param {string}   paddingBottom
+ * @param {string}   paddingLeft
+ * @param {Function} setPaddingTop
+ * @param {Function} setPaddingRight
+ * @param {Function} setPaddingBottom
+ * @param {Function} setPaddingLeft
+ * @return {JSX.Element} The Padding Control for the Block Editor sidebar.
+ * @class
  */
 export default function PaddingControl( {
 	breakpoint,
@@ -55,7 +55,7 @@ export default function PaddingControl( {
 				size="small"
 				className="resource-card-header"
 			>
-				{ __( `${ breakpointName } PADDING`, 'resource' ) }
+				{ `${ breakpointName } PADDING` }
 			</CardHeader>
 			<CardBody size="small">
 				<Flex wrap={ true }>

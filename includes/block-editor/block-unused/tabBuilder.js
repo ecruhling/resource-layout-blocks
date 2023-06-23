@@ -1,9 +1,9 @@
 import { Card } from '@wordpress/components';
-import DisplayControl from '../../block-components/displayControl';
-import FlexControl from '../../block-components/flexControl';
-import PaddingControl from '../../block-components/paddingControl';
-import MarginControl from '../../block-components/marginControl';
-import AlignControl from '../../block-components/alignControl';
+import DisplayControl from '../block-controls/displayControl';
+import FlexControl from '../block-controls/flexControl';
+import PaddingControl from '../block-controls/paddingControl';
+import MarginControl from '../block-controls/marginControl';
+import AlignControl from '../block-controls/alignControl';
 
 const breakpoints = [
 	{
@@ -44,13 +44,11 @@ const breakpoints = [
 	},
 ];
 
-// console.log(attributes['lgDisplay']);
-
-let tabArray = [];
+const tabArray = [];
 let tabObject;
 {
 	breakpoints.forEach( ( breakpoint ) => {
-		const css_class = breakpoint.css_class;
+		const cssClass = breakpoint.css_class;
 		const modifier = breakpoint.modifier;
 		const display = attributes[ modifier + 'Display' ];
 		const flexDirection = attributes[ modifier + 'FlexDirection' ];
@@ -71,8 +69,6 @@ let tabObject;
 		const marginLeft = attributes[ modifier + 'MarginLeft' ];
 		const alignText = attributes[ modifier + 'AlignText' ];
 
-		// console.log(modifier + 'Display');
-
 		tabObject = {
 			name: breakpoint.name,
 			title: breakpoint.control_name,
@@ -80,18 +76,18 @@ let tabObject;
 			content: (
 				<Card>
 					<DisplayControl
-						breakpoint={ css_class }
-						breakpointName={ css_class }
+						breakpoint={ cssClass }
+						breakpointName={ cssClass }
 						display={ display }
 						setDisplay={ ( display ) =>
 							setAttributes( { display } )
 						}
 					></DisplayControl>
-					{ ( display === 'd-' + css_class + 'flex' ||
-						display === 'd-' + css_class + 'inline-flex' ) && (
+					{ ( display === 'd-' + cssClass + 'flex' ||
+						display === 'd-' + cssClass + 'inline-flex' ) && (
 						<FlexControl
-							breakpoint={ css_class }
-							breakpointName={ css_class }
+							breakpoint={ cssClass }
+							breakpointName={ cssClass }
 							flexDirection={ flexDirection }
 							justifyContent={ justifyContent }
 							alignItems={ alignItems }
@@ -122,11 +118,11 @@ let tabObject;
 							}
 						></FlexControl>
 					) }
-					{ display !== 'd-' + css_class + 'none' && (
+					{ display !== 'd-' + cssClass + 'none' && (
 						<>
 							<PaddingControl
-								breakpoint={ css_class }
-								breakpointName={ css_class }
+								breakpoint={ cssClass }
+								breakpointName={ cssClass }
 								paddingTop={ paddingTop }
 								paddingRight={ paddingRight }
 								paddingBottom={ paddingBottom }
@@ -145,8 +141,8 @@ let tabObject;
 								}
 							></PaddingControl>
 							<MarginControl
-								breakpoint={ css_class }
-								breakpointName={ css_class }
+								breakpoint={ cssClass }
+								breakpointName={ cssClass }
 								marginTop={ marginTop }
 								marginRight={ marginRight }
 								marginBottom={ marginBottom }
@@ -165,8 +161,8 @@ let tabObject;
 								}
 							></MarginControl>
 							<AlignControl
-								breakpoint={ css_class }
-								breakpointName={ css_class }
+								breakpoint={ cssClass }
+								breakpointName={ cssClass }
 								alignText={ alignText }
 								setAlignText={ ( alignText ) =>
 									setAttributes( { alignText } )

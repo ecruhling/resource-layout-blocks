@@ -22,18 +22,18 @@ import iconStart from './iconStart';
  * MarginControl
  * Component for controlling Margin attributes
  *
- * @param breakpoint
- * @param breakpointName
- * @param marginTop
- * @param marginRight
- * @param marginBottom
- * @param marginLeft
- * @param setMarginTop
- * @param setMarginRight
- * @param setMarginBottom
- * @param setMarginLeft
- * @returns {JSX.Element}
- * @constructor
+ * @param {string}   breakpoint
+ * @param {string}   breakpointName
+ * @param {string}   marginTop
+ * @param {string}   marginRight
+ * @param {string}   marginBottom
+ * @param {string}   marginLeft
+ * @param {Function} setMarginTop
+ * @param {Function} setMarginRight
+ * @param {Function} setMarginBottom
+ * @param {Function} setMarginLeft
+ * @return {JSX.Element} The Margin Control for the Block Editor sidebar.
+ * @class
  */
 export default function MarginControl( {
 	breakpoint,
@@ -55,7 +55,7 @@ export default function MarginControl( {
 				size="small"
 				className="resource-card-header"
 			>
-				{ __( `${ breakpointName } MARGIN`, 'resource' ) }
+				{ `${ breakpointName } MARGIN` }
 			</CardHeader>
 			<CardBody size="small">
 				<Flex wrap={ true }>

@@ -14,14 +14,14 @@ import {
  * ColumnControl
  * Component for controlling Column attributes
  *
- * @param breakpoint
- * @param breakpointName
- * @param columns
- * @param offset
- * @param setColumns
- * @param setOffset
- * @returns {JSX.Element}
- * @constructor
+ * @param {string}   breakpoint
+ * @param {string}   breakpointName
+ * @param {string}   columns
+ * @param {string}   offset
+ * @param {Function} setColumns
+ * @param {Function} setOffset
+ * @return {JSX.Element} The Column Control for the Block Editor sidebar.
+ * @class
  */
 export default function ColumnControl( {
 	breakpoint,
@@ -31,13 +31,13 @@ export default function ColumnControl( {
 	setColumns,
 	setOffset,
 } ) {
-	// since the equal column class has no dash at the end, e.g. 'col', 'col-sm', 'col-md', etc,
+	// since the equal column class has no dash at the end, e.g. 'col', 'col-sm', 'col-md', etc.,
 	// check to see if there happens to be a dash on the end in the breakpoint builder.
 	// if there is, remove the last character (dash)
-	let equal_column_class = `col-${ breakpoint }`;
+	let equalColumnClass = `col-${ breakpoint }`;
 
-	if ( equal_column_class.slice( -1 ) === '-' ) {
-		equal_column_class = equal_column_class.slice( 0, -1 );
+	if ( equalColumnClass.slice( -1 ) === '-' ) {
+		equalColumnClass = equalColumnClass.slice( 0, -1 );
 	}
 
 	return (
@@ -48,7 +48,7 @@ export default function ColumnControl( {
 				size="small"
 				className="resource-card-header"
 			>
-				{ __( `${ breakpointName } COLUMNS`, 'resource' ) }
+				{ `${ breakpointName } COLUMNS` }
 			</CardHeader>
 			<CardBody size="small">
 				<Flex wrap={ true }>
@@ -59,7 +59,7 @@ export default function ColumnControl( {
 							options={ [
 								{ value: '', label: __( '-', 'resource' ) },
 								{
-									value: equal_column_class,
+									value: equalColumnClass,
 									label: __( 'equal', 'resource' ),
 								},
 								{

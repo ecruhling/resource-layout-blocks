@@ -45,8 +45,11 @@ import './editor.scss';
 /**
  * The Block edit function
  *
- * @returns {JSX.Element}
- * @constructor
+ * @param {Object}   root0
+ * @param {Object}   root0.attributes
+ * @param {Function} root0.setAttributes
+ * @return {JSX.Element} React Element.
+ * @class
  */
 export default function edit( { attributes, setAttributes } ) {
 	const {

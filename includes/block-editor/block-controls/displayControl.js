@@ -14,12 +14,12 @@ import {
  * DisplayControl
  * Component for controlling the Display attribute
  *
- * @param breakpoint
- * @param breakpointName
- * @param display
- * @param setDisplay
- * @returns {JSX.Element}
- * @constructor
+ * @param {string}   breakpoint
+ * @param {string}   breakpointName
+ * @param {string}   display
+ * @param {Function} setDisplay
+ * @return {JSX.Element} The Display Control for the Block Editor sidebar.
+ * @class
  */
 export default function ColumnsDisplayControl( {
 	breakpoint,
@@ -35,7 +35,7 @@ export default function ColumnsDisplayControl( {
 				size="small"
 				className="resource-card-header"
 			>
-				{ __( `${ breakpointName } DISPLAY`, 'resource' ) }
+				{ `${ breakpointName } DISPLAY` }
 			</CardHeader>
 			<CardBody size="small">
 				<Flex wrap={ true }>
