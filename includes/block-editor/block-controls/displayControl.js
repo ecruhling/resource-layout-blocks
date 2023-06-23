@@ -11,15 +11,21 @@ import {
 } from '@wordpress/components';
 
 /**
- * DisplayControl
- * Component for controlling the Display attribute
+ * DisplayControl.
  *
- * @param {string}   breakpoint
- * @param {string}   breakpointName
- * @param {string}   display
- * @param {Function} setDisplay
- * @return {JSX.Element} The Display Control for the Block Editor sidebar.
+ * React Component for controlling Display attributes.
+ *
+ * @since      1.0.0
+ *
  * @class
+ *
+ * @param {Object}   props                Component props.
+ * @param {string}   props.breakpoint     The breakpoint name for this Component.
+ * @param {string}   props.breakpointName The short breakpoint name for this Component.
+ * @param {string}   props.display        The Display attribute.
+ * @param {Function} props.setDisplay     Set the Display attribute.
+ *
+ * @return {JSX.Element} The Display Component for the Block Editor sidebar.
  */
 export default function ColumnsDisplayControl( {
 	breakpoint,

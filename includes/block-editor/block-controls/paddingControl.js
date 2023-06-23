@@ -19,21 +19,27 @@ import iconBottom from './iconBottom';
 import iconStart from './iconStart';
 
 /**
- * PaddingControl
- * Component for controlling Padding attributes
+ * PaddingControl.
  *
- * @param {string}   breakpoint
- * @param {string}   breakpointName
- * @param {string}   paddingTop
- * @param {string}   paddingRight
- * @param {string}   paddingBottom
- * @param {string}   paddingLeft
- * @param {Function} setPaddingTop
- * @param {Function} setPaddingRight
- * @param {Function} setPaddingBottom
- * @param {Function} setPaddingLeft
- * @return {JSX.Element} The Padding Control for the Block Editor sidebar.
+ * React Component for controlling Padding attributes.
+ *
+ * @since      1.0.0
+ *
  * @class
+ *
+ * @param {Object}   props                  Component props.
+ * @param {string}   props.breakpoint       The breakpoint name for this Component.
+ * @param {string}   props.breakpointName   The short breakpoint name for this Component.
+ * @param {string}   props.paddingTop       The paddingTop attribute.
+ * @param {string}   props.paddingRight     The paddingRight attribute.
+ * @param {string}   props.paddingBottom    The paddingBottom attribute.
+ * @param {string}   props.paddingLeft      The paddingLeft attribute.
+ * @param {Function} props.setPaddingTop    Set the PaddingTop attribute.
+ * @param {Function} props.setPaddingRight  Set the PaddingRight attribute.
+ * @param {Function} props.setPaddingBottom Set the PaddingBottom attribute.
+ * @param {Function} props.setPaddingLeft   Set the PaddingLeft attribute.
+ *
+ * @return {JSX.Element} The Padding Component for the Block Editor sidebar.
  */
 export default function PaddingControl( {
 	breakpoint,

@@ -11,15 +11,21 @@ import {
 } from '@wordpress/components';
 
 /**
- * OrderControl
- * Component for controlling Order attributes
+ * OrderControl.
  *
- * @param {string}   breakpoint
- * @param {string}   breakpointName
- * @param {string}   order
- * @param {Function} setOrder
- * @return {JSX.Element} The Order Control for the Block Editor sidebar.
+ * React Component for controlling Order attributes.
+ *
+ * @since      1.0.0
+ *
  * @class
+ *
+ * @param {Object}   props                Component props.
+ * @param {string}   props.breakpoint     The breakpoint name for this Component.
+ * @param {string}   props.breakpointName The short breakpoint name for this Component.
+ * @param {string}   props.order          The Order attribute.
+ * @param {Function} props.setOrder       Set the Order attribute.
+ *
+ * @return {JSX.Element} The Order Component for the Block Editor sidebar.
  */
 export default function OrderControl( {
 	breakpoint,

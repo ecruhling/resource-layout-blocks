@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { Card } from '@wordpress/components';
 import DisplayControl from '../block-controls/displayControl';
 import FlexControl from '../block-controls/flexControl';

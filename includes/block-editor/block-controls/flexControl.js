@@ -11,29 +11,35 @@ import {
 } from '@wordpress/components';
 
 /**
- * FlexControl
- * Component for controlling attributes of flex items
+ * FlexControl.
  *
- * @param {string}   breakpoint
- * @param {string}   breakpointName
- * @param {string}   flexDirection
- * @param {string}   justifyContent
- * @param {string}   alignItems
- * @param {string}   alignSelf
- * @param {string}   fillGrowShrink
- * @param {string}   wrap
- * @param {string}   order
- * @param {string}   alignContent
- * @param {Function} setFlexDirection
- * @param {Function} setJustifyContent
- * @param {Function} setAlignItems
- * @param {Function} setAlignSelf
- * @param {Function} setFillGrowShrink
- * @param {Function} setWrap
- * @param {Function} setOrder
- * @param {Function} setAlignContent
- * @return {JSX.Element} The Flex Control for the Block Editor sidebar.
+ * React Component for controlling Flex attributes.
+ *
+ * @since      1.0.0
+ *
  * @class
+ *
+ * @param {Object}   props                   Component props.
+ * @param {string}   props.breakpoint        The breakpoint name for this Component.
+ * @param {string}   props.breakpointName    The short breakpoint name for this Component.
+ * @param {string}   props.flexDirection     The FlexDirection attribute.
+ * @param {string}   props.justifyContent    The JustifyContent attribute.
+ * @param {string}   props.alignItems        The AlignItems attribute.
+ * @param {string}   props.alignSelf         The AlignSelf attribute.
+ * @param {string}   props.fillGrowShrink    The FillGrowShrink attribute.
+ * @param {string}   props.wrap              The Wrap attribute.
+ * @param {string}   props.order             The Order attribute.
+ * @param {string}   props.alignContent      The AlignContent attribute.
+ * @param {Function} props.setFlexDirection  Set the FlexDirection attribute.
+ * @param {Function} props.setJustifyContent Set the JustifyContent attribute.
+ * @param {Function} props.setAlignItems     Set the AlignItems attribute.
+ * @param {Function} props.setAlignSelf      Set the AlignSelf attribute.
+ * @param {Function} props.setFillGrowShrink Set the FillGrowShrink attribute.
+ * @param {Function} props.setWrap           Set the Wrap attribute.
+ * @param {Function} props.setOrder          Set the Order attribute.
+ * @param {Function} props.setAlignContent   Set the AlignContent attribute.
+ *
+ * @return {JSX.Element} The Flex Component for the Block Editor sidebar.
  */
 export default function FlexControl( {
 	breakpoint,

@@ -26,15 +26,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * AlignControl
- * Component for controlling the Text Align attribute
+ * AlignControl.
  *
- * @param {string}   breakpoint
- * @param {string}   breakpointName
- * @param {string}   alignText
- * @param {Function} setAlignText
- * @return {JSX.Element} The Alignment Control for the Block Editor sidebar.
+ * React Component for controlling the Text Align attribute.
+ *
+ * @since      1.0.0
+ *
  * @class
+ *
+ * @param {Object}   props                Component props.
+ * @param {string}   props.breakpoint     The breakpoint name for this Component.
+ * @param {string}   props.breakpointName The short breakpoint name for this Component.
+ * @param {string}   props.alignText      The AlignText attribute.
+ * @param {Function} props.setAlignText   set AlignText attribute.
+ *
+ * @return {JSX.Element} The Alignment Component for the Block Editor sidebar.
  */
 function AlignControl({
   breakpoint,
@@ -98,15 +104,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * DisplayControl
- * Component for controlling the Display attribute
+ * DisplayControl.
  *
- * @param {string}   breakpoint
- * @param {string}   breakpointName
- * @param {string}   display
- * @param {Function} setDisplay
- * @return {JSX.Element} The Display Control for the Block Editor sidebar.
+ * React Component for controlling Display attributes.
+ *
+ * @since      1.0.0
+ *
  * @class
+ *
+ * @param {Object}   props                Component props.
+ * @param {string}   props.breakpoint     The breakpoint name for this Component.
+ * @param {string}   props.breakpointName The short breakpoint name for this Component.
+ * @param {string}   props.display        The Display attribute.
+ * @param {Function} props.setDisplay     Set the Display attribute.
+ *
+ * @return {JSX.Element} The Display Component for the Block Editor sidebar.
  */
 function ColumnsDisplayControl({
   breakpoint,
@@ -194,29 +206,35 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * FlexControl
- * Component for controlling attributes of flex items
+ * FlexControl.
  *
- * @param {string}   breakpoint
- * @param {string}   breakpointName
- * @param {string}   flexDirection
- * @param {string}   justifyContent
- * @param {string}   alignItems
- * @param {string}   alignSelf
- * @param {string}   fillGrowShrink
- * @param {string}   wrap
- * @param {string}   order
- * @param {string}   alignContent
- * @param {Function} setFlexDirection
- * @param {Function} setJustifyContent
- * @param {Function} setAlignItems
- * @param {Function} setAlignSelf
- * @param {Function} setFillGrowShrink
- * @param {Function} setWrap
- * @param {Function} setOrder
- * @param {Function} setAlignContent
- * @return {JSX.Element} The Flex Control for the Block Editor sidebar.
+ * React Component for controlling Flex attributes.
+ *
+ * @since      1.0.0
+ *
  * @class
+ *
+ * @param {Object}   props                   Component props.
+ * @param {string}   props.breakpoint        The breakpoint name for this Component.
+ * @param {string}   props.breakpointName    The short breakpoint name for this Component.
+ * @param {string}   props.flexDirection     The FlexDirection attribute.
+ * @param {string}   props.justifyContent    The JustifyContent attribute.
+ * @param {string}   props.alignItems        The AlignItems attribute.
+ * @param {string}   props.alignSelf         The AlignSelf attribute.
+ * @param {string}   props.fillGrowShrink    The FillGrowShrink attribute.
+ * @param {string}   props.wrap              The Wrap attribute.
+ * @param {string}   props.order             The Order attribute.
+ * @param {string}   props.alignContent      The AlignContent attribute.
+ * @param {Function} props.setFlexDirection  Set the FlexDirection attribute.
+ * @param {Function} props.setJustifyContent Set the JustifyContent attribute.
+ * @param {Function} props.setAlignItems     Set the AlignItems attribute.
+ * @param {Function} props.setAlignSelf      Set the AlignSelf attribute.
+ * @param {Function} props.setFillGrowShrink Set the FillGrowShrink attribute.
+ * @param {Function} props.setWrap           Set the Wrap attribute.
+ * @param {Function} props.setOrder          Set the Order attribute.
+ * @param {Function} props.setAlignContent   Set the AlignContent attribute.
+ *
+ * @return {JSX.Element} The Flex Component for the Block Editor sidebar.
  */
 function FlexControl({
   breakpoint,
@@ -625,21 +643,27 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * MarginControl
- * Component for controlling Margin attributes
+ * MarginControl.
  *
- * @param {string}   breakpoint
- * @param {string}   breakpointName
- * @param {string}   marginTop
- * @param {string}   marginRight
- * @param {string}   marginBottom
- * @param {string}   marginLeft
- * @param {Function} setMarginTop
- * @param {Function} setMarginRight
- * @param {Function} setMarginBottom
- * @param {Function} setMarginLeft
- * @return {JSX.Element} The Margin Control for the Block Editor sidebar.
+ * React Component for controlling Margin attributes.
+ *
+ * @since      1.0.0
+ *
  * @class
+ *
+ * @param {Object}   props                 Component props.
+ * @param {string}   props.breakpoint      The breakpoint name for this Component.
+ * @param {string}   props.breakpointName  The short breakpoint name for this Component.
+ * @param {string}   props.marginTop       The MarginTop attribute.
+ * @param {string}   props.marginRight     The MarginRight attribute.
+ * @param {string}   props.marginBottom    The MarginBottom attribute.
+ * @param {string}   props.marginLeft      The MarginLeft attribute.
+ * @param {Function} props.setMarginTop    Set the MarginTop attribute.
+ * @param {Function} props.setMarginRight  Set the MarginRight attribute.
+ * @param {Function} props.setMarginBottom Set the MarginBottom attribute.
+ * @param {Function} props.setMarginLeft   Set the MarginLeft attribute.
+ *
+ * @return {JSX.Element} The Margin Component for the Block Editor sidebar.
  */
 function MarginControl({
   breakpoint,
@@ -832,21 +856,27 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * PaddingControl
- * Component for controlling Padding attributes
+ * PaddingControl.
  *
- * @param {string}   breakpoint
- * @param {string}   breakpointName
- * @param {string}   paddingTop
- * @param {string}   paddingRight
- * @param {string}   paddingBottom
- * @param {string}   paddingLeft
- * @param {Function} setPaddingTop
- * @param {Function} setPaddingRight
- * @param {Function} setPaddingBottom
- * @param {Function} setPaddingLeft
- * @return {JSX.Element} The Padding Control for the Block Editor sidebar.
+ * React Component for controlling Padding attributes.
+ *
+ * @since      1.0.0
+ *
  * @class
+ *
+ * @param {Object}   props                  Component props.
+ * @param {string}   props.breakpoint       The breakpoint name for this Component.
+ * @param {string}   props.breakpointName   The short breakpoint name for this Component.
+ * @param {string}   props.paddingTop       The paddingTop attribute.
+ * @param {string}   props.paddingRight     The paddingRight attribute.
+ * @param {string}   props.paddingBottom    The paddingBottom attribute.
+ * @param {string}   props.paddingLeft      The paddingLeft attribute.
+ * @param {Function} props.setPaddingTop    Set the PaddingTop attribute.
+ * @param {Function} props.setPaddingRight  Set the PaddingRight attribute.
+ * @param {Function} props.setPaddingBottom Set the PaddingBottom attribute.
+ * @param {Function} props.setPaddingLeft   Set the PaddingLeft attribute.
+ *
+ * @return {JSX.Element} The Padding Component for the Block Editor sidebar.
  */
 function PaddingControl({
   breakpoint,

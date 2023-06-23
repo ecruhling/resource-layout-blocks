@@ -11,17 +11,23 @@ import {
 } from '@wordpress/components';
 
 /**
- * ColumnControl
- * Component for controlling Column attributes
+ * ColumnControl.
  *
- * @param {string}   breakpoint
- * @param {string}   breakpointName
- * @param {string}   columns
- * @param {string}   offset
- * @param {Function} setColumns
- * @param {Function} setOffset
- * @return {JSX.Element} The Column Control for the Block Editor sidebar.
+ * React Component for controlling Column attributes.
+ *
+ * @since      1.0.0
+ *
  * @class
+ *
+ * @param {Object}   props                Component props.
+ * @param {string}   props.breakpoint     The breakpoint name for this Component.
+ * @param {string}   props.breakpointName The short breakpoint name for this Component.
+ * @param {string}   props.columns        The Columns attribute.
+ * @param {string}   props.offset         The Offset attribute.
+ * @param {Function} props.setColumns     Set the Columns attribute.
+ * @param {Function} props.setOffset      Set the Offset attribute.
+ *
+ * @return {JSX.Element} The Column Component for the Block Editor sidebar.
  */
 export default function ColumnControl( {
 	breakpoint,

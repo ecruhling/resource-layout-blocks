@@ -19,21 +19,27 @@ import iconBottom from './iconBottom';
 import iconStart from './iconStart';
 
 /**
- * MarginControl
- * Component for controlling Margin attributes
+ * MarginControl.
  *
- * @param {string}   breakpoint
- * @param {string}   breakpointName
- * @param {string}   marginTop
- * @param {string}   marginRight
- * @param {string}   marginBottom
- * @param {string}   marginLeft
- * @param {Function} setMarginTop
- * @param {Function} setMarginRight
- * @param {Function} setMarginBottom
- * @param {Function} setMarginLeft
- * @return {JSX.Element} The Margin Control for the Block Editor sidebar.
+ * React Component for controlling Margin attributes.
+ *
+ * @since      1.0.0
+ *
  * @class
+ *
+ * @param {Object}   props                 Component props.
+ * @param {string}   props.breakpoint      The breakpoint name for this Component.
+ * @param {string}   props.breakpointName  The short breakpoint name for this Component.
+ * @param {string}   props.marginTop       The MarginTop attribute.
+ * @param {string}   props.marginRight     The MarginRight attribute.
+ * @param {string}   props.marginBottom    The MarginBottom attribute.
+ * @param {string}   props.marginLeft      The MarginLeft attribute.
+ * @param {Function} props.setMarginTop    Set the MarginTop attribute.
+ * @param {Function} props.setMarginRight  Set the MarginRight attribute.
+ * @param {Function} props.setMarginBottom Set the MarginBottom attribute.
+ * @param {Function} props.setMarginLeft   Set the MarginLeft attribute.
+ *
+ * @return {JSX.Element} The Margin Component for the Block Editor sidebar.
  */
 export default function MarginControl( {
 	breakpoint,

@@ -11,15 +11,21 @@ import {
 } from '@wordpress/components';
 
 /**
- * AlignControl
- * Component for controlling the Text Align attribute
+ * AlignControl.
  *
- * @param {string}   breakpoint
- * @param {string}   breakpointName
- * @param {string}   alignText
- * @param {Function} setAlignText
- * @return {JSX.Element} The Alignment Control for the Block Editor sidebar.
+ * React Component for controlling the Text Align attribute.
+ *
+ * @since      1.0.0
+ *
  * @class
+ *
+ * @param {Object}   props                Component props.
+ * @param {string}   props.breakpoint     The breakpoint name for this Component.
+ * @param {string}   props.breakpointName The short breakpoint name for this Component.
+ * @param {string}   props.alignText      The AlignText attribute.
+ * @param {Function} props.setAlignText   set AlignText attribute.
+ *
+ * @return {JSX.Element} The Alignment Component for the Block Editor sidebar.
  */
 export default function AlignControl( {
 	breakpoint,
