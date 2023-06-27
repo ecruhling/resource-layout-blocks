@@ -1,3 +1,13 @@
 /**
  * Editor only styles.
  */
+
+[data-type="resource-layout-blocks/div"] {
+	outline: 1px dotted rgba(#f00, 0.25);
+
+	// background on hover to make it visible
+	&:not(.is-selected):not(.has-child-selected):hover,
+	&.is-selected {
+		outline: 1px dotted #f00;
+	}
+}
