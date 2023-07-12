@@ -93,39 +93,39 @@ add_action( 'block_categories_all', 'resource_category', 10, 2 );
 /**
  * Enqueue Bootstrap CSS on the frontend. (for development only).
  */
-add_action(
-	'wp_enqueue_scripts',
-	function () {
-		wp_register_style( 'bootstrap-css', '//cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css', array(), null, 'all' );
-		wp_enqueue_style( 'bootstrap-css' );
-	}
-);
+//add_action(
+//	'wp_enqueue_scripts',
+//	function () {
+//		wp_register_style( 'bootstrap-css', '//cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css', array(), null, 'all' );
+//		wp_enqueue_style( 'bootstrap-css' );
+//	}
+//);
 
 /**
  * Enqueue Bootstrap CSS on the backend. (for development only).
  */
-add_action(
-	'admin_enqueue_scripts',
-	function () {
-		wp_register_style( 'bootstrap-css', '//cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css', array(), null, 'all' );
-		wp_enqueue_style( 'bootstrap-css' );
-	}
-);
+//add_action(
+//	'admin_enqueue_scripts',
+//	function () {
+//		wp_register_style( 'bootstrap-css', '//cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css', array(), null, 'all' );
+//		wp_enqueue_style( 'bootstrap-css' );
+//	}
+//);
 
 /**
  * Enqueue Global CSS on the backend, for the editor.
  */
-$deps_file = plugin_dir_path( __FILE__ ) . 'build/global-editor-styles.asset.php';
-$deps      = array();
-
-if ( file_exists( $deps_file ) ) {
-	$deps_file = require $deps_file;
-	$deps      = $deps_file['dependencies'];
-}
-
 add_action(
 	'admin_enqueue_scripts',
 	function () {
+		$deps_file = plugin_dir_path( __FILE__ ) . 'build/global-editor-styles.asset.php';
+		$deps      = array();
+
+		if ( file_exists( $deps_file ) ) {
+			$deps_file = require $deps_file;
+			$deps      = $deps_file['dependencies'];
+		}
+
 		wp_register_style( 'global-editor-styles', plugins_url( 'build/global-editor-styles.css', __FILE__ ), $deps );
 		wp_enqueue_style( 'global-editor-styles' );
 	}
