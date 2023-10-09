@@ -360,7 +360,7 @@
 		"filter": {
 			"duotone": false
 		},
-		"html": false,
+		"html": true,
 		"inserter": true,
 		"multiple": true,
 		"reusable": true,
