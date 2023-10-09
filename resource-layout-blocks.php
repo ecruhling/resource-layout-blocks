@@ -4,14 +4,12 @@
  * Description:       The standard page layout blocks for Containers, Rows, and Columns.
  * Requires at least: 5.9
  * Requires PHP:      7.0
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Erik Rühling
  * Text Domain:       resource
  *
  * @package           resource-layout-blocks
  */
-
-// TODO: Change the Class Inspector to an editable field.
 
 /**
  * Constants

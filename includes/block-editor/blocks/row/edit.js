@@ -18,7 +18,6 @@ import {
 	TabPanel,
 	TextControl,
 	Toolbar,
-	ToolbarItem,
 } from '@wordpress/components';
 
 /**
@@ -195,7 +194,7 @@ export default ( { attributes, setAttributes } ) => {
 		<>
 			<BlockControls>
 				<Toolbar label="Class Inspector" id="class-inspector">
-					<ToolbarItem as="p">{ classes }</ToolbarItem>
+					{ classes }
 				</Toolbar>
 			</BlockControls>
 			<InspectorControls>
