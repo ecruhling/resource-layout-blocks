@@ -4,7 +4,7 @@
  * Description:       The standard page layout blocks for Containers, Rows, and Columns.
  * Requires at least: 5.9
  * Requires PHP:      7.0
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            Erik Rühling
  * Text Domain:       resource
  *

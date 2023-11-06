@@ -305,7 +305,7 @@ export default function FlexControl( {
 									label: __( 'End', 'resource' ),
 								},
 								{
-									value: `justify-content-${ breakpoint }center`,
+									value: `align-content-${ breakpoint }center`,
 									label: __( 'Center', 'resource' ),
 								},
 								{
