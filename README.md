@@ -98,9 +98,11 @@ Advanced sidebar.
 
 - [X] Add Controls for creating & editing inline style per block.
 
-- [ ] Block for layout purposes only: placeholder, grouping for alignment & justify, width 100%, to break column, etc.
+- [X] Block for layout purposes only: placeholder, grouping for alignment & justify, width 100%, to break column, etc.
 
-- [ ] Enable CSS class editing from within the Class Inspector.
+- [ ] Setting to enable Bootstrap or Tailwind classes.
+
+- [ ] Enable CSS class editing from within the Class Inspector. (would be nice, but with the current block editor, probably not possible)
 
 See the [open issues](https://github.com/ecruhling/resource-layout-blocks/issues) for a full list of proposed features (
 and
